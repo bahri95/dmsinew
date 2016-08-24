@@ -1,0 +1,26 @@
+ <div class="col-md-9 col-sm-8">
+           <div class="box-body no-padding">
+                                                                           <div id="container" style="width:900px; height: 400px; margin: 0 auto"></div>
+
+                                                                            <table id="datatable" hidden="hidden">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Bulan</th>
+                                                                                        <th>Domestik</th>
+                                                                                        <th>Ekspor</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                               {if $datagrafik neq ''}
+                                                                                    {foreach name=list_data from=$datagrafik item=result}
+                                                                                    <tr>
+                                                                                        <th>{$result.bulan}</th>
+                                                                                        <td>{if $result.id_katharga eq '1'}{$result.harga_rupiah}{/if}</td>
+                                                                                        <td>{if $result.id_katharga eq  '2'}{$result.harga_rupiah}{/if}</td>
+                                                                                    </tr>
+                                                                                {/foreach}
+                                                                                {/if}
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div><!-- /.box-body -->
+</div>

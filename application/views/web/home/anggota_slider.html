@@ -1,0 +1,26 @@
+<section class="b-tagline-box b-infoblock b-diagonal-line-bg-light">
+<div class="f-info-container">
+        <div class="container">
+            <div class="b-info-container__title f-info-container__title">
+               <!-- <i class="fa fa-twitter"></i><br>-->
+                <span class="f-b f-primary-b" style="color:#424242;">{$judul.anggota}</span>
+            </div>
+            <div class="b-carousel-reset b-carousel-arr-out b-carousel-small-arr f-carousel-small-arr b-remaining">
+    <div class="f-center b-logo-group j-logo-slider">
+   
+    {if $listasosiasi neq ''}
+    {foreach name=list_asosiasi_home from=$listasosiasi item=rs}
+        <div class="b-logo-item"><a href="{$rs.url_detail}">
+    <img class="is-normal" src="{$rs.logo_asosiasi}" height="100"  alt=""/>
+    <img class="is-hover" src="{$rs.logo_asosiasi}" height="100"  alt=""/>
+</a></div>
+	{/foreach}
+    {/if}
+
+    </div>
+       
+       
+        </div>
+    </div>
+</section>
+

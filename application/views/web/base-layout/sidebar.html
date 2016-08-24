@@ -1,0 +1,76 @@
+<div class="col-md-3">
+  <!-- <div class="b-form-row b-input-search">
+    <div class="b-right b-header-ico-group f-header-ico-group b-right"> <span class="b-header__search-box"> <i class="fa fa-search"></i>
+  <form method="post" action="{$url_search_base}" name="form-search"> <input  class="form-control" type="text" name="keyword" value="{$key}" placeholder="Masukan kata pencarian"/></form>
+  </span>
+  </div> -->
+  <div class="row b-col-default-indent">
+  {nocache}
+   
+    <div class="col-md-12">
+      <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special">{if $act_lang eq en}
+      News{else}Berita{/if}</h4>
+      <div class="b-blog-short-post b-blog-short-post--img-hover-bordered b-blog-short-post--w-img f-blog-short-post--w-img row">
+        <div class="b-blog-short-post b-blog-short-post--img-hover-bordered b-blog-short-post--w-img f-blog-short-post--w-img row"> {if $berita_sidebar neq ''}
+          {foreach name=list_berita_sidebar from=$berita_sidebar item=rs}
+          <div class="b-blog-short-post--popular col-md-12  col-xs-12 f-primary-b">
+            <div class="b-blog-short-post__item_img"> <a href="{$rs.url_detail}"><img data-retina src="{$baseurl}php_helpers/timthumb.php?src={$rs.image}&amp;w=50&amp;h=50&amp;zc=0" alt=""/></a> </div>
+            <div class="b-remaining">
+              <div class="b-blog-short-post__item_text f-blog-short-post__item_text"> <a href="{$rs.url_detail}">{$rs.judul}</a> </div>
+              <div class="b-blog-short-post__item_date f-blog-short-post__item_date f-primary-it"> {$rs.tanggal} </div>
+            </div>
+          </div>
+          {/foreach}
+          {/if} </div>
+      </div>
+    </div>
+     <div class="col-md-12">
+      <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special">
+      Event</h4>
+      <div class="b-blog-short-post b-blog-short-post--img-hover-bordered b-blog-short-post--w-img f-blog-short-post--w-img row">
+        <div class="b-blog-short-post b-blog-short-post--img-hover-bordered b-blog-short-post--w-img f-blog-short-post--w-img row"> {if $kegiatanfooter neq ''}
+                {foreach name=list_kegiatan_home from=$kegiatanfooter item=rs}
+          <div class="b-blog-short-post--popular col-md-12  col-xs-12 f-primary-b">
+          <!--  <div class="b-blog-short-post__item_img"> <a href="{$rs.url_detail}"><img data-retina src="{$baseurl}php_helpers/timthumb.php?src={$rs.image}&amp;w=50&amp;h=50&amp;zc=0" alt=""/></a> </div>-->
+            <div class="b-remaining">
+              <div class="b-blog-short-post__item_text f-blog-short-post__item_text"> <a href="{$rs.url_detail}">{if $act_lang eq en}{$rs.judul_english}{else}{$rs.judul_agenda}{/if}</a> </div>
+              <div class="b-blog-short-post__item_date f-blog-short-post__item_date f-primary-it"> {$rs.tanggal_mulai} - {$rs.tanggal_selesai} </div>
+            </div>
+          </div>
+          {/foreach}
+          {/if} </div>
+      </div>
+    </div>
+    {/nocache}
+    <div class="col-md-12">
+     <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special">
+     {if $act_lang eq en}About Us{else}Tentang Kami{/if}</h4>
+     <div class="b-shortcode-example">
+            <ul class="b-list-markers f-list-markers">
+            {if $profil_side neq ''}
+         		 {foreach name=list_profil_side from=$profil_side item=rs}
+              <li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="{$rs.url_detail}">{$rs.judul}</a></li>
+            {/foreach}
+          {/if}  
+            </ul>
+      </div>
+     </div>
+     <div class="col-md-12">
+     <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special">
+     {if $act_lang eq en}Visitor{else}Pengunjung{/if}</h4>
+         <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+    <!-- Histats.com  START  (aync)-->
+    <script type="text/javascript">var _Hasync= _Hasync|| [];
+    _Hasync.push(['Histats.start', '1,3536992,4,30,130,80,00011111']);
+    _Hasync.push(['Histats.fasi', '1']);
+    _Hasync.push(['Histats.track_hits', '']);
+    (function() {
+    var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+    hs.src = ('//s10.histats.com/js15_as.js');
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+    })();</script>
+    <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?3536992&101" alt="web stats" border="0"></a></noscript>
+    <!-- Histats.com  END  -->
+    </div>
+  </div>
+</div>

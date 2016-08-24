@@ -1,0 +1,15 @@
+
+<div class="col-md-9">
+  <p class="f-primary-b f-uppercase f-title-small c-primary">Frequently asked questions</p>
+  {if $faq neq ''}
+  <div class="j-accordion b-accordion f-accordion b-accordion--secondary b-accordion--with-icon-indent f-accordion--secondary"> {foreach name=list_faq from=$faq item=result}
+    <h3 class="b-accordion__title f-accordion__title f-primary-b"><i
+                                class="fa fa-question-circle"></i> {$result.pertanyaan} </h3>
+    <div class="b-accordion__content">
+      <p>{$result.jawaban}</p>
+    </div>
+    {/foreach} </div>
+  {/if}
+  <!--end detail -->
+</div>
+<!--end col 9-->

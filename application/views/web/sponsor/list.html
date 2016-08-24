@@ -1,0 +1,30 @@
+ <section class="container b-welcome-box">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <h1 class="is-global-title f-center">Sponsorship</h1>
+                    
+                </div>
+            </div>
+        </section>
+
+<section class="b-infoblock--without-border">
+    <div class="container ">
+   
+<div class="j-filter-content">
+          <div class="row row b-col-default-indent b-gallery--secondary j-masonry">
+            <div class="masonry-gridSizer col-sm-6 col-md-4 col-lg-3"></div>
+             {if $sponsor_list neq ''}
+            {foreach name=sponsor_list from=$sponsor_list item=rs}
+            <div class="j-masonry-item col-sm-6 col-md-4 col-lg-3 j-filter-portrait">
+                
+                <div class="b-gallery-main-item view view-eighth">
+                <img data-retina='' src='{$rs.image_sponsor}' title="{$rs.nama_sponsor}">
+               
+                </div>
+            </div>
+            {/foreach}
+            {/if}
+</div>
+</div>
+</div>
+</section>

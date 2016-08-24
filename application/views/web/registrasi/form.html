@@ -1,0 +1,208 @@
+<div class="b-desc-section-container">
+       
+        <section class="container">
+            <div class="row">
+ <!-- notification template -->
+                        {if $notification_msg <> ""}
+                        <div class="col-md-12">
+                            {if $notification_status eq 'red'}
+                            <div class="alert alert-danger alert-dismissable">
+                                        <i class="fa fa-ban"></i>
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        {$notification_msg}.
+                                    </div>
+                                 {/if}
+                                 {if $notification_status eq 'green'}
+                                 <div class="alert alert-success alert-dismissable">
+                                        <i class="fa fa-check"></i>
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                         {$notification_msg}.
+                                    </div>
+                                 {/if}
+                         </div>
+                        {/if}
+            <div class="col-xs-12 col-sm-6">
+              <div class="b-form-row f-primary-l f-title-big c-secondary">Registrasi Anggota</div>
+             
+              
+              <hr class="b-hr" />
+                    <div class="row">
+                       
+                        <form action="{$url_daftar}" id="form-registrasi" name="form-registrasi" method="post" enctype="multipart/form-data">
+
+                            <div class="col-md-6">
+                                <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="name">Nama Lengkap *</label>
+                                    <div class="b-form-vertical__input">
+                                        <input type="text" id="nama" name="nama" value="" class="form-control" />
+                                    </div>
+                                </div>
+                                
+                                <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="pekerjaan">Pekerjaan </label>
+                                    <div class="b-form-vertical__input">
+                                        <input type="text" id="pekerjaan" name="pekerjaan" value="" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="website">Organisasi *</label>
+                                    <div class="b-form-vertical__input">
+                                       <select name="id_asosiasi" class="form-control">
+                                             {foreach name=list_asosiasi from=$listasosiasi item=result}
+                                             <option value="{$result.id_asosiasi}">{$result.nama_asosiasi}</option>
+                                             {/foreach}
+                                       </select>
+                                    </div>
+                                </div>
+
+                                <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="title">Alamat Email *</label>
+                                    <div class="b-form-vertical__input">
+                                        <input type="text" id="email" name="email"  value="" class="form-control" />
+                                    </div>
+                                </div>
+                                 <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="title">Username *</label>
+                                    <div class="b-form-vertical__input">
+                                        <input type="text" id="username" name="username"  value="" class="form-control" />
+                                    </div>
+                                </div>
+                                 <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="title">Kata Kunci *</label>
+                                    <div class="b-form-vertical__input">
+                                        <input type="password" id="password" name="password"  value="" class="form-control" />
+                                    </div>
+                                </div>
+                                 <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="title">Ulangi Kata Kunci *</label>
+                                    <div class="b-form-vertical__input">
+                                        <input type="password" id="u_password" name="u_password"  value="" class="form-control" />
+                                    </div>
+                                </div>
+                                 <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="title">Perusahaan </label>
+                                    <div class="b-form-vertical__input">
+                                        <input type="text" id="perusahaan" name="perusahaan" value="" class="form-control" />
+                                    </div>
+                                </div>
+                                 <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="title">Alamat</label>
+                                    <div class="b-form-vertical__input">
+                                        <textarea name="alamat" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                
+                                 <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="title">Alamat Web </label>
+                                    <div class="b-form-vertical__input">
+                                        <input type="text" id="alamat_web" name="web"  value="" class="form-control" />
+                                    </div>
+                                </div>
+                                </div>
+                                 <div class="col-md-6">
+                                 <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="website">Kabupaten/Kota *</label>
+                                   <div class="b-form-vertical__input">
+                                       <select name="id_kota" class="selectpicker" data-live-search="true">
+                                             {foreach name=listkota from=$listkota item=result}
+                                             <option value="{$result.id_kota}">{$result.nama_kota}</option>
+                                             {/foreach}
+                                       </select>
+                                    </div>
+                                </div>
+
+                                 <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="title">Kode Pos</label>
+                                    <div class="b-form-vertical__input">
+                                        <input type="text" id="kode_pos" name="kode_pos"  value="" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="website">Negara *</label>
+                                    <div class="b-form-vertical__input">
+                                        <select id="basic" name="id_negara" class="selectpicker show-tick form-control" data-live-search="true">
+                                           {foreach name=list_negara from=$listnegara item=result}
+                                             <option value="{$result.id_negara}">{$result.nama_negara}</option>
+                                             {/foreach}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="title">Telepon *</label>
+                                    <div class="b-form-vertical__input">
+                                        <input type="text" id="telepon" name="telepon"  value="" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="title">Fax </label>
+                                    <div class="b-form-vertical__input">
+                                        <input type="text" id="fax" name="fax"  value="" class="form-control" />
+                                    </div>
+                                </div>
+                               
+                                <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="title">No KTP</label>
+                                    <div class="b-form-vertical__input">
+                                        <input type="text" id="no_ktp" name="no_ktp"  value="" class="form-control" />
+                                    </div>
+                                </div>
+                                 <div class="b-form-row">
+                                <img src="{$url_captcha}" id="image_captcha" name="captcha" align="absmiddle" />
+                                    <img src="{$baseurl}doc/refresh.jpg" id="refresh" style="max-width:25px;margin-left:20px;" />
+                                </div>
+                                 <div class="b-form-row">
+                                    <label class="b-form-vertical__label" for="title">Kode Validasi *</label>
+                                    <div class="b-form-vertical__input">
+                                        <input type="text" id="user_key" name="user_key"  value="" class="form-control" />
+                                    </div>
+                                </div>
+                                
+                            </div>
+                   
+                        
+                    </div> 
+                     
+                </div><!-- COL XS 12 -->
+            <div class="col-xs-12 col-sm-6"> <!-- upload foto -->
+                <div class="b-form-row f-primary-l f-title-big c-secondary">Upload Foto</div>
+             
+                    
+                      <hr class="b-hr" />
+                           
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="user_name_lama">Foto User </label>
+                                    <br />
+                                    <div style="text-align:center"><img src="http://localhost/dmsi/doc/admin/1/1_9530034funny_pic.jpg" style="max-width:200px;"  /></div>
+                                    </div>
+                                        <div class="form-group">
+                                           <label>Pilih File Foto * </label>
+                                                <span>
+                                                    <input  type="file" 
+                                                            style="visibility:hidden; width: 1px;" 
+                                                            id='foto' name='image'  
+                                                            onchange="$(this).parent().find('span').html($(this).val().replace('C:\\fakepath\\', ''))"  /> 
+                                                    <input class="btn btn-primary" type="button" value="Browse.." onclick="$(this).parent().find('input[type=file]').click();"/> 
+                                                    &nbsp;
+                                                    <span  class="badge badge-important" ></span>
+                                                </span>
+                                        </div>
+                            </div>
+                             <div class="b-form-row">
+                             <div class="col-sm-3 col-sm-offset-4">
+                                    <button type="submit" onclick="" class="b-btn f-btn b-btn-md b-btn-default f-primary-b b-btn__w100">Daftar</button>
+                              </div>
+                              </div>
+
+                        </div><!-- /.box-body -->        
+                          
+                 
+                </div> <!--upload foto -->
+            </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+    
+    

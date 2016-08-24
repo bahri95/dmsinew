@@ -1,0 +1,35 @@
+
+<div class="col-md-9">
+  <div class="b-shortcode-example">
+    <!--start detail desc-->
+    <div class="b-article-box">
+      <div class="f-article_title f-primary-l b-title-b-hr"> {$page_modul|upper} </div>
+      <table class="b-table-primary f-table-primary f-center">
+        <tr>
+          <th width="5%">No</th>
+          <th width="65%">Nama File</th>
+          <th width="15%">Ukuran</th>
+          <th width="15%">Download</th>
+        </tr>
+        {if $regulasi_list neq ''}
+        {foreach name=list_download from=$regulasi_list item=rs}
+        <tr>
+          <td>{$no++}</td>
+          <td align="left"><a href="{$rs.file_download}">{$rs.judul}</a></td>
+          <td>{$rs.ukuran}</td>
+          <td><a href="{$rs.file_regulasi}" class="button-xs button-yellow"><i class="fa fa-download"></i></a></td>
+        </tr>
+        {/foreach}
+        {/if}
+      </table>
+    </div>
+    {if $pagging neq ''}
+    <div class="b-pagination f-pagination">
+      <ul>
+        {$pagging}
+      </ul>
+    </div>
+    {/if} </div>
+  <!--end detail -->
+</div>
+<!--end col 9-->

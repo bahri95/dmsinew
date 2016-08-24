@@ -1,0 +1,39 @@
+<div class="col-md-9">
+  <div class="f-primary-b b-title-b-hr f-title-b-hr">{$data.nama_asosiasi}</div>
+  <div class="row" style="padding-top:10px;">
+    <div class="col-md-3" style="float:left;margin:0 10px 10px 0;">
+    	<div class="b-app-with-img__item">
+          <div class="b-app-with-img__item_img view view-sixth  b-tagline-box  b-tagline-box--no-shadow"> <img data-animate="fadeIn" data-retina src="{$data.logo_asosiasi}" alt=""/>
+    		</div>
+    	</div>	
+    </div>
+    <div class="col-xs-12 col-md-8">
+      <div class="b-tagline-box ">
+        <div class="f-tagline_description"> 
+        <table>
+          <tr><td>Telp.&nbsp;</td> <td>: {$data.telepon}</td></tr>
+          <tr><td>Fax&nbsp;</td> <td>: {$data.fax}</td></tr>
+          <tr><td>Email&nbsp;</td><td>: {$data.email}</td></tr>
+          <tr><td>Website&nbsp;</td> <td>: &nbsp;<a href="{$data.website}">{$data.website}</a></td></tr>
+          <tr><td>Alamat&nbsp;</td>
+          <td>: {$data.alamat|nl2br}</td>
+          <td>{$data.nama_kota}, {$data.nama_propinsi}</td>
+          </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-xs-12 col-md-11">
+      <div class="b-tagline-box ">
+        <div class="f-tagline_description"> 
+          <h3>PROFIL </h3>
+           {$data.profil}
+        </div>
+      </div>
+    </div>
+   
+    <!--end detail -->
+  </div><!--end row-->
+ 
+</div>

@@ -1,0 +1,143 @@
+                <div class="box">
+                                <div class="box-header">
+                                  {if $datamaxtahun neq ''}
+                                    {foreach name=list_data from=$datamaxtahun item=result}
+                                    <h3 class="box-title">Grafik Harga Tahun {$result.maxtahun}</h3>
+                                    {/foreach}
+                                    {/if}
+                                     <div class="box-tools">
+                                        
+                                        <div class="btn-group pull-right"><a href="{$url_add}" title="Tambah Data" class="btn bg-olive btn-flat"><i class='fa fa-plus'></i> Tambah Data</a>
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>
+                                    <div class="nav-tabs-custom">
+                                                    <ul class="nav nav-tabs">
+
+                                                      <li class="active"><a href="#tab_6" data-toggle="tab">Gabung</a></li>
+                                                      <li><a href="#tab_7" data-toggle="tab">Domestik</a></li>
+                                                      <li><a href="#tab_8" data-toggle="tab">Ekspor</a></li>
+                                                    </ul>
+                                              
+                                        <div class="tab-content">
+                                        <!-- <form method="post">
+                                        <div class="form-group">
+                                            <label for="user_name_lama">Tahun *</label>
+                                            <input type="text" name="tahun" value="" id="tahun" onchange="submit()" class="form-control" size="10" maxlength="10" style="width:150px;" />
+                                        </div>
+                                        </form> -->
+                                        <div class="tab-pane active" id="tab_6">
+                                        <section class="content">
+                                    <!-- Small boxes (Stat box) -->
+                                                <div class="row">
+                                                             <div class="col-md-12">
+                                                                <div class="box box-warning">
+                                                                        <div class="box-body no-padding">
+                                                                           <div id="container" style="width:1000px; height: 400px; margin: 0 auto"></div>
+
+                                                                            <table id="datatable">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Bulan</th>
+                                                                                        <th>Domestik</th>
+                                                                                        <th>Ekspor</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                               {if $datagrafik neq ''}
+                                                                                    {foreach name=list_data from=$datagrafik item=result}
+                                                                                    <tr>
+                                                                                        <th>{$result.bulan}</th>
+                                                                                        <td>{if $result.id_katharga eq '1'}{$result.harga_rupiah}{/if}</td>
+                                                                                        <td>{if $result.id_katharga eq  '2'}{$result.harga_rupiah}{/if}</td>
+                                                                                    </tr>
+                                                                                {/foreach}
+                                                                                {/if}
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div><!-- /.box-body -->
+                                                                    </div><!-- /.box -->
+                                                                </div><!-- /.col -->
+                                                       
+                                                </div><!-- /.row -->
+                                            </section><!-- /.content -->
+                                    </div><!--tab 6-->
+
+                                    <div class="tab-pane" id="tab_7">
+                                        <section class="content">
+                                    <!-- Small boxes (Stat box) -->
+                                                <div class="row">
+                                                             <div class="col-md-12">
+                                                                <div class="box box-warning">
+                                                                        <div class="box-body no-padding">
+                                                                           <div id="container2" style="width:1000px; height: 400px; margin: 0 auto"></div>
+
+                                                                            <table id="datatable2" hidden="hidden">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Bulan</th>
+                                                                                        <th>Domestik</th>
+                                                                                       
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                               {if $datagrafikdo neq ''}
+                                                                                    {foreach name=list_data from=$datagrafikdo item=result}
+                                                                                    <tr>
+                                                                                        <th>{$result.bulan}</th>
+                                                                                        <td>{$result.harga_rupiah}</td>
+                                                                                       
+                                                                                    </tr>
+                                                                                {/foreach}
+                                                                                {/if}
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div><!-- /.box-body -->
+                                                                    </div><!-- /.box -->
+                                                                </div><!-- /.col -->
+                                                       
+                                                </div><!-- /.row -->
+                                            </section><!-- /.content -->
+                                    </div><!--tab 7-->
+                                    <div class="tab-pane" id="tab_8">
+                                        <section class="content">
+                                    <!-- Small boxes (Stat box) -->
+                                                <div class="row">
+                                                             <div class="col-md-12">
+                                                                <div class="box box-warning">
+                                                                        <div class="box-body no-padding">
+                                                                           <div id="container3" style="width:1000px; height:400px;"></div>
+
+                                                                            <table id="datatable3" hidden="hidden">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Bulan</th>
+                                                                                     
+                                                                                        <th>Ekspor</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                               {if $datagrafikeks neq ''}
+                                                                                    {foreach name=list_data from=$datagrafikeks item=result}
+                                                                                    <tr>
+                                                                                        <th>{$result.bulan}</th>
+                                                                                       
+                                                                                        <td>{$result.harga_rupiah}</td>
+                                                                                    </tr>
+                                                                                {/foreach}
+                                                                                {/if}
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div><!-- /.box-body -->
+                                                                    </div><!-- /.box -->
+                                                                </div><!-- /.col -->
+                                                       
+                                                </div><!-- /.row -->
+                                            </section><!-- /.content -->
+                                    </div><!--tab 8-->
+                                    </div><!--tab content -->
+                                    </div>
+                                    
+                                    </div><!-- /.box-body -->

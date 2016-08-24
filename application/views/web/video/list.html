@@ -1,0 +1,30 @@
+<div class="row j-masonry b-col-default-indent">
+  <div class="masonry-gridSizer col-xs-12 col-sm-6 col-md-4"></div>
+  <!--start detail desc-->
+  {if $video_list neq ''}
+  {foreach name=list_video from=$video_list item=rs}
+  <div class="j-masonry-item col-md-4 col-sm-6 col-xs-12 f-center j-filter-graphic j-filter-illustration">
+    <div class="b-portfolio__content-item">
+      <div class="view view-eighth">
+        <div class="b-portfolio__content-item-img"> <img data-retina src="{$rs.video_image}" alt=""/> </div>
+        <div class="b-portfolio__content-item-inner b-item-hover-action mask">
+          <div class="b-item-hover-action__inner">
+            <div class="b-item-hover-action__inner-btn_group"><a href="{$rs.url_play}" class="b-btn f-btn b-btn-light f-btn-light fancybox info fancybox.iframe" title="{$rs.judul}"><i class="fa fa-link"></i></a></div>
+            <div class=" f-portfolio__content-item-inner-title f-primary-b">{$rs.judul_video}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {/foreach}
+  {/if}
+  <!--end detail -->
+</div>
+{if $pagging neq ''}
+<div class="b-pagination f-pagination">
+  <ul>
+    {$pagging}
+  </ul>
+</div>
+{/if}
+</div>

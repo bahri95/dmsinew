@@ -1,0 +1,33 @@
+<section class="b-infoblock--without-border">
+    <div class="container ">
+
+<div class="j-filter-content">
+          <div class="row row b-col-default-indent b-gallery--secondary j-masonry">
+            <div class="masonry-gridSizer col-sm-6 col-md-4 "></div>
+             {if $album_list neq ''}
+            {foreach name=list_album from=$album_list item=rs}
+            <div class="j-masonry-item col-sm-6 col-md-4 j-filter-portrait">
+             
+                <div class="b-gallery-main-item view view-eighth">
+                <img data-retina='' src='{$rs.image_album}'>
+                <div class="b-item-hover-action f-center mask">
+                <div class="b-item-hover-action__inner">
+                <div class="b-item-hover-action__inner-btn_group b-default-top-indent">
+                    <a data-animate="fadeInDown" href='{$url_detail}/{$rs.id_album}' class='b-btn f-btn b-btn-light f-btn-light fancybox info' rel='gallery' title='{$rs.nama_album}'><i class='fa fa-arrows-alt'></i></a>
+                   
+                </div>
+                </div>
+                </div>
+                </div>
+                 <div class="b-app-with-img__item_text f-center b-app-with-img__border">
+                                <div class="b-app-with-img__item_name f-app-with-img__item_name f-primary-b"><a href="{$url_detail}/{$rs.id_album}">{$rs.nama_album}</a></div>
+                               
+                            </div>
+
+            </div>
+            {/foreach}
+            {/if}
+</div>
+</div>
+</div>
+</section>

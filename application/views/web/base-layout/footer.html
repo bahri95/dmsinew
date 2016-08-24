@@ -1,0 +1,114 @@
+<footer>
+  <div class="b-footer-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-xs-12 f-copyright b-copyright">Copyright © 2016 - Dewan Minyak Sawit Indonesia (DMSI)</div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="b-btn f-btn b-btn-default b-right b-footer__btn_up f-footer__btn_up j-footer__btn_up">
+                    <i class="fa fa-chevron-up"></i>
+                </div>
+                <nav class="b-bottom-nav f-bottom-nav b-right hidden-xs">
+                    <ul>
+                        <li class="is-active-bottom-nav"><a href="{$homeurl}">Home</a></li>
+                        <li><a href="{$url_menu_profil}">
+                        {if $act_lang eq en}
+                        About Us
+                        {else}
+                        Tentang kami
+                        {/if}</a></li>
+                        <li><a href="{$url_menu_kontak}">
+                        {if $act_lang eq en}
+                        Contact Us
+                        {else}
+                        Kontak Kami
+                        {/if}
+                        </a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+  <div class="container">
+    <div class="b-footer-secondary row">
+      <div class="col-md-3 col-sm-12 col-xs-12 f-center b-footer-logo-containter">
+          <a href=""><img data-retina class="b-footer-logo color-theme" src="{$BASEURL}themes/default/img/logo_dmsi_besar.png" alt="Logo"/></a>
+          <div class="b-footer-logo-text f-footer-logo-text">
+          <p>DMSI<br />Dewan Minyak Sawit Indonesia</p>
+          <div class="b-btn-group-hor f-btn-group-hor">
+                    {nocache}
+                    {if $datasosmed neq ''}
+                    {foreach name=datasosmed from=$datasosmed item=rs}
+                     
+      
+            <a href="{$rs.link}" target="_blank" class="b-btn-group-hor__item f-btn-group-hor__item">
+              <i class="{$rs.logo}"></i>
+            </a>
+            
+                    {/foreach}
+                    {/if}
+                    {/nocache}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h4 class="f-primary-b">
+        {if $act_lang eq en}
+        Association Member DMSI
+        {else}
+        Asosiasi Anggota DMSI
+        {/if}</h4>
+        <div class="b-blog-short-post row">
+        {nocache}
+        {if $asosiasifooter neq ''}
+        <ul class="b-list-markers f-list-markers">
+          {foreach name=list_asosiasi_f from=$asosiasifooter item=rs}
+              <li> <a href="{$rs.url_detail}"><i class="fa fa-hand-o-right b-list-markers__ico f-list-markers__ico"></i> {$rs.nama_asosiasi}</a></li>
+           {/foreach}
+           </ul>
+           {/if}
+           {/nocache}
+        </div>
+      </div>
+     
+      <div class="col-md-3 col-sm-12 col-xs-12 ">
+        <h4 class="f-primary-b">
+        {if $act_lang eq en}
+        Contact Info
+        {else}
+        Info Kontak
+        {/if}
+        </h4>
+        <div class="b-contacts-short-item-group">
+         {nocache}
+          <div class="b-contacts-short-item col-md-12 col-sm-4 col-xs-12">
+            <div class="b-contacts-short-item__icon f-contacts-short-item__icon f-contacts-short-item__icon_lg b-left">
+              <i class="fa fa-map-marker"></i>
+            </div>
+            <div class="b-remaining f-contacts-short-item__text">
+              {$kontakinfo.alamat|nl2br}
+            </div>
+          </div>
+          <div class="b-contacts-short-item col-md-12 col-sm-4 col-xs-12">
+            <div class="b-contacts-short-item__icon f-contacts-short-item__icon b-left f-contacts-short-item__icon_md">
+              <i class="fa fa-phone"></i>
+            </div>
+            <div class="b-remaining f-contacts-short-item__text f-contacts-short-item__text_phone">
+                {$kontakinfo.telp}
+            </div>
+          </div>
+          <div class="b-contacts-short-item col-md-12 col-sm-4 col-xs-12">
+            <div class="b-contacts-short-item__icon f-contacts-short-item__icon b-left f-contacts-short-item__icon_xs">
+              <i class="fa fa-envelope"></i>
+            </div>
+            <div class="b-remaining f-contacts-short-item__text f-contacts-short-item__text_email">
+              <a href="">{$kontakinfo.email}</a>
+            </div>
+          </div>
+           {/nocache}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,86 @@
+
+{include file="web/home/anggota_slider.html"}
+<section class="b-tagline-box b-infoblock b-diagonal-line-bg-light">
+<div class="container">
+  <!--<div class="f-primary-b b-title-b-hr f-title-b-hr">GRAFIK KOLEKSI</div>-->
+  <div class="row">
+    <div class="col-md-4">
+      <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special font-judul-header" style=" color: #589444;">
+      {$judul.berita_dmsi}</h4>
+      <div class="b-blog-short-post b-blog-short-post--img-hover-bordered b-blog-short-post--w-img f-blog-short-post--w-img row">
+        <div class="b-blog-short-post b-blog-short-post--img-hover-bordered b-blog-short-post--w-img f-blog-short-post--w-img row"> {if $berita_sidebar neq ''}
+          {foreach name=list_berita_sidebar from=$berita_sidebar item=rs}
+          <div class="b-blog-short-post--popular col-md-12  col-xs-12 f-primary-b">
+            <div class="b-blog-short-post__item_img"> <a href="{$rs.url_detail}"><img data-retina src="{$baseurl}php_helpers/timthumb.php?src={$rs.image}&amp;w=120&amp;zc=0" alt="" /></a> </div>
+            <div class="b-remaining">
+              <div class="b-blog-short-post__item_text f-blog-short-post__item_text"><a href="{$rs.url_detail}" class="f-primary-b f-more font-judul">{$rs.judul}</a> </div>
+              <div class="b-blog-short-post__item_date f-blog-short-post__item_date f-primary-it"> {$rs.tanggal} </div>
+            </div>
+          </div>
+          {/foreach}
+          {/if} </div>
+      </div>
+    </div>
+    <!--START Berita anggota DMSI-->
+    <div class="col-md-4">
+      <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special font-judul-header " style=" color: #589444;">
+      {$judul.berita_anggota}</h4>
+      <div class="b-blog-short-post b-blog-short-post--img-hover-bordered b-blog-short-post--w-img f-blog-short-post--w-img row">
+        <div class="b-blog-short-post b-blog-short-post--img-hover-bordered b-blog-short-post--w-img f-blog-short-post--w-img row"> {if $berita_asosiasi neq ''}
+          {foreach name=list_berita_asosiasi from=$berita_asosiasi item=rs}
+          <div class="b-blog-short-post--popular col-md-12  col-xs-12 f-primary-b">
+            <div class="b-blog-short-post__item_date f-blog-short-post__item_date f-primary-it font-judul-asosiasi"> {$rs.nama_asosiasi} </div>
+            <div class="b-blog-short-post__item_img"> <a href="{$rs.url_detail}"><img data-retina src="{$baseurl}php_helpers/timthumb.php?src={$rs.image}&amp;w=120&amp;zc=0" alt=""/></a> </div>
+            <div class="b-remaining">
+              <div class="b-blog-short-post__item_text f-blog-short-post__item_text font-judul"> <a href="{$rs.url_detail}">{$rs.judul}</a> </div>
+              <div class="b-blog-short-post__item_date f-blog-short-post__item_date f-primary-it"> {$rs.tanggal} </div>
+            </div>
+          </div>
+          {/foreach}
+          {/if} </div>
+      </div>
+    </div>
+    <!--END Berita anggota DMSI-->
+    <!--START KEGIATAN DMSI-->
+    <div class="col-sm-4">
+      <div class="b-carousel-secondary f-carousel-secondary b-some-examples-tertiary f-some-examples-tertiary b-carousel-reset">
+        <div class="b-carousel-title f-carousel-title f-primary-b" style=" color: #589444;">
+        {if $act_lang eq 'en'}
+        DMSI EVENT
+        {else}
+        EVENT DMSI
+        {/if} </div>
+        <div class="b-some-examples f-some-examples j-carousel-secondary"> {if $eventhome neq ''}
+          {foreach name=list_event_home from=$eventhome item=rs}
+          <div class="b-some-examples__item f-some-examples__item">
+          <div class="b-app-with-img__item">
+                        <div class="b-app-with-img__item_img view view-sixth">
+    <img data-retina="" src="{$rs.image_agenda}" alt="">
+    <div class="b-item-hover-action f-center mask">
+        <div class="b-item-hover-action__inner">
+            <div class="b-item-hover-action__inner-btn_group">
+                <a href="{$rs.url_detail}" class="b-btn f-btn b-btn-light f-btn-light info"><i class="fa fa-link"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+                        <div class="b-app-with-img__item_text f-center">
+                            <div class="b-app-with-img__item_name f-app-with-img__item_name f-primary-b"><a href="{$rs.url_detail}">{$rs.judul_agenda}</a></div>
+                            <div class="b-app-with-img__item_info f-app-with-img__item_info f-primary">{$rs.tanggal_mulai}</div>
+                        </div>
+                    </div>
+                    
+          {/foreach}
+          {/if} </div>
+      </div>
+    </div>
+  </div>
+  <!--END KEGIATAN DMSI-->
+
+</div>
+
+</div>
+{include file="web/home/aspirasi_slider.html"}
+</div>
+{include file="web/home/sponsor_slider.html"}
+

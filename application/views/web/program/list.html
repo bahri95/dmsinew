@@ -1,0 +1,23 @@
+{if $program_list neq ''}
+    {foreach name=program_list from=$program_list item=rs}
+ <section class="b-portfolio-slider-box">
+        <div class="f-carousel-secondary b-portfolio__example-box f-some-examples-tertiary b-carousel-reset b-carousel-arr-square b-carousel-arr-square--big f-carousel-arr-square">
+            <div class="b-carousel-title f-carousel-title f-carousel-title__color f-primary-b b-diagonal-line-bg-light">
+               Program : {$rs.judul_program}  <span class="b-blog-one-column__info_delimiter"></span>
+               <strong> Tanggal Dibuat: {$rs.tanggal} </strong>
+               <br/>
+            </div>
+         
+           <br/>
+           <div class="col-md-9">
+            <div class="b-portfolio-slider-box__items">
+                <div class="b-slider-images j-slider-images">
+                    <img class=""  data-retina="" src="{$rs.image}" alt="">
+                    
+                </div>
+            </div>
+           </div>
+        </div>
+    </section>
+{/foreach}
+{/if}

@@ -1,0 +1,32 @@
+<section class="b-infoblock--without-border">
+    <div class="container ">
+    {if $nama_album neq ''}
+    {foreach name=nama_album from=$nama_album item=nama }
+    <h3 class="f-primary-b f-title-big">{$nama.nama_album}</h3>
+    {/foreach}
+    {/if}
+<div class="j-filter-content">
+          <div class="row row b-col-default-indent b-gallery--secondary j-masonry">
+            <div class="masonry-gridSizer col-sm-6 col-md-4 col-lg-3"></div>
+             {if $foto_list neq ''}
+            {foreach name=list_album from=$foto_list item=rs}
+            <div class="j-masonry-item col-sm-6 col-md-4 col-lg-3 j-filter-portrait">
+                
+                <div class="b-gallery-main-item view view-eighth">
+                <img data-retina='' src='{$rs.foto}'>
+                <div class="b-item-hover-action f-center mask">
+                <div class="b-item-hover-action__inner">
+                <div class="b-item-hover-action__inner-btn_group b-default-top-indent">
+                    <a data-animate="fadeInDown" href='{$rs.foto}' class='b-btn f-btn b-btn-light f-btn-light fancybox info' rel='gallery' title='{$rs.judul_foto}'><i class='fa fa-arrows-alt'></i></a>
+                    <div class="f-uppercase c-white f-title-small b-default-top-indent f-primary-b">{$rs.judul_foto}</div>
+                </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            {/foreach}
+            {/if}
+</div>
+</div>
+</div>
+</section>

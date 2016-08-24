@@ -1,0 +1,58 @@
+<div class="head-content">
+    <h3>Administrator System</h3>
+    <div class="tab-nav"> </div>
+    <div class="ffhack"></div>
+</div>
+<table class="table-input" width="100%">
+    <tr class="headrow">
+        <th colspan="4">Super Administrator</th>
+    </tr>
+    <tr>
+        <td colspan="4"> Keterangan :<br />
+            Untuk sistem yang dibangun dari awal (start from zero) maka administrator dibawah ini dapat diberlakukan.<br />
+            Sistem yang telah dikembangkan tidak disarankan menggunakan pengaturan administrator dibawah ini. </td>
+    </tr>
+    <tr>
+        <td width="20%">User ID<br />
+            <em>User ID</em></td>
+        <td width="30%"><strong>userdemo</strong></td>
+        <td width="20%">Kata Kunci<br />
+            <em>Password</em></td>
+        <td width="30%"><strong>userdemo</strong></td>
+    </tr>
+</table>
+<form action="{$url_process}" method="post">
+    <input type="hidden" name="id_user" value="{$id_user}" />
+    <table class="table-view" width="100%">
+        <tr height="25px">
+            <th width="5%"></th>
+            <th width="25%">Site Portal</th>
+            <th width="30%">Access Authority</th>
+            <th width="40%">Deskripsi</th>
+        </tr>
+        {foreach name=list_data from=$data item=result}
+        {if $smarty.foreach.list_data.index % 2 == 0}
+        <tr>
+            <td class="content-center">
+                <input type="checkbox" name="id_auth[]" value="{$result->id_auth}" {if in_array($result->id_auth, $selected_id)}checked="checked"{/if} />
+            </td>
+            <td>{$result->site_portal}</td>
+            <td>{$result->auth_name}</td>
+            <td>{$result->deskripsi}</td>
+        </tr>
+        {else}
+        <tr class="blink-row">
+            <td class="content-center">
+                <input type="checkbox" name="id_auth[]" value="{$result->id_auth}" {if in_array($result->id_auth, $selected_id)}checked="checked"{/if} />
+            </td>
+            <td>{$result->site_portal}</td>
+            <td>{$result->auth_name}</td>
+            <td>{$result->deskripsi}</td>
+        </tr>
+        {/if}
+        {/foreach}
+        <tr>
+            <td colspan="4"><input type="submit" name="save" value="Simpan" /> </td>
+        </tr>
+    </table>
+</form>

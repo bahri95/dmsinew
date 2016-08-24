@@ -1,0 +1,43 @@
+<div class="head-content">
+    <h3>Museum</h3>
+    <div class="tab-nav">
+        <ul>
+            <li>
+                <a href="#" class="tab-nav-active">Edit Data</a>
+            </li>
+            <li>
+                <a href="{$url_add}" class="tab-nav-active">
+                    <img src="{$BASEURL}doc/images/add-icon.gif" alt="" />
+                    Tambah Data
+                </a>
+            </li>
+            <li><a href="{$url_list}">List Data</a></li>
+        </ul>
+    </div>
+    <div class="ffhack"></div>
+</div>
+<!-- notification template -->
+{if $notification_msg <> ""}
+<div class="notification {$notification_status}">
+    <!-- list of notification message -->
+    {$notification_msg}
+</div>
+{/if}
+<!-- End of notification template -->
+<form action="{$url_process}" method="post">
+    <input type="hidden" name="id_user" value="{$id}" />
+    <input type="hidden" name="id_jenis" value="{$data->id_jenis}" />
+    <table class="table-input" width="100%">
+        <tr class="headrow">
+            <th colspan="2">Edit Museum</th>
+        </tr>
+        <tr>
+            <td>Nama Museum *<br />
+                <em>Name</em></td>
+            <td><input type="text" name="jenis_museum" value="{$data->jenis_museum}" size="100" maxlength="255" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Simpan" name="save[insert]" class="edit-button" /></td>
+        </tr>
+    </table>
+</form>

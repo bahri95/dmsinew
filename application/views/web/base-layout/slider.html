@@ -1,0 +1,33 @@
+<div class="b-slidercontainer b-slider">
+
+      <div class="j-fullscreenslider j-arr-hide">
+
+          <ul>
+
+              {nocache}
+
+              {if $databanner neq ''}
+
+              {foreach name=data_banner from=$databanner item=rs}
+
+              <li data-transition="" data-slotamount="17" >
+
+                  <div class="tp-bannertimer"></div>
+
+                  <img data-retina src="{$rs.banner}">
+
+              </li>
+
+              {/foreach}
+
+              {/if}
+
+              {/nocache}
+
+             
+
+          </ul>
+
+      </div>
+
+  </div>
