@@ -30,9 +30,7 @@ class Registrasi extends MY_Controller {
 
  	public function index() {
 
-
-		// load library
-
+     //data 
 
         $this->load->library('Notification');
 
@@ -67,12 +65,11 @@ class Registrasi extends MY_Controller {
         $this->load->model('registrasimodel');
 
         //data anggota baru
-
-
         $data_anggota_baru = $this->registrasimodel->get_list_anggota_baru();
-
-
+        
         $this->smarty->assign('data_anggota_baru', $data_anggota_baru);
+
+
 
         // jumlah anggota baru
 
@@ -87,9 +84,6 @@ class Registrasi extends MY_Controller {
         $this->smarty->assign("url_process_anggota_disetujui", site_url("private/registrasi/process/disetujui"));
 
         //datadetail
-
-        
-        
 
 	}
 

@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-25 09:10:26
-         compiled from "application\views\private\registrasi\list.html" */ ?>
-<?php /*%%SmartyHeaderCode:2746257bc1c43cbf917-52339595%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-25 06:15:25
+         compiled from "application\views\private\registrasi\list_disetujui.html" */ ?>
+<?php /*%%SmartyHeaderCode:1662357be66d79f1fb8-17700741%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '2bc21fa119a19d3123d435d8d391bf206d9afce2' => 
+    '7a809d91dd99e2b3f41278245d6b1fa77a01ed02' => 
     array (
-      0 => 'application\\views\\private\\registrasi\\list.html',
-      1 => 1472109024,
+      0 => 'application\\views\\private\\registrasi\\list_disetujui.html',
+      1 => 1472098524,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2746257bc1c43cbf917-52339595',
+  'nocache_hash' => '1662357be66d79f1fb8-17700741',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57bc1c43d5fbb8_64509025',
+  'unifunc' => 'content_57be66d7a866d5_17354665',
   'variables' => 
   array (
     'jumlah_anggota_baru' => 0,
@@ -27,13 +27,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'url_anggota_disetujui' => 0,
     'jumlah_anggota_disetujui' => 0,
     'url_aspirasi_hapus' => 0,
-    'data_anggota_baru' => 0,
+    'data_anggota_disetujui' => 0,
     'rs' => 0,
     'url_process_anggota_disetujui' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57bc1c43d5fbb8_64509025')) {function content_57bc1c43d5fbb8_64509025($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_57be66d7a866d5_17354665')) {function content_57be66d7a866d5_17354665($_smarty_tpl) {?>
 
 
 <script type="text/javascript">
@@ -45,8 +45,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       return false;
     }
   }
-
-
 </script>
 
 
@@ -59,7 +57,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <section class="content-header">
           <h1>
             &nbsp;&nbsp;Anggota
-           <small>
+            <small>
             <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['jumlah_anggota_baru']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {
@@ -130,7 +128,7 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
 
                 <div class="box-body no-padding">
                   <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="<?php echo $_smarty_tpl->tpl_vars['url_anggota_list']->value;?>
+                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['url_anggota_list']->value;?>
 "><i class="fa fa-inbox"></i> Permintaan Anggota<span class="label label-primary pull-right"><?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['jumlah_anggota_baru']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {
@@ -139,8 +137,8 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                           <?php echo $_smarty_tpl->tpl_vars['result']->value['jumlah'];?>
 
                      <?php } ?></span></a></li>
-
-                   <li><a href="<?php echo $_smarty_tpl->tpl_vars['url_anggota_disetujui']->value;?>
+                     
+                   <li  class="active"><a href="<?php echo $_smarty_tpl->tpl_vars['url_anggota_disetujui']->value;?>
 "><i class="fa fa-inbox"></i> Anggota Disetujui<span class="label label-primary pull-right"><?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['jumlah_anggota_disetujui']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {
@@ -179,7 +177,7 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
 
 
 
-                  <h3 class="box-title">Daftar Permintaan Anggota</h3>
+                  <h3 class="box-title">Daftar Anggota yang Disetujui</h3>
 
 
                   <div class="box-tools pull-right">
@@ -262,9 +260,9 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
 
 
                           <th width="20%">Pekerjaan</th>
-                        
 
-                          <th width="25%"></th>
+
+                          <th width="15%"></th>
 
 
                       </thead>
@@ -277,53 +275,33 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
 
 
                        <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['data_anggota_baru']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_from = $_smarty_tpl->tpl_vars['data_anggota_disetujui']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {
 $_smarty_tpl->tpl_vars['rs']->_loop = true;
 ?>
 
 
                         <tr>
-
-
                           <td><input type="checkbox" name="id_registrasi[]" value="<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
 " /></td>
-
-
                           <td class="mailbox-name"><?php echo $_smarty_tpl->tpl_vars['rs']->value['nama'];?>
 </td>
-
-
                           <td class="mailbox-subject"><?php echo $_smarty_tpl->tpl_vars['rs']->value['nama_asosiasi'];?>
 </td>
-
-
                           <td class="mailbox-date" width="10%"><?php echo $_smarty_tpl->tpl_vars['rs']->value['pekerjaan'];?>
 </td>
-
-
-                         
-
-
                           <td align="center">
-                               <div class="btn-group-vertical"><a href="javascript:void(0);" onClick="open_modal('Detail Anggota',$('#modal-detail-anggota<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
-').html(),$('#modal-detail-anggota-footer').html(),'medium');" title="Lihat Detail" class="btn btn-success btn-flat"><i class='fa fa-eye'></i></a>
+                              <div class="btn-group-vertical"><a href="<?php echo $_smarty_tpl->tpl_vars['url_process_anggota_disetujui']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
+" title="Lihat Detail" class="btn btn-success btn-flat"><i class='fa fa-eye'></i></a>
                               </div> 
                               <div class="btn-group-vertical"><a href="<?php echo $_smarty_tpl->tpl_vars['url_process_anggota_disetujui']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
 " title="Kirim Pesan" class="btn btn-success btn-flat"><i class='fa fa-envelope'></i></a>
                               </div> 
-                              <div class="btn-group-vertical"><a href="<?php echo $_smarty_tpl->tpl_vars['url_process_anggota_disetujui']->value;?>
-/<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
-" title="Setujui" class="btn btn-success btn-flat"><i class='fa fa-check'></i></a>
-                              </div> 
-
-
-                              
 
                           </td>
 
-                         
 
                         </tr>
 
@@ -387,31 +365,8 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
 
           </div><!-- /.row -->
 
-          
 
-           <?php echo $_smarty_tpl->getSubTemplate ("private/registrasi/detail_anggota.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-                     <!-- Modal form -->
-                
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="myModalLabel"></h4>
-                      </div>
-                      <div class="modal-body" id="modal-bodyku">
-                      </div>
-                      <div class="modal-footer" id="modal-footerq">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- end of modal ------------------------------> 
-               
         </section><!-- /.content -->
 
 
-      </div><!-- /.content-wrapper -->
-
-<?php }} ?>
+      </div><!-- /.content-wrapper --><?php }} ?>

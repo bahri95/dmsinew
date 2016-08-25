@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-24 06:57:44
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-25 09:10:25
          compiled from "application\views\private\base-layout\document.html" */ ?>
 <?php /*%%SmartyHeaderCode:1343157888d7d407514-59546593%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '985f90fb749eb9e3b279a3440dc676881793741a' => 
     array (
       0 => 'application\\views\\private\\base-layout\\document.html',
-      1 => 1471944720,
+      1 => 1472095225,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'rs' => 1,
     'data_anggota_baru' => 1,
     'jumlah_anggota_baru' => 1,
-    'url_anggota_list' => 1,
+    'url_anggota_list' => 0,
     'user_account' => 1,
     'url_logout_admin_process' => 1,
     'LOADJS' => 1,
@@ -104,7 +104,7 @@ $_smarty_tpl->tpl_vars[\'result\']->_loop = true;
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                      <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php } ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
  Permintaan Anggota baru yang belum disetujui                     <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php } else { ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
-                     Tidak ada permintaan                    <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php }?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
+                     Tidak ada permintaan Anggota                    <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php }?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
 </li>                  <li>                    <!-- inner menu: contains the actual data -->                    <ul class="menu">                                        <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php if ($_smarty_tpl->tpl_vars[\'data_anggota_baru\']->value!=\'\') {?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                     <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php  $_smarty_tpl->tpl_vars[\'rs\'] = new Smarty_Variable; $_smarty_tpl->tpl_vars[\'rs\']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars[\'data_anggota_baru\']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, \'array\');}
@@ -119,8 +119,8 @@ $_smarty_tpl->tpl_vars[\'rs\']->_loop = true;
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
 </p>                        </a>                      </li><!-- end message -->                      <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php } ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                       <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php }?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
-                                          </ul>                  </li>                  <li class="footer"><a href="<?php echo $_smarty_tpl->tpl_vars['url_aspirasi_list']->value;?>
-">Lihat Semua Pesan</a></li>                </ul>              </li>              <!-- Notifications: style can be found in dropdown.less -->                        <!-- User Account: style can be found in dropdown.less -->                                                <li class="dropdown user user-menu">                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">                                <i class="glyphicon glyphicon-user"></i>                                <span><?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'user_account\']->value[\'admin_name\'];?>
+                                          </ul>                  </li>                  <li class="footer"><a href="<?php echo $_smarty_tpl->tpl_vars['url_anggota_list']->value;?>
+">Lihat semua permintaan Anggota</a></li>                </ul>              </li>              <!-- Notifications: style can be found in dropdown.less -->                        <!-- User Account: style can be found in dropdown.less -->                                                <li class="dropdown user user-menu">                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">                                <i class="glyphicon glyphicon-user"></i>                                <span><?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'user_account\']->value[\'admin_name\'];?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
 <i class="caret"></i></span>                            </a>                            <ul class="dropdown-menu">                                <!-- User image -->                                <li class="user-header bg-light-blue">                                    <img src="<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'user_account\']->value[\'photo\'];?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>

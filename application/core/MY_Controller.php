@@ -1054,6 +1054,8 @@ class MY_Controller extends CI_Controller {
 		$this->layout->load_javascript("js/admin/adminlte/custom.js");
 
 		$this->layout->load_javascript("js/ajaxupload.3.5.js");
+		// lightbox
+		
 
 		
 

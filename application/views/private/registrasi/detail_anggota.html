@@ -1,6 +1,6 @@
 {nocache}
-
- <div class="container" id="modal-detail-anggota" style="display:none;" >
+ {foreach name=data_anggota_baru from=$data_anggota_baru item=rs}
+ <div class="container" id="modal-detail-anggota{$rs.id_registrasi}" style="display:none;" >
       <div class="row">
     
         <div class="col-xs-12  toppad" >
@@ -8,19 +8,19 @@
    
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title">Sheena Kristin A.Eschor</h3>
+              <h3 class="panel-title">{$rs.nama}</h3>
             </div>
             <div class="panel-body">
               <div class="row">
-                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
+                <div class="col-md-3 col-lg-3 " align="center"><img src="{$BASEURL}doc/registrasi/{$rs.id_registrasi}/{$rs.image}" width="100" class="img-circle img-responsive"> </div>
                 
                
                 <div class=" col-md-9 col-lg-9 "> 
                   <table class="table table-user-information">
                     <tbody>
                       <tr>
-                        <td>Department:</td>
-                        <td>Programming</td>
+                        <td>Pekerjaan</td>
+                        <td>{$rs.pekerjaan}</td>
                       </tr>
                       <tr>
                         <td>Hire date:</td>
@@ -67,4 +67,5 @@
 <div id="modal-detail-anggota-footer" style="display:none;">
   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 </div>
+{/foreach}
 {/nocache} 
