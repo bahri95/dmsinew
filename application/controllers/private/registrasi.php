@@ -40,9 +40,6 @@ class Registrasi extends MY_Controller {
 		$this->smarty->assign('template_content',"private/registrasi/list");
 
 
-		
-
-
 		// notification
 
 
@@ -50,9 +47,6 @@ class Registrasi extends MY_Controller {
 
 
 		//print_r($arr_notify);
-
-
-        
 
 
 		$this->smarty->assign("notification_msg", $arr_notify['message']);
@@ -71,10 +65,6 @@ class Registrasi extends MY_Controller {
 
 
         $this->load->model('registrasimodel');
-
-
-
-
 
         //data anggota baru
 
@@ -95,6 +85,10 @@ class Registrasi extends MY_Controller {
         $this->smarty->assign('jumlah_anggota_disetujui', $jumlah_anggota_disetujui);
         // process anggota disetujui
         $this->smarty->assign("url_process_anggota_disetujui", site_url("private/registrasi/process/disetujui"));
+
+        //datadetail
+
+        
         
 
 	}
@@ -118,7 +112,7 @@ class Registrasi extends MY_Controller {
         $this->load->library('Notification');
 
 
-        $this->smarty->assign('template_content',"private/registrasi/list_setujui");
+        $this->smarty->assign('template_content',"private/registrasi/list_disetujui");
 
 
         
@@ -145,61 +139,30 @@ class Registrasi extends MY_Controller {
        
 
 
-        //load model aspirasi
+        $this->load->model('registrasimodel');
+
+        //data anggota baru
 
 
-        $this->load->model('aspirasimodel');
+        $data_anggota_disetujui = $this->registrasimodel->get_list_anggota_disetujui();
 
 
-        //jumlah aspirasi belum di verifikasi
+        $this->smarty->assign('data_anggota_disetujui', $data_anggota_disetujui);
+
+        // jumlah anggota baru
+
+        $jumlah_anggota_baru = $this->registrasimodel->get_jumlah_anggota_baru();
+
+        $this->smarty->assign('jumlah_anggota_baru', $jumlah_anggota_baru);
+
+        // jumlah anggota yang sudah di setujui
+        $jumlah_anggota_disetujui = $this->registrasimodel->get_jumlah_anggota_disetujui();
+        $this->smarty->assign('jumlah_anggota_disetujui', $jumlah_anggota_disetujui);
+        // process anggota disetujui
+        $this->smarty->assign("url_process_anggota_disetujui", site_url("private/registrasi/process/disetujui"));
 
 
-          $jumlah_aspirasi = $this->aspirasimodel->get_jumlah_aspirasi();
-
-
-        $this->smarty->assign('jumlah_aspirasi', $jumlah_aspirasi);
-
-
-        //jumlah aspirasi verifikasi
-
-
-        $jumlah_aspirasi_ver = $this->aspirasimodel->get_jumlah_aspirasi_verifikasi();
-
-
-        $this->smarty->assign('jumlah_aspirasi_ver', $jumlah_aspirasi_ver);
-
-
-          //jumlah aspirasi jawaban
-
-
-        $jumlah_aspirasi_jaw = $this->aspirasimodel->get_jumlah_aspirasi_jawaban();
-
-
-        $this->smarty->assign('jumlah_aspirasi_jaw', $jumlah_aspirasi_jaw);
-
-
-        //data aspirasi verikasi
-
-
-        $data_aspirasi_ver = $this->aspirasimodel->get_data_aspirasi_verifikasi();
-
-
-        $this->smarty->assign('data_aspirasi_ver', $data_aspirasi_ver);
-
-
-
-
-
-        // read aspirasi
-
-
-        $this->smarty->assign("url_aspirasi", site_url("private/aspirasi"));
-
-
-        $this->smarty->assign("url_aspirasi_read", site_url("private/aspirasi/read"));
-
-
-        // hapus aspirasi
+        // hapus anggota
 
 
         $this->smarty->assign("url_aspirasi_hapus_ver", site_url("private/aspirasi/process/hapus_ver"));

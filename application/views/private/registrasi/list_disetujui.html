@@ -2,96 +2,74 @@
 
 
 <script type="text/javascript">
-
-
   function konfirmasi_delete_data(){
-
-
     tanya = confirm('Apakah anda yakin akan menghapus data ini!');
-
-
     if(tanya){
-
-
       return true;
-
-
     }else{
-
-
       return false;
-
-
     }
-
-
   }
-
-
-
-
-
 </script>
-
-
 {/literal}
-
-
-
 
 
 <!-- Content Wrapper. Contains page content -->
 
 
       <div class="content-wrapper">
-
-
         <!-- Content Header (Page header) -->
-
-
         <section class="content-header">
-
-
           <h1>
-
-
-            &nbsp;&nbsp;Aspirasi
-
-
-            <small>{foreach name=list_aspirasi from=$jumlah_aspirasi item=result}
-
-
+            &nbsp;&nbsp;Anggota
+            <small>
+            {foreach name=jumlah_anggota_baru from=$jumlah_anggota_baru item=result}
                           {$result.jumlah}
-
-
-                     {/foreach} Pesan Baru</small>
-
-
+                     {/foreach} Permintaan Anggota</small>
           </h1>
-
-
-          
-
-
         </section>
-
-
-
-
-
         <!-- Main content -->
-
-
         <section class="content">
-
-
           <div class="row">
-
-
             <div class="col-md-3">
+              {if $notification_msg <> ""}
+                        <div class="col-md-12">
+                            {if $notification_status eq 'red'}
+                            <div class="alert alert-danger alert-dismissable">
+                                        <i class="fa fa-ban"></i>
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        {$notification_msg}.
+                                    </div>
 
 
-             
+                                 {/if}
+
+
+                                 {if $notification_status eq 'green'}
+
+
+                                 <div class="alert alert-success alert-dismissable">
+
+
+                                        <i class="fa fa-check"></i>
+
+
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+
+                                         {$notification_msg}.
+
+
+                                    </div>
+
+
+                                 {/if}
+
+
+                         </div>
+
+
+                        {/if}
 
 
               <div class="box box-solid">
@@ -100,45 +78,24 @@
                 <div class="box-header with-border">
 
 
-                  <h3 class="box-title">Folders</h3>
+                  <h3 class="box-title">Folder</h3>
 
 
                 </div>
 
 
                 <div class="box-body no-padding">
-
-
                   <ul class="nav nav-pills nav-stacked">
-
-
-                    <li ><a href="{$url_aspirasi}"><i class="fa fa-inbox"></i> Pesan Baru <span class="label label-primary pull-right">{foreach name=list_aspirasi from=$jumlah_aspirasi item=result}
-
-
+                    <li><a href="{$url_anggota_list}"><i class="fa fa-inbox"></i> Permintaan Anggota<span class="label label-primary pull-right">{foreach name=jumlah_anggota_baru from=$jumlah_anggota_baru item=result}
                           {$result.jumlah}
-
-
+                     {/foreach}</span></a></li>
+                     
+                   <li  class="active"><a href="{$url_anggota_disetujui}"><i class="fa fa-inbox"></i> Anggota Disetujui<span class="label label-primary pull-right">{foreach name=jumlah_anggota_disetujui from=$jumlah_anggota_disetujui item=result}
+                          {$result.jumlah}
                      {/foreach}</span></a></li>
 
 
-                    <li class="active"><a href="{$url_aspirasi_list_verifikasi}"><i class="fa fa-envelope-o"></i> Sudah Diverifikasi <span class="label label-primary pull-right">{foreach name=list_aspirasi from=$jumlah_aspirasi_ver item=result}
-
-
-                          {$result.jumlah}
-
-
-                     {/foreach}</span></a></li>
-
-
-                    <li><a href="{$url_aspirasi_list_jawaban}"><i class="fa fa-envelope-o"></i> Sudah Dijawab<span class="label label-primary pull-right">{foreach name=list_aspirasi from=$jumlah_aspirasi_jaw item=result}
-
-
-                          {$result.jumlah}
-
-
-                     {/foreach}</span></a></li>
-
-
+                   
                   </ul>
 
 
@@ -163,7 +120,10 @@
                 <div class="box-header with-border">
 
 
-                  <h3 class="box-title">Pesan</h3>
+
+
+
+                  <h3 class="box-title">Daftar Anggota yang Disetujui</h3>
 
 
                   <div class="box-tools pull-right">
@@ -187,7 +147,7 @@
                 </div><!-- /.box-header -->
 
 
-                <form action="{$url_aspirasi_hapus_ver}" name="form-aspirasi" method="post" onsubmit="javascript:return konfirmasi_delete_data();">
+                <form action="{$url_aspirasi_hapus}" name="form-aspirasi" method="post" onsubmit="javascript:return konfirmasi_delete_data();">
 
 
                 <div class="box-body no-padding">
@@ -205,13 +165,10 @@
                     <div class="btn-group">
 
 
-                     
-
-
                      <button class="btn btn-default btn-sm" type="submit" name="hapus"><i class="fa fa-trash-o"></i></button>
 
 
-                  
+                   
 
 
                       </div><!-- /.btn-group -->
@@ -241,13 +198,16 @@
                           <th width="5%" id="cekAll"><input type="checkbox" class="checked-all" name="checked-all"  id="checked-all" class="form-control"></th>
 
 
-                          <th width="20%">Judul</th>
+                          <th width="20%">Nama Anggota</th>
 
 
-                          <th width="40%">Pesan Aspirasi</th>
+                          <th width="30%">Asal Asosiasi</th>
 
 
-                          <th width="10%">Tanggal</th>
+                          <th width="20%">Pekerjaan</th>
+
+
+                          <th width="15%"></th>
 
 
                       </thead>
@@ -256,31 +216,31 @@
                       <tbody>
 
 
-
-
-
-                      {foreach name=data_aspirasi from=$data_aspirasi_ver item=rs}
+                       
+                       {foreach name=data_anggota_disetujui from=$data_anggota_disetujui item=rs}
 
 
                         <tr>
+                          <td><input type="checkbox" name="id_registrasi[]" value="{$rs.id_registrasi}" /></td>
+                          <td class="mailbox-name">{$rs.nama}</td>
+                          <td class="mailbox-subject">{$rs.nama_asosiasi}</td>
+                          <td class="mailbox-date" width="10%">{$rs.pekerjaan}</td>
+                          <td align="center">
+                              <div class="btn-group-vertical"><a href="{$url_process_anggota_disetujui}/{$rs.id_registrasi}" title="Lihat Detail" class="btn btn-success btn-flat"><i class='fa fa-eye'></i></a>
+                              </div> 
+                              <div class="btn-group-vertical"><a href="{$url_process_anggota_disetujui}/{$rs.id_registrasi}" title="Kirim Pesan" class="btn btn-success btn-flat"><i class='fa fa-envelope'></i></a>
+                              </div> 
 
-
-                          <td><input type="checkbox" name="id_aspirasi[]" value="{$rs.id_aspirasi}" /></td>
-
-
-                          <td class="mailbox-name"><a href="{$url_aspirasi_read}/{$rs.id_aspirasi}">{$rs.judul}</a></td>
-
-
-                          <td class="mailbox-subject">{$rs.isi_aspirasi}</td>
-
-
-                          <td class="mailbox-date" width="10%">{$rs.tanggal}</td>
+                          </td>
 
 
                         </tr>
 
 
                        {/foreach}
+
+
+                     
 
 
                       </tbody>
@@ -307,12 +267,13 @@
                     <!-- Check all button -->
 
 
-        
+    
+
 
                      <button class="btn btn-default btn-sm" type="submit" name="hapus"><i class="fa fa-trash-o"></i></button>
 
 
-                   
+                    
 
 
                     

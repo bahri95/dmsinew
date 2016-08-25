@@ -22,8 +22,8 @@
         <section class="content-header">
           <h1>
             &nbsp;&nbsp;Anggota
-            <small>
-            {foreach name=list_aspirasi from=$jumlah_aspirasi item=result}
+           <small>
+            {foreach name=jumlah_anggota_baru from=$jumlah_anggota_baru item=result}
                           {$result.jumlah}
                      {/foreach} Permintaan Anggota</small>
           </h1>
@@ -89,6 +89,7 @@
                     <li class="active"><a href="{$url_anggota_list}"><i class="fa fa-inbox"></i> Permintaan Anggota<span class="label label-primary pull-right">{foreach name=jumlah_anggota_baru from=$jumlah_anggota_baru item=result}
                           {$result.jumlah}
                      {/foreach}</span></a></li>
+
                    <li><a href="{$url_anggota_disetujui}"><i class="fa fa-inbox"></i> Anggota Disetujui<span class="label label-primary pull-right">{foreach name=jumlah_anggota_disetujui from=$jumlah_anggota_disetujui item=result}
                           {$result.jumlah}
                      {/foreach}</span></a></li>
@@ -122,7 +123,7 @@
 
 
 
-                  <h3 class="box-title">Pesan</h3>
+                  <h3 class="box-title">Daftar Permintaan Anggota</h3>
 
 
                   <div class="box-tools pull-right">
@@ -206,7 +207,7 @@
                           <th width="20%">Pekerjaan</th>
 
 
-                          <th width="5%"></th>
+                          <th width="25%"></th>
 
 
                       </thead>
@@ -224,7 +225,7 @@
                         <tr>
 
 
-                          <td><input type="checkbox" name="id_aspirasi[]" value="{$rs.id_aspirasi}" /></td>
+                          <td><input type="checkbox" name="id_registrasi[]" value="{$rs.id_registrasi}" /></td>
 
 
                           <td class="mailbox-name">{$rs.nama}</td>
@@ -240,19 +241,19 @@
 
 
                           <td align="center">
-
-
-                          
-
-
+                               <div class="btn-group-vertical"><a href="javascript:void(0);" onClick="open_modal('Detail Anggota',$('#modal-detail-anggota').html(),$('#modal-detail-anggota-footer').html(),'medium');" title="Lihat Detail" class="btn btn-success btn-flat"><i class='fa fa-eye'></i></a>
+                              </div> 
+                              <div class="btn-group-vertical"><a href="{$url_process_anggota_disetujui}/{$rs.id_registrasi}" title="Kirim Pesan" class="btn btn-success btn-flat"><i class='fa fa-envelope'></i></a>
+                              </div> 
                               <div class="btn-group-vertical"><a href="{$url_process_anggota_disetujui}/{$rs.id_registrasi}" title="Setujui" class="btn btn-success btn-flat"><i class='fa fa-check'></i></a>
-
-
                               </div> 
 
 
+                              
+
                           </td>
 
+                         
 
                         </tr>
 
@@ -316,8 +317,25 @@
 
           </div><!-- /.row -->
 
-
+           {include file="private/registrasi/detail_anggota.html"}
+                     <!-- Modal form -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel"></h4>
+                      </div>
+                      <div class="modal-body" id="modal-bodyku">
+                      </div>
+                      <div class="modal-footer" id="modal-footerq">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of modal ------------------------------> 
         </section><!-- /.content -->
 
 
       </div><!-- /.content-wrapper -->
+

@@ -30,6 +30,18 @@ class Registrasimodel extends CI_Model {
             return 0;
         }
     }
+
+    function get_list_anggota_disetujui() {
+        $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi from registrasi_m a LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi where a.disetujui = 'ya' ORDER BY a.nama";
+        $query = $this->db->query($sql);
+        if ($query->num_rows() > 0) {
+            $result = $query->result_array();
+            $query->free_result();
+            return $result;
+        } else {
+            return 0;
+        }
+    }
     
      function get_jumlah_anggota_baru(){
         $sql = "SELECT a.*, count(*)'jumlah', b.id_asosiasi, b.nama_asosiasi from registrasi_m a LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi where a.disetujui = 'tidak'";
