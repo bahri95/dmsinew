@@ -88,9 +88,9 @@ class Registrasimodel extends CI_Model {
         }
     }
 
-    function get_list_kota() {
-        $sql = "SELECT * FROM spt_kota_m";
-        $query = $this->db->query($sql);
+    function get_list_kota($id_propinsi) {
+        $sql = "SELECT * FROM spt_kota_m where id_propinsi = ?";
+        $query = $this->db->query($sql, array($id_propinsi));
         if ($query->num_rows() > 0) {
             $result = $query->result_array();
             $query->free_result();
@@ -104,6 +104,18 @@ class Registrasimodel extends CI_Model {
 
      function get_list_negara() {
         $sql = "SELECT * FROM spt_negara_m";
+        $query = $this->db->query($sql);
+        if ($query->num_rows() > 0) {
+            $result = $query->result_array();
+            $query->free_result();
+            return $result;
+        } else {
+            return 0;
+        }
+    }
+
+    function get_list_propinsi() {
+        $sql = "SELECT * FROM spt_propinsi_m";
         $query = $this->db->query($sql);
         if ($query->num_rows() > 0) {
             $result = $query->result_array();
@@ -136,7 +148,7 @@ class Registrasimodel extends CI_Model {
     
 
     function process_registrasi_daftar($params) {
-        $sql = "INSERT INTO registrasi_m (nama, pekerjaan, id_asosiasi, email, username, password, perusahaan, alamat, web, id_kota, kode_pos, id_negara, telepon, fax, no_ktp, user_key, user_status) VALUES ( ? , ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO registrasi_m (nama, pekerjaan, id_asosiasi, email, username, password, perusahaan, alamat, web, id_propinsi, id_kota, kode_pos, id_negara, telepon, fax, no_ktp, user_key, user_status) VALUES ( ? , ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         return $this->db->query($sql, $params);
         print_r($sql);
     }

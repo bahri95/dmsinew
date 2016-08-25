@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-23 10:10:09
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-26 02:09:08
          compiled from "application\views\web\registrasi\form.html" */ ?>
 <?php /*%%SmartyHeaderCode:1180857bbcce8cba966-74579534%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c681eb44d13971cfd79007cfbf54d9dcabf6f47b' => 
     array (
       0 => 'application\\views\\web\\registrasi\\form.html',
-      1 => 1471939800,
+      1 => 1472148367,
       2 => 'file',
     ),
   ),
@@ -24,8 +24,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'url_daftar' => 0,
     'listasosiasi' => 0,
     'result' => 0,
+    'url_kota' => 0,
+    'listpropinsi' => 0,
+    'result_propinsi' => 0,
     'listkota' => 0,
-    'listnegara' => 0,
     'url_captcha' => 0,
     'baseurl' => 0,
   ),
@@ -68,7 +70,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
                             <div class="col-md-6">
                                 <div class="b-form-row">
-                                    <label class="b-form-vertical__label" for="name">Nama Lengkap *</label>
+                                    <label class="b-form-vertical__label" for="name">Nama Lengkap/ Nama Organisasi *</label>
                                     <div class="b-form-vertical__input">
                                         <input type="text" id="nama" name="nama" value="" class="form-control" />
                                     </div>
@@ -81,7 +83,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                     </div>
                                 </div>
                                 <div class="b-form-row">
-                                    <label class="b-form-vertical__label" for="website">Organisasi *</label>
+                                    <label class="b-form-vertical__label" for="website">Asosiasi yang dipilih *</label>
                                     <div class="b-form-vertical__input">
                                        <select name="id_asosiasi" class="form-control">
                                              <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
@@ -142,22 +144,39 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                                 </div>
                                 </div>
                                  <div class="col-md-6">
-                                 <div class="b-form-row">
-                                    <label class="b-form-vertical__label" for="website">Kabupaten/Kota *</label>
-                                   <div class="b-form-vertical__input">
-                                       <select name="id_kota" class="selectpicker" data-live-search="true">
-                                             <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
+                                       <div class="form-group">
+                                            <label for="id_propinsi">Provinsi * </label>
+                                           <select name="id_propinsi" id="id_propinsi" class="form-control" onchange="javascript:LoadKota('<?php echo $_smarty_tpl->tpl_vars['url_kota']->value;?>
+/'+this.value);">
+                                            <option value="">-Pilih Provinsi-</option>
+                                            <?php  $_smarty_tpl->tpl_vars['result_propinsi'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result_propinsi']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['listpropinsi']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['result_propinsi']->key => $_smarty_tpl->tpl_vars['result_propinsi']->value) {
+$_smarty_tpl->tpl_vars['result_propinsi']->_loop = true;
+?>
+                                            <option value="<?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi'];?>
+"><?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi'];?>
+ - <?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['nama_propinsi'];?>
+</option>
+                                            <?php } ?>
+                                        </select>
+                                        </div>
+                                        <div class="form-group">
+                                           <label for="id_propinsi">Kota * </label>
+                                          <div id="kota_area"> <select name="id_kota" id="id_kota" class="form-control">
+                                            <option value="">----Pilih Kota----</option>
+                                          <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['listkota']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {
 $_smarty_tpl->tpl_vars['result']->_loop = true;
 ?>
-                                             <option value="<?php echo $_smarty_tpl->tpl_vars['result']->value['id_kota'];?>
+                                            <option value="<?php echo $_smarty_tpl->tpl_vars['result']->value['id_kota'];?>
 "><?php echo $_smarty_tpl->tpl_vars['result']->value['nama_kota'];?>
 </option>
-                                             <?php } ?>
-                                       </select>
-                                    </div>
-                                </div>
+                                          <?php } ?>
+                                          </select></div>
+                                        </div>
+
 
                                  <div class="b-form-row">
                                     <label class="b-form-vertical__label" for="title">Kode Pos</label>
@@ -165,22 +184,7 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                                         <input type="text" id="kode_pos" name="kode_pos"  value="" class="form-control" />
                                     </div>
                                 </div>
-                                <div class="b-form-row">
-                                    <label class="b-form-vertical__label" for="website">Negara *</label>
-                                    <div class="b-form-vertical__input">
-                                        <select id="basic" name="id_negara" class="selectpicker show-tick form-control" data-live-search="true">
-                                           <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['listnegara']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {
-$_smarty_tpl->tpl_vars['result']->_loop = true;
-?>
-                                             <option value="<?php echo $_smarty_tpl->tpl_vars['result']->value['id_negara'];?>
-"><?php echo $_smarty_tpl->tpl_vars['result']->value['nama_negara'];?>
-</option>
-                                             <?php } ?>
-                                        </select>
-                                    </div>
-                                </div>
+                                
                                 <div class="b-form-row">
                                     <label class="b-form-vertical__label" for="title">Telepon *</label>
                                     <div class="b-form-vertical__input">
@@ -259,6 +263,15 @@ doc/refresh.jpg" id="refresh" style="max-width:25px;margin-left:20px;" />
         </div>
     </section>
 </div>
+
+
+<script type="text/javascript">
+    // tiny
+    function LoadKota(url_kota){
+    $("#kota_area").load(url_kota);
+  }
+</script>
+
 
     
     <?php }} ?>

@@ -32,7 +32,7 @@
 
                             <div class="col-md-6">
                                 <div class="b-form-row">
-                                    <label class="b-form-vertical__label" for="name">Nama Lengkap *</label>
+                                    <label class="b-form-vertical__label" for="name">Nama Lengkap/ Nama Organisasi *</label>
                                     <div class="b-form-vertical__input">
                                         <input type="text" id="nama" name="nama" value="" class="form-control" />
                                     </div>
@@ -45,7 +45,7 @@
                                     </div>
                                 </div>
                                 <div class="b-form-row">
-                                    <label class="b-form-vertical__label" for="website">Organisasi *</label>
+                                    <label class="b-form-vertical__label" for="website">Asosiasi yang dipilih *</label>
                                     <div class="b-form-vertical__input">
                                        <select name="id_asosiasi" class="form-control">
                                              {foreach name=list_asosiasi from=$listasosiasi item=result}
@@ -100,16 +100,25 @@
                                 </div>
                                 </div>
                                  <div class="col-md-6">
-                                 <div class="b-form-row">
-                                    <label class="b-form-vertical__label" for="website">Kabupaten/Kota *</label>
-                                   <div class="b-form-vertical__input">
-                                       <select name="id_kota" class="selectpicker" data-live-search="true">
-                                             {foreach name=listkota from=$listkota item=result}
-                                             <option value="{$result.id_kota}">{$result.nama_kota}</option>
-                                             {/foreach}
-                                       </select>
-                                    </div>
-                                </div>
+                                       <div class="form-group">
+                                            <label for="id_propinsi">Provinsi * </label>
+                                           <select name="id_propinsi" id="id_propinsi" class="form-control" onchange="javascript:LoadKota('{$url_kota}/'+this.value);">
+                                            <option value="">-Pilih Provinsi-</option>
+                                            {foreach name=listpropinsi from=$listpropinsi item=result_propinsi}
+                                            <option value="{$result_propinsi.id_propinsi}">{$result_propinsi.id_propinsi} - {$result_propinsi.nama_propinsi}</option>
+                                            {/foreach}
+                                        </select>
+                                        </div>
+                                        <div class="form-group">
+                                           <label for="id_propinsi">Kota * </label>
+                                          <div id="kota_area"> <select name="id_kota" id="id_kota" class="form-control">
+                                            <option value="">----Pilih Kota----</option>
+                                          {foreach name=listkota item=result from=$listkota}
+                                            <option value="{$result.id_kota}">{$result.nama_kota}</option>
+                                          {/foreach}
+                                          </select></div>
+                                        </div>
+
 
                                  <div class="b-form-row">
                                     <label class="b-form-vertical__label" for="title">Kode Pos</label>
@@ -117,16 +126,7 @@
                                         <input type="text" id="kode_pos" name="kode_pos"  value="" class="form-control" />
                                     </div>
                                 </div>
-                                <div class="b-form-row">
-                                    <label class="b-form-vertical__label" for="website">Negara *</label>
-                                    <div class="b-form-vertical__input">
-                                        <select id="basic" name="id_negara" class="selectpicker show-tick form-control" data-live-search="true">
-                                           {foreach name=list_negara from=$listnegara item=result}
-                                             <option value="{$result.id_negara}">{$result.nama_negara}</option>
-                                             {/foreach}
-                                        </select>
-                                    </div>
-                                </div>
+                                
                                 <div class="b-form-row">
                                     <label class="b-form-vertical__label" for="title">Telepon *</label>
                                     <div class="b-form-vertical__input">
@@ -203,6 +203,15 @@
         </div>
     </section>
 </div>
+
+{literal}
+<script type="text/javascript">
+    // tiny
+    function LoadKota(url_kota){
+    $("#kota_area").load(url_kota);
+  }
+</script>
+{/literal}
 
     
     

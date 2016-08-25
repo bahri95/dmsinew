@@ -28,12 +28,15 @@ class Registrasi extends MY_Controller {
 		$this->smarty->assign('listasosiasi', $listasosiasi);
 
 		 // get data kota
-      	$listkota = $this->registrasimodel->get_list_kota();
-		$this->smarty->assign('listkota', $listkota);
-
-		 // get data kota
-      	$listnegara = $this->registrasimodel->get_list_negara();
-		$this->smarty->assign('listnegara', $listnegara);
+      	
+        	$id_propinsi = $this->input->post('id_propinsi');
+            $listkota = $this->registrasimodel->get_list_kota($id_propinsi);
+            $this->smarty->assign("listkota", $listkota);
+        
+         
+		 // get data propinsi
+      	$listpropinsi = $this->registrasimodel->get_list_propinsi();
+		$this->smarty->assign('listpropinsi', $listpropinsi);
 
         $this->smarty->assign("url_daftar", site_url('public/registrasi/daftar'));
         $this->smarty->assign("url_captcha", site_url('public/registrasi/captcha'));
@@ -44,6 +47,11 @@ class Registrasi extends MY_Controller {
         // display document
         $this->parser->parse('web/base-layout/document-full.html');
     }
+
+   
+
+
+	
      public function verifikasi() {
 
 		// template content
@@ -80,22 +88,22 @@ class Registrasi extends MY_Controller {
         $this->load->library('notification');
 	
         // // set rules
-        // $this->notification->check_post('nama', 'Nama', 'required');
-        // $this->notification->check_post('pekerjaan', 'Pekerjaan', 'required');
-        // $this->notification->check_post('id_asosiasi', 'Organisasi', 'required');
+        $this->notification->check_post('nama', 'Nama', 'required');
+        $this->notification->check_post('pekerjaan', 'Pekerjaan', 'required');
+        $this->notification->check_post('id_asosiasi', 'Organisasi', 'required');
 		$this->notification->check_post('email', 'Alamat Email', 'required');
-  //       $this->notification->check_post('username', 'Username', 'required');
-  //       $this->notification->check_post('password', 'Password', 'required');
-		// $this->notification->check_post('perusahaan', 'Perusahaan', 'required');
-		// $this->notification->check_post('alamat', 'Alamat Rumah', 'required');
-		// $this->notification->check_post('web', 'Alamat Web', 'required');
-		// $this->notification->check_post('id_kota', 'Kota', 'required');
-		// $this->notification->check_post('kode_pos', 'Kode Pos', 'required');
-		// $this->notification->check_post('id_negara', 'Negara', 'required');
-		// $this->notification->check_post('telepon', 'Telepon', 'required');
-		// $this->notification->check_post('fax', 'Fax', 'required');
-		// $this->notification->check_post('no_ktp', 'No KTP', 'required');
-		// $this->notification->check_post('user_key', 'Chapta', 'required');
+        $this->notification->check_post('username', 'Username', 'required');
+        $this->notification->check_post('password', 'Password', 'required');
+		$this->notification->check_post('perusahaan', 'Perusahaan', 'required');
+		$this->notification->check_post('alamat', 'Alamat Rumah', 'required');
+		$this->notification->check_post('web', 'Alamat Web', 'required');
+		$this->notification->check_post('id_kota', 'Kota', 'required');
+		$this->notification->check_post('kode_pos', 'Kode Pos', 'required');
+		$this->notification->check_post('id_negara', 'Negara', 'required');
+		$this->notification->check_post('telepon', 'Telepon', 'required');
+		$this->notification->check_post('fax', 'Fax', 'required');
+		$this->notification->check_post('no_ktp', 'No KTP', 'required');
+		$this->notification->check_post('user_key', 'Chapta', 'required');
 
 
 		// run
@@ -128,6 +136,7 @@ class Registrasi extends MY_Controller {
                     'perusahaan' => $this->input->post('perusahaan'),
                     'alamat' => $this->input->post('alamat'),
                     'web' => $this->input->post('web'),
+                    'id_kota' => $this->input->post('id_propinsi'),
                     'id_kota' => $this->input->post('id_kota'),
                     'kode_pos' => $this->input->post('kode_pos'),
                     'id_negara' => $this->input->post('id_negara'),

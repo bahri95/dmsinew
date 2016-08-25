@@ -5,55 +5,29 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '985f90fb749eb9e3b279a3440dc676881793741a' => 
     array (
       0 => 'application\\views\\private\\base-layout\\document.html',
-      1 => 1472095225,
+      1 => 1472135740,
       2 => 'file',
     ),
     '127ed3120242d2eaac5b05ea9e656776b209f371' => 
     array (
       0 => 'application\\views\\private\\base-layout\\sidebar.html',
-      1 => 1471937227,
+      1 => 1472135740,
       2 => 'file',
     ),
-    '7a809d91dd99e2b3f41278245d6b1fa77a01ed02' => 
+    '325d2c2b5cd377d7b51e5da52cf0caa865eeab5b' => 
     array (
-      0 => 'application\\views\\private\\registrasi\\list_disetujui.html',
-      1 => 1472118414,
-      2 => 'file',
-    ),
-    '77e099ab51cff82047a9d80ad1ba79e86529b762' => 
-    array (
-      0 => 'application\\views\\private\\registrasi\\detail_anggota.html',
-      1 => 1472118569,
+      0 => 'application\\views\\private\\asosiasi\\asosiasi-add.html',
+      1 => 1472146320,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '1343157888d7d407514-59546593',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57bebf2ca947f0_98904951',
-  'variables' => 
-  array (
-    'site_description' => 0,
-    'site_keyword' => 0,
-    'site_title' => 0,
-    'THEMESPATH' => 0,
-    'LOADSTYLE' => 1,
-    'data_aspirasi' => 1,
-    'jumlah_aspirasi' => 1,
-    'result' => 1,
-    'url_aspirasi_list' => 0,
-    'rs' => 1,
-    'data_anggota_baru' => 1,
-    'jumlah_anggota_baru' => 1,
-    'url_anggota_list' => 0,
-    'user_account' => 1,
-    'url_logout_admin_process' => 1,
-    'LOADJS' => 1,
-    'LOADJSCRUD' => 1,
-  ),
+  'unifunc' => 'content_57bf42cf2a2545_20793503',
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57bebf2ca947f0_98904951')) {function content_57bebf2ca947f0_98904951($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">    <head>    	<meta charset="UTF-8">	     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>                <meta name='description' content='Museum seni dan budaya di Indonesia' />        <meta name='keywords' content='museum, seni, budaya, indonesia, koleksi' />        <meta name='robots' content='index,follow' />        <title>Administrator Console</title>        <link rel="stylesheet" type="text/css" href="http://localhost/dmsinew/themes/admin/load-style.css" />                <?php echo $_smarty_tpl->tpl_vars['LOADSTYLE']->value;?>
+<?php if ($_valid && !is_callable('content_57bf42cf2a2545_20793503')) {function content_57bf42cf2a2545_20793503($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">    <head>    	<meta charset="UTF-8">	     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>                <meta name='description' content='Museum seni dan budaya di Indonesia' />        <meta name='keywords' content='museum, seni, budaya, indonesia, koleksi' />        <meta name='robots' content='index,follow' />        <title>Administrator Console</title>        <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/admin/load-style.css" />                <?php echo $_smarty_tpl->tpl_vars['LOADSTYLE']->value;?>
             </head>     <body class="skin-blue" onmousemove="change()">        <!-- header logo: style can be found in header.less -->        <header class="header">            <a href="#" class="logo">                <!-- Add the class icon to your logo image or logo icon to add the margining -->              Dewan Minyak Sawit Indonesia            </a>            <!-- Header Navbar: style can be found in header.less -->            <nav class="navbar navbar-static-top" role="navigation">                <!-- Sidebar toggle button-->                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">                    <span class="sr-only">Toggle navigation</span>                    <span class="icon-bar"></span>                    <span class="icon-bar"></span>                    <span class="icon-bar"></span>                </a>                <div class="navbar-right">                    <ul class="nav navbar-nav">                       <!-- Messages: style can be found in dropdown.less-->             <li class="dropdown messages-menu">                <a href="#" class="dropdown-toggle" data-toggle="dropdown">                                  <i class="fa fa-envelope-o"></i>                                     <?php if ($_smarty_tpl->tpl_vars['data_aspirasi']->value!='') {?>                  <span class="label label-success">                     <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['jumlah_aspirasi']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {
@@ -72,7 +46,7 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
 ">                          <div class="pull-left">                            <img src="http://localhost/dmsi/doc/aspirasi/anext.gif" class="img-circle" alt="User Image"/>                  </div>                          <h4>                                                    <?php echo $_smarty_tpl->tpl_vars['rs']->value['nama_pengirim'];?>
                                                       <small><i class="fa fa-clock-o"></i>&nbsp;<?php echo $_smarty_tpl->tpl_vars['rs']->value['tanggal'];?>
 </small>                          </h4>                          <p><?php echo $_smarty_tpl->tpl_vars['rs']->value['isi_aspirasi'];?>
-</p>                        </a>                      </li><!-- end message -->                      <?php } ?>                      <?php }?>                                          </ul>                  </li>                  <li class="footer"><a href="http://localhost/dmsinew/index.php/private/aspirasi">Lihat Semua Pesan</a></li>                </ul>              </li>              <!--anggota -->               <li class="dropdown messages-menu">                <a href="#" class="dropdown-toggle" data-toggle="dropdown">                                  <i class="fa fa-user"></i>                                     <?php if ($_smarty_tpl->tpl_vars['data_anggota_baru']->value!='') {?>                  <span class="label label-success">                     <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
+</p>                        </a>                      </li><!-- end message -->                      <?php } ?>                      <?php }?>                                          </ul>                  </li>                  <li class="footer"><a href="http://localhost:82/dmsinew/index.php/private/aspirasi">Lihat Semua Pesan</a></li>                </ul>              </li>              <!--anggota -->               <li class="dropdown messages-menu">                <a href="#" class="dropdown-toggle" data-toggle="dropdown">                                  <i class="fa fa-user"></i>                                     <?php if ($_smarty_tpl->tpl_vars['data_anggota_baru']->value!='') {?>                  <span class="label label-success">                     <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['jumlah_anggota_baru']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {
 $_smarty_tpl->tpl_vars['result']->_loop = true;
@@ -89,7 +63,7 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
 ?>                      <li><!-- start message -->                        <a href="<?php echo $_smarty_tpl->tpl_vars['url_anggota_list']->value;?>
 ">                          <div class="pull-left">                            <img src="http://localhost/dmsi/doc/aspirasi/anext.gif" class="img-circle" alt="User Image"/>                  </div>                          <h4>                                                    <?php echo $_smarty_tpl->tpl_vars['rs']->value['nama'];?>
                                                                                 </h4>                          <p><?php echo $_smarty_tpl->tpl_vars['rs']->value['nama_asosiasi'];?>
-</p>                        </a>                      </li><!-- end message -->                      <?php } ?>                      <?php }?>                                          </ul>                  </li>                  <li class="footer"><a href="http://localhost/dmsinew/index.php/private/registrasi">Lihat semua permintaan Anggota</a></li>                </ul>              </li>              <!-- Notifications: style can be found in dropdown.less -->                        <!-- User Account: style can be found in dropdown.less -->                                                <li class="dropdown user user-menu">                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">                                <i class="glyphicon glyphicon-user"></i>                                <span><?php echo $_smarty_tpl->tpl_vars['user_account']->value['admin_name'];?>
+</p>                        </a>                      </li><!-- end message -->                      <?php } ?>                      <?php }?>                                          </ul>                  </li>                  <li class="footer"><a href="http://localhost:82/dmsinew/index.php/private/registrasi">Lihat semua permintaan Anggota</a></li>                </ul>              </li>              <!-- Notifications: style can be found in dropdown.less -->                        <!-- User Account: style can be found in dropdown.less -->                                                <li class="dropdown user user-menu">                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">                                <i class="glyphicon glyphicon-user"></i>                                <span><?php echo $_smarty_tpl->tpl_vars['user_account']->value['admin_name'];?>
 <i class="caret"></i></span>                            </a>                            <ul class="dropdown-menu">                                <!-- User image -->                                <li class="user-header bg-light-blue">                                    <img src="<?php echo $_smarty_tpl->tpl_vars['user_account']->value['photo'];?>
 " class="img-circle" alt="<?php echo $_smarty_tpl->tpl_vars['user_account']->value['admin_name'];?>
 " />                                    <p>                                        <?php echo $_smarty_tpl->tpl_vars['user_account']->value['admin_name'];?>

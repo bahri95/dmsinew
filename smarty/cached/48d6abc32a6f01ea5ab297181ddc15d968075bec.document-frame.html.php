@@ -5,31 +5,39 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '48d6abc32a6f01ea5ab297181ddc15d968075bec' => 
     array (
       0 => 'application\\views\\web\\base-layout\\document-frame.html',
-      1 => 1471594299,
+      1 => 1472135742,
       2 => 'file',
     ),
     'fbc81e035079547912715c583bd2aca391b51e76' => 
     array (
       0 => 'application\\views\\private\\loginadmin\\loginform.html',
-      1 => 1471594287,
+      1 => 1472135740,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '2849757888d76aff023-74241161',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57be80eb61e7c1_02861950',
+  'unifunc' => 'content_57bf20131eb035_15284874',
+  'variables' => 
+  array (
+    'title' => 1,
+    'BASEURL' => 0,
+    'THEMESPATH' => 0,
+    'LOADSTYLE' => 0,
+    'LOADJS' => 0,
+  ),
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57be80eb61e7c1_02861950')) {function content_57be80eb61e7c1_02861950($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_57bf20131eb035_15284874')) {function content_57bf20131eb035_15284874($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
-  <link rel="shortcut icon" href="http://localhost/dmsinew/doc/favicon.ico">
+  <link rel="shortcut icon" href="http://localhost:82/dmsinew/doc/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link rel="stylesheet" type="text/css" href="http://localhost/dmsinew/themes/default/load-style.css" />
+<link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/default/load-style.css" />
         
 </head>
 <body style="background-color:#20B2AA; padding-top:50px;">
@@ -40,51 +48,51 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                
     
  <!-- javascript loaded -->
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/jquery.cslider.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/breakpoints.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/jquery/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/scrollspy.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/bootstrap-progressbar/bootstrap-progressbar.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/masonry.pkgd.min.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/imagesloaded.pkgd.min.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/bxslider/jquery.bxslider.min.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/flexslider/jquery.flexslider.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/smooth-scroll/SmoothScroll.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/jquery.carouFredSel-6.2.1-packed.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/rs-plugin/videojs/video.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/jqueryui/jquery-ui.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/modules/sliders.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/modules/ui.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/modules/retina.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/modules/animate-numbers.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/modules/parallax-effect.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/modules/settings.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/modules/color-themes.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/j.placeholder.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/fancybox/jquery.mousewheel.pack.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/fancybox/jquery.fancybox.custom.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/user.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/timeline.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/fontawesome-markers.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/cookie.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/loader.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/scrollIt/scrollIt.min.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/modules/navigation-slide.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/custom.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/audioplayer/js/jplayer.playlist.min.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/audioplayer/js/jquery.jplayer.min.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/audioplayer.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/admin/plugins/datepicker/bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/admin/plugins/daterangepicker/daterangepicker.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/charts/highcharts.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/charts/modules/exporting.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/charts/modules/data.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/bootstrap-select.js"></script>
-<script type="text/javascript" src="http://localhost/dmsinew/js/front/bootstrap-select.js.map"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/jquery.cslider.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/breakpoints.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/scrollspy.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/bootstrap-progressbar/bootstrap-progressbar.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/bxslider/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/flexslider/jquery.flexslider.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/smooth-scroll/SmoothScroll.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/rs-plugin/videojs/video.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/jqueryui/jquery-ui.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/modules/sliders.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/modules/ui.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/modules/retina.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/modules/animate-numbers.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/modules/parallax-effect.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/modules/settings.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/modules/color-themes.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/j.placeholder.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/fancybox/jquery.mousewheel.pack.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/fancybox/jquery.fancybox.custom.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/user.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/timeline.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/fontawesome-markers.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/cookie.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/loader.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/scrollIt/scrollIt.min.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/modules/navigation-slide.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/custom.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/audioplayer/js/jplayer.playlist.min.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/audioplayer/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/audioplayer.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/admin/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/admin/plugins/daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/charts/highcharts.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/charts/modules/exporting.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/charts/modules/data.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/bootstrap-select.js"></script>
+<script type="text/javascript" src="http://localhost:82/dmsinew/js/front/bootstrap-select.js.map"></script>
 
 <!-- end of loaded javascript -->
 

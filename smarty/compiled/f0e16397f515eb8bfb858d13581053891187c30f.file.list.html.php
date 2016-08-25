@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-23 09:47:23
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-26 01:32:09
          compiled from "application\views\private\asosiasi\list.html" */ ?>
 <?php /*%%SmartyHeaderCode:13765578c5477b702d9-65296717%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f0e16397f515eb8bfb858d13581053891187c30f' => 
     array (
       0 => 'application\\views\\private\\asosiasi\\list.html',
-      1 => 1471937791,
+      1 => 1472144985,
       2 => 'file',
     ),
   ),
@@ -65,5 +65,4 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
 " title="Hapus" class="btn btn-danger btn-flat" id="btndel<?php echo $_smarty_tpl->tpl_vars['result']->value['no_regmus'];?>
 " onclick="return konfirmasi_delete();"><i class='fa fa-trash'></i></a>                                                   <a href="<?php echo $_smarty_tpl->tpl_vars['url_anggota']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['result']->value['id_asosiasi'];?>
-" class="btn btn-success btn-flat"> <i class="glyphicon glyphicon-user" title="Lihat Anggota"></i></a>                                                   </div>                                                 </td>                                            </tr>                                            <?php } ?>                                            <?php }?>                                            </tbody>                                            <tfoot>                                        </tfoot>                                    </table>                                    </div><!-- /.box-body -->                            </div><!-- /.box -->                        </div>                    </div><!-- /.row -->                      <?php echo $_smarty_tpl->getSubTemplate ("private/asosiasi/dialog-eksport.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-                     <!-- Modal form -->                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">                  <div class="modal-dialog">                    <div class="modal-content">                      <div class="modal-header">                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>                        <h4 class="modal-title" id="myModalLabel"></h4>                      </div>                      <div class="modal-body" id="modal-bodyku">                      </div>                      <div class="modal-footer" id="modal-footerq">                      </div>                    </div>                  </div>                </div>                <!-- end of modal ------------------------------>                 </section><!-- /.content --><?php }} ?>
+" class="btn btn-success btn-flat"> <i class="glyphicon glyphicon-user" title="Lihat Anggota"></i></a>                                                   </div>                                                 </td>                                            </tr>                                            <?php } ?>                                            <?php }?>                                            </tbody>                                            <tfoot>                                        </tfoot>                                    </table>                                    </div><!-- /.box-body -->                            </div><!-- /.box -->                        </div>                    </div><!-- /.row -->                                    </section><!-- /.content --><?php }} ?>
