@@ -80,8 +80,7 @@ class Registrasi extends MY_Controller {
         // jumlah anggota yang sudah di setujui
         $jumlah_anggota_disetujui = $this->registrasimodel->get_jumlah_anggota_disetujui();
         $this->smarty->assign('jumlah_anggota_disetujui', $jumlah_anggota_disetujui);
-        // process anggota disetujui
-        $this->smarty->assign("url_process_anggota_disetujui", site_url("private/registrasi/process/disetujui"));
+       
 
         //datadetail
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-25 09:10:26
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-25 11:50:00
          compiled from "application\views\private\registrasi\list.html" */ ?>
 <?php /*%%SmartyHeaderCode:2746257bc1c43cbf917-52339595%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2bc21fa119a19d3123d435d8d391bf206d9afce2' => 
     array (
       0 => 'application\\views\\private\\registrasi\\list.html',
-      1 => 1472109024,
+      1 => 1472118152,
       2 => 'file',
     ),
   ),
@@ -306,7 +306,7 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
 
 
                           <td align="center">
-                               <div class="btn-group-vertical"><a href="javascript:void(0);" onClick="open_modal('Detail Anggota',$('#modal-detail-anggota<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
+                               <div class="btn-group-vertical"><a href="javascript:void(0);" onClick="open_modal('Detail Permintaan Anggota',$('#modal-detail-anggota<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
 ').html(),$('#modal-detail-anggota-footer').html(),'medium');" title="Lihat Detail" class="btn btn-success btn-flat"><i class='fa fa-eye'></i></a>
                               </div> 
                               <div class="btn-group-vertical"><a href="<?php echo $_smarty_tpl->tpl_vars['url_process_anggota_disetujui']->value;?>
@@ -317,10 +317,6 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
 /<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
 " title="Setujui" class="btn btn-success btn-flat"><i class='fa fa-check'></i></a>
                               </div> 
-
-
-                              
-
                           </td>
 
                          

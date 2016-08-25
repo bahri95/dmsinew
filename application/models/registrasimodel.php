@@ -19,8 +19,26 @@ class Registrasimodel extends CI_Model {
         }
     }
 
+    function get_list_anggota() {
+        $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi, c.*, d.* from registrasi_m a 
+        LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi
+        LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
+        LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara ORDER BY a.nama";
+        $query = $this->db->query($sql);
+        if ($query->num_rows() > 0) {
+            $result = $query->result_array();
+            $query->free_result();
+            return $result;
+        } else {
+            return 0;
+        }
+    }
     function get_list_anggota_baru() {
-        $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi from registrasi_m a LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi where a.disetujui = 'tidak' ORDER BY a.nama";
+        $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi, c.*, d.* from registrasi_m a 
+        LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi
+        LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
+        LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara
+         where a.disetujui = 'tidak' ORDER BY a.nama";
         $query = $this->db->query($sql);
         if ($query->num_rows() > 0) {
             $result = $query->result_array();
@@ -32,7 +50,10 @@ class Registrasimodel extends CI_Model {
     }
 
     function get_list_anggota_disetujui() {
-        $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi from registrasi_m a LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi where a.disetujui = 'ya' ORDER BY a.nama";
+        $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi, c.*, d.* from registrasi_m a 
+        LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi
+        LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
+        LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara where a.disetujui = 'ya' ORDER BY a.nama";
         $query = $this->db->query($sql);
         if ($query->num_rows() > 0) {
             $result = $query->result_array();

@@ -1,5 +1,5 @@
 {nocache}
- {foreach name=data_anggota_baru from=$data_anggota_baru item=rs}
+ {foreach name=data_anggota from=$data_anggota item=rs}
  <div class="container" id="modal-detail-anggota{$rs.id_registrasi}" style="display:none;" >
       <div class="row">
     
@@ -23,32 +23,52 @@
                         <td>{$rs.pekerjaan}</td>
                       </tr>
                       <tr>
-                        <td>Hire date:</td>
-                        <td>06/23/2013</td>
+                        <td>Organisasi</td>
+                        <td>{$rs.nama_asosiasi}</td>
                       </tr>
-                      <tr>
-                        <td>Date of Birth</td>
-                        <td>01/24/1988</td>
-                      </tr>
-                   
-                         <tr>
-                             <tr>
-                        <td>Gender</td>
-                        <td>Male</td>
-                      </tr>
-                        <tr>
-                        <td>Home Address</td>
-                        <td>Metro Manila,Philippines</td>
-                      </tr>
+                    
+                      
                       <tr>
                         <td>Email</td>
-                        <td><a href="mailto:info@support.com">info@support.com</a></td>
+                        <td><a href="mailto:{$rs.email}">{$rs.email}</a></td>
                       </tr>
-                        <td>Phone Number</td>
-                        <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
-                        </td>
-                           
+                       <tr>
+                        <td>Perusahaan</td>
+                        <td>{$rs.perusahaan}</td>
                       </tr>
+                      <tr>
+                        <td>Alamat</td>
+                        <td>{$rs.alamat}</td>
+                      </tr>
+                      <tr>
+                        <td>Website</td>
+                        <td><a href="http://{$rs.web}">{$rs.web}</a></td>
+                      </tr>
+                      <tr>
+                        <td>Negara</td>
+                        <td>{$rs.nama_negara}</td>
+                      </tr>
+                      <tr>
+                        <td>Kota</td>
+                        <td>{$rs.nama_kota}</td>
+                      </tr>
+                       <tr>
+                        <td>Kode Pos</td>
+                        <td>{$rs.kode_pos}</td>
+                      </tr>
+                       <tr>
+                        <td>Telepon</td>
+                        <td>{$rs.telepon}</td>
+                      </tr>
+                       <tr>
+                        <td>Fax</td>
+                        <td>{$rs.fax}</td>
+                      </tr>
+                      <tr>
+                        <td>No. KTP</td>
+                        <td>{$rs.no_ktp}</td>
+                      </tr>
+                        
                      
                     </tbody>
                   </table>

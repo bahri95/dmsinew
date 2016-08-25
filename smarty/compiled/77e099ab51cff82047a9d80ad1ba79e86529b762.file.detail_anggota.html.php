@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-25 09:10:26
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-25 11:49:32
          compiled from "application\views\private\registrasi\detail_anggota.html" */ ?>
 <?php /*%%SmartyHeaderCode:1398157be752ce50110-35500499%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '77e099ab51cff82047a9d80ad1ba79e86529b762' => 
     array (
       0 => 'application\\views\\private\\registrasi\\detail_anggota.html',
-      1 => 1472109010,
+      1 => 1472118569,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_57be752ce57e15_71813255',
   'variables' => 
   array (
-    'data_anggota_baru' => 1,
+    'data_anggota' => 1,
     'rs' => 1,
     'BASEURL' => 1,
   ),
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_57be752ce57e15_71813255')) {function content_57be752ce57e15_71813255($_smarty_tpl) {?>
  <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['data_anggota_baru']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_from = $_smarty_tpl->tpl_vars['data_anggota']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {
 $_smarty_tpl->tpl_vars['rs']->_loop = true;
 ?>
@@ -60,32 +60,65 @@ doc/registrasi/<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?
 </td>
                       </tr>
                       <tr>
-                        <td>Hire date:</td>
-                        <td>06/23/2013</td>
+                        <td>Organisasi</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['rs']->value['nama_asosiasi'];?>
+</td>
                       </tr>
-                      <tr>
-                        <td>Date of Birth</td>
-                        <td>01/24/1988</td>
-                      </tr>
-                   
-                         <tr>
-                             <tr>
-                        <td>Gender</td>
-                        <td>Male</td>
-                      </tr>
-                        <tr>
-                        <td>Home Address</td>
-                        <td>Metro Manila,Philippines</td>
-                      </tr>
+                    
+                      
                       <tr>
                         <td>Email</td>
-                        <td><a href="mailto:info@support.com">info@support.com</a></td>
+                        <td><a href="mailto:<?php echo $_smarty_tpl->tpl_vars['rs']->value['email'];?>
+"><?php echo $_smarty_tpl->tpl_vars['rs']->value['email'];?>
+</a></td>
                       </tr>
-                        <td>Phone Number</td>
-                        <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
-                        </td>
-                           
+                       <tr>
+                        <td>Perusahaan</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['rs']->value['perusahaan'];?>
+</td>
                       </tr>
+                      <tr>
+                        <td>Alamat</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['rs']->value['alamat'];?>
+</td>
+                      </tr>
+                      <tr>
+                        <td>Website</td>
+                        <td><a href="http://<?php echo $_smarty_tpl->tpl_vars['rs']->value['web'];?>
+"><?php echo $_smarty_tpl->tpl_vars['rs']->value['web'];?>
+</a></td>
+                      </tr>
+                      <tr>
+                        <td>Negara</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['rs']->value['nama_negara'];?>
+</td>
+                      </tr>
+                      <tr>
+                        <td>Kota</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['rs']->value['nama_kota'];?>
+</td>
+                      </tr>
+                       <tr>
+                        <td>Kode Pos</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['rs']->value['kode_pos'];?>
+</td>
+                      </tr>
+                       <tr>
+                        <td>Telepon</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['rs']->value['telepon'];?>
+</td>
+                      </tr>
+                       <tr>
+                        <td>Fax</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['rs']->value['fax'];?>
+</td>
+                      </tr>
+                      <tr>
+                        <td>No. KTP</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['rs']->value['no_ktp'];?>
+</td>
+                      </tr>
+                        
                      
                     </tbody>
                   </table>

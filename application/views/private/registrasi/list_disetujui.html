@@ -225,12 +225,12 @@
                           <td class="mailbox-name">{$rs.nama}</td>
                           <td class="mailbox-subject">{$rs.nama_asosiasi}</td>
                           <td class="mailbox-date" width="10%">{$rs.pekerjaan}</td>
-                          <td align="center">
-                              <div class="btn-group-vertical"><a href="{$url_process_anggota_disetujui}/{$rs.id_registrasi}" title="Lihat Detail" class="btn btn-success btn-flat"><i class='fa fa-eye'></i></a>
+                           <td align="center">
+                               <div class="btn-group-vertical"><a href="javascript:void(0);" onClick="open_modal('Detail Permintaan Anggota',$('#modal-detail-anggota{$rs.id_registrasi}').html(),$('#modal-detail-anggota-footer').html(),'medium');" title="Lihat Detail" class="btn btn-success btn-flat"><i class='fa fa-eye'></i></a>
                               </div> 
                               <div class="btn-group-vertical"><a href="{$url_process_anggota_disetujui}/{$rs.id_registrasi}" title="Kirim Pesan" class="btn btn-success btn-flat"><i class='fa fa-envelope'></i></a>
                               </div> 
-
+                              
                           </td>
 
 
@@ -296,7 +296,24 @@
 
           </div><!-- /.row -->
 
-
+          {include file="private/registrasi/detail_anggota.html"}
+                     <!-- Modal form -->
+                
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel"></h4>
+                      </div>
+                      <div class="modal-body" id="modal-bodyku">
+                      </div>
+                      <div class="modal-footer" id="modal-footerq">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of modal ------------------------------> 
         </section><!-- /.content -->
 
 

@@ -990,6 +990,10 @@ class MY_Controller extends CI_Controller {
 		$this->smarty->assign('jumlah_anggota_baru', $jumlah_anggota_baru);
 
 		// jumlah anggota baru
+		$data_anggota = $this->registrasimodel->get_list_anggota();
+
+		$this->smarty->assign('data_anggota', $data_anggota);
+		// jumlah anggota baru
 		$data_anggota_baru = $this->registrasimodel->get_list_anggota_baru();
 
 		$this->smarty->assign('data_anggota_baru', $data_anggota_baru);
@@ -997,7 +1001,8 @@ class MY_Controller extends CI_Controller {
 		 // jumlah anggota yang sudah di setujui
         $jumlah_anggota_disetujui = $this->registrasimodel->get_jumlah_anggota_disetujui();
         $this->smarty->assign('jumlah_anggota_disetujui', $jumlah_anggota_disetujui);
-
+           // process anggota disetujui
+        $this->smarty->assign("url_process_anggota_disetujui", site_url("private/registrasi/process/disetujui"));
 		$this->smarty->assign("url_anggota_list", site_url("private/registrasi"));
 		$this->smarty->assign("url_anggota_disetujui", site_url("private/registrasi/disetujui"));
 

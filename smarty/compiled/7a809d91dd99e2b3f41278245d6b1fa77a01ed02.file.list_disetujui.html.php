@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-25 06:15:25
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-25 11:46:58
          compiled from "application\views\private\registrasi\list_disetujui.html" */ ?>
 <?php /*%%SmartyHeaderCode:1662357be66d79f1fb8-17700741%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7a809d91dd99e2b3f41278245d6b1fa77a01ed02' => 
     array (
       0 => 'application\\views\\private\\registrasi\\list_disetujui.html',
-      1 => 1472098524,
+      1 => 1472118414,
       2 => 'file',
     ),
   ),
@@ -272,8 +272,6 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
 
 
                        
-
-
                        <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['data_anggota_disetujui']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {
@@ -290,16 +288,15 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
 </td>
                           <td class="mailbox-date" width="10%"><?php echo $_smarty_tpl->tpl_vars['rs']->value['pekerjaan'];?>
 </td>
-                          <td align="center">
-                              <div class="btn-group-vertical"><a href="<?php echo $_smarty_tpl->tpl_vars['url_process_anggota_disetujui']->value;?>
-/<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
-" title="Lihat Detail" class="btn btn-success btn-flat"><i class='fa fa-eye'></i></a>
+                           <td align="center">
+                               <div class="btn-group-vertical"><a href="javascript:void(0);" onClick="open_modal('Detail Permintaan Anggota',$('#modal-detail-anggota<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
+').html(),$('#modal-detail-anggota-footer').html(),'medium');" title="Lihat Detail" class="btn btn-success btn-flat"><i class='fa fa-eye'></i></a>
                               </div> 
                               <div class="btn-group-vertical"><a href="<?php echo $_smarty_tpl->tpl_vars['url_process_anggota_disetujui']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
 " title="Kirim Pesan" class="btn btn-success btn-flat"><i class='fa fa-envelope'></i></a>
                               </div> 
-
+                              
                           </td>
 
 
@@ -365,7 +362,25 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
 
           </div><!-- /.row -->
 
+          <?php echo $_smarty_tpl->getSubTemplate ("private/registrasi/detail_anggota.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
+                     <!-- Modal form -->
+                
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel"></h4>
+                      </div>
+                      <div class="modal-body" id="modal-bodyku">
+                      </div>
+                      <div class="modal-footer" id="modal-footerq">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of modal ------------------------------> 
         </section><!-- /.content -->
 
 
