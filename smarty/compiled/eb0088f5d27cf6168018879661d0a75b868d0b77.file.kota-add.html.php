@@ -1,47 +1,47 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-09 02:31:30
-         compiled from "application\views\private\kota\kota-add.html" */ ?>
-<?php /*%%SmartyHeaderCode:3932578ddec51de755-49461232%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-$_valid = $_smarty_tpl->decodeProperties(array (
-  'file_dependency' => 
-  array (
-    'eb0088f5d27cf6168018879661d0a75b868d0b77' => 
-    array (
-      0 => 'application\\views\\private\\kota\\kota-add.html',
-      1 => 1470700986,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '3932578ddec51de755-49461232',
-  'function' => 
-  array (
-  ),
-  'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_578ddec5578637_92786803',
-  'variables' => 
-  array (
-    'url_private' => 0,
-    'url_list' => 0,
-    'notification_msg' => 0,
-    'notification_status' => 0,
-    'url_process' => 0,
-    'propinsi' => 0,
-    'result_propinsi' => 0,
-    'propinsi_selected' => 0,
-    'id_kota' => 0,
-    'result' => 0,
-    'data' => 0,
-  ),
-  'has_nocache_code' => false,
-),false); /*/%%SmartyHeaderCode%%*/?>
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-26 09:47:52
+         compiled from "application\views\private\kota\kota-add.html" */ ?>
+<?php /*%%SmartyHeaderCode:3932578ddec51de755-49461232%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'eb0088f5d27cf6168018879661d0a75b868d0b77' => 
+    array (
+      0 => 'application\\views\\private\\kota\\kota-add.html',
+      1 => 1471594285,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '3932578ddec51de755-49461232',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.17',
+  'unifunc' => 'content_578ddec5578637_92786803',
+  'variables' => 
+  array (
+    'url_private' => 0,
+    'url_list' => 0,
+    'notification_msg' => 0,
+    'notification_status' => 0,
+    'url_process' => 0,
+    'propinsi' => 0,
+    'result_propinsi' => 0,
+    'propinsi_selected' => 0,
+    'id_kota' => 0,
+    'result' => 0,
+    'data' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_578ddec5578637_92786803')) {function content_578ddec5578637_92786803($_smarty_tpl) {?>                <section class="content-header">
                     <h1>
                       Kota
                         <small>panel</small>
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['url_private']->value;?>
+                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['url_private']->value;?>
 "><i class="fa fa-home"></i> Home</a></li>
-                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['url_list']->value;?>
+                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['url_list']->value;?>
 "><i class="fa "></i> Kota</a></li>
                         <li class="active">Tambah Data</li>
                     </ol>
@@ -58,7 +58,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         		<div class="alert alert-danger alert-dismissable">
                                         <i class="fa fa-ban"></i>
                                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                        <?php echo $_smarty_tpl->tpl_vars['notification_msg']->value;?>
+                                        <?php echo $_smarty_tpl->tpl_vars['notification_msg']->value;?>
 .
                                     </div>
                                  <?php }?>
@@ -66,7 +66,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                  <div class="alert alert-success alert-dismissable">
                                         <i class="fa fa-check"></i>
                                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                         <?php echo $_smarty_tpl->tpl_vars['notification_msg']->value;?>
+                                         <?php echo $_smarty_tpl->tpl_vars['notification_msg']->value;?>
 .
                                     </div>
                                  <?php }?>
@@ -79,21 +79,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                     <h3 class="box-title">Tambah Data Kota</h3>
                                 </div><!-- /.box-header -->
                                 <!-- form start -->
-                               <form id="form" action="<?php echo $_smarty_tpl->tpl_vars['url_process']->value;?>
+                               <form id="form" action="<?php echo $_smarty_tpl->tpl_vars['url_process']->value;?>
 " method="post">
                                    <div class="box-body">
                                    		<div class="form-group">
                                             <label for="id_propinsi">Provinsi * </label>
                                            <select name="id_propinsi" class="form-control">
                                             <option value="">--</option>
-                                            <?php  $_smarty_tpl->tpl_vars['result_propinsi'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result_propinsi']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['propinsi']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['result_propinsi']->key => $_smarty_tpl->tpl_vars['result_propinsi']->value) {
-$_smarty_tpl->tpl_vars['result_propinsi']->_loop = true;
+                                            <?php  $_smarty_tpl->tpl_vars['result_propinsi'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result_propinsi']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['propinsi']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['result_propinsi']->key => $_smarty_tpl->tpl_vars['result_propinsi']->value) {
+$_smarty_tpl->tpl_vars['result_propinsi']->_loop = true;
 ?>
-                                            <option value="<?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi'];?>
-" <?php if ($_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi']==$_smarty_tpl->tpl_vars['propinsi_selected']->value) {?>selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi'];?>
- - <?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['nama_propinsi'];?>
+                                            <option value="<?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi'];?>
+" <?php if ($_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi']==$_smarty_tpl->tpl_vars['propinsi_selected']->value) {?>selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi'];?>
+ - <?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['nama_propinsi'];?>
 </option>
                                             <?php } ?>
                                         </select>
@@ -101,25 +101,25 @@ $_smarty_tpl->tpl_vars['result_propinsi']->_loop = true;
                                         <div class="form-group">
                                             
                                     <?php if ($_smarty_tpl->tpl_vars['id_kota']->value!='') {?>
-                                    <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['id_kota']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {
-$_smarty_tpl->tpl_vars['result']->_loop = true;
+                                    <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['id_kota']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {
+$_smarty_tpl->tpl_vars['result']->_loop = true;
 ?>
-                                            <input type="hidden" name="id_kota" value="<?php echo $_smarty_tpl->tpl_vars['result']->value['max_id'];?>
+                                            <input type="hidden" name="id_kota" value="<?php echo $_smarty_tpl->tpl_vars['result']->value['max_id'];?>
 "  id="id_kota" class="form-control" maxlength="10" style="width:100px;" />
                                     <?php } ?>
                                     <?php }?>
                                         </div>
                                         <div class="form-group">
                                             <label for="nama_kota">Nama Kota * </label>
-                                            <input type="text" name="nama_kota" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['nama_kota'];?>
+                                            <input type="text" name="nama_kota" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['nama_kota'];?>
 "  id="nama_kota" class="form-control"  maxlength="50" />
                                         </div>
                                     </div><!-- /.box-body -->
                                     <div class="box-footer">
                                         <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i>  Simpan</button>
-                                        <a href="<?php echo $_smarty_tpl->tpl_vars['url_list']->value;?>
+                                        <a href="<?php echo $_smarty_tpl->tpl_vars['url_list']->value;?>
 "  class="btn btn-primary"><i class="fa fa-close"></i>  Batal</a>
                                     </div>
                                 </form>
@@ -131,4 +131,4 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                     </div><!-- /.row -->
                     
  </section><!-- /.content -->
-<?php }} ?>
+<?php }} ?>

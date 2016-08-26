@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ee340d351d65f9f758e06bd0014fa18d8db82aec' => 
     array (
       0 => 'application\\views\\web\\base-layout\\document-full.html',
-      1 => 1472135742,
+      1 => 1471594299,
       2 => 'file',
     ),
     'caa5b1ba90178f2b308e228cfefb1d072ece2244' => 
@@ -23,25 +23,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c681eb44d13971cfd79007cfbf54d9dcabf6f47b' => 
     array (
       0 => 'application\\views\\web\\registrasi\\form.html',
-      1 => 1472148367,
+      1 => 1472198792,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '7082578c713be207c1-45151599',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57bf3445295b97_02898869',
-  'variables' => 
-  array (
-    'title' => 1,
-    'BASEURL' => 0,
-    'THEMESPATH' => 0,
-    'LOADSTYLE' => 0,
-    'LOADJS' => 0,
-  ),
+  'unifunc' => 'content_57c006bae52289_84191776',
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57bf3445295b97_02898869')) {function content_57bf3445295b97_02898869($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_57c006bae52289_84191776')) {function content_57c006bae52289_84191776($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">

@@ -1,3 +1,4 @@
+
 <div class="b-desc-section-container">
        
         <section class="container">
@@ -104,19 +105,19 @@
                                             <label for="id_propinsi">Provinsi * </label>
                                            <select name="id_propinsi" id="id_propinsi" class="form-control" onchange="javascript:LoadKota('{$url_kota}/'+this.value);">
                                             <option value="">-Pilih Provinsi-</option>
-                                            {foreach name=listpropinsi from=$listpropinsi item=result_propinsi}
-                                            <option value="{$result_propinsi.id_propinsi}">{$result_propinsi.id_propinsi} - {$result_propinsi.nama_propinsi}</option>
+                                            {foreach name=list_group from=$propinsi item=result_propinsi}
+                                            <option value="{$result_propinsi.id_propinsi}" {if $result_propinsi.id_propinsi == $data.id_propinsi}selected="selected"{/if}>{$result_propinsi.id_propinsi} - {$result_propinsi.nama_propinsi}</option>
                                             {/foreach}
                                         </select>
                                         </div>
                                         <div class="form-group">
-                                           <label for="id_propinsi">Kota * </label>
-                                          <div id="kota_area"> <select name="id_kota" id="id_kota" class="form-control">
-                                            <option value="">----Pilih Kota----</option>
-                                          {foreach name=listkota item=result from=$listkota}
-                                            <option value="{$result.id_kota}">{$result.nama_kota}</option>
-                                          {/foreach}
-                                          </select></div>
+                                            <label for="id_propinsi">Kota * </label>
+                                        <div id="kota_area"> <select name="id_kota" id="id_kota" class="form-control">
+                                        <option value="">----Pilih Kota----</option>
+                                      {foreach name=list_kota item=result from=$data_kota}
+                                        <option value="{$result.id_kota}" {if $result.id_kota == $data.id_kota}selected='selected'{/if}>{$result.nama_kota}</option>
+                                      {/foreach}
+                                      </select></div>
                                         </div>
 
 
@@ -148,7 +149,7 @@
                                 </div>
                                  <div class="b-form-row">
                                 <img src="{$url_captcha}" id="image_captcha" name="captcha" align="absmiddle" />
-                                    <img src="{$baseurl}doc/refresh.jpg" id="refresh" style="max-width:25px;margin-left:20px;" />
+                                    
                                 </div>
                                  <div class="b-form-row">
                                     <label class="b-form-vertical__label" for="title">Kode Validasi *</label>
@@ -156,13 +157,18 @@
                                         <input type="text" id="user_key" name="user_key"  value="" class="form-control" />
                                     </div>
                                 </div>
+                                <br/>
+                                
                                 
                             </div>
                    
                         
                     </div> 
-                     
+                   
+                            
+                        
                 </div><!-- COL XS 12 -->
+
             <div class="col-xs-12 col-sm-6"> <!-- upload foto -->
                 <div class="b-form-row f-primary-l f-title-big c-secondary">Upload Foto</div>
              
@@ -173,12 +179,12 @@
                             <div class="form-group">
                                 <label for="user_name_lama">Foto User </label>
                                     <br />
-                                    <div style="text-align:center"><img src="http://localhost/dmsi/doc/admin/1/1_9530034funny_pic.jpg" style="max-width:200px;"  /></div>
+                                    <img id="output" style="height:200px; margin-top:20px;">
                                     </div>
                                         <div class="form-group">
                                            <label>Pilih File Foto * </label>
                                                 <span>
-                                                    <input  type="file" 
+                                                    <input  type="file"  accept="image/*" onchange="loadFile(event)" 
                                                             style="visibility:hidden; width: 1px;" 
                                                             id='foto' name='image'  
                                                             onchange="$(this).parent().find('span').html($(this).val().replace('C:\\fakepath\\', ''))"  /> 
@@ -188,12 +194,12 @@
                                                 </span>
                                         </div>
                             </div>
-                             <div class="b-form-row">
-                             <div class="col-sm-3 col-sm-offset-4">
+                             
+                            <div class="b-form-row">
+                                <div class="col-md-6">
                                     <button type="submit" onclick="" class="b-btn f-btn b-btn-md b-btn-default f-primary-b b-btn__w100">Daftar</button>
                               </div>
                               </div>
-
                         </div><!-- /.box-body -->        
                           
                  
@@ -210,8 +216,27 @@
     function LoadKota(url_kota){
     $("#kota_area").load(url_kota);
   }
+
+  
 </script>
+
+<script type="text/javascript">
+  
+  //foto
+   var loadFile = function(event) {
+
+
+    var output = document.getElementById('output');
+
+
+    output.src = URL.createObjectURL(event.target.files[0]);
+
+
+  };
+</script>
+
 {/literal}
+
 
     
     

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-25 11:50:00
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-26 04:56:44
          compiled from "application\views\private\registrasi\list.html" */ ?>
 <?php /*%%SmartyHeaderCode:2746257bc1c43cbf917-52339595%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2bc21fa119a19d3123d435d8d391bf206d9afce2' => 
     array (
       0 => 'application\\views\\private\\registrasi\\list.html',
-      1 => 1472118152,
+      1 => 1472179056,
       2 => 'file',
     ),
   ),
@@ -216,16 +216,10 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                     <!-- Check all button -->
 
 
-                  
-
-
                     <div class="btn-group">
 
 
                      <button class="btn btn-default btn-sm" type="submit" name="hapus"><i class="fa fa-trash-o"></i></button>
-
-
-                   
 
 
                       </div><!-- /.btn-group -->
@@ -236,18 +230,9 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
 
                   </div>
 
-
-                    
-
-
                   <div class="table-responsive mailbox-messages">
 
-
-
-
-
                     <table class="table table-hover table-striped">
-
 
                       <thead>
 
@@ -309,10 +294,7 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
                                <div class="btn-group-vertical"><a href="javascript:void(0);" onClick="open_modal('Detail Permintaan Anggota',$('#modal-detail-anggota<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
 ').html(),$('#modal-detail-anggota-footer').html(),'medium');" title="Lihat Detail" class="btn btn-success btn-flat"><i class='fa fa-eye'></i></a>
                               </div> 
-                              <div class="btn-group-vertical"><a href="<?php echo $_smarty_tpl->tpl_vars['url_process_anggota_disetujui']->value;?>
-/<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
-" title="Kirim Pesan" class="btn btn-success btn-flat"><i class='fa fa-envelope'></i></a>
-                              </div> 
+                              
                               <div class="btn-group-vertical"><a href="<?php echo $_smarty_tpl->tpl_vars['url_process_anggota_disetujui']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
 " title="Setujui" class="btn btn-success btn-flat"><i class='fa fa-check'></i></a>

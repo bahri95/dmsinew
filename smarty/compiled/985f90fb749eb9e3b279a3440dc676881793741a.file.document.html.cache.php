@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-26 00:45:33
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-26 10:32:07
          compiled from "application\views\private\base-layout\document.html" */ ?>
 <?php /*%%SmartyHeaderCode:1343157888d7d407514-59546593%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '985f90fb749eb9e3b279a3440dc676881793741a' => 
     array (
       0 => 'application\\views\\private\\base-layout\\document.html',
-      1 => 1472135740,
+      1 => 1472200323,
       2 => 'file',
     ),
   ),
@@ -29,6 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'jumlah_aspirasi' => 1,
     'result' => 1,
     'url_aspirasi_list' => 0,
+    'BASEURL' => 1,
     'rs' => 1,
     'data_anggota_baru' => 1,
     'jumlah_anggota_baru' => 1,
@@ -75,7 +76,13 @@ $_smarty_tpl->tpl_vars[\'rs\']->_loop = true;
 ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                       <li><!-- start message -->                        <a href="<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'url_aspirasi_list\']->value;?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
-">                          <div class="pull-left">                            <img src="http://localhost/dmsi/doc/aspirasi/anext.gif" class="img-circle" alt="User Image"/>                  </div>                          <h4>                                                    <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'nama_pengirim\'];?>
+">                          <div class="pull-left">                            <img src="<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'BASEURL\']->value;?>
+/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
+doc/aspirasi/<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'id_aspirasi\'];?>
+/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
+/<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'foto\'];?>
+/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
+" class="img-circle" alt="User Image"/>                  </div>                          <h4>                                                    <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'nama_pengirim\'];?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                                                       <small><i class="fa fa-clock-o"></i>&nbsp;<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'tanggal\'];?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
@@ -113,7 +120,13 @@ $_smarty_tpl->tpl_vars[\'rs\']->_loop = true;
 ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                       <li><!-- start message -->                        <a href="<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'url_anggota_list\']->value;?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
-">                          <div class="pull-left">                            <img src="http://localhost/dmsi/doc/aspirasi/anext.gif" class="img-circle" alt="User Image"/>                  </div>                          <h4>                                                    <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'nama\'];?>
+">                          <div class="pull-left">                            <img src="<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'BASEURL\']->value;?>
+/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
+doc/registrasi/<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'id_registrasi\'];?>
+/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
+/<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'image\'];?>
+/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
+" class="img-circle" alt="User Image"/>                  </div>                          <h4>                                                    <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'nama\'];?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                                                                                 </h4>                          <p><?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'nama_asosiasi\'];?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>

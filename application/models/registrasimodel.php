@@ -20,10 +20,11 @@ class Registrasimodel extends CI_Model {
     }
 
     function get_list_anggota() {
-        $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi, c.*, d.* from registrasi_m a 
+        $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi, c.*, d.*, e.* from registrasi_m a 
         LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi
         LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
-        LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara ORDER BY a.nama";
+        LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara
+        LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi ORDER BY a.nama";
         $query = $this->db->query($sql);
         if ($query->num_rows() > 0) {
             $result = $query->result_array();
@@ -34,10 +35,11 @@ class Registrasimodel extends CI_Model {
         }
     }
     function get_list_anggota_baru() {
-        $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi, c.*, d.* from registrasi_m a 
+        $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi, c.*, d.*, e.* from registrasi_m a 
         LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi
         LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
         LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara
+        LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi
          where a.disetujui = 'tidak' ORDER BY a.nama";
         $query = $this->db->query($sql);
         if ($query->num_rows() > 0) {
@@ -50,10 +52,12 @@ class Registrasimodel extends CI_Model {
     }
 
     function get_list_anggota_disetujui() {
-        $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi, c.*, d.* from registrasi_m a 
+        $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi, c.*, d.*, e.* from registrasi_m a 
         LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi
         LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
-        LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara where a.disetujui = 'ya' ORDER BY a.nama";
+        LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara
+        LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi
+         where a.disetujui = 'ya' ORDER BY a.nama";
         $query = $this->db->query($sql);
         if ($query->num_rows() > 0) {
             $result = $query->result_array();
@@ -65,7 +69,11 @@ class Registrasimodel extends CI_Model {
     }
     
      function get_jumlah_anggota_baru(){
-        $sql = "SELECT a.*, count(*)'jumlah', b.id_asosiasi, b.nama_asosiasi from registrasi_m a LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi where a.disetujui = 'tidak'";
+        $sql = "SELECT a.*, count(*)'jumlah', b.id_asosiasi, b.nama_asosiasi, c.*, d.*, e.* from registrasi_m a 
+        LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi
+        LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
+        LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara
+        LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi where a.disetujui = 'tidak'";
         $query = $this->db->query($sql);
         if($query->num_rows() > 0){
             $result = $query->result_array();
@@ -77,7 +85,11 @@ class Registrasimodel extends CI_Model {
     }
 
     function get_jumlah_anggota_disetujui(){
-        $sql = "SELECT a.*, count(*)'jumlah', b.id_asosiasi, b.nama_asosiasi from registrasi_m a LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi where a.disetujui = 'ya'";
+        $sql = "SELECT a.*, count(*)'jumlah', b.id_asosiasi, b.nama_asosiasi, c.*, d.*, e.* from registrasi_m a 
+        LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi
+        LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
+        LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara
+        LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi where a.disetujui = 'ya'";
         $query = $this->db->query($sql);
         if($query->num_rows() > 0){
             $result = $query->result_array();
@@ -88,15 +100,15 @@ class Registrasimodel extends CI_Model {
         }
     }
 
-    function get_list_kota($id_propinsi) {
-        $sql = "SELECT * FROM spt_kota_m where id_propinsi = ?";
+   function get_all_kota_by_propinsi($id_propinsi){
+        $sql = "SELECT * FROM spt_kota_m WHERE id_propinsi = ?";
         $query = $this->db->query($sql, array($id_propinsi));
         if ($query->num_rows() > 0) {
             $result = $query->result_array();
             $query->free_result();
             return $result;
         } else {
-            return 0;
+            return false;
         }
     }
 
@@ -114,7 +126,7 @@ class Registrasimodel extends CI_Model {
         }
     }
 
-    function get_list_propinsi() {
+    function get_all_propinsi(){
         $sql = "SELECT * FROM spt_propinsi_m";
         $query = $this->db->query($sql);
         if ($query->num_rows() > 0) {
@@ -122,7 +134,7 @@ class Registrasimodel extends CI_Model {
             $query->free_result();
             return $result;
         } else {
-            return 0;
+            return false;
         }
     }
 
@@ -145,7 +157,46 @@ class Registrasimodel extends CI_Model {
 
 
 	
+     function is_exists_email($email) {
+        $sql = "SELECT COUNT(*)'total' FROM registrasi_m WHERE LOWER(email) = ?";
+        $query = $this->db->query($sql, array($email));
+        $result = $query->row_array();
+        $query->free_result();
+        if (isset($result['total']) AND !empty($result['total'])) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    function is_exists_username($username) {
+        $sql = "SELECT COUNT(*)'total' FROM registrasi_m WHERE LOWER(username) = ?";
+        $query = $this->db->query($sql, array($username));
+        $result = $query->row_array();
+        $query->free_result();
+        if (isset($result['total']) AND !empty($result['total'])) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    function is_exists_telepon($telepon) {
+        $sql = "SELECT COUNT(*)'total' FROM registrasi_m WHERE LOWER(telepon) = ?";
+        $query = $this->db->query($sql, array($telepon));
+        $result = $query->row_array();
+        $query->free_result();
+        if (isset($result['total']) AND !empty($result['total'])) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+
+
     
+
 
     function process_registrasi_daftar($params) {
         $sql = "INSERT INTO registrasi_m (nama, pekerjaan, id_asosiasi, email, username, password, perusahaan, alamat, web, id_propinsi, id_kota, kode_pos, id_negara, telepon, fax, no_ktp, user_key, user_status) VALUES ( ? , ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -155,7 +206,11 @@ class Registrasimodel extends CI_Model {
 
     
     function get_data_registrasi_by_id($params){
-         $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi from registrasi_m a LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi where a.id_registrasi = ?";
+         $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi, c.*, d.*, e.* from registrasi_m a 
+        LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi
+        LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
+        LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara
+        LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi where a.id_registrasi = ?";
         $query = $this->db->query($sql,$params);
         if($query->num_rows() > 0){
             $result = $query->result_array();

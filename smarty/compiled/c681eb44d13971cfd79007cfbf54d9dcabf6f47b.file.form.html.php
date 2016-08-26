@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-26 02:09:08
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-26 10:06:34
          compiled from "application\views\web\registrasi\form.html" */ ?>
 <?php /*%%SmartyHeaderCode:1180857bbcce8cba966-74579534%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c681eb44d13971cfd79007cfbf54d9dcabf6f47b' => 
     array (
       0 => 'application\\views\\web\\registrasi\\form.html',
-      1 => 1472148367,
+      1 => 1472198792,
       2 => 'file',
     ),
   ),
@@ -25,15 +25,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'listasosiasi' => 0,
     'result' => 0,
     'url_kota' => 0,
-    'listpropinsi' => 0,
+    'propinsi' => 0,
     'result_propinsi' => 0,
-    'listkota' => 0,
+    'data' => 0,
+    'data_kota' => 0,
     'url_captcha' => 0,
-    'baseurl' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57bbcce8d4b209_52265382')) {function content_57bbcce8d4b209_52265382($_smarty_tpl) {?><div class="b-desc-section-container">
+<?php if ($_valid && !is_callable('content_57bbcce8d4b209_52265382')) {function content_57bbcce8d4b209_52265382($_smarty_tpl) {?>
+<div class="b-desc-section-container">
        
         <section class="container">
             <div class="row">
@@ -150,31 +151,31 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
 /'+this.value);">
                                             <option value="">-Pilih Provinsi-</option>
                                             <?php  $_smarty_tpl->tpl_vars['result_propinsi'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result_propinsi']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['listpropinsi']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_from = $_smarty_tpl->tpl_vars['propinsi']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result_propinsi']->key => $_smarty_tpl->tpl_vars['result_propinsi']->value) {
 $_smarty_tpl->tpl_vars['result_propinsi']->_loop = true;
 ?>
                                             <option value="<?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi'];?>
-"><?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi'];?>
+" <?php if ($_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi']==$_smarty_tpl->tpl_vars['data']->value['id_propinsi']) {?>selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi'];?>
  - <?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['nama_propinsi'];?>
 </option>
                                             <?php } ?>
                                         </select>
                                         </div>
                                         <div class="form-group">
-                                           <label for="id_propinsi">Kota * </label>
-                                          <div id="kota_area"> <select name="id_kota" id="id_kota" class="form-control">
-                                            <option value="">----Pilih Kota----</option>
-                                          <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['listkota']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+                                            <label for="id_propinsi">Kota * </label>
+                                        <div id="kota_area"> <select name="id_kota" id="id_kota" class="form-control">
+                                        <option value="">----Pilih Kota----</option>
+                                      <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['data_kota']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {
 $_smarty_tpl->tpl_vars['result']->_loop = true;
 ?>
-                                            <option value="<?php echo $_smarty_tpl->tpl_vars['result']->value['id_kota'];?>
-"><?php echo $_smarty_tpl->tpl_vars['result']->value['nama_kota'];?>
+                                        <option value="<?php echo $_smarty_tpl->tpl_vars['result']->value['id_kota'];?>
+" <?php if ($_smarty_tpl->tpl_vars['result']->value['id_kota']==$_smarty_tpl->tpl_vars['data']->value['id_kota']) {?>selected='selected'<?php }?>><?php echo $_smarty_tpl->tpl_vars['result']->value['nama_kota'];?>
 </option>
-                                          <?php } ?>
-                                          </select></div>
+                                      <?php } ?>
+                                      </select></div>
                                         </div>
 
 
@@ -207,8 +208,7 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                                  <div class="b-form-row">
                                 <img src="<?php echo $_smarty_tpl->tpl_vars['url_captcha']->value;?>
 " id="image_captcha" name="captcha" align="absmiddle" />
-                                    <img src="<?php echo $_smarty_tpl->tpl_vars['baseurl']->value;?>
-doc/refresh.jpg" id="refresh" style="max-width:25px;margin-left:20px;" />
+                                    
                                 </div>
                                  <div class="b-form-row">
                                     <label class="b-form-vertical__label" for="title">Kode Validasi *</label>
@@ -216,13 +216,18 @@ doc/refresh.jpg" id="refresh" style="max-width:25px;margin-left:20px;" />
                                         <input type="text" id="user_key" name="user_key"  value="" class="form-control" />
                                     </div>
                                 </div>
+                                <br/>
+                                
                                 
                             </div>
                    
                         
                     </div> 
-                     
+                   
+                            
+                        
                 </div><!-- COL XS 12 -->
+
             <div class="col-xs-12 col-sm-6"> <!-- upload foto -->
                 <div class="b-form-row f-primary-l f-title-big c-secondary">Upload Foto</div>
              
@@ -233,12 +238,12 @@ doc/refresh.jpg" id="refresh" style="max-width:25px;margin-left:20px;" />
                             <div class="form-group">
                                 <label for="user_name_lama">Foto User </label>
                                     <br />
-                                    <div style="text-align:center"><img src="http://localhost/dmsi/doc/admin/1/1_9530034funny_pic.jpg" style="max-width:200px;"  /></div>
+                                    <img id="output" style="height:200px; margin-top:20px;">
                                     </div>
                                         <div class="form-group">
                                            <label>Pilih File Foto * </label>
                                                 <span>
-                                                    <input  type="file" 
+                                                    <input  type="file"  accept="image/*" onchange="loadFile(event)" 
                                                             style="visibility:hidden; width: 1px;" 
                                                             id='foto' name='image'  
                                                             onchange="$(this).parent().find('span').html($(this).val().replace('C:\\fakepath\\', ''))"  /> 
@@ -248,12 +253,12 @@ doc/refresh.jpg" id="refresh" style="max-width:25px;margin-left:20px;" />
                                                 </span>
                                         </div>
                             </div>
-                             <div class="b-form-row">
-                             <div class="col-sm-3 col-sm-offset-4">
+                             
+                            <div class="b-form-row">
+                                <div class="col-md-6">
                                     <button type="submit" onclick="" class="b-btn f-btn b-btn-md b-btn-default f-primary-b b-btn__w100">Daftar</button>
                               </div>
                               </div>
-
                         </div><!-- /.box-body -->        
                           
                  
@@ -270,7 +275,26 @@ doc/refresh.jpg" id="refresh" style="max-width:25px;margin-left:20px;" />
     function LoadKota(url_kota){
     $("#kota_area").load(url_kota);
   }
+
+  
 </script>
+
+<script type="text/javascript">
+  
+  //foto
+   var loadFile = function(event) {
+
+
+    var output = document.getElementById('output');
+
+
+    output.src = URL.createObjectURL(event.target.files[0]);
+
+
+  };
+</script>
+
+
 
 
     

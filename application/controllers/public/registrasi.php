@@ -19,24 +19,30 @@ class Registrasi extends MY_Controller {
 		$this->load->model('registrasimodel');
 		// notification
         $arr_notify = $this->notification->get_notification();
-		if (!empty($arr_notify['post'])) {
-            $this->smarty->assign("data", $arr_notify['post']);
-			
-        }
+		
         // get data asosiasi
       	$listasosiasi = $this->registrasimodel->get_list_asosiasi();
 		$this->smarty->assign('listasosiasi', $listasosiasi);
 
+		 $data_propinsi = $this->registrasimodel->get_all_propinsi();
+
+
+        $this->smarty->assign("propinsi", $data_propinsi);
 		 // get data kota
-      	
-        	$id_propinsi = $this->input->post('id_propinsi');
-            $listkota = $this->registrasimodel->get_list_kota($id_propinsi);
-            $this->smarty->assign("listkota", $listkota);
+        if (isset($arr_notify['post']['id_propinsi'])) {
+			echo $arr_notify['post']['id_kota'];
+            $data_kota = $this->registrasimodel->get_all_kota_by_propinsi($arr_notify['post']['id_propinsi']);
+            $this->smarty->assign("data_kota", $data_kota);
+        }
+
+        $this->smarty->assign("url_kota", site_url("private/asosiasi/process/ajax_kota_by_propinsi"));
+        // notification
+        if (!empty($arr_notify['post'])) {
+            $this->smarty->assign("data", $arr_notify['post']);
+        }
         
          
-		 // get data propinsi
-      	$listpropinsi = $this->registrasimodel->get_list_propinsi();
-		$this->smarty->assign('listpropinsi', $listpropinsi);
+	
 
         $this->smarty->assign("url_daftar", site_url('public/registrasi/daftar'));
         $this->smarty->assign("url_captcha", site_url('public/registrasi/captcha'));
@@ -49,8 +55,48 @@ class Registrasi extends MY_Controller {
     }
 
    
+public function process($action = '') {
+        switch ($action) {
+            case 'hapus':
+                $this->process_hapus();
+                break;
+            case 'ajax_kota_by_propinsi':
+                $this->process_ajax_kota_by_propinsi();
+                break;
 
 
+            default :
+
+
+            // default redirect
+
+
+                redirect('private/asosiasi/add');
+
+
+                break;
+
+
+        }
+
+
+    }
+public function process_ajax_kota_by_propinsi() {
+        $id_propinsi = $this->uri->segment(5, 0);
+        // load
+        $this->load->model('registrasimodel');
+        // get data
+        $kota = $this->registrasimodel->get_all_kota_by_propinsi($id_propinsi);
+        echo '<select name="id_kota" class="form-control"><option value="">-- pilih kota --</option>';
+        if($kota) {
+            foreach($kota as $data) {
+                echo '<option value="'.$data['id_kota'].'">';
+                echo $data['nama_kota'];
+                echo '</option>';
+            }
+        }
+        echo '</select>';
+    }
 	
      public function verifikasi() {
 
@@ -99,24 +145,60 @@ class Registrasi extends MY_Controller {
 		$this->notification->check_post('web', 'Alamat Web', 'required');
 		$this->notification->check_post('id_kota', 'Kota', 'required');
 		$this->notification->check_post('kode_pos', 'Kode Pos', 'required');
-		$this->notification->check_post('id_negara', 'Negara', 'required');
+		$this->notification->check_post('id_propinsi', 'Propinsi', 'required');
 		$this->notification->check_post('telepon', 'Telepon', 'required');
 		$this->notification->check_post('fax', 'Fax', 'required');
 		$this->notification->check_post('no_ktp', 'No KTP', 'required');
 		$this->notification->check_post('user_key', 'Chapta', 'required');
 
+		$arr_notify = $this->notification->get_notification();
+		if (!empty($arr_notify['post'])) {
+            $this->smarty->assign("data", $arr_notify['post']);
+			
+        }
 
-		// run
-		$passpertama = $this->input->post('password');
-		$passkedua = $this->input->post('u_password');
-		if($passpertama == $passkedua){
-        if ($this->notification->valid_input()) {
+
+		// run 
+		// cek email
+		if ($this->notification->valid_input()):
+        	$email = $this->input->post('email');
+        	$username = $this->input->post('username');
+        	$telepon = $this->input->post('telepon');
+        	$message = '';
+        	if($this->registrasimodel->is_exists_email(strtolower($email))):
+                    $message = 'Email';
+		// cek username
+        	elseif($this->registrasimodel->is_exists_username(strtolower($username))):
+                    $message = 'Username';
+			elseif($this->registrasimodel->is_exists_telepon(strtolower($telepon))):
+		// cek no telpon 
+                   $message = 'Telepon';
+            endif;
+            $this->notification->set_message($message.' '.'Sudah digunakan User Lain');
+	        $this->notification->sent_notification(false);
+		endif;
+
+		//cek password
+		if ($this->notification->valid_input()):
+        	$passpertama = $this->input->post('password');
+			$passkedua = $this->input->post('u_password');
+			if($passpertama <> $passkedua):
+	    	$this->notification->set_message("Password tidak sesuai");
+	        $this->notification->sent_notification(false);
+	        endif;
+		endif;
+
+		 //cek kode validasi
+		if ($this->notification->valid_input()):
         	if(!$this->cekvalidasi()):
 				$this->notification->set_message("Kode Validasi yang dimasukkan tidak benar, harap ulangi kembali!");
 				$this->notification->sent_notification(false);
-				redirect('public/registrasi');
+				
 			endif;
-			// send ke email
+		endif;
+
+        if ($this->notification->valid_input()) {
+        
 			
            	//get id reggistrasi
            	$registrasi = $this->registrasimodel->get_id_registrasi();
@@ -136,10 +218,10 @@ class Registrasi extends MY_Controller {
                     'perusahaan' => $this->input->post('perusahaan'),
                     'alamat' => $this->input->post('alamat'),
                     'web' => $this->input->post('web'),
-                    'id_kota' => $this->input->post('id_propinsi'),
+                    'id_propinsi' => $this->input->post('id_propinsi'),
                     'id_kota' => $this->input->post('id_kota'),
                     'kode_pos' => $this->input->post('kode_pos'),
-                    'id_negara' => $this->input->post('id_negara'),
+                    'id_negara' => '360',
                     'telepon' => $this->input->post('telepon'),
                     'fax' => $this->input->post('fax'),
                     'no_ktp' => $this->input->post('no_ktp'),
@@ -192,11 +274,7 @@ class Registrasi extends MY_Controller {
         }else {
             $this->notification->sent_notification(false);
         }
-    }else{
-
-    	$this->notification->set_message("Password tidak sesuai");
-        $this->notification->sent_notification(false);
-    }
+    
         // default redirect
         redirect('public/registrasi/');
     }
