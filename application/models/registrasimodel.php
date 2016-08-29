@@ -221,4 +221,10 @@ class Registrasimodel extends CI_Model {
         }
     }
 
+    function process_registrasi_delete($id) {
+            $this->db->where('id_registrasi', $id);
+            return $this->db->delete('registrasi_m');
+        }
+    
+
 }

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-25 11:49:32
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-29 10:37:15
          compiled from "application\views\private\registrasi\detail_anggota.html" */ ?>
 <?php /*%%SmartyHeaderCode:1398157be752ce50110-35500499%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '77e099ab51cff82047a9d80ad1ba79e86529b762' => 
     array (
       0 => 'application\\views\\private\\registrasi\\detail_anggota.html',
-      1 => 1472118569,
+      1 => 1472459833,
       2 => 'file',
     ),
   ),
@@ -89,8 +89,8 @@ doc/registrasi/<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?
 </a></td>
                       </tr>
                       <tr>
-                        <td>Negara</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['rs']->value['nama_negara'];?>
+                        <td>Provinsi</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['rs']->value['nama_propinsi'];?>
 </td>
                       </tr>
                       <tr>
@@ -117,6 +117,16 @@ doc/registrasi/<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?
                         <td>No. KTP</td>
                         <td><?php echo $_smarty_tpl->tpl_vars['rs']->value['no_ktp'];?>
 </td>
+                      </tr>
+
+                      <tr>
+                        <td>Status Keanggotaan</td>
+                        <?php if ($_smarty_tpl->tpl_vars['rs']->value['disetujui']=='ya') {?>
+                        <td>Anggota <?php echo $_smarty_tpl->tpl_vars['rs']->value['nama_asosiasi'];?>
+</td>
+                        <?php } else { ?>
+                        <td>Menunggu Persetujuan</td>
+                        <?php }?>
                       </tr>
                         
                      

@@ -45,8 +45,8 @@
                         <td><a href="http://{$rs.web}">{$rs.web}</a></td>
                       </tr>
                       <tr>
-                        <td>Negara</td>
-                        <td>{$rs.nama_negara}</td>
+                        <td>Provinsi</td>
+                        <td>{$rs.nama_propinsi}</td>
                       </tr>
                       <tr>
                         <td>Kota</td>
@@ -67,6 +67,15 @@
                       <tr>
                         <td>No. KTP</td>
                         <td>{$rs.no_ktp}</td>
+                      </tr>
+
+                      <tr>
+                        <td>Status Keanggotaan</td>
+                        {if $rs.disetujui eq 'ya'}
+                        <td>Anggota {$rs.nama_asosiasi}</td>
+                        {else}
+                        <td>Menunggu Persetujuan</td>
+                        {/if}
                       </tr>
                         
                      

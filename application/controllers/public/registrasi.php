@@ -44,6 +44,7 @@
 			$this->smarty->assign("notification_msg", $arr_notify['message']);
 			$this->smarty->assign("notification_status", (empty($arr_notify['message_status'])?'red':
 			'green'));
+			
 			// display document
 			$this->parser->parse('web/base-layout/document-full.html');
 		}
@@ -51,19 +52,17 @@
 		public
 		function process($action = '') {
 			switch ($action) {
-				case 'hapus':
-					$this->process_hapus();
-					break;
 				case 'ajax_kota_by_propinsi':
 					$this->process_ajax_kota_by_propinsi();
 					break;
 				default :
 					// default redirect
-					redirect('private/asosiasi/add');
+					redirect('public/registrasi');
 					break;
 			}
 
 	}
+	
 
 	public
 	function process_ajax_kota_by_propinsi() {
@@ -135,6 +134,7 @@
 		$this->notification->check_post('fax', 'Fax', 'required');
 		$this->notification->check_post('no_ktp', 'No KTP', 'required');
 		$this->notification->check_post('user_key', 'Chapta', 'required');
+		
 		$arr_notify = $this->notification->get_notification();
 		
 		if (!empty($arr_notify['post'])) {
@@ -152,15 +152,20 @@
 		
 		if($this->registrasimodel->is_exists_email(strtolower($email))):
 		$message = 'Email';
+		$this->notification->set_message($message.' '.'Sudah digunakan User Lain');
+		$this->notification->sent_notification(false);
 		// cek username
 		elseif($this->registrasimodel->is_exists_username(strtolower($username))):
 		$message = 'Username';
+		$this->notification->set_message($message.' '.'Sudah digunakan User Lain');
+		$this->notification->sent_notification(false);
 		elseif($this->registrasimodel->is_exists_telepon(strtolower($telepon))):
 		// cek no telpon 
 		$message = 'Telepon';
-		endif;
 		$this->notification->set_message($message.' '.'Sudah digunakan User Lain');
 		$this->notification->sent_notification(false);
+		endif;
+		
 		endif;
 		//cek password
 		
@@ -191,7 +196,25 @@
 			}
 
 			// params
-			$params = array('nama' => $this->input->post('nama'),                    'pekerjaan' => $this->input->post('pekerjaan'),                    'id_asosiasi' => $this->input->post('id_asosiasi'),                    'email' => $this->input->post('email'),                    'username' => $this->input->post('username'),                    'password' => $this->input->post('password'),                    'perusahaan' => $this->input->post('perusahaan'),                    'alamat' => $this->input->post('alamat'),                    'web' => $this->input->post('web'),                    'id_propinsi' => $this->input->post('id_propinsi'),                    'id_kota' => $this->input->post('id_kota'),                    'kode_pos' => $this->input->post('kode_pos'),                    'id_negara' => '360',                    'telepon' => $this->input->post('telepon'),                    'fax' => $this->input->post('fax'),                    'no_ktp' => $this->input->post('no_ktp'),'user_key' => $this->input->post('user_key'),'user_status' => 'nonaktif','id_registrasi' => $registrasi[$key]['registrasi']);
+			$params = array('nama' => $this->input->post('nama'),                    
+				'pekerjaan' => $this->input->post('pekerjaan'),                    
+				'id_asosiasi' => $this->input->post('id_asosiasi'),                    
+				'email' => $this->input->post('email'),                    
+				'username' => $this->input->post('username'),                    
+				'password' => $this->input->post('password'),                    
+				'perusahaan' => $this->input->post('perusahaan'),                    
+				'alamat' => $this->input->post('alamat'),                    
+				'web' => $this->input->post('web'),                    
+				'id_propinsi' => $this->input->post('id_propinsi'),                    
+				'id_kota' => $this->input->post('id_kota'),                    
+				'kode_pos' => $this->input->post('kode_pos'),                    
+				'id_negara' => '360',                    
+				'telepon' => $this->input->post('telepon'),                    
+				'fax' => $this->input->post('fax'),                    
+				'no_ktp' => $this->input->post('no_ktp'),
+				'user_key' => $this->input->post('user_key'),
+				'user_status' => 'nonaktif',
+				'id_registrasi' => $registrasi[$key]['registrasi']);
 			// execute
 			
 			if($this->_SendEmailRegistrasi($params)):

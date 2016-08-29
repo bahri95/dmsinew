@@ -18,18 +18,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '2849757888d76aff023-74241161',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57c3e0b32cebc2_92808093',
-  'variables' => 
-  array (
-    'title' => 1,
-    'BASEURL' => 0,
-    'THEMESPATH' => 0,
-    'LOADSTYLE' => 0,
-    'LOADJS' => 0,
-  ),
+  'unifunc' => 'content_57c4b4543c9fa5_65630077',
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57c3e0b32cebc2_92808093')) {function content_57c3e0b32cebc2_92808093($_smarty_tpl) {?><!DOCTYPE html><html>  <head>    <meta charset="utf-8">    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+<?php if ($_valid && !is_callable('content_57c4b4543c9fa5_65630077')) {function content_57c4b4543c9fa5_65630077($_smarty_tpl) {?><!DOCTYPE html><html>  <head>    <meta charset="utf-8">    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
     </title>    <link rel="shortcut icon" href="http://localhost:82/dmsinew/doc/favicon.ico">    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/default/load-style.css" />      </head>  <body style="background-color:#20B2AA; padding-top:50px;">    <!--removed by integration-->        <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['template_content']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
         <!-- javascript loaded -->    <script type="text/javascript" src="http://localhost:82/dmsinew/js/front/jquery.cslider.js"></script>
 <script type="text/javascript" src="http://localhost:82/dmsinew/js/front/breakpoints.js"></script>
