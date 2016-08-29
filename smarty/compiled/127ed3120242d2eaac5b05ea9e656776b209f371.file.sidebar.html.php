@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-26 00:45:35
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-29 09:13:57
          compiled from "application\views\private\base-layout\sidebar.html" */ ?>
 <?php /*%%SmartyHeaderCode:1866057888d7da8f496-63302253%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '127ed3120242d2eaac5b05ea9e656776b209f371' => 
     array (
       0 => 'application\\views\\private\\base-layout\\sidebar.html',
-      1 => 1472135740,
+      1 => 1472451560,
       2 => 'file',
     ),
   ),
@@ -26,9 +26,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57888d7db27a36_80336657')) {function content_57888d7db27a36_80336657($_smarty_tpl) {?>                <!-- sidebar: style can be found in sidebar.less -->                <section class="sidebar">                	                    <!-- Sidebar user panel -->                    <div class="user-panel">                        <div class="image clearfix" style="text-align:center">                            <img src="<?php echo $_smarty_tpl->tpl_vars['baseurl']->value;?>
-doc/images/logo.png" style="width:65px; border:none;"  alt="User Image" />                        </div>                        <div class="pull-left info">                           <p>User : <?php echo $_smarty_tpl->tpl_vars['user_account']->value['admin_name'];?>
-</p>                           <?php if ($_smarty_tpl->tpl_vars['user_account']->value['id_auth']=='5') {?>                           	<p><?php echo $_smarty_tpl->tpl_vars['user_account']->value['nama_museum'];?>
-</p>                           <?php }?>                                                 </div>                    </div>                    <!-- sidebar menu: : style can be found in sidebar.less -->                    <ul class="sidebar-menu">                        <?php echo $_smarty_tpl->tpl_vars['site_navigation_menu_private']->value;?>
-                    </ul>                                      </section>                <!-- /.sidebar -->            <!--<div class="side-menu">    <h3>Sub Menu</h3>    <?php echo $_smarty_tpl->tpl_vars['site_sub_navigation']->value;?>
-</div>--><?php }} ?>
+<?php if ($_valid && !is_callable('content_57888d7db27a36_80336657')) {function content_57888d7db27a36_80336657($_smarty_tpl) {?><!-- sidebar: style can be found in sidebar.less --><section class="sidebar">    <!-- Sidebar user panel -->  <div class="user-panel">    <div class="image clearfix" style="text-align:center">      <img src="<?php echo $_smarty_tpl->tpl_vars['baseurl']->value;?>
+doc/images/logo.png" style="width:65px; border:none;"  alt="User Image" />    </div>    <div class="pull-left info">      <p>User : <?php echo $_smarty_tpl->tpl_vars['user_account']->value['admin_name'];?>
+      </p>      <?php if ($_smarty_tpl->tpl_vars['user_account']->value['id_auth']=='5') {?>      <p><?php echo $_smarty_tpl->tpl_vars['user_account']->value['nama_museum'];?>
+      </p>      <?php }?>    </div>  </div>  <!-- sidebar menu: : style can be found in sidebar.less -->  <ul class="sidebar-menu">    <?php echo $_smarty_tpl->tpl_vars['site_navigation_menu_private']->value;?>
+  </ul>  </section><!-- /.sidebar --><!--<div class="side-menu"><h3>Sub Menu</h3><?php echo $_smarty_tpl->tpl_vars['site_sub_navigation']->value;?>
+</div>--><?php }} ?>

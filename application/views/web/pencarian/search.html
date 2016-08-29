@@ -1,53 +1,1 @@
-<p><h4>Hasil Pencarian Untuk "{$keyword}"</h4></p>
-<div class="row j-masonry b-col-default-indent">
-            <div class="masonry-gridSizer col-xs-12 col-sm-6 col-md-3"></div>
-                
-                <!--start detail desc-->
-                 
-
-                      {if $data neq ''}
-                        {foreach name=data from=$data item=rs}
-                        <div class="j-masonry-item col-xs-12 col-sm-6 col-md-3">
-                            <div class="b-blog-preview">
-
-                                <div class="b-blog-preview__img view view-sixth">
-                                <img data-retina="" src="{$rs.image}" alt="">
-                                <div class="b-item-hover-action f-center mask">
-                                    <div class="b-item-hover-action__inner">
-                                        <div class="b-item-hover-action__inner-btn_group">
-                                            <a href="{$rs.url_detail}" class="b-btn f-btn b-btn-light f-btn-light info"><i class="fa fa-link"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                                <div class="b-blog-preview__content b-diagonal-line-bg-light">
-                                    <div class="b-blog-preview__content-padding_box">
-                                    <p class="f-primary-b f-more"><h4><b>{$rs.kategori}</b></h4></p><br/>
-                                        <p class="f-blog-preview__content-title f-primary-b"><a href="{$rs.url_detail}">{$rs.judul}</a></p>
-                                        <p class="f-blog-preview__content-date f-primary-it">{$rs.tanggal}</p>
-                                        <p class="b-blog-preview__content-text f-blog-preview__content-text">{$rs.content}</p>
-                                    </div>
-                                    <div class="b-footer-mini b-alternative-bg">
-                                        <a class="f-footer-mini__link f-more f-primary-b" href="{$rs.url_detail}"><i class="fa fa-angle-double-right"></i> {$label.selengkapnya}</a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                         {/foreach}
-                         {/if}
-                    
-                <!--end detail -->
-            </div>
-            <!-- {if $pagging neq ''}
-            <div class="b-pagination f-pagination">
-                <ul>
-                   {$pagging}
-                </ul>
-            </div>
-            {/if} -->
-            
-</div>
- 
+<p><h4>Hasil Pencarian Untuk "{$keyword}"</h4></p><div class="row j-masonry b-col-default-indent">  <div class="masonry-gridSizer col-xs-12 col-sm-6 col-md-3">  </div>  <!--start detail desc-->  {if $data neq ''}  {foreach name=data from=$data item=rs}  <div class="j-masonry-item col-xs-12 col-sm-6 col-md-3">    <div class="b-blog-preview">      <div class="b-blog-preview__img view view-sixth">        <img data-retina="" src="{$rs.image}" alt="">        <div class="b-item-hover-action f-center mask">          <div class="b-item-hover-action__inner">            <div class="b-item-hover-action__inner-btn_group">              <a href="{$rs.url_detail}" class="b-btn f-btn b-btn-light f-btn-light info">                <i class="fa fa-link">                </i>              </a>            </div>          </div>        </div>      </div>      <div class="b-blog-preview__content b-diagonal-line-bg-light">        <div class="b-blog-preview__content-padding_box">          <p class="f-primary-b f-more">          <h4>            <b>{$rs.kategori}            </b>          </h4>          </p>        <br/>        <p class="f-blog-preview__content-title f-primary-b">          <a href="{$rs.url_detail}">{$rs.judul}          </a>        </p>        <p class="f-blog-preview__content-date f-primary-it">{$rs.tanggal}        </p>        <p class="b-blog-preview__content-text f-blog-preview__content-text">{$rs.content}        </p>      </div>      <div class="b-footer-mini b-alternative-bg">        <a class="f-footer-mini__link f-more f-primary-b" href="{$rs.url_detail}">          <i class="fa fa-angle-double-right">          </i> {$label.selengkapnya}        </a>      </div>    </div>  </div></div>{/foreach}{/if}<!--end detail --></div><!-- {if $pagging neq ''}<div class="b-pagination f-pagination"><ul>{$pagging}</ul></div>{/if} --></div>

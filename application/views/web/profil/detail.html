@@ -1,23 +1,1 @@
-
-                <div class="col-md-9">
-                <!--start detail desc-->
-                  <div class="b-article-box">
-                    <div class="f-article_title f-primary-l b-title-b-hr">
-                        {$data.judul}
-                    </div>
-                    <div class="b-article__description">
-                        {$data.content}
-                    </div>
-                   
-                </div>
-                <div class="b-article-box">
-                <div class="f-article_title f-primary-l b-title-b-hr"> {$page_modul|upper} </div>
-                {if $profil_list neq ''}
-                {foreach name=list_profil from=$profil_list item=rs}
-                <div class="b-twitter-feeds__item b-tabs__content-list-item" style="margin-top:20px;">
-                  <div class="b-twitter-feeds__item_name f-twitter-feeds__item_name f-primary-b"><i class="fa fa-angle-double-right"></i> <a href="{$rs.url_detail}">{$rs.judul}</a> </div>
-                </div>
-                {/foreach}
-                {/if} </div>
-                <!--end detail -->
-                </div><!--end col 9-->
+<div class="col-md-9">  <!--start detail desc-->  <div class="b-article-box">    <div class="f-article_title f-primary-l b-title-b-hr">      {$data.judul}    </div>    <div class="b-article__description">      {$data.content}    </div>  </div>  <div class="b-article-box">    <div class="f-article_title f-primary-l b-title-b-hr"> {$page_modul|upper}     </div>    {if $profil_list neq ''}    {foreach name=list_profil from=$profil_list item=rs}    <div class="b-twitter-feeds__item b-tabs__content-list-item" style="margin-top:20px;">      <div class="b-twitter-feeds__item_name f-twitter-feeds__item_name f-primary-b">        <i class="fa fa-angle-double-right">        </i>         <a href="{$rs.url_detail}">{$rs.judul}        </a>       </div>    </div>    {/foreach}    {/if}   </div>  <!--end detail --></div><!--end col 9-->

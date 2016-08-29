@@ -1,17 +1,1 @@
-
-<div class="b-breadcrumbs f-breadcrumbs">
-        <div class="container">
-            <ul>
-                <li><a href="{$baseurl}"><i class="fa fa-home"></i>Home</a></li>
-                {if $page_modul neq ''}
-                <li><i class="fa fa-angle-right"></i><a href="{$page_modul_url}">{$page_modul}</a></li>
-                {/if}
-                 {if $page_sub_modul neq ''}
-                <li><i class="fa fa-angle-right"></i><a href="{$page_sub_modul_url}">{$page_sub_modul}</a></li>
-                {/if}
-                {if $page_name neq ''}
-                <li><i class="fa fa-angle-right"></i><span>{$page_name}</span></li>
-                {/if}
-            </ul>
-        </div>
-    </div>
+<div class="b-breadcrumbs f-breadcrumbs">  <div class="container">    <ul>      <li>        <a href="{$baseurl}">          <i class="fa fa-home">          </i>Home        </a>      </li>      {if $page_modul neq ''}      <li>        <i class="fa fa-angle-right">        </i>        <a href="{$page_modul_url}">{$page_modul}        </a>      </li>      {/if}      {if $page_sub_modul neq ''}      <li>        <i class="fa fa-angle-right">        </i>        <a href="{$page_sub_modul_url}">{$page_sub_modul}        </a>      </li>      {/if}      {if $page_name neq ''}      <li>        <i class="fa fa-angle-right">        </i>        <span>{$page_name}        </span>      </li>      {/if}    </ul>  </div></div>

@@ -1,58 +1,1 @@
-<div class="l-inner-page-container">
-    <div class="container">
-        
-    {if $opini_list neq ''}
-    {foreach name=list_opini from=$opini_list item=rs}
-    <div class="b-blog-one-column__row">
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <div class=" view view-sixth">
-    <img data-retina="" src="{$rs.image}" alt="">
-    <div class="b-item-hover-action f-center mask">
-        <div class="b-item-hover-action__inner">
-            <div class="b-item-hover-action__inner-btn_group">
-                <a href="{$rs.url_detail}" class="b-btn f-btn b-btn-light f-btn-light info"><i class="fa fa-link"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-            </div>
-            <div class="col-sm-6 col-md-8">
-                <div class="b-blog__title b-form-row f-h4-special"><a href="{$rs.url_detail}" class="f-primary-l f-title-big f-blog__title">{$rs.judul}</a></div>
-<div class="b-form-row f-h4-special clearfix">
-    <div class="pull-left">
-        <a href="#" class="b-infoblock-with-icon__icon f-infoblock-with-icon__icon fade-in-animate b-blog-one-column__info_edit">
-            <i class="fa fa-pencil"></i>
-        </a>
-    </div>
-    <div class="b-blog-one-column__info_container">
-        <div class="b-blog-one-column__info">
-           
-            <a href="#" class="f-more">{$page_modul}</a>
-             <span class="b-blog-one-column__info_delimiter"></span>
-            Tanggal Post :  <a href="#" class="f-more">{$rs.tanggal}</a>
-                      
-            
-        </div>
-    </div>
-</div>
-<div class="b-form-row b-blog-one-column__text">{$rs.content}</div>
-<div class="b-form-row b-null-bottom-indent">
-    <a href="{$rs.url_detail}" class="b-btn f-btn b-btn-md b-btn-default f-primary-b">{$label.selengkapnya}</a>
-</div>
-            </div>
-        </div>
-
-    </div>
-  {/foreach}
-{/if}
-
-{if $pagging neq ''}
-            <div class="b-pagination f-pagination">
-                <ul>
-                   {$pagging}
-                </ul>
-            </div>
-            {/if}
-    </div>
-</div>
+<div class="l-inner-page-container">  <div class="container">    {if $opini_list neq ''}    {foreach name=list_opini from=$opini_list item=rs}    <div class="b-blog-one-column__row">      <div class="row">        <div class="col-sm-6 col-md-4">          <div class=" view view-sixth">            <img data-retina="" src="{$rs.image}" alt="">            <div class="b-item-hover-action f-center mask">              <div class="b-item-hover-action__inner">                <div class="b-item-hover-action__inner-btn_group">                  <a href="{$rs.url_detail}" class="b-btn f-btn b-btn-light f-btn-light info">                    <i class="fa fa-link">                    </i>                  </a>                </div>              </div>            </div>          </div>        </div>        <div class="col-sm-6 col-md-8">          <div class="b-blog__title b-form-row f-h4-special">            <a href="{$rs.url_detail}" class="f-primary-l f-title-big f-blog__title">{$rs.judul}            </a>          </div>          <div class="b-form-row f-h4-special clearfix">            <div class="pull-left">              <a href="#" class="b-infoblock-with-icon__icon f-infoblock-with-icon__icon fade-in-animate b-blog-one-column__info_edit">                <i class="fa fa-pencil">                </i>              </a>            </div>            <div class="b-blog-one-column__info_container">              <div class="b-blog-one-column__info">                <a href="#" class="f-more">{$page_modul}                </a>                <span class="b-blog-one-column__info_delimiter">                </span>                Tanggal Post :                  <a href="#" class="f-more">{$rs.tanggal}                </a>              </div>            </div>          </div>          <div class="b-form-row b-blog-one-column__text">{$rs.content}          </div>          <div class="b-form-row b-null-bottom-indent">            <a href="{$rs.url_detail}" class="b-btn f-btn b-btn-md b-btn-default f-primary-b">{$label.selengkapnya}            </a>          </div>        </div>      </div>    </div>    {/foreach}    {/if}    {if $pagging neq ''}    <div class="b-pagination f-pagination">      <ul>        {$pagging}      </ul>    </div>    {/if}  </div></div>

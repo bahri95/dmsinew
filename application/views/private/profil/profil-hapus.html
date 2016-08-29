@@ -1,27 +1,0 @@
-<div class="head-content">
-    <h3>Site Propinsi</h3>
-    <div class="tab-nav">
-        <ul>
-            <li><a href="#" class="tab-nav-active">Hapus</a></li>
-            <li><a href="{$url_add}">Tambah</a></li>
-            <li><a href="{$url_list}">List</a></li>
-        </ul>
-    </div>
-    <div class="ffhack"></div>
-</div>
-<form action="{$url_process}" method="post">
-    <input type="hidden" name="id_jenis" value="{$data->id_jenis}" />
-    <table class="table-input" width="100%">
-        <tr class="headrow">
-            <th colspan="2">Hapus Data Museum</th>
-        </tr>
-        <tr>
-            <td>Jenis Museum<br />
-                <em>{$data->jenis_museum}</em></td>
-            <td>{$data->id_jenis} </td>
-        </tr>
-        <tr>
-            <td colspan="2"><input type="submit" value="Hapus" name="save[hapus]" class="edit-button" /></td>
-        </tr>
-    </table>
-</form>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-26 04:56:44
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-29 04:58:41
          compiled from "application\views\private\registrasi\list.html" */ ?>
 <?php /*%%SmartyHeaderCode:2746257bc1c43cbf917-52339595%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2bc21fa119a19d3123d435d8d391bf206d9afce2' => 
     array (
       0 => 'application\\views\\private\\registrasi\\list.html',
-      1 => 1472179056,
+      1 => 1472439516,
       2 => 'file',
     ),
   ),
@@ -243,7 +243,7 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                           <th width="20%">Nama Anggota</th>
 
 
-                          <th width="30%">Asal Asosiasi</th>
+                          <th width="30%">Asosiasi yang dipilih</th>
 
 
                           <th width="20%">Pekerjaan</th>

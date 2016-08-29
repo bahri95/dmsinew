@@ -1,201 +1,141 @@
-
-                <div class="col-md-9">
-
-                
-
-                <!--start detail desc-->
-
-                  <div class="b-article-box">
-
-                    <div class="f-article_title f-primary-l b-title-b-hr">
-
-                        {$data.judul}
-
-                    </div>
-
-                    <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text f-primary-b">
-
-                        {if $act_lang eq en}
-
-                       Category :
-
-                       {else}
-
-                       Kategori :
-
-                       {/if}
-
-                           <a href="#" class="f-more">Berita Anggota</a>
-
-                        
-
-                             Posted : {$data.tanggal}
-
-                            
-
-                    </div>
-
-                    <div class="b-article__description">
-
-                        {if $data.image neq ''}
-
-                        <div class="col-md-6" style="float:left;margin:0 10px 10px 0;">
-
-                             <img data-retina src="{$data.image}" style="max-width:100%;margin:0 10px 10px 0;">
-
-                             {if $data.keterangan_gambar neq ''}<p><h6><i>{$data.keterangan_gambar}</i></h6></p>{/if}
-
-                        </div>
-
-                        {/if}
-
-                        <p class="justify">{$data.content}</p>
-
-                    </div>
-
-                    {if $data.file_berita neq ''}
-
-                    <div class="b-article__social-info">
-
-                            <ul>
-
-                                <li>
-
-                                    <div class="b-article__tag">
-
-                                        <span class="b-article__social-info-name f-article__social-info-name"><i class="fa fa-download"></i> </span>
-
-                                        <a class="f-tag b-tag" href="{$data.file_berita}">Download Lampiran</a>
-
-                                    </div>
-
-                                </li>
-
-                           </ul>
-
-                    </div>
-
-                    {/if}
-
-                </div>
-
-                 {literal}
-
-               <div class="b-hr"></div>
-
-                <script type="text/javascript">var switchTo5x=true;</script>
-
-                        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-
-                        <script type="text/javascript">stLight.options({publisher: "a4abca36-32a8-4c45-9716-281f17242f3b", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-
-                        {/literal}
-
-                        <h5><b>Bagikan</b></h5><br/>
-
-                                        <span class='st_sharethis_large' displayText='ShareThis'></span>
-
-                        <span class='st_facebook_large' displayText='Facebook'></span>
-
-                        <span class='st_twitter_large' displayText='Tweet'></span>
-
-                        <span class='st_linkedin_large' displayText='LinkedIn'></span>
-
-                        <span class='st_pinterest_large' displayText='Pinterest'></span>
-
-                        <span class='st_email_large' displayText='Email'></span>
-
-                <!--end detail -->
-
-
-
-            <div class="b-hr"></div>
-
-                 <h4><b>RELATED POST</b></h4>
-
-                 <div class="b-hr"></div>
-
-
-
-                      <div class="container">
-
-
-
-                    
-
-                          <div class="row j-masonry b-col-default-indent">
-
-                              <div class="masonry-gridSizer col-xs-12 col-sm-6 col-md-3"></div>
-
-                                {if $berita_list neq ''}
-
-                                  {foreach name=berita_list from=$berita_list item=rs}
-
-                              <div class="j-masonry-item col-xs-12 col-sm-6 col-md-3">
-
-                                  <div class="b-blog-preview">
-
-                                      <div class="b-blog-preview__img view view-sixth">
-
-                                      <img data-retina="" src="{$rs.image}"  alt="">
-
-                                      <div class="b-item-hover-action f-center mask">
-
-                                          <div class="b-item-hover-action__inner">
-
-                                              <div class="b-item-hover-action__inner-btn_group">
-
-                                                  <a href="{$rs.url_detail}" class="b-btn f-btn b-btn-light f-btn-light info"><i class="fa fa-link"></i></a>
-
-                                              </div>
-
-                                          </div>
-
-                                      </div>
-
-                          </div>
-
-                                      <div class="b-blog-preview__content b-diagonal-line-bg-light">
-
-                                          <div class="b-blog-preview__content-padding_box">
-
-                                             <p class="f-primary-b f-more"><h6>Berita Anggota</h6></p><br/>
-
-                                            <p class="f-blog-preview__content-title f-primary-b"><a href="{$rs.url_detail}">{$rs.judul}</a></p>
-
-                                            <p class="f-blog-preview__content-date f-primary-it">{$rs.tanggal}</p>
-
-                                            
-
-                                        </div>
-
-
-
-                                          <div class="b-footer-mini b-alternative-bg">
-
-                                              <a class="f-footer-mini__link f-more f-primary-b" href="{$rs.url_detail}"><i class="fa fa-angle-double-right"></i> Selengkapnya</a>
-
-                                          
-
-                                          </div>
-
-                                      </div>
-
-                          </div><!--b blog preview-->
-
-                          </div><!--j-masonry-item-->
-
-                            {/foreach}
-
-                            {/if}
-
-                          </div><!--row j-masonry-->
-
-                         
-
-                          </div><!--container-->
-
-                </div><!--end col 9-->
-
-
-
+<div class="col-md-9">
+  <!--start detail desc-->
+  <div class="b-article-box">
+    <div class="f-article_title f-primary-l b-title-b-hr">
+      {$data.judul}
+    </div>
+    <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text f-primary-b">
+      {if $act_lang eq en}
+      Category :
+      {else}
+      Kategori :
+      {/if}
+      <a href="#" class="f-more">Berita Anggota
+      </a>
+      Posted : {$data.tanggal}
+    </div>
+    <div class="b-article__description">
+      {if $data.image neq ''}
+      <div class="col-md-6" style="float:left;margin:0 10px 10px 0;">
+        <img data-retina src="{$data.image}" style="max-width:100%;margin:0 10px 10px 0;">
+        {if $data.keterangan_gambar neq ''}
+        <p>
+        <h6>
+          <i>{$data.keterangan_gambar}
+          </i>
+        </h6>
+        </p>{/if}
+    </div>
+    {/if}
+    <p class="justify">{$data.content}
+    </p>
+  </div>
+  {if $data.file_berita neq ''}
+  <div class="b-article__social-info">
+    <ul>
+      <li>
+        <div class="b-article__tag">
+          <span class="b-article__social-info-name f-article__social-info-name">
+            <i class="fa fa-download">
+            </i> 
+          </span>
+          <a class="f-tag b-tag" href="{$data.file_berita}">Download Lampiran
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  {/if}
+</div>
+{literal}
+<div class="b-hr">
+</div>
+<script type="text/javascript">var switchTo5x=true;
+</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js">
+</script>
+<script type="text/javascript">stLight.options({
+    publisher: "a4abca36-32a8-4c45-9716-281f17242f3b", doNotHash: false, doNotCopy: false, hashAddressBar: false}
+                                              );
+</script>
+{/literal}
+<h5>
+  <b>Bagikan
+  </b>
+</h5>
+<br/>
+<span class='st_sharethis_large' displayText='ShareThis'>
+</span>
+<span class='st_facebook_large' displayText='Facebook'>
+</span>
+<span class='st_twitter_large' displayText='Tweet'>
+</span>
+<span class='st_linkedin_large' displayText='LinkedIn'>
+</span>
+<span class='st_pinterest_large' displayText='Pinterest'>
+</span>
+<span class='st_email_large' displayText='Email'>
+</span>
+<!--end detail -->
+<div class="b-hr">
+</div>
+<h4>
+  <b>RELATED POST
+  </b>
+</h4>
+<div class="b-hr">
+</div>
+<div class="container">
+  <div class="row j-masonry b-col-default-indent">
+    <div class="masonry-gridSizer col-xs-12 col-sm-6 col-md-3">
+    </div>
+    {if $berita_list neq ''}
+    {foreach name=berita_list from=$berita_list item=rs}
+    <div class="j-masonry-item col-xs-12 col-sm-6 col-md-3">
+      <div class="b-blog-preview">
+        <div class="b-blog-preview__img view view-sixth">
+          <img data-retina="" src="{$rs.image}"  alt="">
+          <div class="b-item-hover-action f-center mask">
+            <div class="b-item-hover-action__inner">
+              <div class="b-item-hover-action__inner-btn_group">
+                <a href="{$rs.url_detail}" class="b-btn f-btn b-btn-light f-btn-light info">
+                  <i class="fa fa-link">
+                  </i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="b-blog-preview__content b-diagonal-line-bg-light">
+          <div class="b-blog-preview__content-padding_box">
+            <p class="f-primary-b f-more">
+            <h6>Berita Anggota
+            </h6>
+            </p>
+          <br/>
+          <p class="f-blog-preview__content-title f-primary-b">
+            <a href="{$rs.url_detail}">{$rs.judul}
+            </a>
+          </p>
+          <p class="f-blog-preview__content-date f-primary-it">{$rs.tanggal}
+          </p>
+        </div>
+        <div class="b-footer-mini b-alternative-bg">
+          <a class="f-footer-mini__link f-more f-primary-b" href="{$rs.url_detail}">
+            <i class="fa fa-angle-double-right">
+            </i> Selengkapnya
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--b blog preview-->
+  </div>
+  <!--j-masonry-item-->
+  {/foreach}
+  {/if}
+</div>
+<!--row j-masonry-->
+</div>
+<!--container-->
+</div>
+<!--end col 9-->

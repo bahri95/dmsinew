@@ -1,75 +1,1 @@
-
- <div class="page-href" id="testimonials"></div>
-      <div class="f-primary-b b-title-b-hr f-title-b-hr">{$judul.aspirasi}</div>
-      <div class="row b-shortcode-example b-margin-top-standard">
-        <div class="col-md-3 col-sm-4">
-          <div class="b-shortcode-example bxslider bx-wrapper bx-viewport">
-
-{if $listaspirasi neq ''}
-  {foreach name=list_aspirasi from=$listaspirasi item=rs}
-
-<div class="b-mention-short-item">
-  <div class="b-mention-short-item__comment">
-    <div class="f-mention-short-item__comment_name f-primary-b font-judul">{$rs.judul}</div>
-    <div class="b-mention-short-item__comment_text f-mention-short-item__comment_text font-content">{$rs.isi_aspirasi}
-    <br/>
-
-    {if $rs.jawaban neq ''}
-    <i>Jawaban :</i>
-    <br/>
-        {$rs.jawaban}
-    {/if}
-    </div>
-    
-  </div>
-  <div class="b-mention-short-item__user">
-    <div class="b-mention-short-item__user_img b-right">
-      <img class="fade-in-animate" data-retina src="{$rs.foto}" alt=""/>
-    </div>
-    <div class="b-mention-short-item__user_info f-right">
-      <div class="f-mention-short-item__user_name f-primary-b">{$rs.nama_pengirim}</div>
-      <div class="f-mention-short-item__user_position">{$rs.pekerjaan}</div>
-    </div>
-  </div>
-</div>
-
-{/foreach}
-{/if}
-
-
-</div>
-  
-</div>
-      <div class="col-md-9 col-sm-8">
-           <div class="box-body no-padding">
-                                                                           <div id="container" style="width:90%; height: 40%; margin: 0 auto;"></div>
-
-                                                                            <table id="datatable" hidden="hidden">
-                                                                                <thead>
-                                                                                    <tr>
-                                                                                        <th>Bulan</th>
-                                                                                        <th>Domestik</th>
-                                                                                        <th>Ekspor</th>
-                                                                                    </tr>
-                                                                                </thead>
-                                                                                <tbody>
-                                                                               {if $datagrafik neq ''}
-                                                                                    {foreach name=list_data from=$datagrafik item=result}
-                                                                                    <tr>
-                                                                                        <th>
-                                                                                      
-                                                                                        {$result.bulan}</th>
-                                                                                        <td>{if $result.id_katharga eq '1'}{$result.harga_rupiah}{/if}</td>
-                                                                                        <td>{if $result.id_katharga eq  '2'}{$result.harga_rupiah}{/if}</td>
-                                                                                    </tr>
-                                                                                {/foreach}
-                                                                                {/if}
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </div><!-- /.box-body -->
-</div>
-</div>
-
-
-
-
+<div class="page-href" id="testimonials"></div><div class="f-primary-b b-title-b-hr f-title-b-hr">{$judul.aspirasi}</div><div class="row b-shortcode-example b-margin-top-standard">  <div class="col-md-3 col-sm-4">    <div class="b-shortcode-example bxslider bx-wrapper bx-viewport">      {if $listaspirasi neq ''}      {foreach name=list_aspirasi from=$listaspirasi item=rs}      <div class="b-mention-short-item">        <div class="b-mention-short-item__comment">          <div class="f-mention-short-item__comment_name f-primary-b font-judul">{$rs.judul}          </div>          <div class="b-mention-short-item__comment_text f-mention-short-item__comment_text font-content">{$rs.isi_aspirasi}            <br/>            {if $rs.jawaban neq ''}            <i>Jawaban :            </i>            <br/>            {$rs.jawaban}            {/if}          </div>        </div>        <div class="b-mention-short-item__user">          <div class="b-mention-short-item__user_img b-right">            <img class="fade-in-animate" data-retina src="{$rs.foto}" alt=""/>          </div>          <div class="b-mention-short-item__user_info f-right">            <div class="f-mention-short-item__user_name f-primary-b">{$rs.nama_pengirim}            </div>            <div class="f-mention-short-item__user_position">{$rs.pekerjaan}            </div>          </div>        </div>      </div>      {/foreach}      {/if}    </div>  </div>  <div class="col-md-9 col-sm-8">    <div class="box-body no-padding">      <div id="container" style="width:90%; height: 40%; margin: 0 auto;">      </div>      <table id="datatable" hidden="hidden">        <thead>          <tr>            <th>Bulan            </th>            <th>Domestik            </th>            <th>Ekspor            </th>          </tr>        </thead>        <tbody>          {if $datagrafik neq ''}          {foreach name=list_data from=$datagrafik item=result}          <tr>            <th>              {$result.bulan}            </th>            <td>{if $result.id_katharga eq '1'}{$result.harga_rupiah}{/if}            </td>            <td>{if $result.id_katharga eq  '2'}{$result.harga_rupiah}{/if}            </td>          </tr>          {/foreach}          {/if}        </tbody>      </table>    </div>    <!-- /.box-body -->  </div></div>

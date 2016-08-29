@@ -1,69 +1,1 @@
-
-                <div class="col-md-9">
-                
-                <!--start detail desc-->
-                  <div class="b-article-box">
-                    <div class="f-article_title f-primary-l b-title-b-hr">
-                        {$data.judul_agenda}
-                    </div>
-                    <div class="b-information-box f-information-box f-primary-b">
-                        <ul>
-                            <li>
-                                <strong class="f-information-box__name b-information-box__name">
-                                {if $act_lang  eq 'en'}
-                                Date
-                                {else}
-                                Tanggal
-                                {/if} </strong>
-                                <i class="b-dotted f-dotted">:</i>
-                                <span class="f-information_data"> {$data.tanggal_mulai} - {$data.tanggal_selesai}</span>
-                            </li>
-                            <li>
-                                <strong class="f-information-box__name b-information-box__name">
-                                {if $act_lang  eq 'en'}
-                                Location
-                                {else}
-                                Lokasi
-                                {/if}</strong>
-                                <i class="b-dotted f-dotted">:</i>
-                                <span class="f-information_data">{$data.lokasi}</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--<div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text f-primary-b">
-                        {$data.tanggal_mulai} - {$data.tanggal_selesai}
-                    </div>-->
-                    <div class="b-article__description">
-                        {if $data.image_agenda neq ''}
-                        <div class="col-md-6" style="float:left;margin:0 10px 10px 0;">
-                             <img data-retina src="{$data.image_agenda}" style="max-width:100%;margin:0 10px 10px 0;">
-                         </div>
-                        {/if}
-                        {$data.keterangan}
-                    </div>
-                    {if $data.file_agenda neq ''}
-                    <div class="b-article__social-info">
-                            <ul>
-                                <li>
-                                    <div class="b-article__tag">
-                                        <span class="b-article__social-info-name f-article__social-info-name"><i class="fa fa-download"></i> </span>
-                                        <a class="f-tag b-tag" href="{$data.file_agenda}">Download Lampiran</a>
-                                    </div>
-                                </li>
-                           </ul>
-                    </div>
-                    {/if}
-                </div>
-                 {literal}
-                <script type="text/javascript">var switchTo5x=true;</script>
-                        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-                        <script type="text/javascript">stLight.options({publisher: "a4abca36-32a8-4c45-9716-281f17242f3b", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-                        {/literal}
-                                        <span class='st_sharethis_large' displayText='ShareThis'></span>
-                        <span class='st_facebook_large' displayText='Facebook'></span>
-                        <span class='st_twitter_large' displayText='Tweet'></span>
-                        <span class='st_linkedin_large' displayText='LinkedIn'></span>
-                        <span class='st_pinterest_large' displayText='Pinterest'></span>
-                        <span class='st_email_large' displayText='Email'></span>
-                <!--end detail -->
-                </div><!--end col 9-->
+<div class="col-md-9">  <!--start detail desc-->  <div class="b-article-box">    <div class="f-article_title f-primary-l b-title-b-hr">      {$data.judul_agenda}    </div>    <div class="b-information-box f-information-box f-primary-b">      <ul>        <li>          <strong class="f-information-box__name b-information-box__name">            {if $act_lang  eq 'en'}            Date            {else}            Tanggal            {/if}           </strong>          <i class="b-dotted f-dotted">:          </i>          <span class="f-information_data"> {$data.tanggal_mulai} - {$data.tanggal_selesai}          </span>        </li>        <li>          <strong class="f-information-box__name b-information-box__name">            {if $act_lang  eq 'en'}            Location            {else}            Lokasi            {/if}          </strong>          <i class="b-dotted f-dotted">:          </i>          <span class="f-information_data">{$data.lokasi}          </span>        </li>      </ul>    </div>    <!--<div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text f-primary-b">{$data.tanggal_mulai} - {$data.tanggal_selesai}</div>-->    <div class="b-article__description">      {if $data.image_agenda neq ''}      <div class="col-md-6" style="float:left;margin:0 10px 10px 0;">        <img data-retina src="{$data.image_agenda}" style="max-width:100%;margin:0 10px 10px 0;">      </div>      {/if}      {$data.keterangan}    </div>    {if $data.file_agenda neq ''}    <div class="b-article__social-info">      <ul>        <li>          <div class="b-article__tag">            <span class="b-article__social-info-name f-article__social-info-name">              <i class="fa fa-download">              </i>             </span>            <a class="f-tag b-tag" href="{$data.file_agenda}">Download Lampiran            </a>          </div>        </li>      </ul>    </div>    {/if}  </div>  {literal}  <script type="text/javascript">var switchTo5x=true;  </script>  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js">  </script>  <script type="text/javascript">stLight.options({      publisher: "a4abca36-32a8-4c45-9716-281f17242f3b", doNotHash: false, doNotCopy: false, hashAddressBar: false}                                                );  </script>  {/literal}  <span class='st_sharethis_large' displayText='ShareThis'>  </span>  <span class='st_facebook_large' displayText='Facebook'>  </span>  <span class='st_twitter_large' displayText='Tweet'>  </span>  <span class='st_linkedin_large' displayText='LinkedIn'>  </span>  <span class='st_pinterest_large' displayText='Pinterest'>  </span>  <span class='st_email_large' displayText='Email'>  </span>  <!--end detail --></div><!--end col 9-->

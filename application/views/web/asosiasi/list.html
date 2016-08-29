@@ -1,46 +1,1 @@
-<div class="row">
-<div class="col-md-12">
-<div class="f-primary-b b-title-b-hr f-title-b-hr">{$page_modul}</div>
-<!--
-<div class="row b-shortcode-example">
-{if $asosiasilist neq ''}
-    {foreach name=list_asosiasi from=$asosiasilist  item=rs}
-          <div class="col-md-4">
-              <div class="b-tagline-box  b-tagline-box--no-shadow b-tagline-box--color">
-               <a href="{$rs.url_detail}" ><img src="{$rs.logo_asosiasi}" alt="{$rs.nama_asosiasi}" /></a>
-              </div>
-          </div>
-          {/foreach}
-       {/if}
- </div>
--->
-
-<div class="j-filter-content">
-  <div class="row b-portfolio-gallery j-masonry">
-    <div class="masonry-gridSizer col-lg-3 col-md-4 col-sm-6 col-xs-12"></div>
-    <!--start detail desc-->
-    {if $asosiasilist neq ''}
-    {foreach name=list_asosiasi from=$asosiasilist  item=rs}
-    <div class="j-masonry-item col-lg-3 col-md-4 col-sm-6 col-xs-12 j-filter-graphic j-filter-web">
-      <div>
-        <div class="b-app-with-img__item">
-          <div class="b-app-with-img__item_img view view-sixth b-tagline-box  b-tagline-box--no-shadow" style="padding:0px !Important;"> <a href="{$rs.url_detail}"><img class="j-data-element" data-animate="fadeIn" data-retina src="{$rs.logo_asosiasi}" alt=""/></a>
-            <div class="b-item-hover-action f-center mask">
-              <div class="b-item-hover-action__inner">
-                <div class="b-item-hover-action__inner-btn_group"> <a href="{$rs.url_detail}" class="b-btn f-btn b-btn-light f-btn-light info"><i class="fa fa-link"></i></a> </div>
-              </div>
-            </div>
-          </div>
-          <div class="b-app-with-img__item_text f-center" style="padding:5px !Important;">
-            <div class="b-app-with-img__item_name f-app-with-img__item_name f-primary-b"><a href="{$rs.url_detail}">{$rs.nama_asosiasi}</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    {/foreach}
-    {/if} </div>
-</div>
-
-
-</div>
-</div>
+<div class="row">  <div class="col-md-12">    <div class="f-primary-b b-title-b-hr f-title-b-hr">{$page_modul}    </div>    <!--<div class="row b-shortcode-example">{if $asosiasilist neq ''}{foreach name=list_asosiasi from=$asosiasilist  item=rs}<div class="col-md-4"><div class="b-tagline-box  b-tagline-box--no-shadow b-tagline-box--color"><a href="{$rs.url_detail}" ><img src="{$rs.logo_asosiasi}" alt="{$rs.nama_asosiasi}" /></a></div></div>{/foreach}{/if}</div>-->    <div class="j-filter-content">      <div class="row b-portfolio-gallery j-masonry">        <div class="masonry-gridSizer col-lg-3 col-md-4 col-sm-6 col-xs-12">        </div>        <!--start detail desc-->        {if $asosiasilist neq ''}        {foreach name=list_asosiasi from=$asosiasilist  item=rs}        <div class="j-masonry-item col-lg-3 col-md-4 col-sm-6 col-xs-12 j-filter-graphic j-filter-web">          <div>            <div class="b-app-with-img__item">              <div class="b-app-with-img__item_img view view-sixth b-tagline-box  b-tagline-box--no-shadow" style="padding:0px !Important;">                 <a href="{$rs.url_detail}">                  <img class="j-data-element" data-animate="fadeIn" data-retina src="{$rs.logo_asosiasi}" alt=""/>                </a>                <div class="b-item-hover-action f-center mask">                  <div class="b-item-hover-action__inner">                    <div class="b-item-hover-action__inner-btn_group">                       <a href="{$rs.url_detail}" class="b-btn f-btn b-btn-light f-btn-light info">                        <i class="fa fa-link">                        </i>                      </a>                     </div>                  </div>                </div>              </div>              <div class="b-app-with-img__item_text f-center" style="padding:5px !Important;">                <div class="b-app-with-img__item_name f-app-with-img__item_name f-primary-b">                  <a href="{$rs.url_detail}">{$rs.nama_asosiasi}                  </a>                </div>              </div>            </div>          </div>        </div>        {/foreach}        {/if}       </div>    </div>  </div></div>
