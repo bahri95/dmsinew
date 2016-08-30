@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-29 11:59:43
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-30 07:29:18
          compiled from "application\views\private\base-layout\document.html" */ ?>
 <?php /*%%SmartyHeaderCode:1343157888d7d407514-59546593%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '985f90fb749eb9e3b279a3440dc676881793741a' => 
     array (
       0 => 'application\\views\\private\\base-layout\\document.html',
-      1 => 1472451548,
+      1 => 1472524656,
       2 => 'file',
     ),
   ),
@@ -133,7 +133,7 @@ doc/registrasi/<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?p
                         </p>                      </a>                    </li>                    <!-- end message -->                    <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php } ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                     <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php }?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                                       </ul>                </li>                <li class="footer">                  <a href="<?php echo $_smarty_tpl->tpl_vars['url_anggota_list']->value;?>
-">Lihat semua permintaan Anggota                  </a>                </li>              </ul>            </li>            <!-- Notifications: style can be found in dropdown.less -->            <!-- User Account: style can be found in dropdown.less -->                        <li class="dropdown user user-menu">              <a href="#" class="dropdown-toggle" data-toggle="dropdown">                <i class="glyphicon glyphicon-user">                </i>                <span><?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'user_account\']->value[\'admin_name\'];?>
+">                                  Lihat semua permintaan Anggota                                   </a>                </li>              </ul>            </li>            <!-- Notifications: style can be found in dropdown.less -->            <!-- User Account: style can be found in dropdown.less -->                        <li class="dropdown user user-menu">              <a href="#" class="dropdown-toggle" data-toggle="dropdown">                <i class="glyphicon glyphicon-user">                </i>                <span><?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'user_account\']->value[\'admin_name\'];?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                   <i class="caret">                  </i>                </span>              </a>              <ul class="dropdown-menu">                <!-- User image -->                <li class="user-header bg-light-blue">                  <img src="<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'user_account\']->value[\'photo\'];?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>

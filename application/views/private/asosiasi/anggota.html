@@ -13,8 +13,8 @@
   }
 </style>
 <script type="text/javascript">
-  function konfirmasi_delete_koleksi(){
-    tanya = confirm('Apakah anda yakin akan menghapus data ini!');
+  function konfirmasi_batal_data(){
+    tanya = confirm('Apakah anda yakin akan menghapus Anggota yang Anda pilih ?');
     if(tanya){
       return true;
     }
@@ -57,6 +57,13 @@
         <i class="fa fa-home">
         </i> Home
       </a>
+     
+    </li>
+    <li>
+       <a href="{$url_list}">
+        
+        </i> Asosiasi Anggota
+      </a>
     </li>
     <li class="active">Asosiasi Anggota
     </li>
@@ -97,7 +104,9 @@
   <div class="col-md-12">
     <div class="box">
       <div class="box-header">
-        <h3 class="box-title">Data Asosiasi Anggota
+        <h3 class="box-title">
+         {foreach name=data_asosiasi from=$data_asosiasi item=rs}Data Anggota <b>{$rs.nama_asosiasi}</b>
+         {/foreach}
         </h3>
         <div class="box-tools">
           <div class="btn-group pull-right" style="margin-right:10px;">
@@ -121,55 +130,44 @@
       </div>
       <!-- /.box-header -->
       <div class="box-body table-responsive">
-        <table id="table_datagrid" class="table table-bordered table-striped">
-          <thead>
-            <th width="5%">No 
-            </th>
-            <th width="13%">Id Asosiasi
-            </th>
-            <th width="25%">Nama Asosiasi
-            </th>
-            <th width="20%">Kota
-            </th>
-            <th width="20%">Provinsi
-            </th>
-            <th width="15%">
-            </th>
-          </thead>
-          <tbody>
-            {if $asosiasi
-            <> ""}
-            {foreach name=list_data from=$asosiasi item=result}
-            <tr>
-              <td>{$no++}.
-              </td>
-              <td align="center">{$result.id_asosiasi}
-              </td>
-              <td>{$result.nama_asosiasi}
-              </td>
-              <td>{$result.nama_kota}
-              </td>
-              <td>{$result.nama_propinsi}
-              </td>
-              <td align="center">
-                <div class="btn-group">
-                  <a href="{$url_delete}/{$result.id_asosiasi}" title="Hapus" class="btn btn-danger btn-flat" id="btndel{$result.no_regmus}" onclick="return konfirmasi_delete();">
-                    <i class='fa fa-trash'>
-                    </i>
-                  </a>
-                  <a href="" class="btn btn-success btn-flat"> 
-                    <i class="fa fa-eye" title="Lihat Anggota">
-                    </i>
-                  </a>
-                </div> 
-              </td>
-            </tr>
-            {/foreach}
-            {/if}
-          </tbody>
-          <tfoot>
-          </tfoot>
-        </table>
+         <table class="table table-bordered table-striped" id="table_datagrid">
+                      <thead>
+                          <th width="5%">No</th>
+                          <th width="10%">Foto</th>
+                          <th width="20%">Nama Anggota</th>
+                          <th width="30%">Asosiasi yang dipilih</th>
+                          <th width="20%">Pekerjaan</th>
+                          <th width="15%"></th>
+                      </thead>
+                      <tbody>
+                      {if $data_anggota_disetujui neq ''}
+                       {foreach name=data_anggota_disetujui from=$data_anggota_disetujui item=rs}
+                        <tr>
+                          <td class="">{$no}</td>
+                          <td class=""><img src="{$BASEURL}doc/registrasi/{$rs.id_registrasi}/{$rs.image}" height="100" class="img-responsive"></td>
+                          <td>{$rs.nama}</td>
+                          <td>{$rs.nama_asosiasi}</td>
+                          <td>{$rs.pekerjaan}</td>
+                           <td align="center">
+                             {if $data_anggota_disetujui neq '' and $rs.disetujui eq 'ya'}
+                               <div class="btn-group-vertical"><a href="javascript:void(0);" onClick="open_modal('Detail Permintaan Anggota',$('#modal-detail-anggota{$rs.id_registrasi}').html(),$('#modal-detail-anggota-footer').html(),'medium');" title="Lihat Detail" class="btn btn-info btn-flat"><i class='fa fa-eye'></i></a>
+                              </div> 
+                              
+                              <form action="{$url_process_anggota_dibatalkan}" name="form-dibatalkan" method="post" onsubmit="javascript:return konfirmasi_batal_data();">
+                                <input type="hidden" name="id_registrasi" value="{$rs.id_registrasi}">
+                                <input type="hidden" name="nama" value="{$rs.nama}">
+                                 <input type="hidden" name="nama_asosiasi" value="{$rs.nama_asosiasi}">
+                                  <input type="hidden" name="email" value="{$rs.email}">
+                               <button class="btn btn-danger btn-flat" type="submit" name="tolak" title="Tolak"><i class="fa fa-times-circle"></i></button>
+                              </form>
+                              {/if}
+                              
+                          </td>
+                        </tr>
+                       {/foreach}
+                       {/if}
+                      </tbody>
+                    </table><!-- /.table -->
       </div>
       <!-- /.box-body -->
     </div>
@@ -177,6 +175,23 @@
   </div>
   </div>
 <!-- /.row -->
+ {include file="private/registrasi/detail_anggota.html"}
+                     <!-- Modal form -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel"></h4>
+                      </div>
+                      <div class="modal-body" id="modal-bodyku">
+                      </div>
+                      <div class="modal-footer" id="modal-footerq">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of modal ------------------------------> 
 {include file="private/asosiasi/dialog-eksport.html"}
 <!-- Modal form -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

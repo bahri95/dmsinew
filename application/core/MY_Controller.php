@@ -470,6 +470,8 @@
 			// jumlah anggota baru
 			$data_anggota_baru = $this->registrasimodel->get_list_anggota_baru();
 			$this->smarty->assign('data_anggota_baru', $data_anggota_baru);
+			$data_anggota_disetujui = $this->registrasimodel->get_list_anggota_disetujui();
+            $this->smarty->assign('data_anggota_disetujui', $data_anggota_disetujui);
 			// jumlah anggota yang sudah di setujui
 			$jumlah_anggota_disetujui = $this->registrasimodel->get_jumlah_anggota_disetujui();
 			$this->smarty->assign('jumlah_anggota_disetujui', $jumlah_anggota_disetujui);

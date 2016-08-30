@@ -76,12 +76,7 @@
                          </div>
                         {/if}
                   <h3 class="box-title">Daftar Permintaan Anggota</h3>
-                  <div class="box-tools pull-right">
-                    <div class="has-feedback">
-                      <input type="text" class="form-control input-sm" placeholder="Search Mail"/>
-                      <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                    </div>
-                  </div><!-- /.box-tools -->
+                  
                 </div><!-- /.box-header -->
                 
                 <div class="box-body no-padding">
@@ -93,8 +88,9 @@
                     </div><!-- /.pull-right -->
                   </div>
                   <div class="panel panel-default">
+                  <div class="panel-body">
                   <div class="table-responsive mailbox-messages">
-                    <table class="table table-hover table-striped">
+                    <table class="table table-hover table-striped" id="table_datagrid">
                       <thead>
                           
                           <th width="20%">Nama Anggota</th>
@@ -103,6 +99,7 @@
                           <th width="10%"></th>
                       </thead>
                       <tbody>
+                      {if $data_anggota_baru neq ''}
                        {foreach name=data_anggota_baru from=$data_anggota_baru item=rs}
                         <tr>
                           
@@ -133,10 +130,12 @@
                           </td>
                         </tr>
                        {/foreach}
+                       {/if}
                       </tbody>
                     </table><!-- /.table -->
                   </div><!-- /.mail-box-messages -->
-                  </div>
+                  </div><!--panel body-->
+                  </div><!--panel default -->
                 </div><!-- /.box-body -->
                 
           

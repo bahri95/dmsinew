@@ -394,8 +394,8 @@
 		// GMAIL password		
 		$mail->AddReplyTo(''.$email_smtp.'', ''.$name_smtp.'');
 		$mail->From       = ''.$email_smtp.'';
-		$mail->FromName   = 'VALIDASI AKUN ANGGOTA';
-		$mail->Subject    = $params['nama'];
+		$mail->FromName   = 'Admin DMSI';
+		$mail->Subject    = 'Verifikasi Akun Registrasi Anggota';
 		//HTML Body
 		$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!";
 		// optional, comment out and test

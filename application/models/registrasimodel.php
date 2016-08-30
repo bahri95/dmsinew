@@ -19,12 +19,26 @@ class Registrasimodel extends CI_Model {
         }
     }
 
+    function get_list_asosiasi_satu() {
+        $id_asosiasi = $this->uri->segment(4,0);
+        $sql = "SELECT * FROM asosiasi_m where id_asosiasi = $id_asosiasi GROUP BY id_asosiasi";
+        $query = $this->db->query($sql);
+        if ($query->num_rows() > 0) {
+            $result = $query->result_array();
+            $query->free_result();
+            return $result;
+        } else {
+            return 0;
+        }
+    }
+
     function get_list_anggota() {
         $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi, c.*, d.*, e.* from registrasi_m a 
         LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi
         LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
         LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara
-        LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi ORDER BY a.nama";
+        LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi 
+        WHERE a.user_status = 'aktif' ORDER BY a.nama";
         $query = $this->db->query($sql);
         if ($query->num_rows() > 0) {
             $result = $query->result_array();
@@ -40,7 +54,7 @@ class Registrasimodel extends CI_Model {
         LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
         LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara
         LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi
-         where a.disetujui = 'tidak' ORDER BY a.nama";
+         where a.disetujui = 'tidak' AND a.user_status = 'aktif' ORDER BY a.nama";
         $query = $this->db->query($sql);
         if ($query->num_rows() > 0) {
             $result = $query->result_array();
@@ -57,7 +71,7 @@ class Registrasimodel extends CI_Model {
         LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
         LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara
         LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi
-         where a.disetujui = 'ya' ORDER BY a.nama";
+         where a.disetujui = 'ya' AND a.user_status = 'aktif' ORDER BY a.nama";
         $query = $this->db->query($sql);
         if ($query->num_rows() > 0) {
             $result = $query->result_array();
@@ -67,13 +81,33 @@ class Registrasimodel extends CI_Model {
             return 0;
         }
     }
+
+     function get_list_anggota_disetujui_asosiasi() {
+        $id_asosiasi = $this->uri->segment(4,0);
+        $sql = "SELECT a.*, b.id_asosiasi, b.nama_asosiasi, c.*, d.*, e.* from registrasi_m a 
+        LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi
+        LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
+        LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara
+        LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi
+         where a.disetujui = 'ya' AND a.user_status = 'aktif' AND a.id_asosiasi = $id_asosiasi ORDER BY a.nama";
+        $query = $this->db->query($sql);
+        if ($query->num_rows() > 0) {
+            $result = $query->result_array();
+            $query->free_result();
+            return $result;
+        } else {
+            return 0;
+        }
+    }
+
+    
     
      function get_jumlah_anggota_baru(){
         $sql = "SELECT a.*, count(*)'jumlah', b.id_asosiasi, b.nama_asosiasi, c.*, d.*, e.* from registrasi_m a 
         LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi
         LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
         LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara
-        LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi where a.disetujui = 'tidak'";
+        LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi where a.disetujui = 'tidak' AND a.user_status = 'aktif'";
         $query = $this->db->query($sql);
         if($query->num_rows() > 0){
             $result = $query->result_array();
@@ -89,7 +123,7 @@ class Registrasimodel extends CI_Model {
         LEFT JOIN asosiasi_m b on a.id_asosiasi = b.id_asosiasi
         LEFT JOIN spt_kota_m c on a.id_kota = c.id_kota
         LEFT JOIN spt_negara_m d on a.id_negara = d.id_negara
-        LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi where a.disetujui = 'ya'";
+        LEFT JOIN spt_propinsi_m e on a.id_propinsi = e.id_propinsi where a.disetujui = 'ya' AND a.user_status = 'aktif'";
         $query = $this->db->query($sql);
         if($query->num_rows() > 0){
             $result = $query->result_array();

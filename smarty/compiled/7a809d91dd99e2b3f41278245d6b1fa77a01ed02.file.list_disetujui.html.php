@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-29 10:30:00
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-30 07:25:38
          compiled from "application\views\private\registrasi\list_disetujui.html" */ ?>
 <?php /*%%SmartyHeaderCode:1662357be66d79f1fb8-17700741%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7a809d91dd99e2b3f41278245d6b1fa77a01ed02' => 
     array (
       0 => 'application\\views\\private\\registrasi\\list_disetujui.html',
-      1 => 1472459399,
+      1 => 1472534734,
       2 => 'file',
     ),
   ),
@@ -26,16 +26,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'jumlah_anggota_disetujui' => 0,
     'notification_msg' => 0,
     'notification_status' => 0,
-    'url_registrasi_hapus_disetujui' => 0,
     'data_anggota_disetujui' => 0,
     'rs' => 0,
+    'url_process_anggota_dibatalkan' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_57be66d7a866d5_17354665')) {function content_57be66d7a866d5_17354665($_smarty_tpl) {?>
 <script type="text/javascript">
-  function konfirmasi_delete_data(){
-    tanya = confirm('Apakah anda yakin akan menghapus data ini!');
+  function konfirmasi_batal_data(){
+    tanya = confirm('Apakah anda yakin akan menghapus Anggota yang anda pilih!');
     if(tanya){
       return true;
     }else{
@@ -118,41 +118,37 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                          </div>
                         <?php }?>
                   <h3 class="box-title">Daftar Anggota yang Disetujui</h3>
-                  <div class="box-tools pull-right">
-                    <div class="has-feedback">
-                      <input type="text" class="form-control input-sm" placeholder="Search Mail"/>
-                      <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                    </div>
-                  </div><!-- /.box-tools -->
+                 
                 </div><!-- /.box-header -->
-                <form action="<?php echo $_smarty_tpl->tpl_vars['url_registrasi_hapus_disetujui']->value;?>
-" name="form-registrasi_disetujui" method="post" onsubmit="javascript:return konfirmasi_delete_data();">
-                <div class="box-body no-padding">
+                 <div class="box-body no-padding">
                   <div class="mailbox-controls">
                     <!-- Check all button -->
                     <div class="btn-group">
-                     <button class="btn btn-default btn-sm" type="submit" name="hapus"><i class="fa fa-trash-o"></i></button>
+                    
                       </div><!-- /.btn-group -->
                     </div><!-- /.pull-right -->
                   </div>
+                <div class="box-body no-padding">
+                   <div class="panel panel-default">
+                  <div class="panel-body">
                   <div class="table-responsive mailbox-messages">
-                    <table class="table table-hover table-striped">
+                    <table class="table table-hover table-striped" id="table_datagrid">
                       <thead>
-                          <th width="5%" id="cekAll"><input type="checkbox" class="checked-all" name="checked-all"  id="checked-all" class="form-control"></th>
+                          
                           <th width="20%">Nama Anggota</th>
                           <th width="30%">Asosiasi yang dipilih</th>
                           <th width="20%">Pekerjaan</th>
                           <th width="15%"></th>
                       </thead>
                       <tbody>
+                      <?php if ($_smarty_tpl->tpl_vars['data_anggota_disetujui']->value!='en') {?>
                        <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['data_anggota_disetujui']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {
 $_smarty_tpl->tpl_vars['rs']->_loop = true;
 ?>
                         <tr>
-                          <td><input type="checkbox" name="id_registrasi[]" value="<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
-" /></td>
+                        
                           <td class="mailbox-name"><?php echo $_smarty_tpl->tpl_vars['rs']->value['nama'];?>
 </td>
                           <td class="mailbox-subject"><?php echo $_smarty_tpl->tpl_vars['rs']->value['nama_asosiasi'];?>
@@ -160,24 +156,36 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
                           <td class="mailbox-date" width="10%"><?php echo $_smarty_tpl->tpl_vars['rs']->value['pekerjaan'];?>
 </td>
                            <td align="center">
+                             <?php if ($_smarty_tpl->tpl_vars['data_anggota_disetujui']->value!=''&&$_smarty_tpl->tpl_vars['rs']->value['disetujui']=='ya') {?>
                                <div class="btn-group-vertical"><a href="javascript:void(0);" onClick="open_modal('Detail Permintaan Anggota',$('#modal-detail-anggota<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
-').html(),$('#modal-detail-anggota-footer').html(),'medium');" title="Lihat Detail" class="btn btn-success btn-flat"><i class='fa fa-eye'></i></a>
+').html(),$('#modal-detail-anggota-footer').html(),'medium');" title="Lihat Detail" class="btn btn-info btn-flat"><i class='fa fa-eye'></i></a>
                               </div> 
+                              
+                              <form action="<?php echo $_smarty_tpl->tpl_vars['url_process_anggota_dibatalkan']->value;?>
+" name="form-dibatalkan" method="post" onsubmit="javascript:return konfirmasi_batal_data();">
+                                <input type="hidden" name="id_registrasi" value="<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
+">
+                                <input type="hidden" name="nama" value="<?php echo $_smarty_tpl->tpl_vars['rs']->value['nama'];?>
+">
+                                 <input type="hidden" name="nama_asosiasi" value="<?php echo $_smarty_tpl->tpl_vars['rs']->value['nama_asosiasi'];?>
+">
+                                  <input type="hidden" name="email" value="<?php echo $_smarty_tpl->tpl_vars['rs']->value['email'];?>
+">
+                               <button class="btn btn-danger btn-flat" type="submit" name="tolak" title="Tolak"><i class="fa fa-times-circle"></i></button>
+                              </form>
+                              <?php }?>
                               
                           </td>
                         </tr>
                        <?php } ?>
+                       <?php }?>
                       </tbody>
                     </table><!-- /.table -->
                   </div><!-- /.mail-box-messages -->
                 </div><!-- /.box-body -->
-                <div class="box-footer no-padding">
-                  <div class="mailbox-controls">
-                    <!-- Check all button -->
-                     <button class="btn btn-default btn-sm" type="submit" name="hapus"><i class="fa fa-trash-o"></i></button>
-                  </div>
-                </div>
-                </form>
+                </div><!-- panel body -->
+                </div><!-- panel default -->
+                
               </div><!-- /. box -->
             </div><!-- /.col -->
           </div><!-- /.row -->

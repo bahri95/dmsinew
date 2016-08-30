@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-29 10:37:15
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-30 06:12:39
          compiled from "application\views\private\registrasi\detail_anggota.html" */ ?>
 <?php /*%%SmartyHeaderCode:1398157be752ce50110-35500499%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '77e099ab51cff82047a9d80ad1ba79e86529b762' => 
     array (
       0 => 'application\\views\\private\\registrasi\\detail_anggota.html',
-      1 => 1472459833,
+      1 => 1472530339,
       2 => 'file',
     ),
   ),
@@ -48,7 +48,7 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
                 <div class="col-md-3 col-lg-3 " align="center"><img src="<?php echo $_smarty_tpl->tpl_vars['BASEURL']->value;?>
 doc/registrasi/<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?>
 /<?php echo $_smarty_tpl->tpl_vars['rs']->value['image'];?>
-" width="100" class="img-circle img-responsive"> </div>
+" height="100" class="img-circle img-responsive"> </div>
                 
                
                 <div class=" col-md-9 col-lg-9 "> 

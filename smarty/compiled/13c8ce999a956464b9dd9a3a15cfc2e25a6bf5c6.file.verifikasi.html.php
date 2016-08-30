@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-23 06:54:38
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-30 05:17:59
          compiled from "application\views\web\registrasi\verifikasi.html" */ ?>
 <?php /*%%SmartyHeaderCode:1240257bbd68dd15d66-52026215%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '13c8ce999a956464b9dd9a3a15cfc2e25a6bf5c6' => 
     array (
       0 => 'application\\views\\web\\registrasi\\verifikasi.html',
-      1 => 1471928074,
+      1 => 1471938817,
       2 => 'file',
     ),
   ),
@@ -30,7 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                  <div class="alert alert-success alert-dismissable">
                                         <i class="fa fa-check"></i>
                                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                       Selamat Akun Anda berhasil di Verifikasi <br/>
+                                       Selamat Akun Anda berhasil di Verifikasi, tinggal menunggu persetujuan admin<br/>
                                       
                                     </div>
                                 

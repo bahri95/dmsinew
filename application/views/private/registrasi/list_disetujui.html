@@ -1,7 +1,7 @@
 {literal}
 <script type="text/javascript">
-  function konfirmasi_delete_data(){
-    tanya = confirm('Apakah anda yakin akan menghapus data ini!');
+  function konfirmasi_batal_data(){
+    tanya = confirm('Apakah anda yakin akan menghapus Anggota yang anda pilih!');
     if(tanya){
       return true;
     }else{
@@ -65,56 +65,61 @@
                          </div>
                         {/if}
                   <h3 class="box-title">Daftar Anggota yang Disetujui</h3>
-                  <div class="box-tools pull-right">
-                    <div class="has-feedback">
-                      <input type="text" class="form-control input-sm" placeholder="Search Mail"/>
-                      <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                    </div>
-                  </div><!-- /.box-tools -->
+                 
                 </div><!-- /.box-header -->
-                <form action="{$url_registrasi_hapus_disetujui}" name="form-registrasi_disetujui" method="post" onsubmit="javascript:return konfirmasi_delete_data();">
-                <div class="box-body no-padding">
+                 <div class="box-body no-padding">
                   <div class="mailbox-controls">
                     <!-- Check all button -->
                     <div class="btn-group">
-                     <button class="btn btn-default btn-sm" type="submit" name="hapus"><i class="fa fa-trash-o"></i></button>
+                    
                       </div><!-- /.btn-group -->
                     </div><!-- /.pull-right -->
                   </div>
+                <div class="box-body no-padding">
+                   <div class="panel panel-default">
+                  <div class="panel-body">
                   <div class="table-responsive mailbox-messages">
-                    <table class="table table-hover table-striped">
+                    <table class="table table-hover table-striped" id="table_datagrid">
                       <thead>
-                          <th width="5%" id="cekAll"><input type="checkbox" class="checked-all" name="checked-all"  id="checked-all" class="form-control"></th>
+                          
                           <th width="20%">Nama Anggota</th>
                           <th width="30%">Asosiasi yang dipilih</th>
                           <th width="20%">Pekerjaan</th>
                           <th width="15%"></th>
                       </thead>
                       <tbody>
+                      {if $data_anggota_disetujui neq 'en'}
                        {foreach name=data_anggota_disetujui from=$data_anggota_disetujui item=rs}
                         <tr>
-                          <td><input type="checkbox" name="id_registrasi[]" value="{$rs.id_registrasi}" /></td>
+                        
                           <td class="mailbox-name">{$rs.nama}</td>
                           <td class="mailbox-subject">{$rs.nama_asosiasi}</td>
                           <td class="mailbox-date" width="10%">{$rs.pekerjaan}</td>
                            <td align="center">
-                               <div class="btn-group-vertical"><a href="javascript:void(0);" onClick="open_modal('Detail Permintaan Anggota',$('#modal-detail-anggota{$rs.id_registrasi}').html(),$('#modal-detail-anggota-footer').html(),'medium');" title="Lihat Detail" class="btn btn-success btn-flat"><i class='fa fa-eye'></i></a>
+                             {if $data_anggota_disetujui neq '' and $rs.disetujui eq 'ya'}
+                               <div class="btn-group-vertical"><a href="javascript:void(0);" onClick="open_modal('Detail Permintaan Anggota',$('#modal-detail-anggota{$rs.id_registrasi}').html(),$('#modal-detail-anggota-footer').html(),'medium');" title="Lihat Detail" class="btn btn-info btn-flat"><i class='fa fa-eye'></i></a>
                               </div> 
+                              
+                              <form action="{$url_process_anggota_dibatalkan}" name="form-dibatalkan" method="post" onsubmit="javascript:return konfirmasi_batal_data();">
+                                <input type="hidden" name="id_registrasi" value="{$rs.id_registrasi}">
+                                <input type="hidden" name="nama" value="{$rs.nama}">
+                                 <input type="hidden" name="nama_asosiasi" value="{$rs.nama_asosiasi}">
+                                  <input type="hidden" name="email" value="{$rs.email}">
+                               <button class="btn btn-danger btn-flat" type="submit" name="tolak" title="Tolak"><i class="fa fa-times-circle"></i></button>
+                              </form>
+                              {/if}
                               
                           </td>
                         </tr>
                        {/foreach}
+                       {/if}
                       </tbody>
                     </table><!-- /.table -->
                   </div><!-- /.mail-box-messages -->
                 </div><!-- /.box-body -->
-                <div class="box-footer no-padding">
-                  <div class="mailbox-controls">
-                    <!-- Check all button -->
-                     <button class="btn btn-default btn-sm" type="submit" name="hapus"><i class="fa fa-trash-o"></i></button>
-                  </div>
-                </div>
-                </form>
+                </div><!-- panel body -->
+                </div><!-- panel default -->
+                
               </div><!-- /. box -->
             </div><!-- /.col -->
           </div><!-- /.row -->

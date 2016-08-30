@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-29 11:59:43
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-30 07:58:44
          compiled from "application\views\private\registrasi\list.html" */ ?>
 <?php /*%%SmartyHeaderCode:2746257bc1c43cbf917-52339595%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2bc21fa119a19d3123d435d8d391bf206d9afce2' => 
     array (
       0 => 'application\\views\\private\\registrasi\\list.html',
-      1 => 1472464767,
+      1 => 1472536112,
       2 => 'file',
     ),
   ),
@@ -130,12 +130,7 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                          </div>
                         <?php }?>
                   <h3 class="box-title">Daftar Permintaan Anggota</h3>
-                  <div class="box-tools pull-right">
-                    <div class="has-feedback">
-                      <input type="text" class="form-control input-sm" placeholder="Search Mail"/>
-                      <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                    </div>
-                  </div><!-- /.box-tools -->
+                  
                 </div><!-- /.box-header -->
                 
                 <div class="box-body no-padding">
@@ -147,8 +142,9 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                     </div><!-- /.pull-right -->
                   </div>
                   <div class="panel panel-default">
+                  <div class="panel-body">
                   <div class="table-responsive mailbox-messages">
-                    <table class="table table-hover table-striped">
+                    <table class="table table-hover table-striped" id="table_datagrid">
                       <thead>
                           
                           <th width="20%">Nama Anggota</th>
@@ -157,6 +153,7 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                           <th width="10%"></th>
                       </thead>
                       <tbody>
+                      <?php if ($_smarty_tpl->tpl_vars['data_anggota_baru']->value!='') {?>
                        <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['data_anggota_baru']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {
@@ -205,10 +202,12 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
                           </td>
                         </tr>
                        <?php } ?>
+                       <?php }?>
                       </tbody>
                     </table><!-- /.table -->
                   </div><!-- /.mail-box-messages -->
-                  </div>
+                  </div><!--panel body-->
+                  </div><!--panel default -->
                 </div><!-- /.box-body -->
                 
           
