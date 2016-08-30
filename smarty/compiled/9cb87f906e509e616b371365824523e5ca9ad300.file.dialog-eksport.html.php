@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-30 05:41:39
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-31 00:32:30
          compiled from "application\views\private\asosiasi\dialog-eksport.html" */ ?>
 <?php /*%%SmartyHeaderCode:1804357b6d133397369-53877631%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9cb87f906e509e616b371365824523e5ca9ad300' => 
     array (
       0 => 'application\\views\\private\\asosiasi\\dialog-eksport.html',
-      1 => 1472447192,
+      1 => 1472596334,
       2 => 'file',
     ),
   ),
@@ -23,9 +23,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'start_list' => 1,
     'end_list' => 1,
     'total_list' => 1,
-    'propinsi' => 1,
-    'result_propinsi' => 1,
-    'propinsi_selected' => 1,
     'awal_cetak' => 1,
     'data' => 1,
   ),
@@ -41,26 +38,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 " />
     <input type="hidden" name="total_list" value="<?php echo $_smarty_tpl->tpl_vars['total_list']->value;?>
 " />
-    <div class="form-group">
-      <label for="user_name_lama">Provinsi * 
-      </label>
-      <div class="input-group">
-        <select name="id_propinsi" class="form-control" >
-          <option value="">-Pilih Provinsi-
-          </option>
-          <?php  $_smarty_tpl->tpl_vars['result_propinsi'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result_propinsi']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['propinsi']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['result_propinsi']->key => $_smarty_tpl->tpl_vars['result_propinsi']->value) {
-$_smarty_tpl->tpl_vars['result_propinsi']->_loop = true;
-?>
-          <option value="<?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi'];?>
-" <?php if ($_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi']==$_smarty_tpl->tpl_vars['propinsi_selected']->value) {?>selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['nama_propinsi'];?>
-
-          </option>
-          <?php } ?>
-        </select>
-      </div>
-    </div>
+    
     <div class="form-group">
       <label for="format">Format Laporan *
       </label>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-29 10:26:34
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-30 09:39:34
          compiled from "application\views\web\aspirasi\aspirasi.html" */ ?>
 <?php /*%%SmartyHeaderCode:7101578c85dc4b7585-89267059%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2374207ad09c3551c7f79be15693d4a2d9e4524a' => 
     array (
       0 => 'application\\views\\web\\aspirasi\\aspirasi.html',
-      1 => 1472456423,
+      1 => 1472542771,
       2 => 'file',
     ),
   ),
@@ -52,7 +52,7 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                     </option>                    <?php } ?>                  </select>                </div>              </div>              <div class="b-form-row">                <label class="b-form-vertical__label" for="email">Email *                </label>                <div class="b-form-vertical__input">                  <input type="text" id="email" name="email" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['email'];?>
 " class="form-control" />                </div>              </div>              <div class="form-group">                <label for="tanggal"><?php echo $_smarty_tpl->tpl_vars['label']->value['tanggal'];?>
  *                </label>                <input type="date" name="tanggal" class="form-control">              </div>              <div class="form-group">                <label for="user_name_lama"><?php echo $_smarty_tpl->tpl_vars['label']->value['foto'];?>
-                </label>                <span>                  <input  type="file"                          style="visibility:hidden; width: 1px;"                          id='foto' name='foto'                           onchange="$(this).parent().find('span').html($(this).val().replace('C:\\fakepath\\', ''))"  />                   <input class="btn btn-primary" type="button" value="Browse.." onclick="$(this).parent().find('input[type=file]').click();"/>                   &nbsp;                  <span  class="badge badge-important" >                  </span>                </span>              </div>            </div>            <div class="col-md-6">              <div class="b-form-row">                <label class="b-form-vertical__label" for="name"><?php echo $_smarty_tpl->tpl_vars['label']->value['judul'];?>
+                </label>                <span>                                                    <input  type="file"  accept="image/*" onchange="loadFile(event)"                                                             style="visibility:hidden; width: 1px;"                                                             id='foto' name='foto'                                                              onchange="$(this).parent().find('span').html($(this).val().replace('C:\\fakepath\\', ''))"  />                                                     <input class="btn btn-primary" type="button" value="Browse.." onclick="$(this).parent().find('input[type=file]').click();"/>                                                     &nbsp;                                                    <span  class="badge badge-important" ></span>                                                </span>              </div>              <img id="output" style="height:200px; margin-top:20px;">            </div>            <div class="col-md-6">              <div class="b-form-row">                <label class="b-form-vertical__label" for="name"><?php echo $_smarty_tpl->tpl_vars['label']->value['judul'];?>
  *                </label>                <div class="b-form-vertical__input">                  <input type="text" id="judul" name="judul" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['nama'];?>
 " class="form-control" />                </div>              </div>              <div class="b-form-row b-form--contact-size">                <label class="b-form-vertical__label"><?php echo $_smarty_tpl->tpl_vars['label']->value['isi_pesan'];?>
  *                </label>                <textarea class="form-control" name="isi_aspirasi" maxlength="150" rows="3"><?php echo $_smarty_tpl->tpl_vars['data']->value['isi_pesan'];?>
@@ -71,4 +71,4 @@ doc/refresh.jpg" id="refresh" style="max-width:25px;margin-left:20px;" />      
                 </li>                <li>                  <i class="fa fa-hand-o-right b-list-markers__ico f-list-markers__ico">                  </i><?php echo $_smarty_tpl->tpl_vars['label']->value['petunjuk6'];?>
                 </li>                <li>                  <i class="fa fa-hand-o-right b-list-markers__ico f-list-markers__ico">                  </i><?php echo $_smarty_tpl->tpl_vars['label']->value['petunjuk7'];?>
                 </li>                <li>                  <i class="fa fa-hand-o-right b-list-markers__ico f-list-markers__ico">                  </i><?php echo $_smarty_tpl->tpl_vars['label']->value['petunjuk8'];?>
-                </li>              </ul>            </div>          </div>        </div>      </div>       <!--upload foto -->    </div>  </section></div><?php }} ?>
+                </li>              </ul>            </div>          </div>        </div>      </div>       <!--upload foto -->    </div>  </section></div><script type="text/javascript">    //foto   var loadFile = function(event) {    var output = document.getElementById('output');    output.src = URL.createObjectURL(event.target.files[0]);  };</script><?php }} ?>

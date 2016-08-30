@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-29 10:21:43
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-30 10:03:27
          compiled from "application\views\web\registrasi\form.html" */ ?>
 <?php /*%%SmartyHeaderCode:1180857bbcce8cba966-74579534%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c681eb44d13971cfd79007cfbf54d9dcabf6f47b' => 
     array (
       0 => 'application\\views\\web\\registrasi\\form.html',
-      1 => 1472456280,
+      1 => 1472544205,
       2 => 'file',
     ),
   ),
@@ -145,26 +145,26 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                                 </div>
                                 </div>
                                  <div class="col-md-6">
+
                                        <div class="form-group">
                                             <label for="id_propinsi">Provinsi * </label>
-                                           <select name="id_propinsi" id="id_propinsi" class="form-control" onchange="javascript:LoadKota('<?php echo $_smarty_tpl->tpl_vars['url_kota']->value;?>
-/'+this.value);">
-                                            <option value="">-Pilih Provinsi-</option>
+                                           <select name="id_propinsi" id="id_propinsi"  onchange="javascript:LoadKota('<?php echo $_smarty_tpl->tpl_vars['url_kota']->value;?>
+/'+this.value);" class="selectpicker" data-live-search="true" data-width="100%">
+                                            <option value="">---Pilih Provinsi---</option>
                                             <?php  $_smarty_tpl->tpl_vars['result_propinsi'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result_propinsi']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['propinsi']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result_propinsi']->key => $_smarty_tpl->tpl_vars['result_propinsi']->value) {
 $_smarty_tpl->tpl_vars['result_propinsi']->_loop = true;
 ?>
                                             <option value="<?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi'];?>
-" <?php if ($_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi']==$_smarty_tpl->tpl_vars['data']->value['id_propinsi']) {?>selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi'];?>
- - <?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['nama_propinsi'];?>
+" <?php if ($_smarty_tpl->tpl_vars['result_propinsi']->value['id_propinsi']==$_smarty_tpl->tpl_vars['data']->value['id_propinsi']) {?>selected="selected"<?php }?>> <?php echo $_smarty_tpl->tpl_vars['result_propinsi']->value['nama_propinsi'];?>
 </option>
                                             <?php } ?>
                                         </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="id_propinsi">Kota * </label>
-                                        <div id="kota_area"> <select name="id_kota" id="id_kota" class="form-control">
+                                        <div id="kota_area"> <select name="id_kota" id="id_kota" class="selectpicker" data-live-search="true" data-width="100%">
                                         <option value="">----Pilih Kota----</option>
                                       <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['data_kota']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -263,6 +263,7 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                           
                  
                 </div> <!--upload foto -->
+
             </form>
             </div>
         </div>

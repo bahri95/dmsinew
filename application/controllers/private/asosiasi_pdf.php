@@ -24,7 +24,7 @@ s<?php
 		public
 		function export_tabel(){
 			// load
-			$this->load->model('asosisimodel');
+			$this->load->model('registrasimodel');
 			$this->load->library('notification');
 			// set rules
 			$this->notification->check_post('format_laporan', 'Format Laporan', 'required');
@@ -55,9 +55,9 @@ s<?php
 				redirect('private/koleksi_museum');
 				endif;
 				endif;
-				$no_regmus = $this->user_data['no_regmus'];
-				$museum= $this->museummodel->get_museum_by_id($no_regmus);
-				$this->no_regmus_export = $no_regmus;
+				 $id_asosiasi = $this->uri->segment(4,0);
+				$anggota= $this->registrasimodel->get_list_anggota_disetujui_asosiasi();
+				$this->no_regmus_export = $id_asosiasi;
 				$this->load->file('system/plugins/tcpdf/tcpdf.php');
 				$this->load->library('katalogpdf');
 				$obj_tcpdf = new KATALOGPDF();
@@ -127,7 +127,7 @@ s<?php
 				endif;
 				*/
 				$tablealign .= '<thead>';
-				$tablealign .= $this->_DisplayPdfTitleCode($museum['nama_museum']);
+				$tablealign .= $this->_DisplayPdfTitleCode($anggota['nama']);
 				$tablealign .= $this->SetTabelTitleRegistrasi();
 				$tablealign .= '</thead><tbody>';
 				$tablealign .= $this->setDataKoleksiRegistrasi($start, $end);

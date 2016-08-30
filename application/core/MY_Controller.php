@@ -847,7 +847,7 @@
 				$menu['infografis'] = "Infographics";
 				$menu['program'] = "Action Programme DMSI";
 				$menu['bagan'] = "Strategy Chart DMSI";
-				$menu['bagan'] = "Strategy Chart DMSI";
+				
 				$menu['harga'] = "Market Prices";
 				$menu['grafik'] = "Domestic and Export Prices";
 				$menu['foto'] = "Photo Gallery";
@@ -873,6 +873,7 @@
 				$menu['infografis'] = "Infografis";
 				$menu['program'] = "Program Aksi DMSI";
 				$menu['bagan'] = "Bagan Strategi DMSI";
+				$menu['harga'] = "Harga Pasar";
 				$menu['grafik'] = "Harga Domestik dan Ekspor";
 				$menu['foto'] = "Galeri Foto";
 				$menu['video'] = "Galeri Video";

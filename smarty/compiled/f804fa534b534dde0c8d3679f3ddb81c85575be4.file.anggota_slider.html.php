@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-29 09:13:37
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-30 10:34:48
          compiled from "application\views\web\home\anggota_slider.html" */ ?>
 <?php /*%%SmartyHeaderCode:2068257888d58d6d3f5-40118178%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f804fa534b534dde0c8d3679f3ddb81c85575be4' => 
     array (
       0 => 'application\\views\\web\\home\\anggota_slider.html',
-      1 => 1472454593,
+      1 => 1472546057,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57888d58d98386_33309836')) {function content_57888d58d98386_33309836($_smarty_tpl) {?><section class="b-tagline-box b-infoblock b-diagonal-line-bg-light">  <div class="f-info-container">    <div class="container">      <div class="b-info-container__title f-info-container__title">        <!-- <i class="fa fa-twitter"></i><br>-->        <span class="f-b f-primary-b" style="color:#424242;"><?php echo $_smarty_tpl->tpl_vars['judul']->value['anggota'];?>
+<?php if ($_valid && !is_callable('content_57888d58d98386_33309836')) {function content_57888d58d98386_33309836($_smarty_tpl) {?><section class="b-info-container b-tagline-box b-infoblock b-diagonal-line-bg-light b">  <div class="f-info-container">    <div class="container">      <div class="b-info-container__title f-info-container__title">        <!-- <i class="fa fa-twitter"></i><br>-->        <span class="f-b f-primary-b" style="color:#424242;"><?php echo $_smarty_tpl->tpl_vars['judul']->value['anggota'];?>
         </span>      </div>      <div class="b-carousel-reset b-carousel-arr-out b-carousel-small-arr f-carousel-small-arr b-remaining">        <div class="f-center b-logo-group j-logo-slider">          <?php if ($_smarty_tpl->tpl_vars['listasosiasi']->value!='') {?>          <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['listasosiasi']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {

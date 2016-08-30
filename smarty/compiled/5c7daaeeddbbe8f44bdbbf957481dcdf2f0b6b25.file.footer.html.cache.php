@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-29 09:13:37
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-30 12:07:44
          compiled from "application\views\web\base-layout\footer.html" */ ?>
 <?php /*%%SmartyHeaderCode:983657888d588cd964-91248063%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5c7daaeeddbbe8f44bdbbf957481dcdf2f0b6b25' => 
     array (
       0 => 'application\\views\\web\\base-layout\\footer.html',
-      1 => 1472454291,
+      1 => 1472551628,
       2 => 'file',
     ),
   ),
@@ -53,9 +53,9 @@ $_smarty_tpl->tpl_vars[\'rs\']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars[\'rs\']->key => $_smarty_tpl->tpl_vars[\'rs\']->value) {
 $_smarty_tpl->tpl_vars[\'rs\']->_loop = true;
 ?>/*/%%SmartyNocache:983657888d588cd964-91248063%%*/';?>
-            <li>               <a href="<?php echo '/*%%SmartyNocache:983657888d588cd964-91248063%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'url_detail\'];?>
+            <li >               <a href="<?php echo '/*%%SmartyNocache:983657888d588cd964-91248063%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'url_detail\'];?>
 /*/%%SmartyNocache:983657888d588cd964-91248063%%*/';?>
-">                <i class="fa fa-hand-o-right b-list-markers__ico f-list-markers__ico">                </i> <?php echo '/*%%SmartyNocache:983657888d588cd964-91248063%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'nama_asosiasi\'];?>
+" >                <i class="fa fa-hand-o-right b-list-markers__ico f-list-markers__ico">                </i> <?php echo '/*%%SmartyNocache:983657888d588cd964-91248063%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'nama_asosiasi\'];?>
 /*/%%SmartyNocache:983657888d588cd964-91248063%%*/';?>
               </a>            </li>            <?php echo '/*%%SmartyNocache:983657888d588cd964-91248063%%*/<?php } ?>/*/%%SmartyNocache:983657888d588cd964-91248063%%*/';?>
           </ul>          <?php echo '/*%%SmartyNocache:983657888d588cd964-91248063%%*/<?php }?>/*/%%SmartyNocache:983657888d588cd964-91248063%%*/';?>

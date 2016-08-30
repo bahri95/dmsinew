@@ -120,6 +120,9 @@
 			$data['judul'] = $data['judul_english'];
 			$data['content'] = $data['content_english'];
 			$data['keterangan_gambar'] = $data['caption_picture'];
+			$share['judul'] = $data['judul_english'];
+			$share['deskripsi'] = strip_tags($this->getIntroText($data['content_english'],100));
+			
 			endif;
 			
 			if($this->act_lang  == 'en'):
@@ -138,12 +141,14 @@
 			
 			if(is_file($path.$data['image'])){
 				$data['image'] = BASEURL.$path.$data['image'];
+				$share['image'] = BASEURL.$path.$data['image'];
 			} else {
 				$data['image']= '';
 			}
 
 			endif;
 			$this->smarty->assign("data", $data);
+			$this->smarty->assign("share", $share);
 			// get data terkait
 			$result = $this->beritamodel->get_list_berita_terkait();
 			

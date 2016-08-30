@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-30 07:31:19
+<?php /* Smarty version Smarty-3.1.17, created on 2016-08-31 00:34:33
          compiled from "application\views\private\asosiasi\anggota.html" */ ?>
 <?php /*%%SmartyHeaderCode:2375457bc00e6beed16-68902881%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '75fada1673dc4945bb1bef61f9973df565027d9b' => 
     array (
       0 => 'application\\views\\private\\asosiasi\\anggota.html',
-      1 => 1472535078,
+      1 => 1472596470,
       2 => 'file',
     ),
   ),
@@ -160,7 +160,7 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
               </button>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="javascript:void(0);" onClick="open_modal('Export Data Koleksi Format PDF',$('#modal-export-pdf-content').html(),$('#modal-export-pdf-footer').html(),'medium');">
+                  <a href="javascript:void(0);" onClick="open_modal('Export Data Anggota Format PDF',$('#modal-export-pdf-content').html(),$('#modal-export-pdf-footer').html(),'medium');">
                     <i class="fa fa-file-pdf-o">
                     </i> Format PDF
                   </a>
@@ -254,28 +254,7 @@ doc/registrasi/<?php echo $_smarty_tpl->tpl_vars['rs']->value['id_registrasi'];?
                 <!-- end of modal ------------------------------> 
 <?php echo $_smarty_tpl->getSubTemplate ("private/asosiasi/dialog-eksport.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-<!-- Modal form -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">
-          <span aria-hidden="true">&times;
-          </span>
-          <span class="sr-only">Close
-          </span>
-        </button>
-        <h4 class="modal-title" id="myModalLabel">
-        </h4>
-      </div>
-      <div class="modal-body" id="modal-bodyku">
-      </div>
-      <div class="modal-footer" id="modal-footerq">
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end of modal ------------------------------> 
+
 </section>
 <!-- /.content -->
 <?php }} ?>

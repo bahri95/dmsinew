@@ -1,44 +1,1 @@
-/* Add here all your CSS customizations */
-@media screen and (max-width: 767px) {
-.optional-special-menu{
-	display:block;
-}
-
-}
-
-@media screen and (min-width: 767px) {
-.optional-special-menu{
-	display:none;
-}
-.login-panel{width:320px;}
-}
-
-
-.b-logo { 
-	margin-top:-10px;		
-}
-.b-logo-item a:hover {
-      background: grey;
-      box-shadow: 0 0 2px #dddddd; }
-
-
-.bx-wrapper .bx-viewport 
-{
-    -moz-box-shadow: 0;
-    -webkit-box-shadow: 0;
-    box-shadow: none;
-    border: 0;
-    left: 0;
-    min-height: 250px;
-   
-     
-}
-.b-article__description{
-  text-align: justify;
-  font-size: 15px;
-}
-
-.b-article__description p{
-line-height:20px;
-  }
-
+/* Add here all your CSS customizations */@media screen and (max-width: 767px) {.optional-special-menu{	display:block;}}@media screen and (min-width: 767px) {.optional-special-menu{	display:none;}.login-panel{width:320px;}}.putih a{  color: #1a1a1a; }.putih a:hover{  color: #e6e6e6;  background-color: #5aa540;  border-radius: 20px;}.fontsubmenu a{  color: #72be58; }.fontsubmenu a:hover{  color: #f2f2f2;  background-color: #5aa540; }.font-footer a:hover{  color: #f2f2f2;}.b-logo { 	margin-top:-10px;		}.b-logo-item a:hover {      background: grey;      box-shadow: 0 0 2px #dddddd; }.bx-wrapper .bx-viewport {    -moz-box-shadow: 0;    -webkit-box-shadow: 0;    box-shadow: none;    border: 0;    left: 0;    min-height: 250px;        }.b-article__description{  text-align: justify;  font-size: 15px;}.b-article__description p{line-height:20px;  }
