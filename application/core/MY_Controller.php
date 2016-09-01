@@ -39,8 +39,50 @@
 			$this->_display_banner_atas();
 			//label
 			$this->_display_label();
-		}
 
+			//foto
+			$this->_display_foto();
+
+			//album
+			$this->_display_album();
+		}
+		public
+		function _display_album()
+		{
+			$this->load->model('fotomodel');
+			$datamaxalbum = $this->fotomodel->get_max_album();
+            $this->smarty->assign("datamaxalbum", $datamaxalbum);
+		}
+		public 
+		function _display_foto()
+		{
+			$this->load->model('fotomodel');
+			$result = $this->fotomodel->get_list_foto_limit_home();
+			
+			
+			if(!empty($result)):
+			foreach($result as $key=>$data):
+			// set path of detail foto
+			$path = 'doc/album/'.$data['id_album']."/".$data['id_foto']."/";
+			
+			if(is_file($path.$data['foto'])){
+				
+				if($this->act_lang == 'en'){
+					$result[$key]['judul_foto'] = $data['judul_english'];
+				}
+
+				$result[$key]['foto'] = BASEURL.$path.$data['foto'];
+			} else {
+				$result[$key]['foto']= BASEURL.'doc/tmp.default.jpg';
+			}
+
+			endforeach;
+			endif;
+			
+			
+
+			$this->smarty->assign("foto_list", $result);
+		}
 		final
 		function base_load_common() {
 			// define important variable
@@ -817,11 +859,15 @@
 				$judul['berita_anggota'] = "DMSI MEMBER NEWS";
 				$judul['anggota'] = "DMSI MEMBER";
 				$judul['aspirasi'] = "ASPIRATION";
+				$judul['judul_album_video'] = "
+THE LATEST PHOTOS AND VIDEOS";
 			} else {
 				$judul['berita_dmsi'] = 'BERITA DMSI';
 				$judul['berita_anggota'] = 'BERITA ANGGOTA DMSI';
 				$judul['anggota'] = "ANGGOTA DMSI";
 				$judul['aspirasi'] = "ASPIRASI";
+				$judul['judul_album_video'] = "
+FOTO DAN VIDEO TERBARU";
 			}
 
 			$this->smarty->assign('judul', $judul);

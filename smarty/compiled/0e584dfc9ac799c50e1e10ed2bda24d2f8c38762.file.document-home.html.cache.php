@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-30 17:52:12
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-01 11:05:33
          compiled from "application\views\web\base-layout\document-home.html" */ ?>
 <?php /*%%SmartyHeaderCode:2617657888d570c68f0-28104633%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57888d57c480a3_78031273',
+  'unifunc' => 'content_57c7d384286a90_51355862',
   'variables' => 
   array (
     'title' => 1,
@@ -28,7 +28,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => true,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57888d57c480a3_78031273')) {function content_57888d57c480a3_78031273($_smarty_tpl) {?><!DOCTYPE html><html>  <head>    <meta charset="utf-8">    <title><?php echo '/*%%SmartyNocache:2617657888d570c68f0-28104633%%*/<?php echo $_smarty_tpl->tpl_vars[\'title\']->value;?>
+<?php if ($_valid && !is_callable('content_57c7d384286a90_51355862')) {function content_57c7d384286a90_51355862($_smarty_tpl) {?><!DOCTYPE html><html>  <head>    <meta charset="utf-8">    <title><?php echo '/*%%SmartyNocache:2617657888d570c68f0-28104633%%*/<?php echo $_smarty_tpl->tpl_vars[\'title\']->value;?>
 /*/%%SmartyNocache:2617657888d570c68f0-28104633%%*/';?>
     </title>    <link rel="shortcut icon" href="<?php echo $_smarty_tpl->tpl_vars['BASEURL']->value;?>
 doc/favicon.ico">    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['THEMESPATH']->value;?>

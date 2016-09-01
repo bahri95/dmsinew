@@ -181,7 +181,7 @@ $db['default']['database'] = "h71721_dmsinew";
 
 
 
-
+///hosting
 // $db['default']['hostname'] = "localhost";
 
 

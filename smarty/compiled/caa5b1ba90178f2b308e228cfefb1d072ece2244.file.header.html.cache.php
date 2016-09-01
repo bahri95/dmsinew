@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-31 00:24:02
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-01 01:27:03
          compiled from "application\views\web\base-layout\header.html" */ ?>
 <?php /*%%SmartyHeaderCode:172657888d5829f778-63496755%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'caa5b1ba90178f2b308e228cfefb1d072ece2244' => 
     array (
       0 => 'application\\views\\web\\base-layout\\header.html',
-      1 => 1472594667,
+      1 => 1472686022,
       2 => 'file',
     ),
   ),
@@ -77,9 +77,9 @@ $_smarty_tpl->tpl_vars[\'rs\']->_loop = true;
 /*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
 ">          </i>        </a>        <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php } ?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
         <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php }?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
-              </span>      <div class="b-option-contacts f-option-contacts">        <a href="<?php echo $_smarty_tpl->tpl_vars['url_menu_registrasi']->value;?>
-">          <i class="fa fa-user">          </i>&nbsp;Registrasi        </a>      </div>      </div>  </div>  </div><div class="container b-header__box b-relative">  <a href="/" class="b-left b-logo">    <img class="color-theme" data-retina src="<?php echo $_smarty_tpl->tpl_vars['BASEURL']->value;?>
-themes/default/img/logo_dmsi.png" alt="Logo DMSI" style="margin-left:-50px;" />  </a>  <div class="b-header-r b-right">    <div class="b-top-nav-show-slide f-top-nav-show-slide b-right j-top-nav-show-slide">      <i class="fa fa-align-justify">      </i>    </div>    <nav class="b-top-nav f-top-nav b-right j-top-nav">      <ul class="b-top-nav__1level_wrap">        <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php if ($_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'home\'||$_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'\') {?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
+              </span>      <!-- <div class="b-option-contacts f-option-contacts">        <a href="<?php echo $_smarty_tpl->tpl_vars['url_menu_registrasi']->value;?>
+">          <i class="fa fa-user">          </i>&nbsp;Registrasi        </a>      </div>  -->     </div>  </div>  </div><div class="container b-header__box b-relative">  <a href="/" class="b-left b-logo">    <img class="color-theme" data-retina src="<?php echo $_smarty_tpl->tpl_vars['BASEURL']->value;?>
+themes/default/img/logo_dmsi.png" alt="Logo DMSI" style="margin-left:-50px;" />  </a>  <div class="b-header-r b-right">    <div class="b-top-nav-show-slide f-top-nav-show-slide b-right j-top-nav-show-slide">      <i class="fa fa-align-justify">      </i>    </div>    <nav class="b-top-nav f-top-nav b-left j-top-nav">      <ul class="b-top-nav__1level_wrap">        <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php if ($_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'home\'||$_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'\') {?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">          <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php } else { ?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">          <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php }?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
                     <a href="<?php echo $_smarty_tpl->tpl_vars['homeurl']->value;?>
@@ -189,21 +189,21 @@ $_smarty_tpl->tpl_vars[\'rs\']->_loop = true;
                      <a href="<?php echo $_smarty_tpl->tpl_vars['url_menu_regulasi']->value;?>
 ">            <i class="fa fa-inbox b-menu-1level-ico">            </i><?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php echo $_smarty_tpl->tpl_vars[\'menu\']->value[\'regulasi\'];?>
 /*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
-          </a>         </li>        <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php if ($_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'download\') {?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
+          </a>         </li>        <!-- <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php if ($_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'download\') {?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">          <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php } else { ?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">          <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php }?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
            <a href="<?php echo $_smarty_tpl->tpl_vars['url_menu_download']->value;?>
-">            <i class="fa fa-code b-menu-1level-ico">            </i>Download          </a>         </li>        <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php if ($_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'sponsor\') {?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
+">            <i class="fa fa-code b-menu-1level-ico">            </i>Download          </a>         </li> -->        <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php if ($_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'sponsor\') {?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">          <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php } else { ?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">          <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php }?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
             <a href="<?php echo $_smarty_tpl->tpl_vars['url_menu_sponsor']->value;?>
-">            <i class="fa fa-inbox b-menu-1level-ico">            </i>Sponsorship          </a>         </li>         <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php if ($_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'aspirasi\') {?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
+">            <i class="fa fa-inbox b-menu-1level-ico">            </i>Sponsorship          </a>         </li>         <!-- <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php if ($_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'aspirasi\') {?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">          <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php } else { ?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">          <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php }?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
            <a href="<?php echo $_smarty_tpl->tpl_vars['url_menu_aspirasi']->value;?>
 ">            <i class="fa fa-inbox b-menu-1level-ico">            </i><?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php echo $_smarty_tpl->tpl_vars[\'menu\']->value[\'aspirasi\'];?>
 /*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
-          </a>         </li>             <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php if ($_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'kontak\') {?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
+          </a>         </li>      -->        <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php if ($_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'kontak\') {?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">          <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php } else { ?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">          <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php }?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
            <a href="<?php echo $_smarty_tpl->tpl_vars['url_menu_kontak']->value;?>

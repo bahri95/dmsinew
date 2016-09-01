@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-29 09:13:37
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-01 11:05:34
          compiled from "application\views\web\home\homecontent.html" */ ?>
 <?php /*%%SmartyHeaderCode:2974957888d58b32e76-93025506%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5078298eef2692eaf65d1a93ee965e5a0b7d1397' => 
     array (
       0 => 'application\\views\\web\\home\\homecontent.html',
-      1 => 1472454610,
+      1 => 1472720729,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'berita_sidebar' => 0,
     'rs' => 0,
     'baseurl' => 0,
-    'berita_asosiasi' => 0,
+    'datamaxalbum' => 0,
+    'rs_album' => 0,
+    'foto_list' => 0,
+    'BASEURL' => 0,
     'act_lang' => 0,
     'eventhome' => 0,
   ),
@@ -41,19 +44,27 @@ php_helpers/timthumb.php?src=<?php echo $_smarty_tpl->tpl_vars['rs']->value['ima
 &amp;w=120&amp;zc=0" alt="" />                </a>               </div>              <div class="b-remaining">                <div class="b-blog-short-post__item_text f-blog-short-post__item_text">                  <a href="<?php echo $_smarty_tpl->tpl_vars['rs']->value['url_detail'];?>
 " class="f-primary-b f-more font-judul"><?php echo $_smarty_tpl->tpl_vars['rs']->value['judul'];?>
                   </a>                 </div>                <div class="b-blog-short-post__item_date f-blog-short-post__item_date f-primary-it"> <?php echo $_smarty_tpl->tpl_vars['rs']->value['tanggal'];?>
-                 </div>              </div>            </div>            <?php } ?>            <?php }?>           </div>        </div>      </div>      <!--START Berita anggota DMSI-->      <div class="col-md-4">        <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special font-judul-header " style=" color: #589444;">          <?php echo $_smarty_tpl->tpl_vars['judul']->value['berita_anggota'];?>
-        </h4>        <div class="b-blog-short-post b-blog-short-post--img-hover-bordered b-blog-short-post--w-img f-blog-short-post--w-img row">          <div class="b-blog-short-post b-blog-short-post--img-hover-bordered b-blog-short-post--w-img f-blog-short-post--w-img row"> <?php if ($_smarty_tpl->tpl_vars['berita_asosiasi']->value!='') {?>            <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['berita_asosiasi']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+                 </div>              </div>            </div>            <?php } ?>            <?php }?>           </div>        </div>      </div>      <!--START Berita anggota DMSI-->      <div class="col-md-4">        <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special font-judul-header " style=" color: #589444;">          <?php echo $_smarty_tpl->tpl_vars['judul']->value['judul_album_video'];?>
+        </h4>                           <div class="col-md-12 col-sm-12 col-xs-12 ">                <h4 class="f-primary-b">                <?php if ($_smarty_tpl->tpl_vars['datamaxalbum']->value!='') {?>                <?php  $_smarty_tpl->tpl_vars['rs_album'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs_album']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['datamaxalbum']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['rs_album']->key => $_smarty_tpl->tpl_vars['rs_album']->value) {
+$_smarty_tpl->tpl_vars['rs_album']->_loop = true;
+?>                <?php echo $_smarty_tpl->tpl_vars['rs_album']->value['nama_album'];?>
+                </h4>                  <div class="b-short-photo-items-group">                <?php if ($_smarty_tpl->tpl_vars['foto_list']->value!='') {?>                    <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['foto_list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {
 $_smarty_tpl->tpl_vars['rs']->_loop = true;
-?>            <div class="b-blog-short-post--popular col-md-12  col-xs-12 f-primary-b">              <div class="b-blog-short-post__item_date f-blog-short-post__item_date f-primary-it font-judul-asosiasi"> <?php echo $_smarty_tpl->tpl_vars['rs']->value['nama_asosiasi'];?>
-               </div>              <div class="b-blog-short-post__item_img">                 <a href="<?php echo $_smarty_tpl->tpl_vars['rs']->value['url_detail'];?>
-">                  <img data-retina src="<?php echo $_smarty_tpl->tpl_vars['baseurl']->value;?>
-php_helpers/timthumb.php?src=<?php echo $_smarty_tpl->tpl_vars['rs']->value['image'];?>
-&amp;w=120&amp;zc=0" alt=""/>                </a>               </div>              <div class="b-remaining">                <div class="b-blog-short-post__item_text f-blog-short-post__item_text font-judul">                   <a href="<?php echo $_smarty_tpl->tpl_vars['rs']->value['url_detail'];?>
-"><?php echo $_smarty_tpl->tpl_vars['rs']->value['judul'];?>
-                  </a>                 </div>                <div class="b-blog-short-post__item_date f-blog-short-post__item_date f-primary-it"> <?php echo $_smarty_tpl->tpl_vars['rs']->value['tanggal'];?>
-                 </div>              </div>            </div>            <?php } ?>            <?php }?>           </div>        </div>      </div>      <!--END Berita anggota DMSI-->      <!--START KEGIATAN DMSI-->      <div class="col-sm-4">        <div class="b-carousel-secondary f-carousel-secondary b-some-examples-tertiary f-some-examples-tertiary b-carousel-reset">          <div class="b-carousel-title f-carousel-title f-primary-b" style=" color: #589444;">            <?php if ($_smarty_tpl->tpl_vars['act_lang']->value=='en') {?>            DMSI EVENT            <?php } else { ?>            EVENT DMSI            <?php }?>           </div>          <div class="b-some-examples f-some-examples j-carousel-secondary"> <?php if ($_smarty_tpl->tpl_vars['eventhome']->value!='') {?>            <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
+?>                      <?php if ($_smarty_tpl->tpl_vars['rs']->value['id_album']==$_smarty_tpl->tpl_vars['rs_album']->value['maxalbum']) {?>                <div class="b-column">                    <a class="b-short-photo-item fancybox" href="<?php echo $_smarty_tpl->tpl_vars['rs']->value['foto'];?>
+" title="<?php echo $_smarty_tpl->tpl_vars['rs']->value['judul_foto'];?>
+ - Album <?php echo $_smarty_tpl->tpl_vars['rs']->value['nama_album'];?>
+" rel="footer-group"><img width="100" height="100" data-retina src="<?php echo $_smarty_tpl->tpl_vars['rs']->value['foto'];?>
+" alt=""/></a>                </div>                    <?php }?>                <?php } ?>                <?php }?>                            </div>                <?php } ?>                <?php }?>              </div> <!--col 12 -->               <div class="b-form-row b-null-bottom-indent">            <?php if ($_smarty_tpl->tpl_vars['datamaxalbum']->value!='') {?>                <?php  $_smarty_tpl->tpl_vars['rs_album'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs_album']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['datamaxalbum']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['rs_album']->key => $_smarty_tpl->tpl_vars['rs_album']->value) {
+$_smarty_tpl->tpl_vars['rs_album']->_loop = true;
+?>            <a class="f-footer-mini__link f-more f-primary-b" href="<?php echo $_smarty_tpl->tpl_vars['BASEURL']->value;?>
+index.php/public/foto/detail/<?php echo $_smarty_tpl->tpl_vars['rs_album']->value['maxalbum'];?>
+">            <i class="fa fa-angle-double-right">            </i> Selengkapnya          </a>          <?php } ?>          <?php }?>           </div>                    </div>      <!--END Berita anggota DMSI-->      <!--START KEGIATAN DMSI-->      <div class="col-sm-4">        <div class="b-carousel-secondary f-carousel-secondary b-some-examples-tertiary f-some-examples-tertiary b-carousel-reset">          <div class="b-carousel-title f-carousel-title f-primary-b" style=" color: #589444;">            <?php if ($_smarty_tpl->tpl_vars['act_lang']->value=='en') {?>            DMSI EVENT            <?php } else { ?>            EVENT DMSI            <?php }?>           </div>          <div class="b-some-examples f-some-examples j-carousel-secondary"> <?php if ($_smarty_tpl->tpl_vars['eventhome']->value!='') {?>            <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['eventhome']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {
 $_smarty_tpl->tpl_vars['rs']->_loop = true;

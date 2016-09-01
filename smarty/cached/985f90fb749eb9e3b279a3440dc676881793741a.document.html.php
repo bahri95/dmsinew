@@ -14,20 +14,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       1 => 1472451560,
       2 => 'file',
     ),
-    '2354618920c3460c34a4ed9ec610ef723ad74b27' => 
+    '0a92318bc38ebd6990564ec71866bdc0b00ec8e6' => 
     array (
-      0 => 'application\\views\\private\\dashboard\\grafik.html',
-      1 => 1472451802,
+      0 => 'application\\views\\private\\foto\\list.html',
+      1 => 1472452488,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '1343157888d7d407514-59546593',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57c6093bf095a6_88454413',
+  'unifunc' => 'content_57c7efe3a52378_17612999',
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57c6093bf095a6_88454413')) {function content_57c6093bf095a6_88454413($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">  <head>    <meta charset="UTF-8">    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>    <meta name='description' content='Museum seni dan budaya di Indonesia' />    <meta name='keywords' content='museum, seni, budaya, indonesia, koleksi' />    <meta name='robots' content='index,follow' />    <title>Administrator Console    </title>    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/admin/load-style.css" />        <?php echo $_smarty_tpl->tpl_vars['LOADSTYLE']->value;?>
+<?php if ($_valid && !is_callable('content_57c7efe3a52378_17612999')) {function content_57c7efe3a52378_17612999($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">  <head>    <meta charset="UTF-8">    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>    <meta name='description' content='Museum seni dan budaya di Indonesia' />    <meta name='keywords' content='museum, seni, budaya, indonesia, koleksi' />    <meta name='robots' content='index,follow' />    <title>Administrator Console    </title>    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/admin/load-style.css" />        <?php echo $_smarty_tpl->tpl_vars['LOADSTYLE']->value;?>
       </head>  <body class="skin-blue" onmousemove="change()">    <!-- header logo: style can be found in header.less -->    <header class="header">      <a href="#" class="logo">        <!-- Add the class icon to your logo image or logo icon to add the margining -->        Dewan Minyak Sawit Indonesia      </a>      <!-- Header Navbar: style can be found in header.less -->      <nav class="navbar navbar-static-top" role="navigation">        <!-- Sidebar toggle button-->        <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">          <span class="sr-only">Toggle navigation          </span>          <span class="icon-bar">          </span>          <span class="icon-bar">          </span>          <span class="icon-bar">          </span>        </a>        <div class="navbar-right">          <ul class="nav navbar-nav">            <!-- Messages: style can be found in dropdown.less-->            <li class="dropdown messages-menu">              <a href="#" class="dropdown-toggle" data-toggle="dropdown">                <i class="fa fa-envelope-o">                </i>                                <?php if ($_smarty_tpl->tpl_vars['data_aspirasi']->value!='') {?>                <span class="label label-success">                  <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['jumlah_aspirasi']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {
