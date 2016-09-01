@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-29 09:13:55
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-02 01:21:52
          compiled from "application\views\private\loginadmin\loginform.html" */ ?>
 <?php /*%%SmartyHeaderCode:1733457888d76dc2151-30486741%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fbc81e035079547912715c583bd2aca391b51e76' => 
     array (
       0 => 'application\\views\\private\\loginadmin\\loginform.html',
-      1 => 1472453439,
+      1 => 1472748459,
       2 => 'file',
     ),
   ),
