@@ -5,62 +5,63 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f6177fde6f50439a7c2240afdd4578c0fe613c49' => 
     array (
       0 => 'application\\views\\web\\base-layout\\document.html',
-      1 => 1472625482,
+      1 => 1472966665,
       2 => 'file',
     ),
     'caa5b1ba90178f2b308e228cfefb1d072ece2244' => 
     array (
       0 => 'application\\views\\web\\base-layout\\header.html',
-      1 => 1472686022,
+      1 => 1472812789,
       2 => 'file',
     ),
     '491adfa508d209a2eb7399044db1f84a27220b0c' => 
     array (
       0 => 'application\\views\\web\\base-layout\\header_detail.html',
-      1 => 1472454315,
+      1 => 1472788283,
       2 => 'file',
     ),
     '5c7daaeeddbbe8f44bdbbf957481dcdf2f0b6b25' => 
     array (
       0 => 'application\\views\\web\\base-layout\\footer.html',
-      1 => 1472551628,
+      1 => 1472814835,
       2 => 'file',
     ),
     '903fc16f82857002a0d45f8431148885b08c3383' => 
     array (
       0 => 'application\\views\\web\\base-layout\\breadcrumbs.html',
-      1 => 1472454233,
+      1 => 1472788283,
       2 => 'file',
     ),
     '4a1041fde5917852504e7e542c715e64af99829e' => 
     array (
       0 => 'application\\views\\web\\beritadmsi\\detail.html',
-      1 => 1472454390,
+      1 => 1472788283,
       2 => 'file',
     ),
     '4aa8bdc77de23e5614b18a829abc45841dc97812' => 
     array (
       0 => 'application\\views\\web\\base-layout\\sidebar.html',
-      1 => 1472454326,
+      1 => 1472804589,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '614957888fa30387c5-29408436',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57c7ed1f7de915_80277599',
+  'unifunc' => 'content_57cbb00d597ed4_30391006',
   'variables' => 
   array (
     'title' => 1,
     'BASEURL' => 0,
-    'share' => 0,
+    'datashare' => 0,
+    'rs' => 0,
     'THEMESPATH' => 0,
     'LOADSTYLE' => 0,
     'LOADJS' => 0,
   ),
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57c7ed1f7de915_80277599')) {function content_57c7ed1f7de915_80277599($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_57cbb00d597ed4_30391006')) {function content_57cbb00d597ed4_30391006($_smarty_tpl) {?><!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -68,12 +69,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     </title>
     <link rel="shortcut icon" href="http://localhost:82/dmsinew/doc/favicon.ico">
-    <meta property="og:title" content="" />
-    <meta property="og:url" content="www.dmsi.or.id" />
-    <meta property="og:image" content="http://localhost:82/dmsinew/doc/berita/32/http://localhost:82/dmsinew/doc/berita/32/32_20121011185424PKS.jpg" />
-    <meta property="og:description" content="" />
+            <meta property="og:title" content=" Butuh 160 Pabrik Kelapa Sawit" />
+    <meta property="og:url" content="http://dmsi.or.id" />
+    <meta property="og:image" content="http://localhost:82/dmsinew/doc/berita/32/32_20121011185424PKS.jpg" />
+    <meta property="og:description" content="MEDAN- Industri kelapa sawit dan produk turunannya diyakini masih akan terus berkembang. Namun, ..." />
     <meta property="og:site_name" content="Dewan Minyak Sawit Indonesia" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/default/load-style.css" />
     
   </head>

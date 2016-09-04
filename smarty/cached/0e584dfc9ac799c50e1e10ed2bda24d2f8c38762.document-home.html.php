@@ -5,73 +5,65 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0e584dfc9ac799c50e1e10ed2bda24d2f8c38762' => 
     array (
       0 => 'application\\views\\web\\base-layout\\document-home.html',
-      1 => 1472748460,
+      1 => 1472788283,
       2 => 'file',
     ),
     '717377b59e15742682b014fa7b61b3271fec7135' => 
     array (
       0 => 'application\\views\\web\\base-layout\\sound.html',
-      1 => 1472748461,
+      1 => 1472788283,
       2 => 'file',
     ),
     'caa5b1ba90178f2b308e228cfefb1d072ece2244' => 
     array (
       0 => 'application\\views\\web\\base-layout\\header.html',
-      1 => 1472748461,
+      1 => 1472812789,
       2 => 'file',
     ),
     '087f4cfd4db792e75b75d4d820f2d77a8e2e43b8' => 
     array (
       0 => 'application\\views\\web\\base-layout\\slider.html',
-      1 => 1472748461,
+      1 => 1472788283,
       2 => 'file',
     ),
     '5c7daaeeddbbe8f44bdbbf957481dcdf2f0b6b25' => 
     array (
       0 => 'application\\views\\web\\base-layout\\footer.html',
-      1 => 1472748460,
+      1 => 1472814835,
       2 => 'file',
     ),
     '5078298eef2692eaf65d1a93ee965e5a0b7d1397' => 
     array (
       0 => 'application\\views\\web\\home\\homecontent.html',
-      1 => 1472748461,
+      1 => 1472804718,
       2 => 'file',
     ),
     'f804fa534b534dde0c8d3679f3ddb81c85575be4' => 
     array (
       0 => 'application\\views\\web\\home\\anggota_slider.html',
-      1 => 1472748461,
+      1 => 1472788283,
       2 => 'file',
     ),
     '1c5ae6c87bbd8a3bfa3f92c629df12fed29a6ab4' => 
     array (
       0 => 'application\\views\\web\\home\\aspirasi_slider.html',
-      1 => 1472748461,
+      1 => 1472805109,
       2 => 'file',
     ),
     '807c3e7dd808a73bd2c6dbf6f4814e4ab394a4da' => 
     array (
       0 => 'application\\views\\web\\home\\sponsor_slider.html',
-      1 => 1472748461,
+      1 => 1472788283,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '2617657888d570c68f0-28104633',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57c85f7e08cd00_51707059',
-  'variables' => 
-  array (
-    'title' => 1,
-    'BASEURL' => 0,
-    'THEMESPATH' => 0,
-    'LOADSTYLE' => 0,
-    'LOADJS' => 0,
-  ),
+  'unifunc' => 'content_57cb9fecc4dda9_05430513',
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57c85f7e08cd00_51707059')) {function content_57c85f7e08cd00_51707059($_smarty_tpl) {?><!DOCTYPE html><html>  <head>    <meta charset="utf-8">    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+<?php if ($_valid && !is_callable('content_57cb9fecc4dda9_05430513')) {function content_57cb9fecc4dda9_05430513($_smarty_tpl) {?><!DOCTYPE html><html>  <head>    <meta charset="utf-8">    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
     </title>    <link rel="shortcut icon" href="http://localhost:82/dmsinew/doc/favicon.ico">    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/default/load-style.css" />      </head>  <body>    <div class="mask-l" style="background-color: #fff; width: 100%; height: 100%; position: fixed; top: 0; left:0; z-index: 9999999;">    </div>     <!--removed by integration-->    <div class="col-md-2">  <div class="b-audio-player">    <div id="jquery_jplayer_1" class="jp-jplayer">    </div>    <div id="jp_container_1" class="jp-audio">      <div class="jp-type-playlist">        <div class="jp-gui jp-interface b-audio-player__content">          <ul class="jp-controls b-audio-player__content_nav f-audio-player__content_nav">            <li class="b-audio-player__content_nav_prev">              <a href="javascript:;" class="jp-previous " tabindex="1">                <i class="fa fa-backward">                </i>              </a>            </li>            <li class="b-audio-player__content_nav_play">              <a href="javascript:;" class="jp-play " tabindex="1">                <i class="fa fa-play">                </i>              </a>              <a href="javascript:;" class="jp-pause" tabindex="1">                <i class="fa fa-pause">                </i>              </a>            </li>            <li class="b-audio-player__content_nav_next">              <a href="javascript:;" class="jp-next " tabindex="1">                <i class="fa fa-forward">                </i>              </a>            </li>          </ul>          <div class="b-audio-player__content_inner f-audio-player__content_inner">            <div class="jp-time-holder b-audio-player__time f-audio-player__time">              <div class="jp-current-time">              </div>            </div>            <div class="jp-time-holder b-audio-player__full-time">              <div class="jp-duration">              </div>            </div>            <div class="jp-progress b-audio-player__progress-bar_box">              <div class="b-audio-player__progress-bar_container">                <div class="jp-seek-bar b-audio-player__progress-bar">                  <div class="jp-play-bar b-audio-player__progress-bar_progress">                    <div class="b-audio-player__progress-bar_progress_btn">                    </div>                  </div>                </div>              </div>            </div>          </div>        </div>        <div class="jp-playlist">          <ul>            <li>            </li>          </ul>        </div>      </div>    </div>  </div></div>    <header>  <div class="b-top-options-panel">    <div class="container">      <div class="b-option-contacts f-option-contacts">        <a href="#">          <i class="fa fa-envelope-o">          </i> dewan.sawit@gmail.com        </a>        <a href="#">          <i class="fa fa-phone">          </i> +62 21 29625788         </a>        <a href="#">          <i class="fa fa-fax">          </i> +62 21 29625788        </a>      </div>      <div class="b-right b-header-ico-group f-header-ico-group b-right">         <span class="b-header__search-box">           <i class="fa fa-search">          </i>          <form method="post" action="http://localhost:82/dmsinew/index.php/public/pencarian/index" name="form-search">             <input type="text" name="keyword" value="" placeholder="Masukan kata pencarian"/>          </form>        </span>       </div>      <div class="b-right">        <div class="b-option-contacts f-primary-b">          <a href="http://localhost:82/dmsinew/index.php/public/lang/id" title="Indonesia">            <img src="http://localhost:82/dmsinew/doc/lang/indo.png" width="20">          </a>  &nbsp;&nbsp;          <a href="http://localhost:82/dmsinew/index.php/public/lang/en" title="English">            <img src="http://localhost:82/dmsinew/doc/lang/eng.png" width="20">          </a>        </div>        </div>      <span class="b-header__social-box b-header__social-box--no-fon ">                <?php if ($_smarty_tpl->tpl_vars['datasosmed']->value!='') {?>        <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['datasosmed']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {

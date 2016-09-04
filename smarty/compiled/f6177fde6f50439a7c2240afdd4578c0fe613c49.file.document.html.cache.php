@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-01 10:55:59
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-04 07:24:29
          compiled from "application\views\web\base-layout\document.html" */ ?>
 <?php /*%%SmartyHeaderCode:614957888fa30387c5-29408436%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f6177fde6f50439a7c2240afdd4578c0fe613c49' => 
     array (
       0 => 'application\\views\\web\\base-layout\\document.html',
-      1 => 1472625482,
+      1 => 1472966665,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'title' => 1,
     'BASEURL' => 0,
-    'share' => 0,
+    'datashare' => 0,
+    'rs' => 0,
     'THEMESPATH' => 0,
     'LOADSTYLE' => 0,
     'LOADJS' => 0,
@@ -39,14 +40,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </title>
     <link rel="shortcut icon" href="<?php echo $_smarty_tpl->tpl_vars['BASEURL']->value;?>
 doc/favicon.ico">
-    <meta property="og:title" content="<?php echo $_smarty_tpl->tpl_vars['share']->value['judul'];?>
+    <?php if ($_smarty_tpl->tpl_vars['datashare']->value!='') {?>
+    <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['datashare']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {
+$_smarty_tpl->tpl_vars['rs']->_loop = true;
+?>
+    <meta property="og:title" content="<?php echo $_smarty_tpl->tpl_vars['rs']->value['judul'];?>
 " />
-    <meta property="og:url" content="www.dmsi.or.id" />
-    <meta property="og:image" content="<?php echo $_smarty_tpl->tpl_vars['share']->value['image'];?>
+    <meta property="og:url" content="http://dmsi.or.id" />
+    <meta property="og:image" content="<?php echo $_smarty_tpl->tpl_vars['rs']->value['image'];?>
 " />
-    <meta property="og:description" content="<?php echo $_smarty_tpl->tpl_vars['share']->value['deskripsi'];?>
+    <meta property="og:description" content="<?php echo $_smarty_tpl->tpl_vars['rs']->value['content'];?>
 " />
     <meta property="og:site_name" content="Dewan Minyak Sawit Indonesia" />
+    <?php } ?>
+    <?php }?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['THEMESPATH']->value;?>
 " />

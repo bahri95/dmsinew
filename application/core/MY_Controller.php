@@ -45,6 +45,258 @@
 
 			//album
 			$this->_display_album();
+
+			//video
+			$this->_display_video();
+
+			//share
+			if($this->uri->segment(4,0) <> '' or $this->uri->segment(5,0) <> ''):
+			$this->_display_share();
+			endif;
+		}
+		public 
+		function _display_share()
+		{
+			$this->load->model('sharemodel');
+			$array_berita = array();
+			$array_informasi = array();
+			$array_agenda = array();
+			$array_opini = array();
+			$array_sesebi = array();
+			
+			// get data berita
+			$params = $this->uri->segment(4,0);
+			if($this->act_lang =='en'):
+			$databerita = $this->sharemodel->get_pencarian_berita_english($params);
+			
+			if(!empty($databerita)):
+			foreach($databerita as $row):
+			
+			if($row['id_asosiasi'] == '100'){
+				$databerita['url_detail'] = site_url('public/beritadmsi/detail/'.$row['id_berita'].'/'.url_title($row['judul_english']));
+				$databerita['kategori'] = 'DMSI News';
+			} else {
+				$databerita['url_detail'] = site_url('public/beritaanggota/detail/'.$row['id_berita'].'/'.url_title($row['judul_english']));
+				$databerita['kategori'] = 'DMSI Members News';
+			}
+
+			$pathdok = 'doc/berita/'.$row['id_berita'].'/'.$row['image'];
+			
+			if(is_file($pathdok)):
+			$databerita['image'] = BASEURL.$pathdok;
+			endif;
+			$detail_berita = $databerita['url_detail'];
+			$array_berita[] = array('id_data' => $row['id_berita'], 'judul' => $row['judul_english'],'content' => strip_tags($this->getIntroText($row['content_english'],100)),'image' => $databerita['image'],'kategori' => $databerita['kategori'],'url_detail' => $databerita['url_detail']);
+			endforeach;
+			endif; else :
+			$params = $this->uri->segment(4,0);
+			$databerita = $this->sharemodel->get_pencarian_berita_indo($params);
+			
+			if(!empty($databerita)):
+			foreach($databerita as $row):
+			
+			if($row['id_asosiasi'] == '100'){
+				$databerita['url_detail'] = site_url('public/beritadmsi/detail/'.$row['id_berita'].'/'.url_title($row['judul']));
+				$databerita['kategori'] = 'Berita DMSI';
+			} else {
+				$databerita['url_detail'] = site_url('public/beritaanggota/detail/'.$row['id_berita'].'/'.url_title($row['judul']));
+				$databerita['kategori'] = 'Berita Anggota DMSI';
+			}
+
+			$pathdok = 'doc/berita/'.$row['id_berita'].'/'.$row['image'];
+			
+			if(is_file($pathdok)):
+			$databerita['image'] = BASEURL.$pathdok;
+			endif;
+			$detail_berita = $databerita['url_detail'];
+			$array_berita[] = array('id_data' => $row['id_berita'], 'judul' => $row['judul'],'content' => strip_tags($this->getIntroText($row['content'],100)),'image' => $databerita['image'],'kategori' => $databerita['kategori'],'url_detail' => $databerita['url_detail']);
+			endforeach;
+			endif;
+			endif;
+			// get data informasi
+			// $params = array_merge($par, $limit);
+			
+			if($this->act_lang =='en'):
+			$params = $this->uri->segment(5,0);
+			$datainformasi = $this->sharemodel->get_pencarian_informasi_english($params);
+			
+			if(!empty($datainformasi)):
+			foreach($datainformasi as $row):
+			$datainformasi['url_detail'] = site_url('public/informasi/detail/'.$row['id_kategori'].'/'.$row['id_informasi'].'/'.url_title($row['judul_english']));
+			$datainformasi['kategori'] = 'Information '.$row['kategori_english'];
+			$pathdok = 'doc/informasi/'.$row['id_informasi'].'/'.$row['image'];
+			
+			if(is_file($pathdok)):
+			$datainformasi['image'] = BASEURL.$pathdok;
+			endif;
+			$detail_informasi = $datainformasi['url_detail'];
+			$array_informasi[] = array('id_data' => $row['id_informasi'], 'judul' => $row['judul_english'],'content' => strip_tags($this->getIntroText($row['content_english'],100)),'image' => $datainformasi['image'],'kategori' => $datainformasi['kategori'],'url_detail' => $datainformasi['url_detail']);
+			endforeach;
+			endif; else :
+			$params = $this->uri->segment(5,0);
+			$datainformasi = $this->sharemodel->get_pencarian_informasi_indo($params);
+			
+			if(!empty($datainformasi)):
+			foreach($datainformasi as $row):
+			$datainformasi['url_detail'] = site_url('public/informasi/detail/'.$row['id_kategori'].'/'.$row['id_informasi'].'/'.url_title($row['judul']));
+			$datainformasi['kategori'] = 'Information '.$row['kategori'];
+			$pathdok = 'doc/informasi/'.$row['id_informasi'].'/'.$row['image'];
+			
+			if(is_file($pathdok)):
+			$datainformasi['image'] = BASEURL.$pathdok;
+			endif;
+			$detail_informasi = $datainformasi['url_detail'];
+			$array_informasi[] = array('id_data' => $row['id_informasi'], 'judul' => $row['judul'],'content' => strip_tags($this->getIntroText($row['content'],100)),'image' => $datainformasi['image'],'kategori' => $datainformasi['kategori'],'url_detail' => $datainformasi['url_detail']);
+			endforeach;
+			endif;
+			endif;
+			// get data agenda
+			
+			if($this->act_lang =='en'):
+			$params = $this->uri->segment(4,0);
+			$dataagenda = $this->sharemodel->get_pencarian_agenda_english($params);
+			
+			if(!empty($dataagenda)):
+			foreach($dataagenda as $row):
+			
+			if($row['id_asosiasi'] == '100'){
+				$dataagenda['url_detail'] = site_url('public/kegiatandmsi/detail/'.$row['id_agenda'].'/'.url_title($row['judul_english']));
+				$dataagenda['kategori'] = 'DMSI Event';
+			} else {
+				$dataagenda['url_detail'] = site_url('public/kegiatananggota/detail/'.$row['id_agenda'].'/'.url_title($row['judul_english']));
+				$dataagenda['kategori'] = 'DMSI Member Event';
+			}
+
+			$pathdok = 'doc/agenda/'.$row['id_agenda'].'/'.$row['image_agenda'];
+			
+			if(is_file($pathdok)):
+			$dataagenda['image'] = BASEURL.$pathdok;
+			endif;
+			$detail_agenda = $dataagenda['url_detail'];
+			$array_agenda[] = array('id_data' => $row['id_agenda'], 'judul' => $row['judul_english'],'content' => strip_tags($this->getIntroText($row['keterangan_english'],100)),'image' => $dataagenda['image'],'kategori' => $dataagenda['kategori'],'url_detail' => $dataagenda['url_detail']);
+			endforeach;
+			endif; else :
+			$params = $this->uri->segment(4,0);
+			$dataagenda = $this->sharemodel->get_pencarian_agenda_indo($params);
+			
+			if(!empty($dataagenda)):
+			foreach($dataagenda as $row):
+			
+			if($row['id_asosiasi'] == '100'){
+				$dataagenda['url_detail'] = site_url('public/kegiatandmsi/detail/'.$row['id_agenda'].'/'.url_title($row['judul_agenda']));
+				$dataagenda['kategori'] = 'Event DMSI';
+			} else {
+				$dataagenda['url_detail'] = site_url('public/kegiatananggota/detail/'.$row['id_agenda'].'/'.url_title($row['judul_agenda']));
+				$dataagenda['kategori'] = 'Event Anggota DMSI';
+			}
+
+			$pathdok = 'doc/agenda/'.$row['id_agenda'].'/'.$row['image_agenda'];
+			
+			if(is_file($pathdok)):
+			$dataagenda['image'] = BASEURL.$pathdok;
+			endif;
+			$detail_agenda = $dataagenda['url_detail'];
+			$array_agenda[] = array('id_data' => $row['id_agenda'], 'judul' => $row['judul_agenda'],'content' => strip_tags($this->getIntroText($row['keterangan'],100)),'image' => $dataagenda['image'],'kategori' => $dataagenda['kategori'],'url_detail' => $dataagenda['url_detail']);
+			endforeach;
+			endif;
+			endif;
+			// get data opini
+			// $params = array_merge($par, $limit);
+			
+			if($this->act_lang =='en'):
+			$params = $this->uri->segment(4,0);
+			$dataopini = $this->sharemodel->get_pencarian_opini_english($params);
+			
+			if(!empty($dataopini)):
+			foreach($dataopini as $row):
+			$dataopini['url_detail'] = site_url('public/opini/detail/'.$row['id_opini'].'/'.url_title($row['judul_english']));
+			$dataopini['kategori'] = 'Opinion';
+			$pathdok = 'doc/opini/'.$row['id_opini'].'/'.$row['image'];
+			
+			if(is_file($pathdok)):
+			$dataopini['image'] = BASEURL.$pathdok;
+			endif;
+			$detail_opini = $dataopini['url_detail'];
+			$array_opini[] = array('id_data' => $row['id_opini'], 'judul' => $row['judul_english'],'content' => strip_tags($this->getIntroText($row['content_english'],100)),'image' => $dataopini['image'],'kategori' => $dataopini['kategori'],'url_detail' => $dataopini['url_detail']);
+			endforeach;
+			endif; else :
+			$params = $this->uri->segment(4,0);
+			$dataopini = $this->sharemodel->get_pencarian_opini_indo($params);
+			
+			if(!empty($dataopini)):
+			foreach($dataopini as $row):
+			$dataopini['url_detail'] = site_url('public/opini/detail/'.$row['id_opini'].'/'.url_title($row['judul']));
+			$dataopini['kategori'] = 'Opini';
+			$pathdok = 'doc/opini/'.$row['id_opini'].'/'.$row['image'];
+			
+			if(is_file($pathdok)):
+			$dataopini['image'] = BASEURL.$pathdok;
+			endif;
+			$detail_opini = $dataopini['url_detail'];
+			$array_opini[] = array('id_data' => $row['id_opini'], 'judul' => $row['judul'],'content' => strip_tags($this->getIntroText($row['content'],100)),'image' => $dataopini['image'],'kategori' => $dataopini['kategori'],'url_detail' => $dataopini['url_detail']);
+			endforeach;
+			endif;
+			endif;
+			// get data opini
+			// $params = array_merge($par, $limit);
+			
+			if($this->act_lang =='en'):
+			$params = $this->uri->segment(4,0);
+			$datasesebi = $this->sharemodel->get_pencarian_sesebi_english($params);
+			
+			if(!empty($datasesebi)):
+			foreach($datasesebi as $row):
+			$datasesebi['url_detail'] = site_url('public/sesebi/detail/'.$row['id_sesebi'].'/'.url_title($row['judul_english']));
+			$datasesebi['kategori'] = 'Various';
+			$pathdok = 'doc/sesebi/'.$row['id_sesebi'].'/'.$row['image'];
+			
+			if(is_file($pathdok)):
+			$datasesebi['image'] = BASEURL.$pathdok;
+			endif;
+			$detail_sesebi = $datasesebi['url_detail'];
+			$array_sesebi[] = array('id_data' => $row['id_sesebi'], 'judul' => $row['judul_english'],'content' => strip_tags($this->getIntroText($row['content_english'],100)),'image' => $datasesebi['image'],'kategori' => $datasesebi['kategori'],'url_detail' => $datasesebi['url_detail']);
+			endforeach;
+			endif; else :
+			$params = $this->uri->segment(4,0);
+			$datasesebi = $this->sharemodel->get_pencarian_sesebi_indo($params);
+			
+			if(!empty($datasesebi)):
+			foreach($datasesebi as $row):
+			$datasesebi['url_detail'] = site_url('public/sesebi/detail/'.$row['id_sesebi'].'/'.url_title($row['judul']));
+			$datasesebi['kategori'] = 'Serba-serbi';
+			$pathdok = 'doc/sesebi/'.$row['id_sesebi'].'/'.$row['image'];
+			
+			if(is_file($pathdok)):
+			$datasesebi['image'] = BASEURL.$pathdok;
+			endif;
+			$detail_sesebi = $datasesebi['url_detail'];
+			$array_sesebi[] = array('id_data' => $row['id_sesebi'], 'judul' => $row['judul'],'content' => strip_tags($this->getIntroText($row['content'],100)),'image' => $datasesebi['image'],'kategori' => $datasesebi['kategori'],'url_detail' => $datasesebi['url_detail']);
+			endforeach;
+			endif;
+			endif;
+			$array_hasil = array_merge($array_berita, $array_informasi, $array_agenda, $array_opini, $array_sesebi);
+			$this->smarty->assign("datashare", $array_hasil);
+			
+		}
+		public
+		function _display_video()
+		{
+			$this->load->model('videomodel');
+			$result = $this->videomodel->get_list_video_home();
+			if(!empty($result)):
+			foreach($result as $key=>$data):
+			$path = 'doc/video/'.$data['id_video']."/";
+			
+			if(is_file($path.$data['video_image'])){
+				$result[$key]['video_image'] = BASEURL.$path.$data['video_image'];
+			} else {
+				$result[$key]['video_image']= BASEURL.'doc/tmp.default.jpg';
+			}
+
+			$result[$key]['url_play'] = site_url('public/video/play/'.$data['id_video'].'/'.url_title($data['judul_video']));
+			endforeach;
+			endif;
+			$this->smarty->assign("video_list", $result);
 		}
 		public
 		function _display_album()
@@ -69,6 +321,7 @@
 				
 				if($this->act_lang == 'en'){
 					$result[$key]['judul_foto'] = $data['judul_english'];
+					$result[$key]['nama_album'] = $data['nama_english'];
 				}
 
 				$result[$key]['foto'] = BASEURL.$path.$data['foto'];
@@ -858,14 +1111,14 @@
 				$judul['berita_dmsi'] = "DMSI NEWS";
 				$judul['berita_anggota'] = "DMSI MEMBER NEWS";
 				$judul['anggota'] = "DMSI MEMBER";
-				$judul['aspirasi'] = "ASPIRATION";
+				$judul['harga'] = "MARKET PRICE";
 				$judul['judul_album_video'] = "
 THE LATEST PHOTOS AND VIDEOS";
 			} else {
 				$judul['berita_dmsi'] = 'BERITA DMSI';
 				$judul['berita_anggota'] = 'BERITA ANGGOTA DMSI';
 				$judul['anggota'] = "ANGGOTA DMSI";
-				$judul['aspirasi'] = "ASPIRASI";
+				$judul['harga'] = "HARGA PASAR";
 				$judul['judul_album_video'] = "
 FOTO DAN VIDEO TERBARU";
 			}
@@ -1004,7 +1257,8 @@ FOTO DAN VIDEO TERBARU";
 				//aspirasi
 				$label['isi_pesan'] = 'Message Body Aspiration';
 				$label['validasi'] = 'Validation Code';
-				$label['kirim_pesan'] = 'Send a message';
+				$label['sosmed'] = 'Social Media';
+				$label['info'] = 'Contact Info';
 				$label['petunjuk'] = 'Instructions';
 				$label['petunjuk1'] = 'Please Enter Your Full Name';
 				$label['petunjuk2'] = 'fill the column by selecting the Object to which this aspiration in show';
@@ -1032,7 +1286,8 @@ FOTO DAN VIDEO TERBARU";
 				$label['judul'] = 'Judul';
 				$label['isi_pesan'] = 'Isi Pesan Aspirasi';
 				$label['validasi'] = 'Kode Validasi';
-				$label['kirim_pesan'] = 'Kirim Pesan';
+				$label['sosmed'] = 'Sosial Media';
+				$label['info'] = 'Kontak Info';
 				$label['petunjuk'] = 'Petunjuk';
 				$label['petunjuk1'] = 'Isikan Nama Anda Secara Lengkap';
 				$label['petunjuk2'] = 'isikan Kolom Objek dengan memilih ke pihak mana Aspirasi ini di tunjukan';

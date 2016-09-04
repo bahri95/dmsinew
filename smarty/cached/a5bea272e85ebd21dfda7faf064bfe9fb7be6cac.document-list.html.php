@@ -5,47 +5,47 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a5bea272e85ebd21dfda7faf064bfe9fb7be6cac' => 
     array (
       0 => 'application\\views\\web\\base-layout\\document-list.html',
-      1 => 1472454273,
+      1 => 1472788283,
       2 => 'file',
     ),
     'caa5b1ba90178f2b308e228cfefb1d072ece2244' => 
     array (
       0 => 'application\\views\\web\\base-layout\\header.html',
-      1 => 1472686022,
+      1 => 1472812789,
       2 => 'file',
     ),
     '491adfa508d209a2eb7399044db1f84a27220b0c' => 
     array (
       0 => 'application\\views\\web\\base-layout\\header_detail.html',
-      1 => 1472454315,
+      1 => 1472788283,
       2 => 'file',
     ),
     '5c7daaeeddbbe8f44bdbbf957481dcdf2f0b6b25' => 
     array (
       0 => 'application\\views\\web\\base-layout\\footer.html',
-      1 => 1472551628,
+      1 => 1472814835,
       2 => 'file',
     ),
     '903fc16f82857002a0d45f8431148885b08c3383' => 
     array (
       0 => 'application\\views\\web\\base-layout\\breadcrumbs.html',
-      1 => 1472454233,
+      1 => 1472788283,
       2 => 'file',
     ),
-    'cd85aa74c922a518960740d43f19675e07035050' => 
+    'cc06e9ff67b79286a4e9ff5e690d9fe02af47ab2' => 
     array (
-      0 => 'application\\views\\web\\foto\\list.html',
-      1 => 1472700511,
+      0 => 'application\\views\\web\\beritadmsi\\list.html',
+      1 => 1472788283,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '1929857888f9d947971-65923897',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57c7e3a18a5101_85669269',
+  'unifunc' => 'content_57cbace8375143_82938273',
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57c7e3a18a5101_85669269')) {function content_57c7e3a18a5101_85669269($_smarty_tpl) {?><!DOCTYPE html><html>  <head>    <meta charset="utf-8">    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+<?php if ($_valid && !is_callable('content_57cbace8375143_82938273')) {function content_57cbace8375143_82938273($_smarty_tpl) {?><!DOCTYPE html><html>  <head>    <meta charset="utf-8">    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
     </title>    <link rel="shortcut icon" href="http://localhost:82/dmsinew/doc/favicon.ico">    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/default/load-style.css" />      </head>  <body>    <div class="mask-l" style="background-color: #fff; width: 100%; height: 100%; position: fixed; top: 0; left:0; z-index: 9999999;">    </div>     <!--removed by integration-->    <header>  <div class="b-top-options-panel">    <div class="container">      <div class="b-option-contacts f-option-contacts">        <a href="#">          <i class="fa fa-envelope-o">          </i> dewan.sawit@gmail.com        </a>        <a href="#">          <i class="fa fa-phone">          </i> +62 21 29625788         </a>        <a href="#">          <i class="fa fa-fax">          </i> +62 21 29625788        </a>      </div>      <div class="b-right b-header-ico-group f-header-ico-group b-right">         <span class="b-header__search-box">           <i class="fa fa-search">          </i>          <form method="post" action="http://localhost:82/dmsinew/index.php/public/pencarian/index" name="form-search">             <input type="text" name="keyword" value="" placeholder="Masukan kata pencarian"/>          </form>        </span>       </div>      <div class="b-right">        <div class="b-option-contacts f-primary-b">          <a href="http://localhost:82/dmsinew/index.php/public/lang/id" title="Indonesia">            <img src="http://localhost:82/dmsinew/doc/lang/indo.png" width="20">          </a>  &nbsp;&nbsp;          <a href="http://localhost:82/dmsinew/index.php/public/lang/en" title="English">            <img src="http://localhost:82/dmsinew/doc/lang/eng.png" width="20">          </a>        </div>        </div>      <span class="b-header__social-box b-header__social-box--no-fon ">                <?php if ($_smarty_tpl->tpl_vars['datasosmed']->value!='') {?>        <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['datasosmed']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {

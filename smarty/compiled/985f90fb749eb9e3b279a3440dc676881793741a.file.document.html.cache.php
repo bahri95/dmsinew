@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-02 01:22:57
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-04 05:57:06
          compiled from "application\views\private\base-layout\document.html" */ ?>
 <?php /*%%SmartyHeaderCode:1343157888d7d407514-59546593%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '985f90fb749eb9e3b279a3440dc676881793741a' => 
     array (
       0 => 'application\\views\\private\\base-layout\\document.html',
-      1 => 1472748459,
+      1 => 1472961424,
       2 => 'file',
     ),
   ),
@@ -47,7 +47,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </title>    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['THEMESPATH']->value;?>
 " />        <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'LOADSTYLE\']->value;?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
-      </head>  <body class="skin-blue" onmousemove="change()">    <!-- header logo: style can be found in header.less -->    <header class="header">      <a href="#" class="logo">        <!-- Add the class icon to your logo image or logo icon to add the margining -->        Dewan Minyak Sawit Indonesia      </a>      <!-- Header Navbar: style can be found in header.less -->      <nav class="navbar navbar-static-top" role="navigation">        <!-- Sidebar toggle button-->        <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">          <span class="sr-only">Toggle navigation          </span>          <span class="icon-bar">          </span>          <span class="icon-bar">          </span>          <span class="icon-bar">          </span>        </a>        <div class="navbar-right">          <ul class="nav navbar-nav">            <!-- Messages: style can be found in dropdown.less-->            <li class="dropdown messages-menu">              <a href="#" class="dropdown-toggle" data-toggle="dropdown">                <i class="fa fa-envelope-o">                </i>                                <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php if ($_smarty_tpl->tpl_vars[\'data_aspirasi\']->value!=\'\') {?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
+      </head>  <body class="skin-blue" onmousemove="change()">    <!-- header logo: style can be found in header.less -->    <header class="header">      <a href="#" class="logo">        <!-- Add the class icon to your logo image or logo icon to add the margining -->        Dewan Minyak Sawit Indonesia      </a>      <!-- Header Navbar: style can be found in header.less -->      <nav class="navbar navbar-static-top" role="navigation">        <!-- Sidebar toggle button-->        <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">          <span class="sr-only">Toggle navigation          </span>          <span class="icon-bar">          </span>          <span class="icon-bar">          </span>          <span class="icon-bar">          </span>        </a>        <div class="navbar-right">          <ul class="nav navbar-nav">            <!-- Messages: style can be found in dropdown.less-->            <!-- <li class="dropdown messages-menu">              <a href="#" class="dropdown-toggle" data-toggle="dropdown">                <i class="fa fa-envelope-o">                </i>                                <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php if ($_smarty_tpl->tpl_vars[\'data_aspirasi\']->value!=\'\') {?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                 <span class="label label-success">                  <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php  $_smarty_tpl->tpl_vars[\'result\'] = new Smarty_Variable; $_smarty_tpl->tpl_vars[\'result\']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars[\'jumlah_aspirasi\']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, \'array\');}
 foreach ($_from as $_smarty_tpl->tpl_vars[\'result\']->key => $_smarty_tpl->tpl_vars[\'result\']->value) {
@@ -68,13 +68,13 @@ $_smarty_tpl->tpl_vars[\'result\']->_loop = true;
                   <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php } ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
  Pesan Aspirasi yang belum diverifikasi                  <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php } else { ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                   Tidak ada pesan                  <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php }?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
-                </li>                <li>                  <!-- inner menu: contains the actual data -->                  <ul class="menu">                                        <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php if ($_smarty_tpl->tpl_vars[\'data_aspirasi\']->value!=\'\') {?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
+                </li>                <li>                  <!-- inner menu: contains the actual data -->                 <!--  <ul class="menu">                                        <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php if ($_smarty_tpl->tpl_vars[\'data_aspirasi\']->value!=\'\') {?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                     <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php  $_smarty_tpl->tpl_vars[\'rs\'] = new Smarty_Variable; $_smarty_tpl->tpl_vars[\'rs\']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars[\'data_aspirasi\']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, \'array\');}
 foreach ($_from as $_smarty_tpl->tpl_vars[\'rs\']->key => $_smarty_tpl->tpl_vars[\'rs\']->value) {
 $_smarty_tpl->tpl_vars[\'rs\']->_loop = true;
 ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
-                    <li>                      <!-- start message -->                      <a href="<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'url_aspirasi_list\']->value;?>
+                    <li> -->                      <!-- start message -->                     <!--  <a href="<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'url_aspirasi_list\']->value;?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
 ">                        <div class="pull-left">                          <img src="<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'BASEURL\']->value;?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
@@ -88,10 +88,10 @@ doc/aspirasi/<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                           </small>                        </h4>                        <p><?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'isi_aspirasi\'];?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
-                        </p>                      </a>                    </li>                    <!-- end message -->                    <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php } ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
+                        </p>                      </a>                    </li> -->                    <!-- end message -->                    <!-- <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php } ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                     <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php }?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                                       </ul>                </li>                <li class="footer">                  <a href="<?php echo $_smarty_tpl->tpl_vars['url_aspirasi_list']->value;?>
-">Lihat Semua Pesan                  </a>                </li>              </ul>            </li>            <!--anggota -->            <li class="dropdown messages-menu">              <a href="#" class="dropdown-toggle" data-toggle="dropdown">                <i class="fa fa-user">                </i>                                <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php if ($_smarty_tpl->tpl_vars[\'data_anggota_baru\']->value!=\'\') {?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
+">Lihat Semua Pesan                  </a>                </li>              </ul>            </li>            anggota             <li class="dropdown messages-menu">              <a href="#" class="dropdown-toggle" data-toggle="dropdown">                <i class="fa fa-user">                </i>                                <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php if ($_smarty_tpl->tpl_vars[\'data_anggota_baru\']->value!=\'\') {?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                 <span class="label label-success">                  <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php  $_smarty_tpl->tpl_vars[\'result\'] = new Smarty_Variable; $_smarty_tpl->tpl_vars[\'result\']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars[\'jumlah_anggota_baru\']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, \'array\');}
 foreach ($_from as $_smarty_tpl->tpl_vars[\'result\']->key => $_smarty_tpl->tpl_vars[\'result\']->value) {
@@ -112,13 +112,13 @@ $_smarty_tpl->tpl_vars[\'result\']->_loop = true;
                   <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php } ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
  Permintaan Anggota baru yang belum disetujui                  <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php } else { ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                   Tidak ada permintaan Anggota                  <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php }?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
-                </li>                <li>                  <!-- inner menu: contains the actual data -->                  <ul class="menu">                                        <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php if ($_smarty_tpl->tpl_vars[\'data_anggota_baru\']->value!=\'\') {?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
+                </li>                <li> -->                  <!-- inner menu: contains the actual data -->                 <!--  <ul class="menu">                                        <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php if ($_smarty_tpl->tpl_vars[\'data_anggota_baru\']->value!=\'\') {?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                     <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php  $_smarty_tpl->tpl_vars[\'rs\'] = new Smarty_Variable; $_smarty_tpl->tpl_vars[\'rs\']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars[\'data_anggota_baru\']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, \'array\');}
 foreach ($_from as $_smarty_tpl->tpl_vars[\'rs\']->key => $_smarty_tpl->tpl_vars[\'rs\']->value) {
 $_smarty_tpl->tpl_vars[\'rs\']->_loop = true;
 ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
-                    <li>                      <!-- start message -->                      <a href="<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'url_anggota_list\']->value;?>
+                    <li> -->                      <!-- start message -->                      <!-- <a href="<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'url_anggota_list\']->value;?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
 ">                        <div class="pull-left">                          <img src="<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'BASEURL\']->value;?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
@@ -130,10 +130,10 @@ doc/registrasi/<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?p
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                         </h4>                        <p><?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'rs\']->value[\'nama_asosiasi\'];?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
-                        </p>                      </a>                    </li>                    <!-- end message -->                    <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php } ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
+                        </p>                      </a>                    </li> -->                    <!-- end message -->                    <!-- <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php } ?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                     <?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php }?>/*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                                       </ul>                </li>                <li class="footer">                  <a href="<?php echo $_smarty_tpl->tpl_vars['url_anggota_list']->value;?>
-">                                  Lihat semua permintaan Anggota                                   </a>                </li>              </ul>            </li>            <!-- Notifications: style can be found in dropdown.less -->            <!-- User Account: style can be found in dropdown.less -->                        <li class="dropdown user user-menu">              <a href="#" class="dropdown-toggle" data-toggle="dropdown">                <i class="glyphicon glyphicon-user">                </i>                <span><?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'user_account\']->value[\'admin_name\'];?>
+">                                  Lihat semua permintaan Anggota                                   </a>                </li>              </ul>            </li> -->            <!-- Notifications: style can be found in dropdown.less --> -->            <!-- User Account: style can be found in dropdown.less -->                        <li class="dropdown user user-menu">              <a href="#" class="dropdown-toggle" data-toggle="dropdown">                <i class="glyphicon glyphicon-user">                </i>                <span><?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'user_account\']->value[\'admin_name\'];?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
                   <i class="caret">                  </i>                </span>              </a>              <ul class="dropdown-menu">                <!-- User image -->                <li class="user-header bg-light-blue">                  <img src="<?php echo '/*%%SmartyNocache:1343157888d7d407514-59546593%%*/<?php echo $_smarty_tpl->tpl_vars[\'user_account\']->value[\'photo\'];?>
 /*/%%SmartyNocache:1343157888d7d407514-59546593%%*/';?>
