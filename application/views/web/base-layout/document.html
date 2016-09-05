@@ -8,13 +8,13 @@
     {if $datashare neq ''}
     {foreach name=datashare from=$datashare item=rs}
     <meta property="og:title" content="{$rs.judul}" />
-    <meta property="og:url" content="http://dmsi.or.id" />
+    <meta property="og:url" content="{$rs.url_detail}" />
     <meta property="og:image" content="{$rs.image}" />
     <meta property="og:description" content="{$rs.content}" />
     <meta property="og:site_name" content="Dewan Minyak Sawit Indonesia" />
     {/foreach}
     {/if}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{$THEMESPATH}" />
     {$LOADSTYLE}
   </head>
