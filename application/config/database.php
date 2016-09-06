@@ -202,37 +202,37 @@ $active_record = TRUE;
 
 
 
-$db['default']['hostname'] = "localhost";
+// $db['default']['hostname'] = "localhost";
 
 
 
-$db['default']['username'] = "root";
+// $db['default']['username'] = "root";
 
 
 
-$db['default']['password'] = "";
+// $db['default']['password'] = "";
 
 
 
-$db['default']['database'] = "h71721_dmsinew";
+// $db['default']['database'] = "h71721_dmsinew";
 
 
 
 //ONLINE
 
-// $db['default']['hostname'] = "localhost";
+$db['default']['hostname'] = "localhost";
 
 
 
-// $db['default']['username'] = "h71721_taa";
+$db['default']['username'] = "h71721_taa";
 
 
 
-// $db['default']['password'] = "letmein0101";
+$db['default']['password'] = "letmein0101";
 
 
 
-// $db['default']['database'] = "h71721_dmsinew";
+$db['default']['database'] = "h71721_dmsinew";
 
 
 

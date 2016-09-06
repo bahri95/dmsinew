@@ -5,13 +5,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f6177fde6f50439a7c2240afdd4578c0fe613c49' => 
     array (
       0 => 'application\\views\\web\\base-layout\\document.html',
-      1 => 1472966665,
+      1 => 1473054758,
       2 => 'file',
     ),
     'caa5b1ba90178f2b308e228cfefb1d072ece2244' => 
     array (
       0 => 'application\\views\\web\\base-layout\\header.html',
-      1 => 1472812789,
+      1 => 1473062844,
       2 => 'file',
     ),
     '491adfa508d209a2eb7399044db1f84a27220b0c' => 
@@ -32,9 +32,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       1 => 1472788283,
       2 => 'file',
     ),
-    '4a1041fde5917852504e7e542c715e64af99829e' => 
+    'e9b73766bd4288ad5b57d21e8b2fd722b0743238' => 
     array (
-      0 => 'application\\views\\web\\beritadmsi\\detail.html',
+      0 => 'application\\views\\web\\asosiasi\\detail.html',
       1 => 1472788283,
       2 => 'file',
     ),
@@ -48,7 +48,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '614957888fa30387c5-29408436',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57cbb00d597ed4_30391006',
+  'unifunc' => 'content_57ce063e86d2b6_98351205',
   'variables' => 
   array (
     'title' => 1,
@@ -61,7 +61,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57cbb00d597ed4_30391006')) {function content_57cbb00d597ed4_30391006($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_57ce063e86d2b6_98351205')) {function content_57ce063e86d2b6_98351205($_smarty_tpl) {?><!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -69,12 +69,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     </title>
     <link rel="shortcut icon" href="http://localhost:82/dmsinew/doc/favicon.ico">
-            <meta property="og:title" content=" Butuh 160 Pabrik Kelapa Sawit" />
-    <meta property="og:url" content="http://dmsi.or.id" />
-    <meta property="og:image" content="http://localhost:82/dmsinew/doc/berita/32/32_20121011185424PKS.jpg" />
-    <meta property="og:description" content="MEDAN- Industri kelapa sawit dan produk turunannya diyakini masih akan terus berkembang. Namun, ..." />
-    <meta property="og:site_name" content="Dewan Minyak Sawit Indonesia" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/default/load-style.css" />
     
   </head>

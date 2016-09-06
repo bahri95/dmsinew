@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-04 07:24:29
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-06 01:56:46
          compiled from "application\views\web\base-layout\document.html" */ ?>
 <?php /*%%SmartyHeaderCode:614957888fa30387c5-29408436%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f6177fde6f50439a7c2240afdd4578c0fe613c49' => 
     array (
       0 => 'application\\views\\web\\base-layout\\document.html',
-      1 => 1472966665,
+      1 => 1473054758,
       2 => 'file',
     ),
   ),
@@ -48,7 +48,8 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
 ?>
     <meta property="og:title" content="<?php echo $_smarty_tpl->tpl_vars['rs']->value['judul'];?>
 " />
-    <meta property="og:url" content="http://dmsi.or.id" />
+    <meta property="og:url" content="<?php echo $_smarty_tpl->tpl_vars['rs']->value['url_detail'];?>
+" />
     <meta property="og:image" content="<?php echo $_smarty_tpl->tpl_vars['rs']->value['image'];?>
 " />
     <meta property="og:description" content="<?php echo $_smarty_tpl->tpl_vars['rs']->value['content'];?>
@@ -56,7 +57,7 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
     <meta property="og:site_name" content="Dewan Minyak Sawit Indonesia" />
     <?php } ?>
     <?php }?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['THEMESPATH']->value;?>
 " />
     <?php echo $_smarty_tpl->tpl_vars['LOADSTYLE']->value;?>

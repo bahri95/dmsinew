@@ -17,38 +17,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2354618920c3460c34a4ed9ec610ef723ad74b27' => 
     array (
       0 => 'application\\views\\private\\dashboard\\grafik.html',
-      1 => 1473001065,
+      1 => 1473031348,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '1343157888d7d407514-59546593',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57cc366ab01837_30436201',
-  'variables' => 
-  array (
-    'site_description' => 0,
-    'site_keyword' => 0,
-    'site_title' => 0,
-    'THEMESPATH' => 0,
-    'LOADSTYLE' => 1,
-    'data_aspirasi' => 1,
-    'jumlah_aspirasi' => 1,
-    'result' => 1,
-    'url_aspirasi_list' => 0,
-    'BASEURL' => 1,
-    'rs' => 1,
-    'data_anggota_baru' => 1,
-    'jumlah_anggota_baru' => 1,
-    'url_anggota_list' => 0,
-    'user_account' => 1,
-    'url_logout_admin_process' => 1,
-    'LOADJS' => 1,
-    'LOADJSCRUD' => 1,
-  ),
+  'unifunc' => 'content_57ce0a3c3f55d8_48597276',
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57cc366ab01837_30436201')) {function content_57cc366ab01837_30436201($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">  <head>    <meta charset="UTF-8">    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>    <meta name='description' content='Museum seni dan budaya di Indonesia' />    <meta name='keywords' content='museum, seni, budaya, indonesia, koleksi' />    <meta name='robots' content='index,follow' />    <title>Administrator Console    </title>    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/admin/load-style.css" />        <?php echo $_smarty_tpl->tpl_vars['LOADSTYLE']->value;?>
+<?php if ($_valid && !is_callable('content_57ce0a3c3f55d8_48597276')) {function content_57ce0a3c3f55d8_48597276($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">  <head>    <meta charset="UTF-8">    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>    <meta name='description' content='Museum seni dan budaya di Indonesia' />    <meta name='keywords' content='museum, seni, budaya, indonesia, koleksi' />    <meta name='robots' content='index,follow' />    <title>Administrator Console    </title>    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/admin/load-style.css" />        <?php echo $_smarty_tpl->tpl_vars['LOADSTYLE']->value;?>
       </head>  <body class="skin-blue" onmousemove="change()">    <!-- header logo: style can be found in header.less -->    <header class="header">      <a href="#" class="logo">        <!-- Add the class icon to your logo image or logo icon to add the margining -->        Dewan Minyak Sawit Indonesia      </a>      <!-- Header Navbar: style can be found in header.less -->      <nav class="navbar navbar-static-top" role="navigation">        <!-- Sidebar toggle button-->        <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">          <span class="sr-only">Toggle navigation          </span>          <span class="icon-bar">          </span>          <span class="icon-bar">          </span>          <span class="icon-bar">          </span>        </a>        <div class="navbar-right">          <ul class="nav navbar-nav">            <!-- Messages: style can be found in dropdown.less-->            <!-- <li class="dropdown messages-menu">              <a href="#" class="dropdown-toggle" data-toggle="dropdown">                <i class="fa fa-envelope-o">                </i>                                <?php if ($_smarty_tpl->tpl_vars['data_aspirasi']->value!='') {?>                <span class="label label-success">                  <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['jumlah_aspirasi']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {

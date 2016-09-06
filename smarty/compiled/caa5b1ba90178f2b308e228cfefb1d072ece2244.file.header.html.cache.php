@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-02 12:44:47
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-06 02:22:46
          compiled from "application\views\web\base-layout\header.html" */ ?>
 <?php /*%%SmartyHeaderCode:172657888d5829f778-63496755%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'caa5b1ba90178f2b308e228cfefb1d072ece2244' => 
     array (
       0 => 'application\\views\\web\\base-layout\\header.html',
-      1 => 1472812789,
+      1 => 1473121334,
       2 => 'file',
     ),
   ),
@@ -151,7 +151,7 @@ $_smarty_tpl->tpl_vars[\'rs\']->_loop = true;
                   </a>                </li>                <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php } ?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
               </ul>              <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php }?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
               <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php }?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
-                          </ul>            <ul class="b-top-nav__2level_wrap">              <li class="b-top-nav__2level_title f-top-nav__2level_title"><?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php echo $_smarty_tpl->tpl_vars[\'menu\']->value[\'wawasan\'];?>
+                          </ul>            <!-- <ul class="b-top-nav__2level_wrap">              <li class="b-top-nav__2level_title f-top-nav__2level_title"><?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php echo $_smarty_tpl->tpl_vars[\'menu\']->value[\'wawasan\'];?>
 /*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
               </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="<?php echo $_smarty_tpl->tpl_vars['url_menu_opini']->value;?>
 "  onClick="return true">                  <i class="fa fa-angle-right">                  </i><?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php echo $_smarty_tpl->tpl_vars[\'menu\']->value[\'opini\'];?>
@@ -167,7 +167,7 @@ $_smarty_tpl->tpl_vars[\'rs\']->_loop = true;
                 </a>              </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="<?php echo $_smarty_tpl->tpl_vars['url_menu_bagan']->value;?>
 " onClick="return true">                  <i class="fa fa-angle-right">                  </i><?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php echo $_smarty_tpl->tpl_vars[\'menu\']->value[\'bagan\'];?>
 /*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
-                </a>              </li>            </ul>            <ul class="b-top-nav__2level_wrap">               <li class="b-top-nav__2level_title f-top-nav__2level_title"><?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php echo $_smarty_tpl->tpl_vars[\'menu\']->value[\'harga\'];?>
+                </a>              </li>            </ul> -->            <ul class="b-top-nav__2level_wrap">               <li class="b-top-nav__2level_title f-top-nav__2level_title"><?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php echo $_smarty_tpl->tpl_vars[\'menu\']->value[\'harga\'];?>
 /*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
               </li>                            <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="<?php echo $_smarty_tpl->tpl_vars['url_menu_harga']->value;?>
 "  onClick="return true">                  <i class="fa fa-angle-right">                  </i><?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php echo $_smarty_tpl->tpl_vars[\'menu\']->value[\'grafik\'];?>
