@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-08-17 09:00:42
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-05 21:53:29
          compiled from "application/views/web/base-layout/header_detail.html" */ ?>
 <?php /*%%SmartyHeaderCode:70874136757720cfaa04496-62063668%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f36110f272dd6932943df921173d302351fa858f' => 
     array (
       0 => 'application/views/web/base-layout/header_detail.html',
-      1 => 1471361266,
+      1 => 1472809882,
       2 => 'file',
     ),
   ),
@@ -24,18 +24,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => true,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_57720cfaa1f1c7_33864322')) {function content_57720cfaa1f1c7_33864322($_smarty_tpl) {?><div class="b-inner-page-header f-inner-page-header b-bg-header-inner-page">
+  
+  <?php echo '/*%%SmartyNocache:70874136757720cfaa04496-62063668%%*/<?php if ($_smarty_tpl->tpl_vars[\'image_bantas\']->value!=\'\') {?>/*/%%SmartyNocache:70874136757720cfaa04496-62063668%%*/';?>
 
-
-              <?php echo '/*%%SmartyNocache:70874136757720cfaa04496-62063668%%*/<?php if ($_smarty_tpl->tpl_vars[\'image_bantas\']->value!=\'\') {?>/*/%%SmartyNocache:70874136757720cfaa04496-62063668%%*/';?>
-
-
-               <?php echo '/*%%SmartyNocache:70874136757720cfaa04496-62063668%%*/<?php echo $_smarty_tpl->tpl_vars[\'image_bantas\']->value;?>
+  <?php echo '/*%%SmartyNocache:70874136757720cfaa04496-62063668%%*/<?php echo $_smarty_tpl->tpl_vars[\'image_bantas\']->value;?>
 /*/%%SmartyNocache:70874136757720cfaa04496-62063668%%*/';?>
 
-     <?php echo '/*%%SmartyNocache:70874136757720cfaa04496-62063668%%*/<?php }?>/*/%%SmartyNocache:70874136757720cfaa04496-62063668%%*/';?>
+  <?php echo '/*%%SmartyNocache:70874136757720cfaa04496-62063668%%*/<?php }?>/*/%%SmartyNocache:70874136757720cfaa04496-62063668%%*/';?>
 
-     
-
-
-
-</div><?php }} ?>
+  
+</div>
+<?php }} ?>

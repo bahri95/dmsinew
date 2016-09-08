@@ -1,10 +1,10 @@
-body{background-color:#FAFAFA;}
-.login_box{margin-top:40px;margin-bottom:40px;background-color:#fff;padding:20px 30px 40px 30px;border-top:4px solid #58ACFA;border-bottom:4px solid #58ACFA;box-shadow:1px 1px 2px #bdbdbd;}
-.form-control{border-radius:0px;}
-.form-group .form-control-feedback{color:#bdbdbd;}
-.btn-log{border-radius:0px;background-color:transparent;border:2px solid #58ACFA;color:#045FB4;width:100%;}
-.btn-log:hover{background-color:#58ACFA;color:#fff;-webkit-transition:0.5s;-moz-transition:0.5s;-moz-transition:0.5s;}
-.font-judul{font-size: 14px;}
-.font-judul-asosiasi{font-size: 13px;}
-.font-judul-header{font-size: 18px;}
+body{background-color:#FAFAFA;}
+.login_box{margin-top:40px;margin-bottom:40px;background-color:#fff;padding:20px 30px 40px 30px;border-top:4px solid #58ACFA;border-bottom:4px solid #58ACFA;box-shadow:1px 1px 2px #bdbdbd;}
+.form-control{border-radius:0px;}
+.form-group .form-control-feedback{color:#bdbdbd;}
+.btn-log{border-radius:0px;background-color:transparent;border:2px solid #58ACFA;color:#045FB4;width:100%;}
+.btn-log:hover{background-color:#58ACFA;color:#fff;-webkit-transition:0.5s;-moz-transition:0.5s;-moz-transition:0.5s;}
+.font-judul{font-size: 14px;}
+.font-judul-asosiasi{font-size: 13px;}
+.font-judul-header{font-size: 18px;}
 .font-content{font-size: 13px;}

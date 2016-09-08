@@ -537,10 +537,13 @@
 			$this->smarty->assign('kontakinfo', $kontak);
 			$this->load->model('asosiasimodel');
 			$asosiasi = $this->asosiasimodel->get_data_asosiasi_all_public();
+			
+			if($asosiasi <> ''){
 			foreach($asosiasi as $key=>$data):
 			$asosiasi[$key]['url_detail'] = site_url('public/asosiasi/profil/'.$data['id_asosiasi'].'/'.url_title($data['nama_asosiasi']));
 			endforeach;
 			$this->smarty->assign('asosiasifooter', $asosiasi);
+			}
 			//get data berita 
 			$this->load->library('datetimemanipulation');
 			$this->db->select('*');

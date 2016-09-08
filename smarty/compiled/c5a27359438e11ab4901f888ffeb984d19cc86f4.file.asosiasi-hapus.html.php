@@ -28,109 +28,109 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_578de714eed107_78500835')) {function content_578de714eed107_78500835($_smarty_tpl) {?>                <section class="content-header">
-                    <h1>
-                     Asosiasi Anggota
-                        <small>panel</small>
-                    </h1>
-                    <ol class="breadcrumb">
+<?php if ($_valid && !is_callable('content_578de714eed107_78500835')) {function content_578de714eed107_78500835($_smarty_tpl) {?>                <section class="content-header">
+                    <h1>
+                     Asosiasi Anggota
+                        <small>panel</small>
+                    </h1>
+                    <ol class="breadcrumb">
                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['url_private']->value;?>
-"><i class="fa fa-home"></i> Home</a></li>
+"><i class="fa fa-home"></i> Home</a></li>
                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['url_list']->value;?>
-"><i class="fa "></i> Asosiasi Anggota</a></li>
-                        <li class="active">Hapus Data</li>
-                    </ol>
-                </section>
-
-                <!-- Main content -->
-                <section class="content">
-				<!-- Small boxes (Stat box) -->
-                    <div class="row">
-                     <!-- notification template -->
-                        <?php if ($_smarty_tpl->tpl_vars['notification_msg']->value!='') {?>
-                        <div class="col-md-12">
-                        		<?php if ($_smarty_tpl->tpl_vars['notification_status']->value=='red') {?>
-                        		<div class="alert alert-danger alert-dismissable">
-                                        <i class="fa fa-ban"></i>
-                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+"><i class="fa "></i> Asosiasi Anggota</a></li>
+                        <li class="active">Hapus Data</li>
+                    </ol>
+                </section>
+
+                <!-- Main content -->
+                <section class="content">
+				<!-- Small boxes (Stat box) -->
+                    <div class="row">
+                     <!-- notification template -->
+                        <?php if ($_smarty_tpl->tpl_vars['notification_msg']->value!='') {?>
+                        <div class="col-md-12">
+                        		<?php if ($_smarty_tpl->tpl_vars['notification_status']->value=='red') {?>
+                        		<div class="alert alert-danger alert-dismissable">
+                                        <i class="fa fa-ban"></i>
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                         <?php echo $_smarty_tpl->tpl_vars['notification_msg']->value;?>
-.
-                                    </div>
-                                 <?php }?>
-                                 <?php if ($_smarty_tpl->tpl_vars['notification_status']->value=='green') {?>
-                                 <div class="alert alert-success alert-dismissable">
-                                        <i class="fa fa-check"></i>
-                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+.
+                                    </div>
+                                 <?php }?>
+                                 <?php if ($_smarty_tpl->tpl_vars['notification_status']->value=='green') {?>
+                                 <div class="alert alert-success alert-dismissable">
+                                        <i class="fa fa-check"></i>
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                          <?php echo $_smarty_tpl->tpl_vars['notification_msg']->value;?>
-.
-                                    </div>
-                                 <?php }?>
-                         </div>
-                        <?php }?>
-                        <!-- form start -->
+.
+                                    </div>
+                                 <?php }?>
+                         </div>
+                        <?php }?>
+                        <!-- form start -->
                        <form id="form" action="<?php echo $_smarty_tpl->tpl_vars['url_process']->value;?>
-" method="post">
+" method="post">
                        <input type="hidden" name="id_asosiasi" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['id_asosiasi'];?>
-" />
-                       <div class="col-md-12">
-                       		<div class="box box-warning">
-                                <div class="box-header" style="text-align:center">
-                                    <h3 >Hapus Data Asosiasi Anggota</h3>
-                                    <h3  style="text-align:center">Apakah anda akan menghapus data asosiasi ini ? </h3>
-                                </div>
-                            </div>
-                       </div>
-                        <div class="col-md-6">
-                        <!-- form add -->
-                             <div class="box box-success">
-                                <!-- /.box-header -->
-                                   <div class="box-body">
-                                   <table id="table_datagrid" class="table table-bordered table-striped">
+" />
+                       <div class="col-md-12">
+                       		<div class="box box-warning">
+                                <div class="box-header" style="text-align:center">
+                                    <h3 >Hapus Data Asosiasi Anggota</h3>
+                                    <h3  style="text-align:center">Apakah anda akan menghapus data asosiasi ini ? </h3>
+                                </div>
+                            </div>
+                       </div>
+                        <div class="col-md-6">
+                        <!-- form add -->
+                             <div class="box box-success">
+                                <!-- /.box-header -->
+                                   <div class="box-body">
+                                   <table id="table_datagrid" class="table table-bordered table-striped">
                                    <tr><td>Nama Asosiasi </td><td><?php echo $_smarty_tpl->tpl_vars['data']->value['nama_asosiasi'];?>
-</td></tr>
+</td></tr>
                                     <tr><td>Alamat</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value['alamat'];?>
-</td></tr>
+</td></tr>
                                     <tr><td>Provinsi</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value['nama_propinsi'];?>
-</td></tr>
+</td></tr>
                                     <tr><td>Kota</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value['nama_kota'];?>
-</td></tr>  
+</td></tr>  
                                     <tr><td>Kode Pos</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value['kodepos'];?>
-</td></tr>   
+</td></tr>   
                                     <tr><td>Telepon</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value['telepon'];?>
-</td></tr>    
+</td></tr>    
                                     <tr><td>Email</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value['email'];?>
-</td></tr>  
-                                    </table>   
-                                    </div><!-- /.box-body -->
-                                    <div class="box-footer">
-                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i>  Hapus</button>
+</td></tr>  
+                                    </table>   
+                                    </div><!-- /.box-body -->
+                                    <div class="box-footer">
+                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i>  Hapus</button>
                                         <button type="button" onclick="javascript:document.location='<?php echo $_smarty_tpl->tpl_vars['url_list']->value;?>
-';"  class="btn btn-primary"><i class="fa fa-close"></i>  Batal</a>
-                                    </div>
-                              
-                            </div><!-- /.box -->
-                        
-                        </div><!-- /.col -->
-                          <div class="col-md-6">
-                        <!-- form add -->
-                             <div class="box box-success">
-                                
-                                   <div class="box-body">
-                                   <table id="table_datagrid" class="table table-bordered table-striped">
+';"  class="btn btn-primary"><i class="fa fa-close"></i>  Batal</a>
+                                    </div>
+                              
+                            </div><!-- /.box -->
+                        
+                        </div><!-- /.col -->
+                          <div class="col-md-6">
+                        <!-- form add -->
+                             <div class="box box-success">
+                                
+                                   <div class="box-body">
+                                   <table id="table_datagrid" class="table table-bordered table-striped">
                                     <tr><td>Fax</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value['fax'];?>
-</td></tr>   
+</td></tr>   
                                     <tr><td>Website</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value['website'];?>
-</td></tr>  
+</td></tr>  
                                     <tr><td>Profil</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value['profil'];?>
-</td></tr>    
-                                    </table>
-                                  </div>
-                              </div><!-- /.box --> 
-                          </div><!-- /.col -->
-                          </form>
-                         
-                    </div><!-- /.row -->
-                    
- </section><!-- /.content -->
-
+</td></tr>    
+                                    </table>
+                                  </div>
+                              </div><!-- /.box --> 
+                          </div><!-- /.col -->
+                          </form>
+                         
+                    </div><!-- /.row -->
+                    
+ </section><!-- /.content -->
+
 <?php }} ?>

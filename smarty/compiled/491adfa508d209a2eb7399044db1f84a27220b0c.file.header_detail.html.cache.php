@@ -23,15 +23,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => true,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57888fa31af829_47921057')) {function content_57888fa31af829_47921057($_smarty_tpl) {?><div class="b-inner-page-header f-inner-page-header b-bg-header-inner-page">
-  
+<?php if ($_valid && !is_callable('content_57888fa31af829_47921057')) {function content_57888fa31af829_47921057($_smarty_tpl) {?><div class="b-inner-page-header f-inner-page-header b-bg-header-inner-page">
+  
   <?php echo '/*%%SmartyNocache:2876257888fa31ab9a6-51468158%%*/<?php if ($_smarty_tpl->tpl_vars[\'image_bantas\']->value!=\'\') {?>/*/%%SmartyNocache:2876257888fa31ab9a6-51468158%%*/';?>
-
+
   <?php echo '/*%%SmartyNocache:2876257888fa31ab9a6-51468158%%*/<?php echo $_smarty_tpl->tpl_vars[\'image_bantas\']->value;?>
 /*/%%SmartyNocache:2876257888fa31ab9a6-51468158%%*/';?>
-
+
   <?php echo '/*%%SmartyNocache:2876257888fa31ab9a6-51468158%%*/<?php }?>/*/%%SmartyNocache:2876257888fa31ab9a6-51468158%%*/';?>
-
-  
-</div>
+
+  
+</div>
 <?php }} ?>
