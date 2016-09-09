@@ -26,9 +26,15 @@
             // get data
             $data = $this->hargamodel->get_list_harga_private();
             $this->smarty->assign("data", $data);
+            //data harga domestik sub kategori
+            $datasubkategori = $this->hargamodel->get_list_sub_katharga_edit();
+            $this->smarty->assign("datasubkategori", $datasubkategori);
             //data harga domestik
             $datadomestik = $this->hargamodel->get_list_harga_domestik_tabel();
             $this->smarty->assign("datadomestik", $datadomestik);
+            //data harga cpo domestik
+            $datacpodomestik = $this->hargamodel->get_list_harga_domestik_cpo_tabel();
+            $this->smarty->assign("datacpodomestik", $datacpodomestik);
             //data harga ekspor
             $dataekspor = $this->hargamodel->get_list_harga_ekspor_tabel();
             $this->smarty->assign("dataekspor", $dataekspor);
@@ -41,6 +47,7 @@
             $this->smarty->assign('url_list', site_url('private/harga/index'));
             $this->smarty->assign('url_process', site_url('private/harga/process/hapus'));
             $this->smarty->assign('url_edit', site_url('private/harga/edit'));
+           
             // max tahun
             if($this->hargamodel->get_list_harga_grafik() <> ''){
             $datamaxtahun = $this->hargamodel->get_max_tahun();
@@ -51,6 +58,9 @@
             //grafik domestik
             $datagrafikdo = $this->hargamodel->get_list_harga_grafik_domestik();
             $this->smarty->assign("datagrafikdo", $datagrafikdo);
+            //grafik cpo domestik
+            $datagrafikdocpo = $this->hargamodel->get_list_harga_grafik_cpo_domestik();
+            $this->smarty->assign("datagrafikdocpo", $datagrafikdocpo);
             //grafik ekspor
             $datagrafikeks = $this->hargamodel->get_list_harga_grafik_ekspor();
             $this->smarty->assign("datagrafikeks", $datagrafikeks);
@@ -78,6 +88,11 @@
                 case 'hapus':
                     $this->process_hapus();
                     break;
+                 case 'ajax_sub_katharga_by_katharga':
+
+                $this->process_ajax_sub_katharga_by_katharga();
+
+                break;
                 default :
                     // default redirect
                     redirect('private/berita/add');
@@ -96,6 +111,20 @@
         //get kategori harga
         $datakatharga = $this->hargamodel->get_list_katharga();
         $this->smarty->assign("katharga", $datakatharga);
+        //sub kategori harga
+       // list kota
+
+        if (isset($arr_notify['post']['id_katharga'])) {
+
+            echo $arr_notify['post']['id_sub_katharga'];
+
+            $data_sub_katharga = $this->hargamodel->get_list_sub_katharga($arr_notify['post']['id_katharga']);
+
+            $this->smarty->assign("sub_katharga", $data_sub_katharga);
+
+        }
+
+        $this->smarty->assign("url_sub_katharga", site_url("private/harga/process/ajax_sub_katharga_by_katharga"));
         //get kategori harga
         $databulan = $this->hargamodel->get_list_bulan();
         $this->smarty->assign("bulan", $databulan);
@@ -118,6 +147,39 @@
         $this->parser->parse('private/base-layout/document.html');
     }
 
+    public function process_ajax_sub_katharga_by_katharga() {
+
+        $id_katharga = $this->uri->segment(5, 0);
+
+        // load
+
+        $this->load->model('hargamodel');
+
+        // get data
+
+        $sub_katharga = $this->hargamodel->get_list_sub_katharga($id_katharga);
+
+        echo '<select name="id_sub_katharga" class="form-control" style="width:300px;">';
+
+        if($sub_katharga) {
+
+            foreach($sub_katharga as $data) {
+
+                echo '<option value="'.$data['id_sub_katharga'].'">';
+
+                echo $data['sub_katharga'];
+
+                echo '</option>';
+
+            }
+
+        }
+
+        echo '</select>';
+
+        
+
+    }
     public
     function process_add() {
         // load library
@@ -129,7 +191,10 @@
         $this->notification->check_post('rupiah', 'Harga Rupiah', 'required');
         $this->notification->check_post('dolar', 'Harga Dolar', 'required');
         // run
-        $param = array('id_katharga' => $this->input->post('id_katharga'),                    'tahun' => $this->input->post('tahun'),                    'id_bulan' => $this->input->post('id_bulan'));
+        $param = array('id_katharga' => $this->input->post('id_katharga'),
+            'id_sub_katharga' => $this->input->post('id_sub_katharga'),                    
+            'tahun' => $this->input->post('tahun'),                    
+            'id_bulan' => $this->input->post('id_bulan'));
         
         if($this->hargamodel->get_list_harga($param)){
             $this->notification->set_message("Data sudah di input");
@@ -138,7 +203,13 @@
             
             if ($this->notification->valid_input()) {
                 // params
-                $params = array('id_katharga' => $this->input->post('id_katharga'),                    'tahun' => $this->input->post('tahun'),                    'id_bulan' => $this->input->post('id_bulan'),                    'rupiah' => $this->input->post('rupiah'),'dolar' => $this->input->post('dolar'),'sumber' => $this->input->post('sumber'));
+                $params = array('id_katharga' => $this->input->post('id_katharga'),
+                'id_sub_katharga' => $this->input->post('id_sub_katharga'),
+                'tahun' => $this->input->post('tahun'),                    
+                    'id_bulan' => $this->input->post('id_bulan'),                    
+                    'rupiah' => $this->input->post('rupiah'),
+                    'dolar' => $this->input->post('dolar'),
+                    'sumber' => $this->input->post('sumber'));
                 // execute
                 
                 if($this->hargamodel->process_harga_add($params)) {
@@ -171,6 +242,12 @@
         // get katharga
         $listkatharga = $this->hargamodel->get_list_katharga();
         $this->smarty->assign('listkatharga', $listkatharga);
+        // get sub_katharga
+        $data_sub_katharga = $this->hargamodel->get_list_sub_katharga_edit();
+        $this->smarty->assign("subkatharga", $data_sub_katharga);
+        
+
+        $this->smarty->assign("url_sub_katharga", site_url("private/harga/process/ajax_sub_katharga_by_katharga"));
         // get bulan
         $listbulan = $this->hargamodel->get_list_bulan();
         $this->smarty->assign('listbulan', $listbulan);
@@ -208,10 +285,31 @@
         $this->notification->check_post('rupiah', 'Harga Rupiah', 'required');
         $this->notification->check_post('dolar', 'Harga Dolar', 'required');
         // run
+         if ($this->notification->valid_input()):
+         $param = array('id_katharga' => $this->input->post('id_katharga'),
+            'id_sub_katharga' => $this->input->post('id_sub_katharga'),                    
+            'tahun' => $this->input->post('tahun'),                    
+            'id_bulan' => $this->input->post('id_bulan'),
+            'id_harga' => $this->input->post('id_harga'));
         
+        if($this->hargamodel->get_list_harga_edit($param)){
+            $this->notification->set_message("Data sudah di input");
+            $this->notification->sent_notification(false);
+            redirect('private/harga/edit/'.$this->input->post('id_harga'));
+
+        }
+        endif;
         if ($this->notification->valid_input()) {
+            
             // params
-            $params = array('id_katharga' => $this->input->post('id_katharga'),                    'tahun' => $this->input->post('tahun'),                    'id_bulan' => $this->input->post('id_bulan'),                    'rupiah' => $this->input->post('rupiah'),'dolar' => $this->input->post('dolar'),'sumber' => $this->input->post('sumber'),'id_harga' => $this->input->post('id_harga'));
+            $params = array('id_katharga' => $this->input->post('id_katharga'), 
+                'id_sub_katharga' => $this->input->post('id_sub_katharga'),                   
+                'tahun' => $this->input->post('tahun'),                    
+                'id_bulan' => $this->input->post('id_bulan'),                    
+                'rupiah' => $this->input->post('rupiah'),
+                'dolar' => $this->input->post('dolar'),
+                'sumber' => $this->input->post('sumber'),
+                'id_harga' => $this->input->post('id_harga'));
             // execute
             
             if($this->hargamodel->process_harga_edit($params)) {

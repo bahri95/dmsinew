@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-02 06:26:07
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-08 05:35:04
          compiled from "application\views\web\video\play.html" */ ?>
 <?php /*%%SmartyHeaderCode:238925791e2607be041-53347006%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e4f3da55e2ed5346d60e83bc291a3bf9dfc3c605' => 
     array (
       0 => 'application\\views\\web\\video\\play.html',
-      1 => 1472788283,
+      1 => 1473302651,
       2 => 'file',
     ),
   ),

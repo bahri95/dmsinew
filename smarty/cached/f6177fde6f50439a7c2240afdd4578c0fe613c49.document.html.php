@@ -5,50 +5,50 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f6177fde6f50439a7c2240afdd4578c0fe613c49' => 
     array (
       0 => 'application\\views\\web\\base-layout\\document.html',
-      1 => 1473054758,
+      1 => 1473302644,
       2 => 'file',
     ),
     'caa5b1ba90178f2b308e228cfefb1d072ece2244' => 
     array (
       0 => 'application\\views\\web\\base-layout\\header.html',
-      1 => 1473062844,
+      1 => 1473302644,
       2 => 'file',
     ),
     '491adfa508d209a2eb7399044db1f84a27220b0c' => 
     array (
       0 => 'application\\views\\web\\base-layout\\header_detail.html',
-      1 => 1472788283,
+      1 => 1473302644,
       2 => 'file',
     ),
     '5c7daaeeddbbe8f44bdbbf957481dcdf2f0b6b25' => 
     array (
       0 => 'application\\views\\web\\base-layout\\footer.html',
-      1 => 1472814835,
+      1 => 1473302644,
       2 => 'file',
     ),
     '903fc16f82857002a0d45f8431148885b08c3383' => 
     array (
       0 => 'application\\views\\web\\base-layout\\breadcrumbs.html',
-      1 => 1472788283,
+      1 => 1473302645,
       2 => 'file',
     ),
-    'e9b73766bd4288ad5b57d21e8b2fd722b0743238' => 
+    '092f48cb449a470e36894103ba4edc50c1d4f2cc' => 
     array (
-      0 => 'application\\views\\web\\asosiasi\\detail.html',
-      1 => 1472788283,
+      0 => 'application\\views\\web\\agenda\\detail.html',
+      1 => 1473302642,
       2 => 'file',
     ),
     '4aa8bdc77de23e5614b18a829abc45841dc97812' => 
     array (
       0 => 'application\\views\\web\\base-layout\\sidebar.html',
-      1 => 1472804589,
+      1 => 1473302644,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '614957888fa30387c5-29408436',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57ce063e86d2b6_98351205',
+  'unifunc' => 'content_57d12728ccdb55_71459504',
   'variables' => 
   array (
     'title' => 1,
@@ -61,7 +61,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57ce063e86d2b6_98351205')) {function content_57ce063e86d2b6_98351205($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_57d12728ccdb55_71459504')) {function content_57d12728ccdb55_71459504($_smarty_tpl) {?><!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -69,7 +69,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     </title>
     <link rel="shortcut icon" href="http://localhost:82/dmsinew/doc/favicon.ico">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <meta property="og:title" content="POIDEC  2015" />
+    <meta property="og:url" content="http://localhost:82/dmsinew/index.php/public/kegiatandmsi/detail/11/POIDEC-2015" />
+    <meta property="og:image" content="http://localhost:82/dmsinew/doc/agenda/11/11_unduhan.jpg" />
+    <meta property="og:description" content="Disaat masalah masih menggunung seperti harga yang masih melemah, munculnya tudingan miring dan ..." />
+    <meta property="og:site_name" content="Dewan Minyak Sawit Indonesia" />
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/default/load-style.css" />
     
   </head>
@@ -77,50 +86,404 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <div class="mask-l" style="background-color: #fff; width: 100%; height: 100%; position: fixed; top: 0; left:0; z-index: 9999999;">
     </div> 
     <!--removed by integration-->
-    <header>  <div class="b-top-options-panel">    <div class="container">      <div class="b-option-contacts f-option-contacts">        <a href="#">          <i class="fa fa-envelope-o">          </i> dewan.sawit@gmail.com        </a>        <a href="#">          <i class="fa fa-phone">          </i> +62 21 29625788         </a>        <a href="#">          <i class="fa fa-fax">          </i> +62 21 29625788        </a>      </div>      <div class="b-right b-header-ico-group f-header-ico-group b-right">         <span class="b-header__search-box">           <i class="fa fa-search">          </i>          <form method="post" action="http://localhost:82/dmsinew/index.php/public/pencarian/index" name="form-search">             <input type="text" name="keyword" value="" placeholder="Masukan kata pencarian"/>          </form>        </span>       </div>      <div class="b-right">        <div class="b-option-contacts f-primary-b">          <a href="http://localhost:82/dmsinew/index.php/public/lang/id" title="Indonesia">            <img src="http://localhost:82/dmsinew/doc/lang/indo.png" width="20">          </a>  &nbsp;&nbsp;          <a href="http://localhost:82/dmsinew/index.php/public/lang/en" title="English">            <img src="http://localhost:82/dmsinew/doc/lang/eng.png" width="20">          </a>        </div>        </div>      <span class="b-header__social-box b-header__social-box--no-fon ">                <?php if ($_smarty_tpl->tpl_vars['datasosmed']->value!='') {?>        <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
+    <header>
+  <div class="b-top-options-panel">
+    <div class="container">
+      <div class="b-option-contacts f-option-contacts">
+        <a href="#">
+          <i class="fa fa-envelope-o">
+          </i> ipob@dmsi.or.id / dm.sawit@gmail.com
+        </a>
+        <a href="#">
+          <i class="fa fa-phone">
+          </i> +62 21 29625788 
+        </a>
+        <a href="#">
+          <i class="fa fa-fax">
+          </i> +62 21 29625789
+        </a>
+      </div>
+      <div class="b-right b-header-ico-group f-header-ico-group b-right"> 
+        <span class="b-header__search-box"> 
+          <i class="fa fa-search">
+          </i>
+          <form method="post" action="http://localhost:82/dmsinew/index.php/public/pencarian/index" name="form-search"> 
+            <input type="text" name="keyword" value="" placeholder="Masukan kata pencarian"/>
+          </form>
+        </span> 
+      </div>
+      <div class="b-right">
+        <div class="b-option-contacts f-primary-b">
+          <a href="http://localhost:82/dmsinew/index.php/public/lang/id" title="Indonesia">
+            <img src="http://localhost:82/dmsinew/doc/lang/indo.png" width="20">
+          </a>  &nbsp;&nbsp;
+          <a href="http://localhost:82/dmsinew/index.php/public/lang/en" title="English">
+            <img src="http://localhost:82/dmsinew/doc/lang/eng.png" width="20">
+          </a>
+        </div>  
+      </div>
+      <span class="b-header__social-box b-header__social-box--no-fon ">
+        
+        <?php if ($_smarty_tpl->tpl_vars['datasosmed']->value!='') {?>
+        <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['datasosmed']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {
 $_smarty_tpl->tpl_vars['rs']->_loop = true;
-?>        <a href="<?php echo $_smarty_tpl->tpl_vars['rs']->value['link'];?>
-">          <i class="<?php echo $_smarty_tpl->tpl_vars['rs']->value['logo'];?>
-">          </i>        </a>        <?php } ?>        <?php }?>              </span>      <!-- <div class="b-option-contacts f-option-contacts">        <a href="http://localhost:82/dmsinew/index.php/public/registrasi">          <i class="fa fa-user">          </i>&nbsp;Registrasi        </a>      </div>  -->     </div>  </div>  </div><div class="container b-header__box b-relative">  <a href="/" class="b-left b-logo">    <img class="color-theme" data-retina src="http://localhost:82/dmsinew/themes/default/img/logo_dmsi.png" alt="Logo DMSI" style="margin-left:-50px;" />  </a>  <div class="b-header-r b-right">    <div class="b-top-nav-show-slide f-top-nav-show-slide b-right j-top-nav-show-slide">      <i class="fa fa-align-justify">      </i>    </div>    <nav class="b-top-nav f-top-nav b-left j-top-nav">      <ul class="b-top-nav__1level_wrap">        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='home'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='') {?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">          <?php } else { ?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">          <?php }?>                    <a href="http://localhost:82/dmsinew/index.php/public/home">            <i class="fa fa-home b-menu-1level-ico">            </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['home'];?>
-            <span class="b-ico-dropdown">              <i class="fa fa-arrow-circle-down">              </i>            </span>          </a>        </li>        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='profil'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='beritadmsi'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='kegiatandmsi') {?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">          <?php } else { ?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">          <?php }?>                    <a href="#">            <i class="fa fa-folder-open b-menu-1level-ico">            </i>DMSI            <span class="b-ico-dropdown">              <i class="fa fa-arrow-circle-down">              </i>            </span>          </a>          <div class="b-top-nav__dropdomn">            <ul class="b-top-nav__2level_wrap">              <li class="b-top-nav__2level_title f-top-nav__2level_title">DMSI              </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="http://localhost:82/dmsinew/index.php/public/profil">                  <i class="fa fa-angle-right">                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['tentang_dmsi'];?>
-                </a>              </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="http://localhost:82/dmsinew/index.php/public/profil/detail/3/visi">                  <i class="fa fa-angle-right">                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['visi'];?>
-                </a>              </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="http://localhost:82/dmsinew/index.php/public/beritadmsi">                  <i class="fa fa-angle-right">                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['berita_dmsi'];?>
-                </a>              </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="http://localhost:82/dmsinew/index.php/public/kegiatandmsi">                  <i class="fa fa-angle-right">                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['event_dmsi'];?>
-                </a>              </li>              <!--<li class="b-top-nav__2level f-top-nav__2level f-primary"><a href="http://localhost:82/dmsinew/index.php/public/pengumuman"><i class="fa fa-angle-right"></i>Pengumuman</a></li>-->            </ul>          </div>        </li>        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='asosiasi'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='beritaanggota'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='kegiatananggota') {?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">          <?php } else { ?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">          <?php }?>                    <a href="#">            <i class="fa fa-picture-o b-menu-1level-ico">            </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['anggota_dmsi'];?>
-             <span class="b-ico-dropdown">              <i class="fa fa-arrow-circle-down">              </i>            </span>          </a>          <div class="b-top-nav__dropdomn">            <ul class="b-top-nav__2level_wrap">              <li class="b-top-nav__2level_title f-top-nav__2level_title"><?php echo $_smarty_tpl->tpl_vars['menu']->value['anggota_dmsi'];?>
-              </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="http://localhost:82/dmsinew/index.php/public/asosiasi">                  <i class="fa fa-angle-right">                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['profil_anggota'];?>
-                </a>              </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="http://localhost:82/dmsinew/index.php/public/beritaanggota">                  <i class="fa fa-angle-right">                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['berita_anggota'];?>
-                </a>              </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="http://localhost:82/dmsinew/index.php/public/kegiatananggota">                  <i class="fa fa-angle-right">                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['event_anggota'];?>
-                </a>              </li>            </ul>          </div>        </li>        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='informasi'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='opini'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='sesebi'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='program'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='bagan'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='harga') {?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b b-top-nav-big is-active-top-nav__1level">          <?php } else { ?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b b-top-nav-big putih">          <?php }?>                    <a href="#">            <i class="fa fa-code b-menu-1level-ico">            </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['informasi'];?>
-             <span class="b-ico-dropdown">              <i class="fa fa-arrow-circle-down">              </i>            </span>          </a>          <div class="b-top-nav__dropdomn">            <ul class="b-top-nav__2level_wrap">              <li class="b-top-nav__2level_title f-top-nav__2level_title" ><?php echo $_smarty_tpl->tpl_vars['menu']->value['informasi'];?>
-              </li>                            <?php if ($_smarty_tpl->tpl_vars['act_lang']->value=='en') {?>              <?php if ($_smarty_tpl->tpl_vars['informasifooter']->value!='') {?>              <ul class="b-list-markers f-list-markers">                <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
+?>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['rs']->value['link'];?>
+">
+          <i class="<?php echo $_smarty_tpl->tpl_vars['rs']->value['logo'];?>
+">
+          </i>
+        </a>
+        <?php } ?>
+        <?php }?>
+        
+      </span>
+      <!-- <div class="b-option-contacts f-option-contacts">
+        <a href="http://localhost:82/dmsinew/index.php/public/registrasi">
+          <i class="fa fa-user">
+          </i>&nbsp;Registrasi
+        </a>
+      </div>  --> 
+    </div>
+  </div>
+  </div>
+<div class="container b-header__box b-relative">
+  <a href="/" class="b-left b-logo">
+    <img class="color-theme" data-retina src="http://localhost:82/dmsinew/themes/default/img/logo_dmsi.png" alt="Logo DMSI" style="margin-left:-50px;" />
+  </a>
+  <div class="b-header-r b-right">
+    <div class="b-top-nav-show-slide f-top-nav-show-slide b-right j-top-nav-show-slide">
+      <i class="fa fa-align-justify">
+      </i>
+    </div>
+    <nav class="b-top-nav f-top-nav b-left j-top-nav">
+      <ul class="b-top-nav__1level_wrap">
+        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='home'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='') {?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">
+          <?php } else { ?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">
+          <?php }?>
+          
+          <a href="http://localhost:82/dmsinew/index.php/public/home">
+            <i class="fa fa-home b-menu-1level-ico">
+            </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['home'];?>
+
+            <span class="b-ico-dropdown">
+              <i class="fa fa-arrow-circle-down">
+              </i>
+            </span>
+          </a>
+        </li>
+        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='profil'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='beritadmsi'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='kegiatandmsi') {?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">
+          <?php } else { ?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">
+          <?php }?>
+          
+          <a href="#">
+            <i class="fa fa-folder-open b-menu-1level-ico">
+            </i>DMSI
+            <span class="b-ico-dropdown">
+              <i class="fa fa-arrow-circle-down">
+              </i>
+            </span>
+          </a>
+          <div class="b-top-nav__dropdomn">
+            <ul class="b-top-nav__2level_wrap">
+              <li class="b-top-nav__2level_title f-top-nav__2level_title">DMSI
+              </li>
+              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/profil">
+                  <i class="fa fa-angle-right">
+                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['tentang_dmsi'];?>
+
+                </a>
+              </li>
+              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/profil/detail/3/visi">
+                  <i class="fa fa-angle-right">
+                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['visi'];?>
+
+                </a>
+              </li>
+              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/beritadmsi">
+                  <i class="fa fa-angle-right">
+                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['berita_dmsi'];?>
+
+                </a>
+              </li>
+              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/kegiatandmsi">
+                  <i class="fa fa-angle-right">
+                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['event_dmsi'];?>
+
+                </a>
+              </li>
+              <!--<li class="b-top-nav__2level f-top-nav__2level f-primary"><a href="http://localhost:82/dmsinew/index.php/public/pengumuman"><i class="fa fa-angle-right"></i>Pengumuman</a></li>-->
+            </ul>
+          </div>
+        </li>
+        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='asosiasi'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='beritaanggota'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='kegiatananggota') {?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">
+          <?php } else { ?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">
+          <?php }?>
+          
+          <a href="#">
+            <i class="fa fa-picture-o b-menu-1level-ico">
+            </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['anggota_dmsi'];?>
+ 
+            <span class="b-ico-dropdown">
+              <i class="fa fa-arrow-circle-down">
+              </i>
+            </span>
+          </a>
+          <div class="b-top-nav__dropdomn">
+            <ul class="b-top-nav__2level_wrap">
+              <li class="b-top-nav__2level_title f-top-nav__2level_title"><?php echo $_smarty_tpl->tpl_vars['menu']->value['anggota_dmsi'];?>
+
+              </li>
+              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/asosiasi">
+                  <i class="fa fa-angle-right">
+                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['profil_anggota'];?>
+
+                </a>
+              </li>
+              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/beritaanggota">
+                  <i class="fa fa-angle-right">
+                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['berita_anggota'];?>
+
+                </a>
+              </li>
+              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/kegiatananggota">
+                  <i class="fa fa-angle-right">
+                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['event_anggota'];?>
+
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='informasi') {?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">
+          <?php } else { ?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b  putih">
+          <?php }?>
+          
+          <a href="#">
+            <i class="fa fa-code b-menu-1level-ico">
+            </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['informasi'];?>
+ 
+            <span class="b-ico-dropdown">
+              <i class="fa fa-arrow-circle-down">
+              </i>
+            </span>
+          </a>
+          <div class="b-top-nav__dropdomn">
+            <ul class="b-top-nav__2level_wrap">
+              <li class="b-top-nav__2level_title f-top-nav__2level_title" ><?php echo $_smarty_tpl->tpl_vars['menu']->value['informasi'];?>
+
+              </li>
+              
+              <?php if ($_smarty_tpl->tpl_vars['act_lang']->value=='en') {?>
+              <?php if ($_smarty_tpl->tpl_vars['informasifooter']->value!='') {?>
+              <ul class="b-list-markers f-list-markers">
+                <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['informasifooter']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {
 $_smarty_tpl->tpl_vars['rs']->_loop = true;
-?>                <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu" >                   <a href="<?php echo $_smarty_tpl->tpl_vars['rs']->value['url_detail'];?>
-">                    <i class="fa fa-angle-right">                    </i> <?php echo $_smarty_tpl->tpl_vars['rs']->value['kategori_english'];?>
-                  </a>                </li>                <?php } ?>              </ul>              <?php }?>              <?php } else { ?>              <?php if ($_smarty_tpl->tpl_vars['informasifooter']->value!='') {?>              <ul class="b-list-markers f-list-markers">                <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
+?>
+                <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu" > 
+                  <a href="<?php echo $_smarty_tpl->tpl_vars['rs']->value['url_detail'];?>
+">
+                    <i class="fa fa-angle-right">
+                    </i> <?php echo $_smarty_tpl->tpl_vars['rs']->value['kategori_english'];?>
+
+                  </a>
+                </li>
+                <?php } ?>
+              </ul>
+              <?php }?>
+              <?php } else { ?>
+              <?php if ($_smarty_tpl->tpl_vars['informasifooter']->value!='') {?>
+              <ul class="b-list-markers f-list-markers">
+                <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['informasifooter']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {
 $_smarty_tpl->tpl_vars['rs']->_loop = true;
-?>                <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                   <a href="<?php echo $_smarty_tpl->tpl_vars['rs']->value['url_detail'];?>
-">                    <i class="fa fa-angle-right">                    </i> <?php echo $_smarty_tpl->tpl_vars['rs']->value['kategori'];?>
-                  </a>                </li>                <?php } ?>              </ul>              <?php }?>              <?php }?>                          </ul>            <ul class="b-top-nav__2level_wrap">              <li class="b-top-nav__2level_title f-top-nav__2level_title"><?php echo $_smarty_tpl->tpl_vars['menu']->value['wawasan'];?>
-              </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="http://localhost:82/dmsinew/index.php/public/opini"  onClick="return true">                  <i class="fa fa-angle-right">                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['opini'];?>
-                </a>              </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="http://localhost:82/dmsinew/index.php/public/sesebi"  onClick="return true">                  <i class="fa fa-angle-right">                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['sesebi'];?>
-                </a>              </li>            </ul>            <ul class="b-top-nav__2level_wrap">              <li class="b-top-nav__2level_title f-top-nav__2level_title"><?php echo $_smarty_tpl->tpl_vars['menu']->value['infografis'];?>
-              </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="http://localhost:82/dmsinew/index.php/public/program" onClick="return true">                  <i class="fa fa-angle-right">                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['program'];?>
-                </a>              </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="http://localhost:82/dmsinew/index.php/public/bagan" onClick="return true">                  <i class="fa fa-angle-right">                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['bagan'];?>
-                </a>              </li>            </ul>            <ul class="b-top-nav__2level_wrap">               <li class="b-top-nav__2level_title f-top-nav__2level_title"><?php echo $_smarty_tpl->tpl_vars['menu']->value['harga'];?>
-              </li>                            <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="http://localhost:82/dmsinew/index.php/public/harga"  onClick="return true">                  <i class="fa fa-angle-right">                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['grafik'];?>
-                </a>              </li>            </ul>          </div>        </li>        <!-- <li class="b-top-nav__1level f-top-nav__1level f-primary-b"><a href="http://localhost:82/dmsinew/index.php/public/home#petaperkebunan"><i class="fa fa-picture-o b-menu-1level-ico"></i>Peta Perkebunan</a></li> -->        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='foto'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='video') {?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">          <?php } else { ?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">          <?php }?>                    <a href="#">            <i class="fa fa-code b-menu-1level-ico">            </i>Media            <span class="b-ico-dropdown">              <i class="fa fa-arrow-circle-down">              </i>            </span>          </a>          <div class="b-top-nav__dropdomn">            <ul class="b-top-nav__2level_wrap">              <li class="b-top-nav__2level_title f-top-nav__2level_title">Media              </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="http://localhost:82/dmsinew/index.php/public/foto">                  <i class="fa fa-angle-right">                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['foto'];?>
-                </a>              </li>              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">                <a href="http://localhost:82/dmsinew/index.php/public/video">                  <i class="fa fa-angle-right">                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['video'];?>
-                </a>              </li>            </ul>          </div>        </li>        <!-- <li class="b-top-nav__1level f-top-nav__1level f-primary-b b-top-nav-big"> <a href="http://localhost:82/dmsinew/index.php/public/forum"><i class="fa fa-inbox b-menu-1level-ico"></i>Forum</a> </li> -->        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='regulasi') {?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">          <?php } else { ?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">          <?php }?>                     <a href="http://localhost:82/dmsinew/index.php/public/regulasi">            <i class="fa fa-inbox b-menu-1level-ico">            </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['regulasi'];?>
-          </a>         </li>        <!-- <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='download') {?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">          <?php } else { ?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">          <?php }?>           <a href="http://localhost:82/dmsinew/index.php/public/download">            <i class="fa fa-code b-menu-1level-ico">            </i>Download          </a>         </li> -->        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='sponsor') {?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">          <?php } else { ?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">          <?php }?>            <a href="http://localhost:82/dmsinew/index.php/public/sponsor">            <i class="fa fa-inbox b-menu-1level-ico">            </i>Sponsorship          </a>         </li>         <!-- <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='aspirasi') {?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">          <?php } else { ?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">          <?php }?>           <a href="http://localhost:82/dmsinew/index.php/public/aspirasi">            <i class="fa fa-inbox b-menu-1level-ico">            </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['aspirasi'];?>
-          </a>         </li>      -->        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='kontak') {?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">          <?php } else { ?>        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">          <?php }?>           <a href="http://localhost:82/dmsinew/index.php/public/kontak">            <i class="fa fa-list b-menu-1level-ico">            </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['kontak'];?>
-          </a>         </li>         </ul>    </nav>  </div></div></header>
+?>
+                <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu"> 
+                  <a href="<?php echo $_smarty_tpl->tpl_vars['rs']->value['url_detail'];?>
+">
+                    <i class="fa fa-angle-right">
+                    </i> <?php echo $_smarty_tpl->tpl_vars['rs']->value['kategori'];?>
+
+                  </a>
+                </li>
+                <?php } ?>
+              </ul>
+              <?php }?>
+              <?php }?>
+              
+            </ul>
+            <!-- <ul class="b-top-nav__2level_wrap">
+              <li class="b-top-nav__2level_title f-top-nav__2level_title"><?php echo $_smarty_tpl->tpl_vars['menu']->value['wawasan'];?>
+
+              </li>
+              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/opini"  onClick="return true">
+                  <i class="fa fa-angle-right">
+                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['opini'];?>
+
+                </a>
+              </li>
+              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/sesebi"  onClick="return true">
+                  <i class="fa fa-angle-right">
+                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['sesebi'];?>
+
+                </a>
+              </li>
+            </ul>
+            <ul class="b-top-nav__2level_wrap">
+              <li class="b-top-nav__2level_title f-top-nav__2level_title"><?php echo $_smarty_tpl->tpl_vars['menu']->value['infografis'];?>
+
+              </li>
+              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/program" onClick="return true">
+                  <i class="fa fa-angle-right">
+                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['program'];?>
+
+                </a>
+              </li>
+              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/bagan" onClick="return true">
+                  <i class="fa fa-angle-right">
+                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['bagan'];?>
+
+                </a>
+              </li>
+            </ul> -->
+            
+          </div>
+        </li>
+        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='harga') {?>
+            <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">
+              <?php } else { ?>
+            <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">
+              <?php }?>
+               
+              <a href="http://localhost:82/dmsinew/index.php/public/harga">
+                <i class="fa fa-inbox b-menu-1level-ico">
+                </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['grafik'];?>
+
+              </a> 
+            </li>
+        <!-- <li class="b-top-nav__1level f-top-nav__1level f-primary-b">
+<a href="http://localhost:82/dmsinew/index.php/public/home#petaperkebunan"><i class="fa fa-picture-o b-menu-1level-ico"></i>Peta Perkebunan</a>
+</li> -->
+        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='foto'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='video') {?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">
+          <?php } else { ?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">
+          <?php }?>
+          
+          <a href="#">
+            <i class="fa fa-code b-menu-1level-ico">
+            </i>Media
+            <span class="b-ico-dropdown">
+              <i class="fa fa-arrow-circle-down">
+              </i>
+            </span>
+          </a>
+          <div class="b-top-nav__dropdomn">
+            <ul class="b-top-nav__2level_wrap">
+              <li class="b-top-nav__2level_title f-top-nav__2level_title">Media
+              </li>
+              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/foto">
+                  <i class="fa fa-angle-right">
+                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['foto'];?>
+
+                </a>
+              </li>
+              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/video">
+                  <i class="fa fa-angle-right">
+                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['video'];?>
+
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- <li class="b-top-nav__1level f-top-nav__1level f-primary-b b-top-nav-big"> <a href="http://localhost:82/dmsinew/index.php/public/forum"><i class="fa fa-inbox b-menu-1level-ico"></i>Forum</a> </li> -->
+        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='regulasi') {?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">
+          <?php } else { ?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">
+          <?php }?>
+           
+          <a href="http://localhost:82/dmsinew/index.php/public/regulasi">
+            <i class="fa fa-inbox b-menu-1level-ico">
+            </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['regulasi'];?>
+
+          </a> 
+        </li>
+        <!-- <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='download') {?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">
+          <?php } else { ?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">
+          <?php }?> 
+          <a href="http://localhost:82/dmsinew/index.php/public/download">
+            <i class="fa fa-code b-menu-1level-ico">
+            </i>Download
+          </a> 
+        </li> -->
+        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='sponsor') {?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">
+          <?php } else { ?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">
+          <?php }?>  
+          <a href="http://localhost:82/dmsinew/index.php/public/sponsor">
+            <i class="fa fa-inbox b-menu-1level-ico">
+            </i>Sponsorship
+          </a> 
+        </li> 
+        <!-- <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='aspirasi') {?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">
+          <?php } else { ?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">
+          <?php }?> 
+          <a href="http://localhost:82/dmsinew/index.php/public/aspirasi">
+            <i class="fa fa-inbox b-menu-1level-ico">
+            </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['aspirasi'];?>
+
+          </a> 
+        </li>      -->
+        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='kontak') {?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">
+          <?php } else { ?>
+        <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">
+          <?php }?> 
+          <a href="http://localhost:82/dmsinew/index.php/public/kontak">
+            <i class="fa fa-list b-menu-1level-ico">
+            </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['kontak'];?>
+
+          </a> 
+        </li>   
+      </ul>
+    </nav>
+  </div>
+</div>
+</header>
+
     <div class="j-menu-container">
     </div>
     <div class="b-inner-page-header f-inner-page-header b-bg-header-inner-page">
