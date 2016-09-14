@@ -5,13 +5,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f6177fde6f50439a7c2240afdd4578c0fe613c49' => 
     array (
       0 => 'application\\views\\web\\base-layout\\document.html',
-      1 => 1473302644,
+      1 => 1473825979,
       2 => 'file',
     ),
     'caa5b1ba90178f2b308e228cfefb1d072ece2244' => 
     array (
       0 => 'application\\views\\web\\base-layout\\header.html',
-      1 => 1473302644,
+      1 => 1473841808,
       2 => 'file',
     ),
     '491adfa508d209a2eb7399044db1f84a27220b0c' => 
@@ -32,10 +32,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       1 => 1473302645,
       2 => 'file',
     ),
-    '092f48cb449a470e36894103ba4edc50c1d4f2cc' => 
+    '03f853591c6142ec0c90c1a329ea92a82401e6a9' => 
     array (
-      0 => 'application\\views\\web\\agenda\\detail.html',
-      1 => 1473302642,
+      0 => 'application\\views\\web\\bagan\\list.html',
+      1 => 1473302643,
       2 => 'file',
     ),
     '4aa8bdc77de23e5614b18a829abc45841dc97812' => 
@@ -48,10 +48,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '614957888fa30387c5-29408436',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57d12728ccdb55_71459504',
+  'unifunc' => 'content_57d90a92813e06_95275913',
   'variables' => 
   array (
-    'title' => 1,
+    'act_lang' => 1,
     'BASEURL' => 0,
     'datashare' => 0,
     'rs' => 0,
@@ -61,31 +61,44 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57d12728ccdb55_71459504')) {function content_57d12728ccdb55_71459504($_smarty_tpl) {?><!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
-
-    </title>
-    <link rel="shortcut icon" href="http://localhost:82/dmsinew/doc/favicon.ico">
+<?php if ($_valid && !is_callable('content_57d90a92813e06_95275913')) {function content_57d90a92813e06_95275913($_smarty_tpl) {?><!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>
     
+    <?php if ($_smarty_tpl->tpl_vars['act_lang']->value=='en') {?>
+    The center of Information and coordination of Industry Perkelapasawitan Indonesia
+    <?php } else { ?>
+      Pusat Informasi dan Koordinasi Industri Perkelapasawitan Indonesia
+    <?php }?>
     
-    <meta property="og:title" content="POIDEC  2015" />
-    <meta property="og:url" content="http://localhost:82/dmsinew/index.php/public/kegiatandmsi/detail/11/POIDEC-2015" />
-    <meta property="og:image" content="http://localhost:82/dmsinew/doc/agenda/11/11_unduhan.jpg" />
-    <meta property="og:description" content="Disaat masalah masih menggunung seperti harga yang masih melemah, munculnya tudingan miring dan ..." />
-    <meta property="og:site_name" content="Dewan Minyak Sawit Indonesia" />
+
+    </title>
+
+    <link rel="shortcut icon" href="http://localhost:82/dmsinew/doc/favicon.ico">
+
     
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/default/load-style.css" />
+
     
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/default/load-style.css" />
-    
-  </head>
-  <body>
-    <div class="mask-l" style="background-color: #fff; width: 100%; height: 100%; position: fixed; top: 0; left:0; z-index: 9999999;">
-    </div> 
-    <!--removed by integration-->
+
+  </head>
+
+  <body>
+
+    <div class="mask-l" style="background-color: #fff; width: 100%; height: 100%; position: fixed; top: 0; left:0; z-index: 9999999;">
+
+    </div> 
+
+    <!--removed by integration-->
+
     <header>
   <div class="b-top-options-panel">
     <div class="container">
@@ -176,7 +189,7 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
             </span>
           </a>
         </li>
-        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='profil'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='beritadmsi'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='kegiatandmsi') {?>
+        <?php if ($_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='profil'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='beritadmsi'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='kegiatandmsi'||$_smarty_tpl->tpl_vars['menu']->value['menu_aktif']=='bagan') {?>
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">
           <?php } else { ?>
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">
@@ -194,18 +207,26 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
             <ul class="b-top-nav__2level_wrap">
               <li class="b-top-nav__2level_title f-top-nav__2level_title">DMSI
               </li>
-              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
-                <a href="http://localhost:82/dmsinew/index.php/public/profil">
+                              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/profil/detail/1">
                   <i class="fa fa-angle-right">
-                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['tentang_dmsi'];?>
-
+                  </i>
+                                     Tentang DMSI
+                                  
                 </a>
               </li>
-              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
-                <a href="http://localhost:82/dmsinew/index.php/public/profil/detail/3/visi">
+                              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/profil/detail/3">
                   <i class="fa fa-angle-right">
-                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['visi'];?>
-
+                  </i>
+                                     Visi dan Misi
+                                  
+                </a>
+              </li>
+                            <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="http://localhost:82/dmsinew/index.php/public/bagan">
+                  <i class="fa fa-angle-right">
+                  </i>Struktur Organisasi
                 </a>
               </li>
               <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
@@ -483,9 +504,12 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
   </div>
 </div>
 </header>
-
-    <div class="j-menu-container">
-    </div>
+
+
+    <div class="j-menu-container">
+
+    </div>
+
     <div class="b-inner-page-header f-inner-page-header b-bg-header-inner-page">
   
   <?php if ($_smarty_tpl->tpl_vars['image_bantas']->value!='') {?>
@@ -494,24 +518,38 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
   <?php }?>
   
 </div>
-
-    <div class="l-main-container">
-      
+
+
+    <div class="l-main-container">
+
+      
+
       <?php echo $_smarty_tpl->getSubTemplate ("web/base-layout/breadcrumbs.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-      <div class="l-inner-page-container">
-        <div class="container">
-          <div class="row">
+
+
+      <div class="l-inner-page-container">
+
+        <div class="container">
+
+          <div class="row">
+
             <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['template_content']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
+
+
             <?php echo $_smarty_tpl->getSubTemplate ("web/base-layout/sidebar.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-          </div>
-        </div>
-      </div>
-      
-    </div>
-    <footer>  <div class="b-footer-primary">    <div class="container">      <div class="row">        <div class="col-sm-8 col-xs-12 f-copyright b-copyright">Copyright © 2016 - Dewan Minyak Sawit Indonesia (DMSI)        </div>        <div class="col-sm-4 col-xs-12">          <div class="b-btn f-btn b-btn-default b-right b-footer__btn_up f-footer__btn_up j-footer__btn_up">            <i class="fa fa-chevron-up">            </i>          </div>          <nav class="b-bottom-nav f-bottom-nav b-right hidden-xs">            <ul>              <li class="is-active-bottom-nav">                <a href="http://localhost:82/dmsinew/index.php/public/home">Home                </a>              </li>              <li>                <a href="http://localhost:82/dmsinew/index.php/public/profil">                                    Tentang kami                                  </a>              </li>              <li>                <a href="http://localhost:82/dmsinew/index.php/public/kontak">                                    Kontak Kami                                  </a>              </li>            </ul>          </nav>        </div>      </div>    </div>  </div>  <div class="container">    <div class="b-footer-secondary row">      <div class="col-md-3 col-sm-12 col-xs-12 f-center b-footer-logo-containter">        <a href="">          <img data-retina class="b-footer-logo color-theme" src="http://localhost:82/dmsinew/themes/default/img/logo_dmsi_besar.png" alt="Logo"/>        </a>        <div class="b-footer-logo-text f-footer-logo-text">          <p>DMSI            <br />Dewan Minyak Sawit Indonesia          </p>          <div class="b-btn-group-hor f-btn-group-hor">                        <?php if ($_smarty_tpl->tpl_vars['datasosmed']->value!='') {?>            <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+      
+
+    </div>
+
+    <footer>  <div class="b-footer-primary">    <div class="container">      <div class="row">        <div class="col-sm-8 col-xs-12 f-copyright b-copyright">Copyright © 2016 - Dewan Minyak Sawit Indonesia (DMSI)        </div>        <div class="col-sm-4 col-xs-12">          <div class="b-btn f-btn b-btn-default b-right b-footer__btn_up f-footer__btn_up j-footer__btn_up">            <i class="fa fa-chevron-up">            </i>          </div>          <nav class="b-bottom-nav f-bottom-nav b-right hidden-xs">            <ul>              <li class="is-active-bottom-nav">                <a href="http://localhost:82/dmsinew/index.php/public/home">Home                </a>              </li>              <li>                <a href="http://localhost:82/dmsinew/index.php/public/profil/detail">                                    Tentang kami                                  </a>              </li>              <li>                <a href="http://localhost:82/dmsinew/index.php/public/kontak">                                    Kontak Kami                                  </a>              </li>            </ul>          </nav>        </div>      </div>    </div>  </div>  <div class="container">    <div class="b-footer-secondary row">      <div class="col-md-3 col-sm-12 col-xs-12 f-center b-footer-logo-containter">        <a href="">          <img data-retina class="b-footer-logo color-theme" src="http://localhost:82/dmsinew/themes/default/img/logo_dmsi_besar.png" alt="Logo"/>        </a>        <div class="b-footer-logo-text f-footer-logo-text">          <p>DMSI            <br />Dewan Minyak Sawit Indonesia          </p>          <div class="b-btn-group-hor f-btn-group-hor">                        <?php if ($_smarty_tpl->tpl_vars['datasosmed']->value!='') {?>            <?php  $_smarty_tpl->tpl_vars['rs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['datasosmed']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['rs']->key => $_smarty_tpl->tpl_vars['rs']->value) {
 $_smarty_tpl->tpl_vars['rs']->_loop = true;
@@ -526,8 +564,10 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
               </a>            </li>            <?php } ?>          </ul>          <?php }?>                  </div>      </div>      <div class="col-md-3 col-sm-12 col-xs-12 ">        <h4 class="f-primary-b">                    Info Kontak                  </h4>        <div class="b-contacts-short-item-group">                    <div class="b-contacts-short-item col-md-12 col-sm-4 col-xs-12">            <div class="b-contacts-short-item__icon f-contacts-short-item__icon f-contacts-short-item__icon_lg b-left">              <i class="fa fa-map-marker">              </i>            </div>            <div class="b-remaining f-contacts-short-item__text">              <?php echo nl2br($_smarty_tpl->tpl_vars['kontakinfo']->value['alamat']);?>
             </div>          </div>          <div class="b-contacts-short-item col-md-12 col-sm-4 col-xs-12">            <div class="b-contacts-short-item__icon f-contacts-short-item__icon b-left f-contacts-short-item__icon_md">              <i class="fa fa-phone">              </i>            </div>            <div class="b-remaining f-contacts-short-item__text f-contacts-short-item__text_phone">              <?php echo $_smarty_tpl->tpl_vars['kontakinfo']->value['telp'];?>
             </div>          </div>          <div class="b-contacts-short-item col-md-12 col-sm-4 col-xs-12">            <div class="b-contacts-short-item__icon f-contacts-short-item__icon b-left f-contacts-short-item__icon_xs">              <i class="fa fa-envelope">              </i>            </div>            <div class="b-remaining f-contacts-short-item__text f-contacts-short-item__text_email">              <a href=""><?php echo $_smarty_tpl->tpl_vars['kontakinfo']->value['email'];?>
-              </a>            </div>          </div>                  </div>      </div>    </div>  </div></footer>
-    <!-- javascript loaded -->
+              </a>            </div>          </div>                  </div>      </div>    </div>  </div></footer>
+
+    <!-- javascript loaded -->
+
     <script type="text/javascript" src="http://localhost:82/dmsinew/js/front/jquery.cslider.js"></script>
 <script type="text/javascript" src="http://localhost:82/dmsinew/js/front/breakpoints.js"></script>
 <script type="text/javascript" src="http://localhost:82/dmsinew/js/front/jquery/jquery-1.11.1.min.js"></script>
@@ -573,8 +613,12 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
 <script type="text/javascript" src="http://localhost:82/dmsinew/js/charts/modules/data.js"></script>
 <script type="text/javascript" src="http://localhost:82/dmsinew/js/front/bootstrap-select.js"></script>
 <script type="text/javascript" src="http://localhost:82/dmsinew/js/front/bootstrap-select.js.map"></script>
-
-    <!-- end of loaded javascript -->
-  </body>
-</html>
+
+
+    <!-- end of loaded javascript -->
+
+  </body>
+
+</html>
+
 <?php }} ?>

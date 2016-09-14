@@ -81,7 +81,7 @@
             </span>
           </a>
         </li>
-        {nocache}{if $menu.menu_aktif eq 'profil' or $menu.menu_aktif eq 'beritadmsi' or $menu.menu_aktif eq 'kegiatandmsi' }
+        {nocache}{if $menu.menu_aktif eq 'profil' or $menu.menu_aktif eq 'beritadmsi' or $menu.menu_aktif eq 'kegiatandmsi' or $menu.menu_aktif eq 'bagan' }
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">
           {else}
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b putih">
@@ -99,16 +99,24 @@
             <ul class="b-top-nav__2level_wrap">
               <li class="b-top-nav__2level_title f-top-nav__2level_title">DMSI
               </li>
-              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
-                <a href="{$url_menu_profil}">
+              {foreach name=list_profil from=$profil item=rs_profil}
+                <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+                <a href="{$url_menu_profil}/{$rs_profil.id_info}">
                   <i class="fa fa-angle-right">
-                  </i>{nocache}{$menu.tentang_dmsi}{/nocache}
+                  </i>
+                   {if $act_lang eq en}
+                  {$rs_profil.judul_english}
+                  {else}
+                  {$rs_profil.judul}
+                  {/if}
+                
                 </a>
               </li>
+              {/foreach}
               <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
-                <a href="{$url_menu_profil_visi}">
+                <a href="{$url_menu_bagan}">
                   <i class="fa fa-angle-right">
-                  </i>{nocache}{$menu.visi}{/nocache}
+                  </i>{$menu.bagan}
                 </a>
               </li>
               <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">

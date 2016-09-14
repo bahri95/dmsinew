@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-01 08:07:01
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-14 05:15:25
          compiled from "application\views\private\foto\edit_foto.html" */ ?>
 <?php /*%%SmartyHeaderCode:281205791dcd54e2df0-65811307%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2290010f7c06ae5f6b1b3e25810e0429eba93754' => 
     array (
       0 => 'application\\views\\private\\foto\\edit_foto.html',
-      1 => 1472452478,
+      1 => 1473822923,
       2 => 'file',
     ),
   ),
@@ -41,8 +41,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 .      </div>      <?php }?>    </div>    <?php }?>    <div class="col-md-9">      <!-- form update email-->      <div class="box box-success">        <div class="box-header">          <h3 class="box-title">Edit Foto          </h3>          <div class="box-body">            <div class="btn-group pull-right">              <a href="<?php echo $_smarty_tpl->tpl_vars['url_list_foto']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['album']->value['id_album'];?>
 " title="List Foto" class="btn bg-olive btn-flat">                <i class='fa fa-list'>                </i> List Foto              </a>            </div>          </div>        </div>        <!-- /.box-header -->        <!-- form start -->        <form id="form" action="<?php echo $_smarty_tpl->tpl_vars['url_process']->value;?>
-" method="post" enctype="multipart/form-data">          <div class="box-body">            <input type="hidden" name="id_album" value="<?php echo $_smarty_tpl->tpl_vars['album']->value['id_album'];?>
+" method="post" enctype="multipart/form-data">          <div class="box-body">          <div class="box-body">            <input type="hidden" name="id_album" value="<?php echo $_smarty_tpl->tpl_vars['album']->value['id_album'];?>
 ">            <input type="hidden" name="id_foto" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['id_foto'];?>
+">            <input type="hidden" name="tanggal" value="<?php echo $_smarty_tpl->tpl_vars['album']->value['tanggal'];?>
 ">            <div class="form-group">              <label>Pilih File Foto *               </label>              <div style="text-align:center"><?php echo $_smarty_tpl->tpl_vars['foto']->value;?>
               </div>              <br />              <span>                <input  type="file" accept="image/*" onchange="loadFile(event)"                        style="visibility:hidden; width: 1px;"                        id='foto' name='foto'                         onchange="$(this).parent().find('span').html($(this).val().replace('C:\\fakepath\\', ''))"  />                 <input class="btn btn-primary" type="button" value="Browse.." onclick="$(this).parent().find('input[type=file]').click();"/>                 &nbsp;                <span  class="badge badge-important" >                </span>              </span>            </div>            <center>              <img id="output" style="height:200px; margin-top:20px;">            </center>            <div class="form-group">              <label for="user_name_la">Judul *              </label>              <input type="text" name="judul_foto" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['judul_foto'];?>
 " size="100" maxlength="255" />            </div>            <div class="form-group">              <label for="user_name_la">Judul (                <i>English                </i>) *              </label>              <input type="text" name="judul_english" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['judul_english'];?>

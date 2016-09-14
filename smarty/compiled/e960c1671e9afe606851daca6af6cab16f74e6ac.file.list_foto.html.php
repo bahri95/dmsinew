@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-02 06:01:35
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-14 05:16:42
          compiled from "application\views\private\foto\list_foto.html" */ ?>
 <?php /*%%SmartyHeaderCode:146895791cde6ca0c58-67062239%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e960c1671e9afe606851daca6af6cab16f74e6ac' => 
     array (
       0 => 'application\\views\\private\\foto\\list_foto.html',
-      1 => 1472788282,
+      1 => 1473823001,
       2 => 'file',
     ),
   ),
@@ -63,5 +63,5 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                   </td>                  <td align="center">                    <div class="btn-group-vertical">                      <a href="<?php echo $_smarty_tpl->tpl_vars['url_edit_foto']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['result']->value['id_album'];?>
 /<?php echo $_smarty_tpl->tpl_vars['result']->value['id_foto'];?>
-" title="Edit Nama Album" class="btn btn-success btn-flat">                        <i class='fa fa-pencil'>                        </i>                      </a>                      </td>                </tr>                <?php } ?>                <?php }?>              </tbody>              <tfoot>              </tfoot>            </table>          </div>          <!-- /.box-body -->          <div class="box-footer clearfix">            <input type="submit" name="hapus" value="hapus" class="btn btn-danger"/>            <ul class="pagination pagination-sm no-margin pull-right"> <?php if ($_smarty_tpl->tpl_vars['pagging']->value!='') {?><?php echo $_smarty_tpl->tpl_vars['pagging']->value;?>
+" title="Edit Foto" class="btn btn-success btn-flat">                        <i class='fa fa-pencil'>                        </i>                      </a>                      </td>                </tr>                <?php } ?>                <?php }?>              </tbody>              <tfoot>              </tfoot>            </table>          </div>          <!-- /.box-body -->          <div class="box-footer clearfix">            <input type="submit" name="hapus" value="hapus" class="btn btn-danger"/>            <ul class="pagination pagination-sm no-margin pull-right"> <?php if ($_smarty_tpl->tpl_vars['pagging']->value!='') {?><?php echo $_smarty_tpl->tpl_vars['pagging']->value;?>
 <?php }?>            </ul>              </div>              </form>                      </div>          <!-- /.box -->          </div>      </div>      <!-- /.row -->      </section>    <!-- /.content --><?php }} ?>

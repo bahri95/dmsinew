@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a5bea272e85ebd21dfda7faf064bfe9fb7be6cac' => 
     array (
       0 => 'application\\views\\web\\base-layout\\document-list.html',
-      1 => 1473302644,
+      1 => 1473826021,
       2 => 'file',
     ),
     'caa5b1ba90178f2b308e228cfefb1d072ece2244' => 
@@ -35,17 +35,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'acb4068bc1d9b4b22794160b80dd90977eb3a6e1' => 
     array (
       0 => 'application\\views\\web\\harga\\grafik.html',
-      1 => 1473413298,
+      1 => 1473826358,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '1929857888f9d947971-65923897',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57d280d02cc100_09415749',
+  'unifunc' => 'content_57d8ce37469280_12969581',
   'variables' => 
   array (
-    'title' => 1,
+    'act_lang' => 1,
     'BASEURL' => 0,
     'THEMESPATH' => 0,
     'LOADSTYLE' => 0,
@@ -53,8 +53,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57d280d02cc100_09415749')) {function content_57d280d02cc100_09415749($_smarty_tpl) {?><!DOCTYPE html><html>  <head>    <meta charset="utf-8">    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
-    </title>    <link rel="shortcut icon" href="http://localhost:82/dmsinew/doc/favicon.ico">    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/default/load-style.css" />      </head>  <body>    <div class="mask-l" style="background-color: #fff; width: 100%; height: 100%; position: fixed; top: 0; left:0; z-index: 9999999;">    </div>     <!--removed by integration-->    <header>
+<?php if ($_valid && !is_callable('content_57d8ce37469280_12969581')) {function content_57d8ce37469280_12969581($_smarty_tpl) {?><!DOCTYPE html><html>  <head>    <meta charset="utf-8">    <title>    <?php if ($_smarty_tpl->tpl_vars['act_lang']->value=='en') {?>    The center of Information and coordination of Industry Perkelapasawitan Indonesia    <?php } else { ?>      Pusat Informasi dan Koordinasi Industri Perkelapasawitan Indonesia    <?php }?>        </title>    <link rel="shortcut icon" href="http://localhost:82/dmsinew/doc/favicon.ico">    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/default/load-style.css" />      </head>  <body>    <div class="mask-l" style="background-color: #fff; width: 100%; height: 100%; position: fixed; top: 0; left:0; z-index: 9999999;">    </div>     <!--removed by integration-->    <header>
   <div class="b-top-options-panel">
     <div class="container">
       <div class="b-option-contacts f-option-contacts">

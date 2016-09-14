@@ -259,9 +259,10 @@
                 $tahunmax = $tahun['maxtahun'];
             }
 
-            $sql = "SELECT a.*, s.katharga, d.id_sub_katharga, d.sub_katharga FROM harga_m a 
+            $sql = "SELECT a.*, b.id_bulan, b.bulan, s.katharga, d.id_sub_katharga, d.sub_katharga FROM harga_m a 
             LEFT JOIN katharga_m s ON a.id_katharga = s.id_katharga
             LEFT JOIN sub_katharga_m d ON a.id_sub_katharga = d.id_sub_katharga 
+             LEFT JOIN bulan_m b ON a.id_bulan = b.id_bulan
             WHERE a.id_katharga = '1' and a.tahun = $tahunmax  ORDER BY a.id_bulan ASC";
             $query = $this->db->query($sql);
             
@@ -304,9 +305,10 @@
                 $tahunmax = $tahun['maxtahun'];
             }
 
-            $sql = "SELECT a.*, s.katharga, d.id_sub_katharga, d.sub_katharga FROM harga_m a 
+            $sql = "SELECT a.*, b.id_bulan, b.bulan, s.katharga, d.id_sub_katharga, d.sub_katharga FROM harga_m a 
             LEFT JOIN katharga_m s ON a.id_katharga = s.id_katharga
-            LEFT JOIN sub_katharga_m d ON a.id_sub_katharga = d.id_sub_katharga 
+            LEFT JOIN sub_katharga_m d ON a.id_sub_katharga = d.id_sub_katharga
+            LEFT JOIN bulan_m b ON a.id_bulan = b.id_bulan 
             WHERE a.id_katharga = '3' and a.tahun = $tahunmax  ORDER BY a.id_bulan ASC";
             $query = $this->db->query($sql);
             

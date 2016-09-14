@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-08 05:15:05
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-14 10:30:10
          compiled from "application\views\web\base-layout\header.html" */ ?>
 <?php /*%%SmartyHeaderCode:172657888d5829f778-63496755%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'caa5b1ba90178f2b308e228cfefb1d072ece2244' => 
     array (
       0 => 'application\\views\\web\\base-layout\\header.html',
-      1 => 1473302644,
+      1 => 1473841808,
       2 => 'file',
     ),
   ),
@@ -30,20 +30,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'url_menu_registrasi' => 0,
     'menu' => 1,
     'homeurl' => 0,
+    'profil' => 0,
     'url_menu_profil' => 0,
-    'url_menu_profil_visi' => 0,
+    'rs_profil' => 0,
+    'act_lang' => 1,
+    'url_menu_bagan' => 0,
     'url_menu_berita_dmsi' => 0,
     'url_menu_kegiatan_dmsi' => 0,
     'url_menu_pengumuman' => 0,
     'url_menu_anggota' => 0,
     'url_menu_berita_anggota' => 0,
     'url_menu_kegiatan_anggota' => 0,
-    'act_lang' => 1,
     'informasifooter' => 1,
     'url_menu_opini' => 0,
     'url_menu_sesebi' => 0,
     'url_menu_program' => 0,
-    'url_menu_bagan' => 0,
     'url_menu_harga' => 0,
     'url_menu_foto' => 0,
     'url_menu_video' => 0,
@@ -168,7 +169,7 @@ themes/default/img/logo_dmsi.png" alt="Logo DMSI" style="margin-left:-50px;" />
             </span>
           </a>
         </li>
-        <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php if ($_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'profil\'||$_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'beritadmsi\'||$_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'kegiatandmsi\') {?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
+        <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php if ($_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'profil\'||$_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'beritadmsi\'||$_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'kegiatandmsi\'||$_smarty_tpl->tpl_vars[\'menu\']->value[\'menu_aktif\']==\'bagan\') {?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
 
         <li class="b-top-nav__1level f-top-nav__1level f-primary-b is-active-top-nav__1level">
           <?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php } else { ?>/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
@@ -189,21 +190,33 @@ themes/default/img/logo_dmsi.png" alt="Logo DMSI" style="margin-left:-50px;" />
             <ul class="b-top-nav__2level_wrap">
               <li class="b-top-nav__2level_title f-top-nav__2level_title">DMSI
               </li>
-              <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
+              <?php  $_smarty_tpl->tpl_vars['rs_profil'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs_profil']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['profil']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['rs_profil']->key => $_smarty_tpl->tpl_vars['rs_profil']->value) {
+$_smarty_tpl->tpl_vars['rs_profil']->_loop = true;
+?>
+                <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
                 <a href="<?php echo $_smarty_tpl->tpl_vars['url_menu_profil']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['rs_profil']->value['id_info'];?>
 ">
                   <i class="fa fa-angle-right">
-                  </i><?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php echo $_smarty_tpl->tpl_vars[\'menu\']->value[\'tentang_dmsi\'];?>
-/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
+                  </i>
+                   <?php if ($_smarty_tpl->tpl_vars['act_lang']->value=='en') {?>
+                  <?php echo $_smarty_tpl->tpl_vars['rs_profil']->value['judul_english'];?>
 
+                  <?php } else { ?>
+                  <?php echo $_smarty_tpl->tpl_vars['rs_profil']->value['judul'];?>
+
+                  <?php }?>
+                
                 </a>
               </li>
+              <?php } ?>
               <li class="b-top-nav__2level f-top-nav__2level f-primary fontsubmenu">
-                <a href="<?php echo $_smarty_tpl->tpl_vars['url_menu_profil_visi']->value;?>
+                <a href="<?php echo $_smarty_tpl->tpl_vars['url_menu_bagan']->value;?>
 ">
                   <i class="fa fa-angle-right">
-                  </i><?php echo '/*%%SmartyNocache:172657888d5829f778-63496755%%*/<?php echo $_smarty_tpl->tpl_vars[\'menu\']->value[\'visi\'];?>
-/*/%%SmartyNocache:172657888d5829f778-63496755%%*/';?>
+                  </i><?php echo $_smarty_tpl->tpl_vars['menu']->value['bagan'];?>
 
                 </a>
               </li>

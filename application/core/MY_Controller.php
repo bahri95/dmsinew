@@ -49,11 +49,13 @@
 			//video
 			$this->_display_video();
 
+			
 			//share
 			if($this->uri->segment(4,0) <> '' or $this->uri->segment(5,0) <> ''):
 			$this->_display_share();
 			endif;
 		}
+		
 		public 
 		function _display_share()
 		{
@@ -474,8 +476,7 @@
 			$this->smarty->assign('url_menu_anggota', site_url('public/asosiasi'));
 			$this->smarty->assign('url_menu_berita_anggota', site_url('public/beritaanggota'));
 			$this->smarty->assign('url_menu_kegiatan_anggota', site_url('public/kegiatananggota'));
-			$this->smarty->assign('url_menu_profil', site_url('public/profil'));
-			$this->smarty->assign('url_menu_profil_visi', site_url('public/profil/detail/3/visi'));
+			$this->smarty->assign('url_menu_profil', site_url('public/profil/detail'));
 			$this->smarty->assign('url_menu_pengumuman', site_url('public/pengumuman'));
 			$this->smarty->assign('url_menu_kegiatan_dmsi', site_url('public/kegiatandmsi'));
 			$this->smarty->assign('url_menu_berita_dmsi', site_url('public/beritadmsi'));
@@ -1131,7 +1132,10 @@ FOTO DAN VIDEO TERBARU";
 
 		private
 		function _display_nama_menu(){
-			
+			$this->load->model('profilmodel');
+			$profil = $this->profilmodel->get_list_profil();
+			$this->smarty->assign("profil", $profil);
+
 			if($this->act_lang  == 'en'){
 				$menu['home'] = "Home";
 				$menu['tentang_dmsi'] = "About DMSI";
@@ -1148,7 +1152,7 @@ FOTO DAN VIDEO TERBARU";
 				$menu['sesebi'] = "Various";
 				$menu['infografis'] = "Infographics";
 				$menu['program'] = "Action Programme DMSI";
-				$menu['bagan'] = "Strategy Chart DMSI";
+				$menu['bagan'] = "Organizational Structure";
 				
 				$menu['harga'] = "Market Prices";
 				$menu['grafik'] = "Domestic and Export Prices";
@@ -1174,7 +1178,7 @@ FOTO DAN VIDEO TERBARU";
 				$menu['sesebi'] = "Serba-Serbi";
 				$menu['infografis'] = "Infografis";
 				$menu['program'] = "Program Aksi DMSI";
-				$menu['bagan'] = "Bagan Strategi DMSI";
+				$menu['bagan'] = "Struktur Organisasi";
 				$menu['harga'] = "Harga Pasar";
 				$menu['grafik'] = "Harga Domestik dan Ekspor";
 				$menu['foto'] = "Galeri Foto";
