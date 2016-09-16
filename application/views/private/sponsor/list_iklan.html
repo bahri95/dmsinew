@@ -13,7 +13,7 @@
 {/literal}
 <section class="content-header">
   <h1>
-    Sponsorship
+    Iklan Sponsorship
     <small>panel
     </small>
   </h1>
@@ -24,7 +24,13 @@
         </i> Home
       </a>
     </li>
-    <li class="active">Data Sponsor
+    <li>
+      <a href="{$url_list}">
+        <i class="fa ">
+        </i>Data Sponsor
+      </a>
+    </li>
+    <li class="active">Data Iklan Sponsor
     </li>
   </ol>
 </section>
@@ -59,13 +65,13 @@
     <div class="col-md-12">
       <div class="box">
         <div class="box-header">
-          <h3 class="box-title">Daftar Sponsor
+          <h3 class="box-title">Daftar Iklan dari  <b>{$sponsor.nama_sponsor}</b>
           </h3>
           <div class="box-tools">
             <div class="btn-group pull-right">
-              <a href="{$url_add}" title="Tambah Data" class="btn bg-olive btn-flat">
+              <a href="{$url_add_iklan}/{$sponsor.id_sponsor}" title="Tambah Data" class="btn bg-olive btn-flat">
                 <i class='fa fa-plus'>
-                </i> Tambah Sponsor
+                </i> Tambah Iklan
               </a>
             </div>
           </div>
@@ -86,6 +92,7 @@
         <form action="{$url_process}" name="form-album" method="post" onsubmit="javascript:return konfirmasi_delete_data();">
           <div style="margin-left:10px;">
             <input type="submit" name="hapus" value="hapus" class="btn btn-danger"/>
+            <input type="hidden" name="id_sponsor" value="{$sponsor.id_sponsor}">
           </div>
           <div class="box-body table-responsive">
             <table id="table_datagrid" class="table table-bordered table-striped">
@@ -96,9 +103,11 @@
                   </th>
                   <th width="6%" align="center">No
                   </th>
-                  <th width="30%">Nama Sponsor
+                  <th width="30%">Judul Iklan
                   </th>
-                  <th width="20%">Foto
+                  <th width="10%">Iklan Indonesia
+                  </th>
+                  <th width="10%">Iklan English
                   </th>
                   <th width="7%">
                   </th>
@@ -109,35 +118,29 @@
                 {foreach name=list_data from=$data item=result}
                 <tr>
                   <td align="center">
-                    <input type=checkbox name="id_sponsor[]" value="{$result.id_sponsor}" class="checkbox" />
+                    <input type=checkbox name="id_iklan[]" value="{$result.id_iklan}" class="checkbox" />
                   </td>
                   <td align="center">{$no++}.
                   </td>
-                  <td>{$result.nama_sponsor}
+                  <td>{$result.judul}<br/>
+                  <i>({$result.judul_english})</i>
                   </td>
-                  <td align="center">{if $result.image_sponsor neq ''}
-                    <img src="{$result.image_sponsor}" width="100" />
+                  <td align="center">{if $result.image neq ''}
+                    <img src="{$result.image}" width="100" />
+                    {/if}
+                  </td>
+                  <td align="center">{if $result.image_english neq ''}
+                    <img src="{$result.image_english}" width="100" />
                     {/if}
                   </td>
                   <td align="center">
                     <div class="btn-group-vertical">
-                      <a href="{$url_edit}/{$result.id_sponsor}" title="Edit Nama Album" class="btn btn-success btn-flat">
+                      <a href="{$url_edit_iklan}/{$result.id_sponsor}/{$result.id_iklan}" title="Edit Iklan" class="btn btn-success btn-flat">
                         <i class='fa fa-pencil'>
                         </i>
                       </a>
                     </div>
-                    <div class="btn-group-vertical">
-                      <a href="{$url_add_foto}/{$result.id_album}" title="Tambah Iklan" class="btn btn-success btn-flat">
-                        <i class='fa fa-plus'>
-                        </i>
-                      </a>
-                    </div>
-                    <div class="btn-group-vertical">
-                      <a href="{$url_list_foto}/{$result.id_album}" title="Lihat List Iklan" class="btn btn-success btn-flat">
-                        <i class='fa fa-eye'>
-                        </i>
-                      </a>
-                    </div>
+                    
                   </td>
                 </tr>
                 {/foreach}

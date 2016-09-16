@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-14 05:44:26
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-16 09:54:09
          compiled from "application\views\private\sponsor\list.html" */ ?>
 <?php /*%%SmartyHeaderCode:222845791d9a9152ee2-35079079%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f140fe44a59c55ff3bdf842c02af08238c88da98' => 
     array (
       0 => 'application\\views\\private\\sponsor\\list.html',
-      1 => 1473302640,
+      1 => 1474012320,
       2 => 'file',
     ),
   ),
@@ -32,6 +32,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'result' => 1,
     'no' => 1,
     'url_edit' => 1,
+    'url_add_iklan' => 1,
+    'url_list_iklan' => 1,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -44,15 +46,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </b> dari <b><?php echo $_smarty_tpl->tpl_vars['total']->value;?>
 </b> data</span><div class="box-tools"><?php if ($_smarty_tpl->tpl_vars['total']->value!=0) {?><ul class="pagination pagination-sm no-margin pull-right"><?php if ($_smarty_tpl->tpl_vars['pagging']->value!='') {?><?php echo $_smarty_tpl->tpl_vars['pagging']->value;?>
 <?php }?></ul><?php }?></div>-->        <!-- </div> -->                <form action="<?php echo $_smarty_tpl->tpl_vars['url_process']->value;?>
-" name="form-album" method="post" onsubmit="javascript:return konfirmasi_delete_data();">          <div style="margin-left:10px;">            <input type="submit" name="hapus" value="hapus" class="btn btn-danger"/>          </div>          <div class="box-body table-responsive">            <table id="table_datagrid" class="table table-bordered table-striped">              <thead>                <tr>                  <th width="5%" id="cekAll">                    <input type="checkbox" class="checked-all" name="checked-all"  id="checked-all"/ class="form-control">                  </th>                  <th width="6%" align="center">No                  </th>                  <th width="30%">Nama Sponsor                  </th>                  <th width="20%">Foto                  </th>                  <th width="7%">                  </th>                </tr>              </thead>              <tbody>                <?php if ($_smarty_tpl->tpl_vars['data']->value!='') {?>                <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
+" name="form-album" method="post" onsubmit="javascript:return konfirmasi_delete_data();">          <div style="margin-left:10px;">            <input type="submit" name="hapus" value="hapus" class="btn btn-danger"/>          </div>          <div class="box-body table-responsive">            <table id="table_datagrid" class="table table-bordered table-striped">              <thead>                <tr>                  <th width="5%" id="cekAll">                    <input type="checkbox" class="checked-all" name="checked-all"  id="checked-all"/ class="form-control">                  </th>                  <th width="6%" align="center">No                  </th>                  <th width="30%">Nama Sponsor                  </th>                  <th width="20%">Logo Sponsor                  </th>                  <th width="10%">Jumlah Iklan</th>                  <th width="15%">                  </th>                </tr>              </thead>              <tbody>                <?php if ($_smarty_tpl->tpl_vars['data']->value!='') {?>                <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['data']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {
 $_smarty_tpl->tpl_vars['result']->_loop = true;
-?>                <tr>                  <td align="center">                    <input type=checkbox name="id_sponsor[]" value="<?php echo $_smarty_tpl->tpl_vars['result']->value['id_sponsor'];?>
+?>                <tr>                  <td align="center">                                        <input type=checkbox name="id_sponsor[]" value="<?php echo $_smarty_tpl->tpl_vars['result']->value['id_sponsor'];?>
 " class="checkbox" />                  </td>                  <td align="center"><?php echo $_smarty_tpl->tpl_vars['no']->value++;?>
 .                  </td>                  <td><?php echo $_smarty_tpl->tpl_vars['result']->value['nama_sponsor'];?>
                   </td>                  <td align="center"><?php if ($_smarty_tpl->tpl_vars['result']->value['image_sponsor']!='') {?>                    <img src="<?php echo $_smarty_tpl->tpl_vars['result']->value['image_sponsor'];?>
-" width="100" />                    <?php }?>                  </td>                  <td align="center">                    <div class="btn-group-vertical">                      <a href="<?php echo $_smarty_tpl->tpl_vars['url_edit']->value;?>
+" width="100" />                    <?php }?>                  </td>                   <td align="center">a                  </td>                  <td align="center">                    <div class="btn-group-vertical">                      <a href="<?php echo $_smarty_tpl->tpl_vars['url_edit']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['result']->value['id_sponsor'];?>
-" title="Edit Nama Album" class="btn btn-success btn-flat">                        <i class='fa fa-pencil'>                        </i>                      </a>                    </div>                  </td>                </tr>                <?php } ?>                <?php }?>              </tbody>              <tfoot>              </tfoot>            </table>          </div>          <!-- /.box-body -->          <div class="box-footer clearfix">            <input type="submit" name="hapus" value="hapus" class="btn btn-danger"/>            <ul class="pagination pagination-sm no-margin pull-right"> <?php if ($_smarty_tpl->tpl_vars['pagging']->value!='') {?><?php echo $_smarty_tpl->tpl_vars['pagging']->value;?>
+" title="Edit Nama Album" class="btn btn-success btn-flat">                        <i class='fa fa-pencil'>                        </i>                      </a>                    </div>                    <div class="btn-group-vertical">                      <a href="<?php echo $_smarty_tpl->tpl_vars['url_add_iklan']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['result']->value['id_sponsor'];?>
+" title="Tambah Iklan" class="btn btn-success btn-flat">                        <i class='fa fa-plus'>                        </i>                      </a>                    </div>                    <div class="btn-group-vertical">                      <a href="<?php echo $_smarty_tpl->tpl_vars['url_list_iklan']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['result']->value['id_sponsor'];?>
+" title="Lihat List Iklan" class="btn btn-success btn-flat">                        <i class='fa fa-eye'>                        </i>                      </a>                    </div>                  </td>                </tr>                <?php } ?>                <?php }?>              </tbody>              <tfoot>              </tfoot>            </table>          </div>          <!-- /.box-body -->          <div class="box-footer clearfix">            <input type="submit" name="hapus" value="hapus" class="btn btn-danger"/>            <ul class="pagination pagination-sm no-margin pull-right"> <?php if ($_smarty_tpl->tpl_vars['pagging']->value!='') {?><?php echo $_smarty_tpl->tpl_vars['pagging']->value;?>
 <?php }?>            </ul>              </div>              </form>                      </div>          <!-- /.box -->          </div>      </div>      <!-- /.row -->      </section>    <!-- /.content --><?php }} ?>
