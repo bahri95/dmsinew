@@ -174,6 +174,8 @@
 
 		$this->load->model('beritamodel');
 
+		$data = $this->beritamodel->get_list_berita_private();
+		$this->smarty->assign("data", $data);
 		// url
 
 		$listasosiasi = $this->beritamodel->get_list_asosiasi();
@@ -183,6 +185,8 @@
 		$this->smarty->assign("url_add", site_url("private/berita/add"));
 
 		$this->smarty->assign("url_list", site_url("private/berita"));
+
+		
 
 		$this->smarty->assign("url_process", site_url("private/berita/process/add"));
 

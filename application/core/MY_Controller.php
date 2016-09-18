@@ -663,9 +663,7 @@
 				$data['profile_url'] = site_url('private/account/status');
 				$data['account_url'] = site_url('private/account/login');
 				
-				if($data['id_auth']== 5):
-				$data['url_profil_museum'] = site_url('private/museum_info');
-				endif;
+				
 				$this->user_data = $data;
 				// parse data
 				$this->smarty->assign('user_account', $data);
@@ -1155,7 +1153,7 @@ FOTO DAN VIDEO TERBARU";
 				$menu['bagan'] = "Organizational Structure";
 				
 				$menu['harga'] = "Market Prices";
-				$menu['grafik'] = "Domestic and Export Prices";
+				$menu['grafik'] = "Market Price";
 				$menu['foto'] = "Photo Gallery";
 				$menu['video'] = "Video Gallery";
 				$menu['regulasi'] = "Regulation";
@@ -1180,7 +1178,7 @@ FOTO DAN VIDEO TERBARU";
 				$menu['program'] = "Program Aksi DMSI";
 				$menu['bagan'] = "Struktur Organisasi";
 				$menu['harga'] = "Harga Pasar";
-				$menu['grafik'] = "Harga Domestik dan Ekspor";
+				$menu['grafik'] = "Harga Pasar";
 				$menu['foto'] = "Galeri Foto";
 				$menu['video'] = "Galeri Video";
 				$menu['regulasi'] = "Regulasi";

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-16 10:56:47
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-18 12:36:30
          compiled from "application\views\private\sponsor\list_iklan.html" */ ?>
 <?php /*%%SmartyHeaderCode:2753957da174aa95aa0-39757563%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'df6c3f2b4510375fd2b0bc7da86af1c45c088138' => 
     array (
       0 => 'application\\views\\private\\sponsor\\list_iklan.html',
-      1 => 1474016206,
+      1 => 1474194988,
       2 => 'file',
     ),
   ),
@@ -160,6 +160,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   </th>
                   <th width="10%">Iklan English
                   </th>
+                  <th width="5%">Status
+                  </th>
                   <th width="7%">
                   </th>
                 </tr>
@@ -193,6 +195,9 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
                     <img src="<?php echo $_smarty_tpl->tpl_vars['result']->value['image_english'];?>
 " width="100" />
                     <?php }?>
+                  </td>
+                  <td align="center"><?php echo $_smarty_tpl->tpl_vars['result']->value['status'];?>
+ 
                   </td>
                   <td align="center">
                     <div class="btn-group-vertical">

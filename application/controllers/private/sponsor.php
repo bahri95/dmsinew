@@ -673,7 +673,7 @@
 
             $data['image'] = $data['image_sponsor'];
 
-            $this->smarty->assign("image_sponsor_edit", $data['image_sponsor_edit']);
+            $this->smarty->assign("image_sponsor_edit", $data['image']);
 
             ///ASIGN DATA variable nya ke smarty
 

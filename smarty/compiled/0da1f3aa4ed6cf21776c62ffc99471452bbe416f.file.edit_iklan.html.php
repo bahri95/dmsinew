@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-16 11:25:19
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-18 01:32:54
          compiled from "application\views\private\sponsor\edit_iklan.html" */ ?>
 <?php /*%%SmartyHeaderCode:2636357da63b24d0e55-48285385%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0da1f3aa4ed6cf21776c62ffc99471452bbe416f' => 
     array (
       0 => 'application\\views\\private\\sponsor\\edit_iklan.html',
-      1 => 1474017914,
+      1 => 1474154949,
       2 => 'file',
     ),
   ),
@@ -117,7 +117,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <div class="box-body">
             <input type="hidden" name="id_sponsor" value="<?php echo $_smarty_tpl->tpl_vars['sponsor']->value['id_sponsor'];?>
 ">
-            <input type="hidden" name="id_iklan" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['id_iklan'];?>
+            <input type="hidden
+            " name="id_iklan" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['id_iklan'];?>
 ">
             <div class="form-group">
               <label for="user_name_la">Judul *
