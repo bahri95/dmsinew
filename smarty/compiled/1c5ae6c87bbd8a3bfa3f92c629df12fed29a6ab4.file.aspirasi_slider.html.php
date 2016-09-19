@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-14 06:09:32
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-19 08:18:19
          compiled from "application\views\web\home\aspirasi_slider.html" */ ?>
 <?php /*%%SmartyHeaderCode:876357888d58e38624-87801914%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1c5ae6c87bbd8a3bfa3f92c629df12fed29a6ab4' => 
     array (
       0 => 'application\\views\\web\\home\\aspirasi_slider.html',
-      1 => 1473826128,
+      1 => 1474265890,
       2 => 'file',
     ),
   ),
@@ -60,7 +60,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_va
 $_smarty_tpl->tpl_vars['result']->_loop = true;
 ?>                      <tr>                        <th>                        <?php echo $_smarty_tpl->tpl_vars['result']->value['bulan'];?>
                         </th>                        <td><?php echo $_smarty_tpl->tpl_vars['result']->value['harga_rupiah'];?>
-                        </td>                      </tr>                      <?php } ?>                      <?php }?>                    </tbody>                  </table>                </div>                <!-- /.box-body -->              </div>              <!-- /.box -->            </div>            <!-- /.col -->          </div>          <!-- /.row -->        </section>        <!-- /.content -->      </div>      <!--tab 9-->      <div class="tab-pane" id="tab_8">        <section class="content">          <!-- Small boxes (Stat box) -->          <div class="row">            <div class="col-md-12">              <div class="box box-warning">                <div class="box-body no-padding">                  <div id="container3" style="width:90%; height: 70%; margin: 0 auto">                  </div>                  <table id="datatable3" hidden="hidden">                    <thead>                      <tr>                        <th>Bulan                        </th>                         <th>CPO</th>                        <th>Soybean Oil</th>                        <th>Rapeseed Oil</th>                      </tr>                    </thead>                    <tbody>                      <?php if ($_smarty_tpl->tpl_vars['datagrafikeks']->value!='') {?>                      <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
+                        </td>                      </tr>                      <?php } ?>                      <?php }?>                    </tbody>                  </table>                  harga rata2 dalam Rupiah per Kg      ada tulisan Exclude PPN                </div>                <!-- /.box-body -->              </div>              <!-- /.box -->            </div>            <!-- /.col -->          </div>          <!-- /.row -->        </section>        <!-- /.content -->      </div>      <!--tab 9-->      <div class="tab-pane" id="tab_8">        <section class="content">          <!-- Small boxes (Stat box) -->          <div class="row">            <div class="col-md-12">              <div class="box box-warning">                <div class="box-body no-padding">                  <div id="container3" style="width:90%; height: 70%; margin: 0 auto">                  </div>                  <table id="datatable3" hidden="hidden">                    <thead>                      <tr>                        <th>Bulan                        </th>                         <th>CPO</th>                        <th>Soybean Oil</th>                        <th>Rapeseed Oil</th>                      </tr>                    </thead>                    <tbody>                      <?php if ($_smarty_tpl->tpl_vars['datagrafikeks']->value!='') {?>                      <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['datagrafikeks']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {
 $_smarty_tpl->tpl_vars['result']->_loop = true;

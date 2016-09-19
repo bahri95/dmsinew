@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-18 16:02:21
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-19 07:01:11
          compiled from "application\views\private\berita\add.html" */ ?>
 <?php /*%%SmartyHeaderCode:244635791ca32e80657-89978904%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '249584e60153ec0a7aa1c72be73c87f905ad8811' => 
     array (
       0 => 'application\\views\\private\\berita\\add.html',
-      1 => 1474207338,
+      1 => 1474259957,
       2 => 'file',
     ),
   ),

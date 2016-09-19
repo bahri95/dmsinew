@@ -174,7 +174,7 @@
 
 		$this->load->model('beritamodel');
 
-		$data = $this->beritamodel->get_list_berita_private();
+		$data = $this->beritamodel->get_list_asosiasi_private();
 		$this->smarty->assign("data", $data);
 		// url
 
