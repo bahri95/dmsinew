@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-18 13:06:19
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-23 10:03:26
          compiled from "application\views\private\account\status.html" */ ?>
 <?php /*%%SmartyHeaderCode:6776578da102840b34-30938709%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f8c111fd95363b1f6acb71ff53c90bd9277b0b66' => 
     array (
       0 => 'application\\views\\private\\account\\status.html',
-      1 => 1473302618,
+      1 => 1474617795,
       2 => 'file',
     ),
   ),
@@ -34,7 +34,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 .    </div>    <?php }?>    <?php }?>    <div class="col-md-6">      <!-- form username -->      <div class="box box-primary">        <div class="box-header">          <h3 class="box-title">Update Profil          </h3>        </div>        <!-- /.box-header -->        <!-- form start -->        <form id="form" action="<?php echo $_smarty_tpl->tpl_vars['url_process']->value;?>
 " method="post">          <input type="hidden" name="id_user" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['id_user'];?>
 " />          <input type="hidden" name="user_name" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['user_name'];?>
-" />          <div class="box-body">            <div class="form-group">              <label for="user_name_baru">Nama Instansi              </label>              <input type="text" name="nama_museum" id="nama_museum" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['nama_museum'];?>
+" />          <div class="box-body">            <div class="form-group">              <label for="user_name_baru">Nama Instansi              </label>              <input type="text" name="nama_museum" id="nama_museum" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['nama_asosiasi'];?>
 " class="form-control" maxlength="30" size="30" disabled="disabled" />            </div>            <div class="form-group">              <label for="admin_name">Nama *               </label>              <input type="text" name="admin_name" id="admin_name" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['admin_name'];?>
 " class="form-control" maxlength="30" size="30"  />            </div>            <div class="form-group">              <label for="admin_name">Jenis Kelamin *               </label>              <div class="radio">                <label>                  <input type="radio" name="jenis_kelamin" id="jenis_kelamin1" value="L" <?php if ($_smarty_tpl->tpl_vars['data']->value['jenis_kelamin']=='L') {?>checked="checked"<?php }?>>                  Laki-laki                </label>              </div>              <div class="radio">                <label>                  <input type="radio" name="jenis_kelamin" id="jenis_kelamin2" value="P" <?php if ($_smarty_tpl->tpl_vars['data']->value['jenis_kelamin']=='P') {?>checked="checked"<?php }?>>                  Perempuan                </label>              </div>            </div>            <div class="form-group">              <label for="jabatan">Jabatan               </label>              <input type="text" name="jabatan" id="jabatan" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['jabatan'];?>
 " class="form-control" maxlength="30" size="30"  />            </div>            <!--  <div class="form-group"><label for="no_sk">No SK</label><input type="text" name="no_sk" id="no_sk" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['no_sk'];?>

@@ -519,12 +519,7 @@
 			}
 
 			// title
-			
-			if($this->uri->segment(2) <> ''):
-			$title = 'DMSI | '.$this->uri->segment(2); else :
-			$title = 'DMSI | Home';
-			endif;
-			$this->smarty->assign('title', $title);
+		
 			$this->_set_language();
 		}
 
@@ -809,6 +804,11 @@
 			// lightbox
 			//-- AdminLTE for demo purposes
 			//$this->layout->load_javascript("js/admin/AdminLTE/demo.js");
+			//textarea
+			$this->layout->load_javascript("js/tinymce/js/tinymce/tinymce.dev.js");
+			$this->layout->load_javascript("js/tinymce/js/tinymce/plugins/table/plugin.dev.js");
+			$this->layout->load_javascript("js/tinymce/js/tinymce/plugins/paste/plugin.dev.js");
+			$this->layout->load_javascript("js/tinymce/js/tinymce/plugins/spellchecker/plugin.dev.js");
 		}
 
 		private

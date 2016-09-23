@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '48d6abc32a6f01ea5ab297181ddc15d968075bec' => 
     array (
       0 => 'application\\views\\web\\base-layout\\document-frame.html',
-      1 => 1473826031,
+      1 => 1474437062,
       2 => 'file',
     ),
     'fbc81e035079547912715c583bd2aca391b51e76' => 
@@ -18,10 +18,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '2849757888d76aff023-74241161',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57df711f8f6a45_64192905',
+  'unifunc' => 'content_57e4d826b94628_36623050',
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57df711f8f6a45_64192905')) {function content_57df711f8f6a45_64192905($_smarty_tpl) {?><!DOCTYPE html><html>  <head>    <meta charset="utf-8">    <title>    <?php if ($_smarty_tpl->tpl_vars['act_lang']->value=='en') {?>    The center of Information and coordination of Industry Perkelapasawitan Indonesia    <?php } else { ?>      Pusat Informasi dan Koordinasi Industri Perkelapasawitan Indonesia    <?php }?>        </title>    <link rel="shortcut icon" href="http://localhost:82/dmsinew/doc/favicon.ico">    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/default/load-style.css" />      </head>  <body style="background-color:#20B2AA; padding-top:50px;">    <!--removed by integration-->        <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['template_content']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_57e4d826b94628_36623050')) {function content_57e4d826b94628_36623050($_smarty_tpl) {?><!DOCTYPE html><html>  <head>    <meta charset="utf-8">    <title>          Pusat Informasi dan Koordinasi Industri Perkelapasawitan Indonesia           </title>    <link rel="shortcut icon" href="http://localhost:82/dmsinew/doc/favicon.ico">    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/default/load-style.css" />      </head>  <body style="background-color:#20B2AA; padding-top:50px;">    <!--removed by integration-->        <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['template_content']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
         <!-- javascript loaded -->    <script type="text/javascript" src="http://localhost:82/dmsinew/js/front/jquery.cslider.js"></script>
 <script type="text/javascript" src="http://localhost:82/dmsinew/js/front/breakpoints.js"></script>
 <script type="text/javascript" src="http://localhost:82/dmsinew/js/front/jquery/jquery-1.11.1.min.js"></script>

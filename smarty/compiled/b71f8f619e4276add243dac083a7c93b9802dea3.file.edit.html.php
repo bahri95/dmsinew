@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-18 17:08:59
+<?php /* Smarty version Smarty-3.1.17, created on 2016-09-23 08:03:38
          compiled from "application\views\private\agenda\edit.html" */ ?>
 <?php /*%%SmartyHeaderCode:32705791cbf4710ec3-42302551%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b71f8f619e4276add243dac083a7c93b9802dea3' => 
     array (
       0 => 'application\\views\\private\\agenda\\edit.html',
-      1 => 1474211338,
+      1 => 1474610587,
       2 => 'file',
     ),
   ),
@@ -37,15 +37,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 .      </div>      <?php }?>      <?php if ($_smarty_tpl->tpl_vars['notification_status']->value=='green') {?>      <div class="alert alert-success alert-dismissable">        <i class="fa fa-check">        </i>        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;        </button>        <?php echo $_smarty_tpl->tpl_vars['notification_msg']->value;?>
 .      </div>      <?php }?>    </div>    <?php }?>    <div class="col-md-9">      <!-- form update email-->      <div class="box box-success">        <div class="nav-tabs-custom">          <ul class="nav nav-tabs">            <li class="active">              <a href="#tab_1" data-toggle="tab">Indonesia              </a>            </li>            <li>              <a href="#tab_2" data-toggle="tab">English              </a>            </li>          </ul>          <!-- form start -->          <form id="form" action="<?php echo $_smarty_tpl->tpl_vars['url_process']->value;?>
 " method="post" enctype="multipart/form-data">            <div class="tab-content">              <div class="tab-pane active" id="tab_1">                <div class="box-body">                  <div class="form-group">                    <input type="hidden" name="id_agenda" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['id_agenda'];?>
-">                    <label for="user_name_lama">DMSI & Asosiasi *                       </label>                    <select name="id_asosiasi" class="form-control" disabled="disabled" >                       <option value="<?php echo $_smarty_tpl->tpl_vars['data']->value['id_asosiasi'];?>
-"><?php echo $_smarty_tpl->tpl_vars['data']->value['nama_asosiasi'];?>
-                      </option>                      <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
+">                    <label for="user_name_lama">DMSI & Asosiasi *                       </label>                      <input type="hidden" name="id_asosiasi" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['id_asosiasi'];?>
+">                       <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['listasosiasi']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {
 $_smarty_tpl->tpl_vars['result']->_loop = true;
-?>                      <option value="<?php echo $_smarty_tpl->tpl_vars['result']->value['id_asosiasi'];?>
-" <?php if ($_smarty_tpl->tpl_vars['data']->value['id_asosiasi']==$_smarty_tpl->tpl_vars['result']->value['id_asosiasi']) {?>selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['result']->value['nama_asosiasi'];?>
-                      </option>                      <?php } ?>                    </select>                  </div>                  <div class="form-group">                    <label for="user_name_lama">Judul Kegiatan *                     </label>                    <input type="text" name="judul_agenda" id="judul_agenda" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['judul_agenda'];?>
+?>                      <?php if ($_smarty_tpl->tpl_vars['data']->value['id_asosiasi']==$_smarty_tpl->tpl_vars['result']->value['id_asosiasi']) {?>                      <input type="text" class="form-control"  value="<?php echo $_smarty_tpl->tpl_vars['result']->value['nama_asosiasi'];?>
+" readonly="readonly">                     <?php }?>                     <?php } ?>                                                       </div>                  <div class="form-group">                    <label for="user_name_lama">Judul Kegiatan *                     </label>                    <input type="text" name="judul_agenda" id="judul_agenda" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['judul_agenda'];?>
 " class="form-control" size="50" maxlength="255" />                  </div>                  <div class="form-group">                    <label for="user_name_lama">Tanggal Mulai *                    </label>                    <input type="text" name="tanggal_mulai" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['tanggal_mulai'];?>
 " class="tanggal form-control" size="10" maxlength="10" style="width:150px;" />                  </div>                  <div class="form-group">                    <label for="user_name_lama">Tanggal Selesai *                    </label>                    <input type="text" name="tanggal_selesai" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['tanggal_selesai'];?>
 " class="tanggal form-control" size="10" maxlength="10" style="width:150px;" />                  </div>                  <div class="form-group">                    <label for="user_name_lama">Lokasi                     </label>                    <input type="text" name="lokasi" id="lokasi" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['lokasi'];?>

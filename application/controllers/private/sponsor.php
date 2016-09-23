@@ -328,7 +328,7 @@
             
                     if (!empty($_FILES['image_sponsor']['tmp_name'])) {
 
-                        $datasponsor= $this->sponsormodel->get_sponsor_by_id($id_asosiasi);
+                        $datasponsor= $this->sponsormodel->get_sponsor_by_id($id_sponsor);
 
                         $_FILES['image_sponsor']['name'] = $id_sponsor.'_'.$_FILES['image_sponsor']['name'];
 
@@ -353,10 +353,22 @@
 
                         if ($this->upload->do_upload("image_sponsor")) {
 
+                            
                             $data = $this->upload->data();
 
                             $image_sponsor = $data['file_name'];
 
+                             //resize
+                             $config['image_library'] = 'gd2';
+                            $config['source_image']  = "doc/sponsor/".$id_sponsor.'/'.$image_sponsor;
+                            $config['new_image']  = "doc/sponsor/".$id_sponsor.'/'.$image_sponsor;
+                            
+                            $config['height']   = '120';
+                            
+                            $this->image_lib->initialize($config); 
+                            
+                            
+                            $this->image_lib->resize();
                             $this->db->set("image_sponsor",$image_sponsor);
 
                             $this->db->where("id_sponsor", $id_sponsor);
@@ -653,7 +665,7 @@
 
             $data = $this->sponsormodel->get_sponsor_by_id($id_sponsor);
 
-            $path = 'doc/sponsor/'.$id_sponsor."/";
+            $path = 'doc/sponsor/'.$data['id_sponsor'].'/';
 
             
 
@@ -661,19 +673,16 @@
 
                 $url_hapus = site_url('private/sponsor/process/hapusgambar/')."/".$data['id_sponsor'];
 
-                $data['image_sponsor_edit'] = '<img src="'.BASEURL.$path.$data['image_sponsor'].'" border="0" height="200px;"><br /><input type="button" value="Hapus Gambar" onClick="javascript:document.location=\''.$url_hapus.'\';">';
+                $data['image_sponsor_edit'] = '<img src="'.BASEURL.$path.$data['image_sponsor'].'" border="0" height="200px;"><br />';
 
             } else {
 
-                $data['image_sponsor']= '-tidak ada gambar- ';
+                $data['image_sponsor_edit']= '-tidak ada gambar- ';
 
             }
 
 
-
-            $data['image'] = $data['image_sponsor'];
-
-            $this->smarty->assign("image_sponsor_edit", $data['image']);
+            $this->smarty->assign("image_sponsor_edit", $data['image_sponsor_edit']);
 
             ///ASIGN DATA variable nya ke smarty
 
@@ -886,6 +895,17 @@
                             $data = $this->upload->data();
 
                             $image_sponsor = $data['file_name'];
+                             //resize
+                             $config['image_library'] = 'gd2';
+                            $config['source_image']  = "doc/sponsor/".$id_sponsor.'/'.$image_sponsor;
+                            $config['new_image']  = "doc/sponsor/".$id_sponsor.'/'.$image_sponsor;
+                            
+                            $config['height']   = '120';
+                            
+                            $this->image_lib->initialize($config); 
+                            
+                            
+                            $this->image_lib->resize();
 
                             $this->db->set("image_sponsor",$image_sponsor);
 

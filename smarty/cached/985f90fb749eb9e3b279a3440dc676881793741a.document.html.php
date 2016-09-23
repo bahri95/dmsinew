@@ -14,20 +14,44 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       1 => 1473302624,
       2 => 'file',
     ),
-    'e536b4d00dbd3e9ce7cef19499267608cbebed4a' => 
+    '5382647f140e03bb477b4825810172a23ad6e45b' => 
     array (
-      0 => 'application\\views\\private\\berita\\list.html',
-      1 => 1473302624,
+      0 => 'application\\views\\private\\harga\\list.html',
+      1 => 1473412938,
+      2 => 'file',
+    ),
+    '2f3ab26491dbeee2836e7ba821290f7d4dd7d85f' => 
+    array (
+      0 => 'application\\views\\private\\harga\\domestik.html',
+      1 => 1473739108,
+      2 => 'file',
+    ),
+    '99059d8f4bdefbc97130db8ada50acdd8a8d4c06' => 
+    array (
+      0 => 'application\\views\\private\\harga\\cpo_domestik.html',
+      1 => 1473735191,
+      2 => 'file',
+    ),
+    'dbf79d96c9bf017dc714ba3f94f7c8fa90120494' => 
+    array (
+      0 => 'application\\views\\private\\harga\\ekspor.html',
+      1 => 1473409588,
+      2 => 'file',
+    ),
+    '62ca48d373b0a63675a4c850bbd9dd08ef015614' => 
+    array (
+      0 => 'application\\views\\private\\harga\\grafik.html',
+      1 => 1474212993,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '1343157888d7d407514-59546593',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57df7874bc54a3_48376339',
+  'unifunc' => 'content_57e4f5dce1cec3_47348708',
   'has_nocache_code' => true,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57df7874bc54a3_48376339')) {function content_57df7874bc54a3_48376339($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">  <head>    <meta charset="UTF-8">    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>    <meta name='description' content='Museum seni dan budaya di Indonesia' />    <meta name='keywords' content='museum, seni, budaya, indonesia, koleksi' />    <meta name='robots' content='index,follow' />    <title>Administrator Console    </title>    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/admin/load-style.css" />        <?php echo $_smarty_tpl->tpl_vars['LOADSTYLE']->value;?>
+<?php if ($_valid && !is_callable('content_57e4f5dce1cec3_47348708')) {function content_57e4f5dce1cec3_47348708($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">  <head>    <meta charset="UTF-8">    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>    <meta name='description' content='Museum seni dan budaya di Indonesia' />    <meta name='keywords' content='museum, seni, budaya, indonesia, koleksi' />    <meta name='robots' content='index,follow' />    <title>Administrator Console    </title>    <link rel="stylesheet" type="text/css" href="http://localhost:82/dmsinew/themes/admin/load-style.css" />        <?php echo $_smarty_tpl->tpl_vars['LOADSTYLE']->value;?>
       </head>  <body class="skin-blue" onmousemove="change()">    <!-- header logo: style can be found in header.less -->    <header class="header">      <a href="#" class="logo">        <!-- Add the class icon to your logo image or logo icon to add the margining -->        Dewan Minyak Sawit Indonesia      </a>      <!-- Header Navbar: style can be found in header.less -->      <nav class="navbar navbar-static-top" role="navigation">        <!-- Sidebar toggle button-->        <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">          <span class="sr-only">Toggle navigation          </span>          <span class="icon-bar">          </span>          <span class="icon-bar">          </span>          <span class="icon-bar">          </span>        </a>        <div class="navbar-right">          <ul class="nav navbar-nav">            <!-- Messages: style can be found in dropdown.less-->            <!-- <li class="dropdown messages-menu">              <a href="#" class="dropdown-toggle" data-toggle="dropdown">                <i class="fa fa-envelope-o">                </i>                                <?php if ($_smarty_tpl->tpl_vars['data_aspirasi']->value!='') {?>                <span class="label label-success">                  <?php  $_smarty_tpl->tpl_vars['result'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['result']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['jumlah_aspirasi']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['result']->key => $_smarty_tpl->tpl_vars['result']->value) {

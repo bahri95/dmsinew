@@ -1814,7 +1814,7 @@ $config['cache_path'] = '';
 
 
 
-$config['encryption_key'] = 'DMSI';
+$config['encryption_key'] = 'Pusat Informasi dan Koordinasi Industri Perkelapasawitan Indonesia';
 
 
 
@@ -2894,7 +2894,7 @@ $config['admin_portal_id'] = 2;
 
 
 
-$config['nama_aplikasi'] = 'Dewan Minyak Sawit Indonesia';
+$config['nama_aplikasi'] = 'Pusat Informasi dan Koordinasi Industri Perkelapasawitan Indonesia';
 
 
 
@@ -2910,7 +2910,7 @@ $config['logo_dikbud_putih'] = '';
 
 
 
-$config['nama_instansi_dpcbm'] = 'Dewan Minyak Sawit Indonesia';
+$config['nama_instansi_dpcbm'] = 'Pusat Informasi dan Koordinasi Industri Perkelapasawitan Indonesia';
 
 
 
@@ -2918,7 +2918,7 @@ $config['nama_instansi_dpcbm'] = 'Dewan Minyak Sawit Indonesia';
 
 
 
-$config['nama_instansi_dikbud'] = 'Dewan Minyak Sawit Indonesia';
+$config['nama_instansi_dikbud'] = 'Pusat Informasi dan Koordinasi Industri Perkelapasawitan Indonesias';
 
 
 
